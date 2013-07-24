@@ -1,6 +1,10 @@
 <!-- Sub:[TOC] -->
 
-# Discolsure and audit
+# Rollbar Security Policy
+
+Last updated: July 24, 2013
+
+## Disclosure and audit
 
 Data is sent to Rollbar via notifiers that are installed and run on customer machines or embedded in web pages and run on customer's user's browsers. There are open-source notifiers written in popular programming languages and platforms, including [Ruby](https://github.com/rollbar/rollbar-gem), [Python](https://github.com/rollbar/pyrollbar), [Node.js](https://github.com/rollbar/node_rollbar), [JavaScript](https://github.com/rollbar/rollbar.js), [PHP](https://github.com/rollbar/rollbar-php), and [others](https://github.com/rollbar). 
 
@@ -8,7 +12,7 @@ Notifiers are small pieces of code that gather and report data to Rollbar over H
 
 Since all of the notifier code is open-source, the community is able and encouraged to audit the source code. All code is hosted on [Github](http://github.com/).
 
-# Secured content
+## Secured content
 
 In order to help us improve Rollbar and user experience, Rollbar may use third-party analytics and customer service tools to better understand user behavior on our site. Any data that Rollbar collects is used solely by Rollbar and is not shared, sold or rented to any third-parties.
 
@@ -16,39 +20,39 @@ Data reported by our notifiers is never shared with any third-party service with
 
 See our [privacy policy](http://rollbar.com/privacy) for more information.
 
-# Data collection
+## Data collection
 
 Our [privacy policy](http://rollbar.com/privacy) details the type of data we collect via our website and notifiers.
 
 All data collected from our notifiers is stored in a raw and aggregated form. Both the aggregated and raw data is available via our website as well as our API. More information about our API can be found [here](http://rollbar.com/docs/api_overview/).
 
-# Data transmission
+## Data transmission
 
-## HTTPS
+### HTTPS
 
 All data transmitted to Rollbar from our notifiers is done over SSL by default. Users can choose to configure HTTPS or HTTP in each notifier by providing a configuration option or editing the source code directly. We do not perform host authentication over HTTPS nor do we store any passwords in our notifiers. HTTPS is used solely for communication encryption.
 
-## SSL certificates
+### SSL certificates
 
 Notifiers send data to [https://api.rollbar.com/](https://api.rollbar.com/). We have an extended validation SSL certificate which our API servers use to ensure trusted communication between our customers and Rollbar.
 
-## CORS (cross-origin resource sharing)
+### CORS (cross-origin resource sharing)
  
 Rollbar's API servers are configured to allow [CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) requests for API endpoints that are used by our JavaScript notifiers. This enables our customers to send data from their users' browsers to Rollbar for processing. Our CORS enabled endpoints only allow POST requests.
 
-## Serialization formats
+### Serialization formats
 
 Data from our notifiers is either serialized into JSON or multipart-mime format before being sent. Our API servers respond with application/json content-type.  
 
-# Proxies
+## Proxies
 
 None of the notifiers currently support proxies. Work on this is not yet scheduled. Please contact [support@rollbar.com](mailto:support@rollbar.com) if this would be useful for you.
 
-# Data scrubbing
+## Data scrubbing
 
 Data scrubbing is the process of removing sensitive information from the data sent to Rollbar by the notifier. All of the notifiers support data scrubbing. Refer to their individual READMEs on github for information regarding configuration.
 
-## Notifiers
+### Notifiers
 
 By default, notifiers will attempt to remove request parameters that look like sensitive information.
 
@@ -64,17 +68,17 @@ e.g. the rollbar-gem notifier scrubs the following request parameters by default
 
 More info can be found in the [README](https://github.com/rollbar/rollbar-gem/blob/master/README.md#data-sanitization-scrubbing).
 
-## Server-side
+### Server-side
 
 Currently we do not support data scrubbing on the server-side. If this is important to you, please email [support@rollbar.com](mailto:support@rollbar.com).
 
-# Infrastructure and data storage
+## Infrastructure and data storage
 
-## Hosting
+### Hosting
 
 All of our servers are hosted on [SoftLayer](http://softlayer.com/). We have a mix of "cloud" and physical hosts which enables us to quickly scale up or down.
 
-## DNS and load balancers
+### DNS and load balancers
 
 Rollbar's API and web servers use a cluster of load balancers that are hosted around the globe for fast response times. We use [DynECT Managed DNS](http://dyn.com/dynect-managed-dns) for domain name resolution and failover. DynECT automatically fails over to usable API servers in case of an unexpected error or interruption in service from our API tier.
 
@@ -85,49 +89,49 @@ We have load balancers in the following locations:
 - Singapore
 - Amsterdam
 
-## Internal network
+### Internal network
 
 All data transmitted between Rollbar hosts is done over SoftLayer's internal, private network. Our main database cluster is in Dallas with redundant hosts in Seattle and San Jose. The SoftLayer private network is only accessible by machines running within its infrastructure.
 
-## Public network
+### Public network
 
 The only hosts that are accessible from the public internet are our load balancers. The hosts run with strict firewall rules that only allow HTTP and HTTPS traffic (as well as SSH for maintenance and development operations.)
 
 We follow best practices for securing SSH and used industry-standard tools such as fail2ban to enforce strict access policies.
 
-## Storage
+### Storage
 
-### Raw data
+#### Raw data
 
 The data we collect from our notifiers is referred to as "raw" data. We store this data in temporary files that have a very short lifetime (less than a few seconds) before loading them into a MySQL cluster and Memcache. The data stored in MySQL and Memcache is not encrypted although it is compressed. Raw data is also stored in SoftLayer's Object Storage for long-term storage. Softlayer maintains its own access control mechanisms for reading and writing data to Object Storage. We have the ability to quickly generate new credentials and invalidate old ones in case there is an issue.
 
-### Aggregate data
+#### Aggregate data
 
 We process all of the raw data into an aggregate form to present to customers. This data is stored in MySQL and Memcache.
 
-### Retention
+#### Retention
 
 All raw data is deleted from MySQL based on the customer's account type. Different accounts allow for longer retention times. Once deleted from MySQL, data will persist in Memcache until it is purged and will exist indefinitely in SoftLayer's Object Storage.
 
 All MySQL data is backed up nightly to an offsite host where we store a compressed version of the database. Backups are periodically deleted based on storage considerations.
 
-# Passwords
+## Passwords
 
-## Rollbar.com
+### Rollbar.com
 
 Customer passwords for Rollbar.com are never stored. We save a secure hash of a customer's password using a random salt. If a user forgets their password, a reset password email will be sent to their confirmed email address.
 
-## Third-party integrations
+### Third-party integrations
 
 Most of the third-party integrations that Rollbar includes do not require a user's login credentials and we therefore do not store any. The only exception is JIRA. The JIRA API does not currently provide a way to authenticate a user without their username and password. We store both in MySQL using AES encryption with a different secret key per user.
 
-# Data access
+## Data access
 
 All Rollbar employees have full access to all data. Each have signed confidentiality and IP agreements as part of their employment.
 
 Customers can only access data associated with projects that their team is allowed to access. Teams are configured by account admins (users in the "Owners" group) and can be modified at any time.
 
-# For more help
+## For more help
 
 - [Privacy policy](http://rollbar.com/privacy/)
-- Email [support@rollbar.com](mailto:support@rollbar.com) for more help and informatin
+- Email [support@rollbar.com](mailto:support@rollbar.com) for more help and information
