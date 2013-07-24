@@ -6,17 +6,17 @@ Last updated: July 24, 2013
 
 ## Disclosure and audit
 
-Data is sent to Rollbar via notifiers that are installed and run on customer machines or embedded in web pages and run on customer's user's browsers. There are open-source notifiers written in popular programming languages and platforms, including [Ruby](https://github.com/rollbar/rollbar-gem), [Python](https://github.com/rollbar/pyrollbar), [Node.js](https://github.com/rollbar/node_rollbar), [JavaScript](https://github.com/rollbar/rollbar.js), [PHP](https://github.com/rollbar/rollbar-php), and [others](https://github.com/rollbar). 
+Data is sent to the Rollbar API via notifiers that are installed and run on customer machines or embedded in web pages and run on customer's user's browsers. We provide and maintain official open-source libraries for several popular programming languages and platforms, including [Ruby](https://github.com/rollbar/rollbar-gem), [Python](https://github.com/rollbar/pyrollbar), [Node.js](https://github.com/rollbar/node_rollbar), [JavaScript](https://github.com/rollbar/rollbar.js), and [PHP](https://github.com/rollbar/rollbar-php). 
 
-Notifiers are small pieces of code that gather and report data to Rollbar over HTTPS. They do not generate any dynamic code or "monkey-patch" libraries, so you do not need to worry about them interfering with your codebase once installed. Notifiers are also designed to run in an asynchornous manner (where available), and should not have a noticeable impact on performance.
+Notifiers are small pieces of code that gather and report data to Rollbar over HTTPS. They do not generate any dynamic code, so you do not need to worry about them interfering with your codebase once installed. Notifiers are also designed to run in an asynchornous manner (where available), and should not have a noticeable impact on performance.
 
-Since all of the notifier code is open-source, the community is able and encouraged to audit the source code. All code is hosted on [Github](http://github.com/).
+Since all of the notifier code is open-source, the community is able and encouraged to audit the source code. All code is hosted on [GitHub](http://github.com/rollbar).
 
 ## Secured content
 
 In order to help us improve Rollbar and user experience, Rollbar may use third-party analytics and customer service tools to better understand user behavior on our site. Any data that Rollbar collects is used solely by Rollbar and is not shared, sold or rented to any third-parties.
 
-Data reported by our notifiers is never shared with any third-party service without the express consent of our users. Rollbar integrates with many tools that provide complementary services. Each of these tools must be configured and enabled by a user before any data will be sent to them.
+Data reported to the Rollbar API is never shared with any third-party service without the express consent of our customers. Rollbar integrates with many complimentary tools, including GitHub, JIRA, HipChat, PagerDuty, and many others. Each of these tools must be configured and enabled by a user before any data will be sent to them.
 
 See our [privacy policy](http://rollbar.com/privacy) for more information.
 
@@ -24,7 +24,7 @@ See our [privacy policy](http://rollbar.com/privacy) for more information.
 
 Our [privacy policy](http://rollbar.com/privacy) details the type of data we collect via our website and notifiers.
 
-All data collected from our notifiers is stored in a raw and aggregated form. Both the aggregated and raw data is available via our website as well as our API. More information about our API can be found [here](http://rollbar.com/docs/api_overview/).
+All data collected from our notifiers is stored in raw and aggregated forms. Both the aggregated and raw data are available via our website as well as our API. More information about our API can be found [here](http://rollbar.com/docs/api_overview/).
 
 ## Data transmission
 
@@ -34,7 +34,7 @@ All data transmitted to Rollbar from our notifiers is done over SSL by default. 
 
 ### SSL certificates
 
-Notifiers send data to [https://api.rollbar.com/](https://api.rollbar.com/). We have an extended validation SSL certificate which our API servers use to ensure trusted communication between our customers and Rollbar.
+Notifiers send data to [https://api.rollbar.com/](https://api.rollbar.com/). We have an extended validation SSL certificate from [DigiCert](https://www.digicert.com) which our API servers use to ensure trusted communication between our customers and Rollbar.
 
 ### CORS (cross-origin resource sharing)
  
@@ -54,9 +54,7 @@ Data scrubbing is the process of removing sensitive information from the data se
 
 ### Notifiers
 
-By default, notifiers will attempt to remove request parameters that look like sensitive information.
-
-e.g. the rollbar-gem notifier scrubs the following request parameters by default
+By default, notifiers will attempt to remove request parameters that look like sensitive information. For example, the rollbar-gem notifier scrubs the following request parameters by default:
 
 - passwd
 - password
@@ -91,11 +89,11 @@ We have load balancers in the following locations:
 
 ### Internal network
 
-All data transmitted between Rollbar hosts is done over SoftLayer's internal, private network. Our main database cluster is in Dallas with redundant hosts in Seattle and San Jose. The SoftLayer private network is only accessible by machines running within its infrastructure.
+All data transmitted between Rollbar hosts is done over SoftLayer's internal, private network. Our main database cluster is in Dallas, with redundant hosts in Seattle and San Jose. The SoftLayer private network is only accessible by machines running within its infrastructure.
 
 ### Public network
 
-The only hosts that are accessible from the public internet are our load balancers. The hosts run with strict firewall rules that only allow HTTP and HTTPS traffic (as well as SSH for maintenance and development operations.)
+The only hosts that are accessible from the public internet are our load balancers and development machines. The hosts run with strict firewall rules that only allow HTTP and HTTPS traffic (as well as SSH for maintenance and development operations.)
 
 We follow best practices for securing SSH and used industry-standard tools such as fail2ban to enforce strict access policies.
 
@@ -103,7 +101,7 @@ We follow best practices for securing SSH and used industry-standard tools such 
 
 #### Raw data
 
-The data we collect from our notifiers is referred to as "raw" data. We store this data in temporary files that have a very short lifetime (less than a few seconds) before loading them into a MySQL cluster and Memcache. The data stored in MySQL and Memcache is not encrypted although it is compressed. Raw data is also stored in SoftLayer's Object Storage for long-term storage. Softlayer maintains its own access control mechanisms for reading and writing data to Object Storage. We have the ability to quickly generate new credentials and invalidate old ones in case there is an issue.
+The data we collect from our notifiers is referred to as "raw" data. We store this data in temporary files that have a very short lifetime (less than a few seconds) before loading them into a MySQL cluster and Memcache. The data stored in MySQL and Memcache is not encrypted, although it is compressed. Raw data is also stored in SoftLayer's [Object Storage](http://www.softlayer.com/cloudlayer/storage/) for long-term storage. Softlayer maintains its own access control mechanisms for reading and writing data to Object Storage. We have the ability to quickly generate new credentials and invalidate old ones as needed.
 
 #### Aggregate data
 
@@ -119,7 +117,7 @@ All MySQL data is backed up nightly to an offsite host where we store a compress
 
 ### Rollbar.com
 
-Customer passwords for Rollbar.com are never stored. We save a secure hash of a customer's password using a random salt. If a user forgets their password, a reset password email will be sent to their confirmed email address.
+Customer passwords for Rollbar.com are never stored. We save a secure hash of a customer's password using a random salt. If a user forgets their password, a password-reset email will be sent to their confirmed email address.
 
 ### Third-party integrations
 
@@ -127,9 +125,9 @@ Most of the third-party integrations that Rollbar includes do not require a user
 
 ## Data access
 
-All Rollbar employees have full access to all data. Each have signed confidentiality and IP agreements as part of their employment.
+All Rollbar employees have full access to all data. Each has signed confidentiality and IP agreements as part of their employment.
 
-Customers can only access data associated with projects that their team is allowed to access. Teams are configured by account admins (users in the "Owners" group) and can be modified at any time.
+Customers can only access data associated with projects that their team is allowed to access. Teams are configured by account admins (users in the "Owners" team) and can be modified at any time.
 
 ## For more help
 
