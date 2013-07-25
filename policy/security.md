@@ -10,7 +10,7 @@ Data is sent to the Rollbar API via notifiers that are installed and run on cust
 
 Notifiers are small pieces of code that gather and report data to Rollbar over HTTPS. They do not generate any dynamic code, so you do not need to worry about them interfering with your codebase once installed. Notifiers are also designed to run in an asynchornous manner (where available), and should not have a noticeable impact on performance.
 
-Since all of the notifier code is open-source, the community is able and encouraged to audit the source code. All code is hosted on [GitHub](http://github.com/rollbar).
+Since all of the notifier code is open-source, the community is able and encouraged to audit the source code. All code is hosted on [GitHub - Rollbar](http://github.com/rollbar/).
 
 ## Secured content
 
