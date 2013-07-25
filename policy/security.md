@@ -1,8 +1,8 @@
-<!-- Sub:[TOC] -->
-
 # Rollbar Security Policy
 
 Last updated: July 24, 2013
+
+<!-- Sub:[TOC] -->
 
 ## Disclosure and audit
 
@@ -109,9 +109,11 @@ We process all of the raw data into an aggregate form to present to customers. T
 
 #### Retention
 
-All raw data is deleted from MySQL based on the customer's account type. Different accounts allow for longer retention times. Once deleted from MySQL, data will persist in Memcache until it is purged and will exist indefinitely in SoftLayer's Object Storage.
+Data retention period varies based on account type: 30 days for the Free plan, 90 days for Starter, and 180 days for Small and above. After that period, data is eligible for deletion. The deletion process, not yet implemented, will include deleting the raw data from all locations (Memcache, MySQL, and Object Storage). Aggregate data is not typically deleted.
 
-All MySQL data is backed up nightly to an offsite host where we store a compressed version of the database. Backups are periodically deleted based on storage considerations.
+Data can also be deleted individually on a one-off basis. If you need some data to be deleted immediately, please contact [support@rollbar.com](support@rollbar.com).
+
+All MySQL data is backed up nightly to a backup server within our SoftLayer infrastructure, stored as a compressed version of each database. Backups are periodically deleted (typically within 1 month) based on storage considerations.
 
 ## Passwords
 
