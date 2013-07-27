@@ -1,6 +1,6 @@
 # Rollbar Security Policy
 
-Last updated: July 24, 2013
+Last updated: July 26, 2013
 
 <!-- Sub:[TOC] -->
 
@@ -10,7 +10,7 @@ Data is sent to the Rollbar API via notifiers that are installed and run on cust
 
 Notifiers are small pieces of code that gather and report data to Rollbar over HTTPS. They do not generate any dynamic code, so you do not need to worry about them interfering with your codebase once installed. Notifiers are also designed to run in an asynchornous manner (where available), and should not have a noticeable impact on performance.
 
-Since all of the notifier code is open-source, the community is able and encouraged to audit the source code. All code is hosted on [GitHub - Rollbar](http://github.com/rollbar/).
+Since all of the notifier code is open-source, the community is able and encouraged to audit the source code. All code is hosted at [GitHub - Rollbar](http://github.com/rollbar/).
 
 ## Secured content
 
@@ -115,11 +115,19 @@ Data can also be deleted individually on a one-off basis. If you need some data 
 
 All MySQL data is backed up nightly to a backup server within our SoftLayer infrastructure, stored as a compressed version of each database. Backups are periodically deleted (typically within 1 month) based on storage considerations.
 
+#### Logical Partitioning and Data Access
+
+All customer raw and aggregate data is stored as part of a Project. Individual user access to a particular Project is configurable in the "Teams" section of the Rollbar interface.
+
+To ensure that customer data cannot be accessed by other customers, customer data is always stored with its Project ID and always queried using a Project ID.
+
 ## Passwords
 
 ### Rollbar.com
 
 Customer passwords for Rollbar.com are never stored. We save a secure hash of a customer's password using a random salt. If a user forgets their password, a password-reset email will be sent to their confirmed email address.
+
+As of July 26, 2013, we use the [py-bcrypt](http://www.mindrot.org/projects/py-bcrypt/) implementation of [bcrypt](http://en.wikipedia.org/wiki/Bcrypt) to hash passwords. Password hashes in our legacy format (salted MD5s) are replaced with bcrypt hashes upon login.
 
 ### Third-party integrations
 
