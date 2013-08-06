@@ -12,7 +12,7 @@ To create a new Rollbar user, call the ```provision/user``` endpoint with the fo
   <dt>username</dt>
   <dd>Must be unique across all Rollbar usernames.
 
-The username must start with a letter ```[a-zA-Z]``` followed by any ascii letter, number, "_" or "-"
+The username must match the following regular expression, ```[a-zA-Z][a-zA-Z0-9_-]*```.
 
   </dd>
   <dt>email</dt>
