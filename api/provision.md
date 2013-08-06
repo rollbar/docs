@@ -10,7 +10,11 @@ To create a new Rollbar user, call the ```provision/user``` endpoint with the fo
 
   <dl>
   <dt>username</dt>
-  <dd>Must be unique across all Rollbar usernames</dd>
+  <dd>Must be unique across all Rollbar usernames.
+
+The username must start with a letter ```[a-zA-Z]``` followed by any ascii letter, number, "_" or "-"
+
+  </dd>
   <dt>email</dt>
   <dd>Must be unique across all Rollbar email addresses. This will be the default email address used for all communication, including alerts and forgotten password emails.</dd>
   <dt>password</dt>
