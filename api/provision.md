@@ -19,6 +19,8 @@ The username must match the following regular expression, ```[a-zA-Z][a-zA-Z0-9_
   <dd>Must be unique across all Rollbar email addresses. This will be the default email address used for all communication, including alerts and forgotten password emails.</dd>
   <dt>password</dt>
   <dd>Passwords are never stored on our servers and are encrypted via HTTPS during transmission.</dd>
+  <dt>source</dt>
+  <dd>Optional string used to identify where this account was provisioned from.</dd>
   </dl>
 
 When a new user is provisioned an account and starter project are also created.
