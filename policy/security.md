@@ -1,6 +1,6 @@
 # Rollbar Security Policy
 
-Last updated: July 26, 2013
+Last updated: November 6, 2013
 
 <!-- Sub:[TOC] -->
 
@@ -109,9 +109,9 @@ We process all of the raw data into an aggregate form to present to customers. T
 
 #### Retention
 
-Data retention period varies based on account type: 30 days for the Free plan, 90 days for Starter, and 180 days for Small and above. After that period, data is eligible for deletion. The deletion process, not yet implemented, will include deleting the raw data from all locations (Memcache, MySQL, and Object Storage). Aggregate data is not typically deleted.
+Data retention period varies based on account type: 30 days for the Free plan, 90 days for Starter, and 180 days for Small and above. After that period, data is eligible for deletion. The deletion process runs periodically and includes deleting the raw data from all locations (Memcache, MySQL, and Object Storage). Aggregate data is not typically deleted.
 
-Data can also be deleted individually on a one-off basis. If you need some data to be deleted immediately, please contact [support@rollbar.com](support@rollbar.com).
+Data can also be deleted individually on a one-off basis. To delete an individual occurrence, press the "Delete" button at the bottom of the occurrence detail page. If you need a large amount of occurrences or other data to be deleted immediately, please contact [support@rollbar.com](support@rollbar.com).
 
 All MySQL data is backed up nightly to a backup server within our SoftLayer infrastructure, stored as a compressed version of each database. Backups are periodically deleted (typically within 1 month) based on storage considerations.
 
@@ -125,11 +125,13 @@ To ensure that customer data cannot be accessed by other customers, customer dat
 
 ### Rollbar.com
 
-Customer passwords for Rollbar.com are never stored. We save a secure hash of a customer's password using a random salt. If a user forgets their password, a password-reset email will be sent to their confirmed email address.
+Customer passwords for Rollbar.com are never stored. We save a secure hash of a customer's password using bcrypt. If a user forgets their password, a password-reset email will be sent to their confirmed email address.
 
 As of July 26, 2013, we use the [py-bcrypt](http://www.mindrot.org/projects/py-bcrypt/) implementation of [bcrypt](http://en.wikipedia.org/wiki/Bcrypt) to hash passwords. Password hashes in our legacy format (salted MD5s) are replaced with bcrypt hashes upon login.
 
 ### Third-party integrations
+
+In most cases, we use access tokens for integrations with third-party services. These access tokens are stored encrypted in our database. 
 
 Most of the third-party integrations that Rollbar includes do not require a user's login credentials and we therefore do not store any. The only exception is JIRA. The JIRA API does not currently provide a way to authenticate a user without their username and password. We store both in MySQL using AES encryption with a different secret key per user.
 
