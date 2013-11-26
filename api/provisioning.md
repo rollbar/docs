@@ -8,7 +8,7 @@ API calls in this section require an access token from your *account*. These tok
 
 ## Tutorial
 
-In this tutorial we'll demonstrate how to:
+In this tutorial, we'll show how to:
 
 - create a project
 - invite a user to it, by email address
@@ -20,7 +20,7 @@ You'll need your read/write account access token from Account Settings &raquo; A
 To create a project, use the `POST /projects` call.
 
 ```bash
-ACCESS_TOKEN=yourtokenhere
+ACCESS_TOKEN=READ_ACCOUNT_ACCESS_TOKEN
 API_BASE='https://api.rollbar.com/api/1'
 curl -X POST "$API_BASE/projects?access_token=$ACCESS_TOKEN" \ 
   -H "Content-Type: application/json" \
@@ -48,7 +48,7 @@ In Rollbar, users access projects via Teams. To add a user to the project, we'll
 To create a team, use the `POST /teams` call.
 
 ```bash
-ACCESS_TOKEN=yourtokenhere
+ACCESS_TOKEN=READ_ACCOUNT_ACCESS_TOKEN
 API_BASE='https://api.rollbar.com/api/1'
 curl -X POST "$API_BASE/teams?access_token=$ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
@@ -74,7 +74,7 @@ This returns the new team. Note the `id`; we'll need it in the next step.
 Next, use `PUT /team/:team_id/project/:project_id` to add the project to the team.
 
 ```bash
-ACCESS_TOKEN=yourtokenhere
+ACCESS_TOKEN=READ_ACCOUNT_ACCESS_TOKEN
 API_BASE='https://api.rollbar.com/api/1'
 TEAM_ID=300
 PROJECT_ID=200
@@ -94,12 +94,12 @@ This returns a simple OK response:
 
 ### Invite the User to the Team
 
-We now have a new project and a team that can access it. Let's invite someone to it, by email address. If they are already a Rollbar user, they'll be added to the team immediately. Otherwise, they will receive an email invite; when they accept, they'll be added to the team.
+We now have a new project and a team that can access it. Let's invite someone to it, by email address. If they are already a Rollbar user, they'll be added to the team immediately. Otherwise, they will be added to the team once they accept the invite that was emailed to them.
 
 Use `POST /team/:id/invites`:
 
 ```bash
-ACCESS_TOKEN=yourtokenhere
+ACCESS_TOKEN=READ_ACCOUNT_ACCESS_TOKEN
 API_BASE='https://api.rollbar.com/api/1'
 TEAM_ID=300
 curl -X POST "$API_BASE/team/$TEAM_ID/invites?access_token=$ACCESS_TOKEN" \
