@@ -126,9 +126,10 @@ This returns the invite object:
 
 That's it for the tutorial, but there's much more you can do with the provisioning API. For more information, see the following pages:
 
-- Project (get one, get all, create, delete)
-- Team (get one, get all, create, delete)
-- TeamProject (get one, get all, create, delete)
-- TeamUser (get one, delete)
-- Invite (get one, get for team, send, delete)
+- [Projects](/docs/api/projects/)
+- [Teams](/docs/api/teams/)
+- [Invites](/docs/api/invites/)
 
+-----
+
+Last updated: November 26, 2013
