@@ -114,8 +114,10 @@ This returns the invite object:
   "err": 0,
   "result": {
     "id": 400,
+    "from_user_id": 123,
     "team_id": 300,
     "to_email": "foo@example.com",
+    "status": "pending",
     "date_created": 1385506327,
     "date_redeemed": null
   }
