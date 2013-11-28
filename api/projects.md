@@ -31,7 +31,7 @@ Creates a new project in the authenticated account.
 
 Name | Type | Description
 -----|------|-------------
-`slug`|`string`|**Required.** Name of the project. Must start with a letter; can contain letters, numbers, spaces, underscores, hyphens, periods, and commas. Max length 32 characters.
+`name`|`string`|**Required.** Name of the project. Must start with a letter; can contain letters, numbers, spaces, underscores, hyphens, periods, and commas. Max length 32 characters.
 
 Params must be supplied as JSON, and as the body of the request. Be sure to set the header `Content-Type: application/json`.
 

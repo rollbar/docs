@@ -24,7 +24,7 @@ ACCESS_TOKEN=WRITE_ACCOUNT_ACCESS_TOKEN
 API_BASE='https://api.rollbar.com/api/1'
 curl -X POST "$API_BASE/projects?access_token=$ACCESS_TOKEN" \ 
   -H "Content-Type: application/json" \
-  -d '{"slug": "Project X"}'
+  -d '{"name": "Project X"}'
 ```
 
 This returns your new project. Note the `id`; we'll need it later.
@@ -35,7 +35,7 @@ This returns your new project. Note the `id`; we'll need it later.
   "result": {
     "id": 200,
     "account_id": 100,
-    "slug": "Project X"
+    "name": "Project X"
     // ... other properties ommitted
   }
 }
@@ -83,12 +83,15 @@ curl -X PUT "$API_BASE/team/$TEAM_ID/project/$PROJECT_ID?access_token=$ACCESS_TO
   -d '{"name": "Project X Developers", "access_level": "standard"}'
 ```
 
-This returns a simple OK response:
+This returns a the team-project object:
 
 ```js
 {
   "err": 0,
-  "result": "OK"
+  "result": {
+    "team_id": 300,
+    "project_id": 200
+  }
 }
 ```
 
