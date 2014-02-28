@@ -10,7 +10,7 @@ Rollbar can send messages about exceptions or deploys to your flow in [Flowdock]
 
 ## In Rollbar
 
-1. Navigate to the Dashboard of the project you want to integrate with PagerDuty
+1. Navigate to the Dashboard of the project you want to integrate with Flowdock
     
     <img src="/static/img/docs/pagerduty_5.png">
     
