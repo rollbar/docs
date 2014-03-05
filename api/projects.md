@@ -1,5 +1,7 @@
 # Projects
 
+These calls require an account-level access token, which should be provided in the query string. The prefix for all URLs is `https://api.rollbar.com`
+
 <!-- Sub:[TOC] -->
 
 ---

@@ -2,6 +2,9 @@
 
 In Rollbar, users are allowed to access projects if they are part of a team that can access that project. Teams belong to accounts, and can be associated (many-to-many) with Projects and Users.
 
+These calls require an account-level access token, which should be provided in the query string. The prefix for all URLs is `https://api.rollbar.com`
+
+
 <!-- Sub:[TOC] -->
 
 ----
