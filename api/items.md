@@ -4,11 +4,42 @@ These calls require a project-level access token, which should be provided in th
 
 <!-- Sub:[TOC] -->
 
-## Get an item
+## Get an item by ID
 
     GET /api/1/item/:id
 
 Requires `read` scope.
+
+`:id` must be an item ID for an item in the project. These IDs are returned as the `id` field in other API calls, and can be found in the Rollbar UI on URLs like "https://rollbar.com/item/272505123/instance/909858456/" (272505123 is the Item ID).
+
+Note that they are NOT found in in URLs like "https://rollbar.com/project/123/item/456/" -- that is the "counter", which can be used in the following API call.
+
+
+## Get an item by counter
+
+    GET /api/1/item_by_counter/:counter
+
+Requires `read` scope.
+
+`:counter` must be an item counter for an item in the project. The counter can be found in URLs like "https://rollbar.com/project/123/item/456/" (456 is the counter).
+
+The success response is a 301 redirect like this:
+
+```
+HTTP/1.1 301 Moved Permanently
+Location: /api/1/item/272505123?access_token=abcd1234abcd1234abcd1234abcd1234
+
+{
+  "err": 0,
+  "result": {
+    "itemId": 272505123,
+    "path": "/api/1/item/272505123",
+    "uri": "/api/1/item/272505123?access_token=abcd1234abcd1234abcd1234abcd1234"
+  }
+}
+```
+
+Many HTTP clients will automatically follow the redirect.
 
 
 ## List all items
