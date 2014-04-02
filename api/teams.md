@@ -43,6 +43,7 @@ Deletes the specified team. Be careful, there is no undo!
 
     DELETE /api/1/team/:id
 
+Note: the Owners team (which has access level `owner`) is special and cannot be deleted.
 
 ## Check if a project is in a team
 
