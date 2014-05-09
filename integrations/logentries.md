@@ -1,6 +1,8 @@
 # Sending Logentries alerts to Rollbar
 
-If you use [Logentries](https://logentries.com), you can set up alerts to report to Rollbar. For example, you can create an tag matching 'error', and then configure Logentries to notify Rollbar whenever an event in Logentries matches.
+If you use [Logentries](https://logentries.com), you can set up alerts to report to Rollbar. For example, you can create an tag matching `error`, and then configure Logentries to notify Rollbar whenever an event in Logentries matches.
+
+A "message"-type Item will appear in Rollbar, using the log message from Logentries that triggered the alert. The host, timestamp, and context lines will be included as well.
 
 Use the following webhook URL:
 
