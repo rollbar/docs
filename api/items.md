@@ -4,6 +4,8 @@ These calls require a project-level access token, which should be provided in th
 
 <!-- Sub:[TOC] -->
 
+---
+
 ## Get an item by ID
 
     GET /api/1/item/:id
@@ -14,6 +16,8 @@ Requires `read` scope.
 
 Note that they are NOT found in in URLs like "https://rollbar.com/project/123/item/456/" -- that is the "counter", which can be used in the following API call.
 
+
+---
 
 ## Get an item by counter
 
@@ -42,6 +46,8 @@ Location: /api/1/item/272505123?access_token=abcd1234abcd1234abcd1234abcd1234
 Many HTTP clients will automatically follow the redirect.
 
 
+---
+
 ## List all items
 
 Returns all items in the project, in pages of 20.
@@ -69,11 +75,16 @@ curl 'https://api.rollbar.com/api/1/items/?access_token=abcd5678&status=active&p
 ```
 
 
+---
+
 ## Modify an item
 
     PATCH /api/1/item/:id
 
-Used to modify an item's state; currently only supports changing the status.
+Used to modify an item's state. Currently supports:
+
+- setting the status
+- when resolving, setting the "resolved in version"
 
 ### Query String Parameters
 
@@ -89,7 +100,8 @@ The following params must be supplied as JSON, and as the body of the request. B
 
 Name | Type | Description
 -----|------|-------------
-`status`|`string`|**Required.** Valid values: `'active'`, `'resolved'`
+`status`|`string`|**Required.** Valid values: `active`, `resolved`, `muted`
+`resolved_in_version`|`string`|If not empty, a string up to 40 characters describing the version that the item was resolved in. Only used if `status` is set to `resolved`.
 
 ### Examples
 
@@ -104,4 +116,4 @@ curl -X PATCH 'https://api.rollbar.com/api/1/item/275123456?access_token=abcd123
 
 -----
 
-Last updated: March 5, 2014
+Last updated: May 12, 2014
