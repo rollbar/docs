@@ -143,7 +143,7 @@ The example JSON payload below describes all the required and optional params th
           "message": "global name 'foo' is not defined"
         }
       
-      }
+      },
 
       // Required (if "trace" is not present): "message"
       // Only "trace" or "message" should be present, but not both.
@@ -209,7 +209,7 @@ The example JSON payload below describes all the required and optional params th
       // headers: object containing the request headers.
       "headers": {
         // Header names should be formatted like they are in HTTP.
-        "Accept": "text/html"
+        "Accept": "text/html",
         "Referer": "https://rollbar.com/"
       },
 
