@@ -282,7 +282,7 @@ The example JSON payload below describes all the required and optional params th
       "javascript": {
 
         // Optional: browser user agent string
-        "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3)",
+        "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3)"
 
       }
     },
