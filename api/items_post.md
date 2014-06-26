@@ -63,12 +63,15 @@ The example JSON payload below describes all the required and optional params th
     "environment": "production",
 
     // Required: body
-    // The main data being sent. It can either be a "message" or an "exception".
-    // This payload demonstrates the format for an exception.
+    // The main data being sent. It can either be a message or an exception.
     "body": {
 
-      // Required: "trace" or "message" (exactly one, not both)
-      // Presence of a "trace" key means that this payload is an exception.
+      // Required: "trace", "trace_chain", or "message" (exactly one)
+      // If this payload is a single exception, use "trace"
+      // If a chain of exceptions (for languages that support inner exceptions), use "trace_chain"
+      // If a message with no stack trace, use "message"
+
+      // Option 1: "trace"
       "trace": {
 
         // Required: frames
@@ -145,20 +148,27 @@ The example JSON payload below describes all the required and optional params th
       
       },
 
-      // Required (if "trace" is not present): "message"
-      // Only "trace" or "message" should be present, but not both.
+      // Option 2: "trace_chain"
+      // Used for exceptions with inner exceptions or causes
+      "trace_chain": [
+        // Each element in the list should be a "trace" object, as shown above
+        // Must contain at least one element.
+      ],
+
+      // Option 3: "message"
+      // Only one of "trace", "trace_chain", or "message" should be present.
       // Presence of a "message" key means that this payload is a log message.
       "message": {
         
         // Required: body
         // The primary message text, as a string
-        "body": "User logged in",
+        "body": "Request over threshold of 10 seconds",
 
         // Can also contain any arbitrary keys of metadata. Their values can be any valid JSON.
         // For example:
 
-        "user_id": "12345",
-        "lucky_numbers": [4, 18, 15, 16, 23, 42]
+        "route": "home#index",
+        "time_elapsed": 15.23
 
       }
     
