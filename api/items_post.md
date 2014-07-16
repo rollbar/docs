@@ -184,6 +184,17 @@ The example JSON payload below describes all the required and optional params th
     // When this occurred, as a unix timestamp.
     "timestamp": 1369188822,
 
+    // Optional: code_version
+    // A string, up to 40 characters, describing the version of the application code
+    // Rollbar understands these formats:
+    // - semantic version (i.e. "2.1.12")
+    // - integer (i.e. "45")
+    // - git SHA (i.e. "3da541559918a808c2402bba5012f6c60b27661c")
+    // If you have multiple code versions that are relevant, those can be sent inside "client" and "server"
+    // (see those sections below)
+    // For most cases, just send it here.
+    "code_version": "3da541559918a808c2402bba5012f6c60b27661c"
+
     // Optional: platform
     // The platform on which this occurred. Meaningful platform names:
     // "browser", "flash", "android", "ios", "heroku", "google-app-engine"
@@ -278,7 +289,12 @@ The example JSON payload below describes all the required and optional params th
       // branch: Name of the checked-out source control branch. Defaults to "master"
       "branch": "master",
 
-      // sha: Git SHA of the running code revision. Use the full sha.
+      // Optiona: code_version
+      // String describing the running code version on the server
+      // See note about "code_version" above
+      "code_version": "b6437f45b7bbbb15f5eddc2eace4c71a8625da8c",
+
+      // (Deprecated) sha: Git SHA of the running code revision. Use the full sha.
       "sha": "b6437f45b7bbbb15f5eddc2eace4c71a8625da8c"
     },
 
@@ -291,9 +307,14 @@ The example JSON payload below describes all the required and optional params th
 
       "javascript": {
 
-        // Optional: browser user agent string
-        "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3)"
-
+        // Optional: browser
+        // The user agent string
+        "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3)",
+      
+        // Optiona: code_version
+        // String describing the running code version in javascript
+        // See note about "code_version" above
+        "code_version": "b6437f45b7bbbb15f5eddc2eace4c71a8625da8c"
       }
     },
 
@@ -314,6 +335,15 @@ The example JSON payload below describes all the required and optional params th
     // If omitted, we'll determine this on the backend.
     "title": "NameError when setting last project in views/project.py",
 
+    // Optional: uuid
+    // A string, up to 36 characters, that uniquely identifies this occurrence.
+    // While it can now be any latin1 string, this may change to be a 16 byte field in the future.
+    // We recommend using a UUID4 (16 random bytes).
+    // The UUID space is unique to each project, and can be used to look up an occurrence later.
+    // It is also used to detect duplicate requests. If you send the same UUID in two payloads, the second
+    // one will be discarded.
+    "uuid": "d4c7acef55bf4c9ea95e4fe9428a8287",
+
     // Optional: notifier
     // Describes the library used to send this event.
     "notifier": {
@@ -332,7 +362,52 @@ The example JSON payload below describes all the required and optional params th
 
 Note that you can send us whatever data you want and we'll store it. Max paylaod size is 128kb. For best results, put custom data in "request", "server", "client", "person", or "custom".
 
-### Error Responses
+### Response Format
+
+#### Success
+
+On success, this endpoint will respond with HTTP status code 200, and a JSON response like the following:
+
+```javascript
+{
+  // Always present: err
+  // 0 indiciates that there was no error
+  err: 0,
+
+  // Always present: result
+  result: {
+    // Always present: uuid
+    // UUID of the posted occurrence.
+    // If you provided one in the payload, this will be the value you provided
+    // If you did not, one will be generated for you. 
+    // You can use this later to look up the occurrence by UUID.
+    uuid: "d4c7acef55bf4c9ea95e4fe9428a8287",
+    
+    // Deprecated: id
+    // Unused; will be removed in the future
+    id: null
+  }
+}
+```
+
+On error, this endpoint will respond with an HTTP error code 400 or higher, and a JSON response like the following:
+
+```javascript
+{
+  // Always present: err
+  // 1 indicates there was an error
+  err: 1,
+
+  // Always present: message
+  // A human-readable message describing the error
+  message: "request entity too large'
+}
+```
+
+See the next section for more details about the response codes.
+
+
+### Response Codes
 
 The Items API can return the following status codes:
 
