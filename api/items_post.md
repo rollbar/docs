@@ -430,7 +430,7 @@ On error, this endpoint will respond with an HTTP error code 400 or higher, and 
 
   // Always present: message
   // A human-readable message describing the error
-  message: "request entity too large'
+  message: "request entity too large"
 }
 ```
 
