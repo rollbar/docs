@@ -15,12 +15,22 @@ Analogous to the "Top 10 items in last 24 hours" report on the Dashboard.
 
     GET /api/1/reports/top_active_items
 
+Returns the top 10 active items in the specified environments (default "any environment"), ordered descending by level (critical first) and then descending by the count within the specied time period (default "last 24 hours").
+
+The return value includes both the items and an array of the counts for each hour. The counts array has the oldest counts first.
+
 ### Parameters
 
 Name | Type | Description
 -----|------|------------
 `hours`|`integer`|Number of recent hours to consider. Min 1, max 168, default 24. Optional.
 `environments`|`string`|Comma-separated list of environments to consider. Optional; empty means "any environment"
+
+### Example
+
+```
+curl 'https://api.rollbar.com/api/1/reports/top_active_items?access_token=aaaabbbbccccddddeeeeffff00001111&hours=48&environments=production,staging'
+```
 
 ### Response
 
