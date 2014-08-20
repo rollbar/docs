@@ -70,7 +70,7 @@ Response is JSON.
 
 Analogous to "Hourly Error/Critical Occurrences" and "Daily Error/Critical Occurrences" on the Dashboard.
 
-    GET /api/1/occurrence_counts
+    GET /api/1/reports/occurrence_counts
 
 Returns an array of recent counts as `[timestamp, count]` pairs, where each `count` is the number of matching occurrences in the time range `[timestamp, timestamp + bucket_size - 1]`.
 
