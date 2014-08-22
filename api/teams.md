@@ -32,7 +32,7 @@ Creates a new team in the authenticated account.
 Name | Type | Description
 -----|------|-------------
 `name`|`string`|**Required.** Name of the team. Max length 32 characters.
-`access_level`|`string`|**Required.** Can be either `standard` or `light`.
+`access_level`|`string`|**Required.** Can be either `standard`, `light`, or `view`.
 
 Params must be supplied as JSON, and as the body of the request. Be sure to set the header `Content-Type: application/json`.
 
