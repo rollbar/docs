@@ -15,6 +15,8 @@ Returns all invites ever sent for the team--pending, accepted, rejected, and can
 
     GET /api/1/team/:id/invites
 
+Returns up to 5000 results. Add `&page=2` to the URL to go to the next page.
+
 
 ## Invite a user to a team
 
@@ -42,4 +44,4 @@ Cancels an invite, making it no longer valid to accept. If it has already been a
 
 -----
 
-Last updated: November 26, 2013
+Last updated: September 16, 2014

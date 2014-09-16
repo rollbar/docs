@@ -13,12 +13,14 @@ These calls require an account-level access token, which should be provided in t
 
 ## List project access tokens
 
+Lists all access tokens for the specified project.
+
     GET /api/1/project/:id/access_tokens
 
 
 ## List your projects
 
-Lists projects for the authenticated account.
+Lists all projects for the authenticated account.
 
     GET /api/1/projects
 
@@ -46,4 +48,4 @@ Deletes the specified project. Be careful, there is no easy undo! If you mistake
 
 -----
 
-Last updated: November 26, 2013
+Last updated: September 16, 2014
