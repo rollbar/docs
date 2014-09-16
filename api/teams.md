@@ -20,6 +20,8 @@ Lists teams for the authenticated account.
 
     GET /api/1/teams
 
+Returns up to 20 results. Add `&page=2` to go to the next page.
+
 
 ## Create a team
 
@@ -54,6 +56,8 @@ Note: the Owners team (which has access level `owner`) is special and cannot be 
 
     GET /api/1/team/:team_id/projects
 
+Returns up to 20 results. Add `&page=2` to go to the next page.
+
 
 ## Add a project to a team
 
@@ -74,6 +78,8 @@ Note: the Owners team (which has access level `owner`) is special and cannot be 
 
     GET /api/1/team/:team_id/users
 
+Returns up to 5000 results. Add `&page=2` to go to the next page.
+
 
 ## Remove a user from a team
 
@@ -83,5 +89,5 @@ Be careful, there is no undo!
 
 -----
 
-Last updated: November 26, 2013
+Last updated: September 16, 2014
 
