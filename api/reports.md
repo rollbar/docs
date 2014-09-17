@@ -81,7 +81,7 @@ Timestamps are UNIX timestamps, in whole seconds.
 Name | Type | Description
 -----|------|------------
 `access_token`|`string`|A `read`-scope access token for your project. Required.
-`bucket_size`|`integer`|Size of each bucket, in seconds. Valid values are `3600` (hour) and `86400` (day). Optional, default `86400`.
+`bucket_size`|`integer`|Size of each bucket, in seconds. Valid values are `3600` (hour) and `86400` (day). Optional, default `86400`. Timezone for all buckets is GMT.
 `buckets`|`integer`|Number of buckets to return. Must be in range `[2, 60]`. Optional, default `60`.
 `environments`|`string`|Comma-separated list of environments to consider. Optional; empty means "any environment".
 
@@ -125,5 +125,5 @@ Response is JSON.
 
 -----
 
-Last updated: August 20, 2014
+Last updated: September 17, 2014
 
