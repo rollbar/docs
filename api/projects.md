@@ -6,23 +6,16 @@ These calls require an account-level access token, which should be provided in t
 
 ---
 
-## Get a project
-
-    GET /api/1/project/:id
-
-
-## List project access tokens
-
-Lists all access tokens for the specified project.
-
-    GET /api/1/project/:id/access_tokens
-
-
 ## List your projects
 
 Lists all projects for the authenticated account.
 
     GET /api/1/projects
+
+
+## Get a project
+
+    GET /api/1/project/:id
 
 
 ## Create a project
@@ -45,6 +38,13 @@ Params must be supplied as JSON, and as the body of the request. Be sure to set 
 Deletes the specified project. Be careful, there is no easy undo! If you mistakenly delete a project, please contact [support](support@rollbar.com) immediately.
 
     DELETE /api/1/project/:id
+
+
+## List project access tokens
+
+Lists all access tokens for the specified project.
+
+    GET /api/1/project/:id/access_tokens
 
 
 ## Update rate limits for a project access token
