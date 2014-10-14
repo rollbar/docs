@@ -46,6 +46,23 @@ Deletes the specified project. Be careful, there is no easy undo! If you mistake
 
     DELETE /api/1/project/:id
 
+
+## Update rate limits for a project access token
+
+Updates a project access token's rate limit settings.
+
+    PATCH /api/1/project/:id/access_token/:project_access_token
+
+### Parameters
+
+Name | Type | Description
+-----|------|-------------
+`rate_limit_window_count`|`integer`|**Optional.** Max number of calls the token is permitted within each window. Must be greater than -1;
+`rate_limit_window_size`|`integer`|**Optional.** Window duration in seconds. Must be greater than -1;
+
+If `rate_limit_window_size` or `rate_limit_window_count` is set to `0`, the access token will have no rate limit.
+Params must be supplied as JSON, and as the body of the request. Be sure to set the header `Content-Type: application/json`.
+
 -----
 
-Last updated: September 16, 2014
+Last updated: October 14, 2014
