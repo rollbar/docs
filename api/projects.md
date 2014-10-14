@@ -57,8 +57,8 @@ Updates a project access token's rate limit settings.
 
 Name | Type | Description
 -----|------|-------------
-`rate_limit_window_count`|`integer`|**Optional.** Max number of calls the token is permitted within each window. Must be greater than -1;
-`rate_limit_window_size`|`integer`|**Optional.** Window duration in seconds. Must be greater than -1;
+`rate_limit_window_count`|`integer`|**Optional.** Max number of calls the token is permitted within each window. Must be greater than -1.
+`rate_limit_window_size`|`integer`|**Optional.** Window duration in seconds. Must be greater than -1.
 
 If `rate_limit_window_size` or `rate_limit_window_count` is set to `0`, the access token will have no rate limit.
 Params must be supplied as JSON, and as the body of the request. Be sure to set the header `Content-Type: application/json`.
