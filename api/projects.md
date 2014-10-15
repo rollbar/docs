@@ -35,7 +35,7 @@ Params must be supplied as JSON, and as the body of the request. Be sure to set 
 
 ## Delete a project
 
-Deletes the specified project. Be careful, there is no easy undo! If you mistakenly delete a project, please contact [support](support@rollbar.com) immediately.
+Deletes the specified project. Be careful, there is no easy undo! If you mistakenly delete a project, please contact [support](mailto:support@rollbar.com) immediately.
 
     DELETE /api/1/project/:id
 
