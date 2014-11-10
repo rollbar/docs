@@ -47,7 +47,7 @@ The example JSON payload below describes all the required and optional params th
 {
   // Required: access_token
   // An access token with scope "post_server_item" or "post_client_item".
-  // A post_client_item token must be used if the "platform" is "browser", "flash", "android", or "ios"
+  // A post_client_item token must be used if the "platform" is "browser", "android", "ios", "flash", or "client"
   // A post_server_item token should be used for other platforms.
   "access_token": "aaaabbbbccccddddeeeeffff00001111",
 
@@ -213,7 +213,7 @@ The example JSON payload below describes all the required and optional params th
 
     // Optional: platform
     // The platform on which this occurred. Meaningful platform names:
-    // "browser", "flash", "android", "ios", "heroku", "google-app-engine"
+    // "browser", "android", "ios", "flash", "client", "heroku", "google-app-engine"
     // If this is a client-side event, be sure to specify the platform and use a post_client_item access token.
     "platform": "linux",
 
