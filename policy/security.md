@@ -101,7 +101,18 @@ We follow best practices for securing SSH and used industry-standard tools such 
 
 #### Raw data
 
-The data we collect from our notifiers is referred to as "raw" data. We store this data in temporary files that have a very short lifetime (less than a few seconds) before loading them into a MySQL cluster and Memcache. The data stored in MySQL and Memcache is not encrypted, although it is compressed. Raw data is also stored in SoftLayer's [Object Storage](http://www.softlayer.com/cloudlayer/storage/) for long-term storage. Softlayer maintains its own access control mechanisms for reading and writing data to Object Storage. We have the ability to quickly generate new credentials and invalidate old ones as needed.
+The data we collect from our notifiers is referred to as "raw" data. We store this data in temporary files that have a very short lifetime (less than a few seconds) before loading them into a MySQL cluster and Memcache. The data stored in MySQL and Memcache is not encrypted, although it is compressed.
+
+#### Uploaded data
+
+Data that is uploaded to Rollbar by our customers is temporarily stored on disk before it is compressed, encrypted and stored in MySQL alongside our raw data. The data is encrypted with a different secret key per project.
+
+Uploaded data includes:
+- iOS dSYM files
+- Javascript source maps
+- Java Proguard files
+
+Files uploaded to Rollbar are available for download by any user that has access to the project.
 
 #### Aggregate data
 
@@ -112,8 +123,6 @@ We process all of the raw data into an aggregate form to present to customers. T
 Data retention period varies based on account type: 30 days for the Free plan, 90 days for Starter, and 180 days for Small and above. After that period, data is eligible for deletion. The deletion process runs periodically and includes deleting the raw data from all locations (Memcache, MySQL, and Object Storage). Aggregate data is not typically deleted.
 
 Data can also be deleted individually on a one-off basis. To delete an individual occurrence, press the "Delete" button at the bottom of the occurrence detail page. If you need a large amount of occurrences or other data to be deleted immediately, please contact [support@rollbar.com](support@rollbar.com).
-
-All MySQL data is backed up nightly to a backup server within our SoftLayer infrastructure, stored as a compressed version of each database. Backups are periodically deleted (typically within 1 month) based on storage considerations.
 
 #### Logical Partitioning and Data Access
 
