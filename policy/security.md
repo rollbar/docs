@@ -1,6 +1,6 @@
 # Rollbar Security Policy
 
-Last updated: November 6, 2013
+Last updated: December 15, 2014
 
 <!-- Sub:[TOC] -->
 
