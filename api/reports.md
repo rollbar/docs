@@ -84,6 +84,8 @@ Name | Type | Description
 `bucket_size`|`integer`|Size of each bucket, in seconds. Valid values are `3600` (hour) and `86400` (day). Optional, default `86400`. Timezone for all buckets is GMT.
 `buckets`|`integer`|Number of buckets to return. Must be in range `[2, 60]`. Optional, default `60`.
 `environments`|`string`|Comma-separated list of environments to filter by. Optional; empty means "any environment".
+`min_level`|`string`|Minimum item level to filter by. One of `debug`, `info`, `warning`, `error`, or `critical`. Optional, default `error`
+`max_level`|`string`|Maximum item level to filter by. One of `debug`, `info`, `warning`, `error`, or `critical`. Optional, defaults to "no maximum"
 `item_id`|`integer`|Item ID to filter by. Optional. Note that this is an Item *ID* (usually a 9-digit number), not an Item Counter (the shorter numbers that appear in the UI. See [Get an item by counter](/docs/api/items/#get-an-item-by-counter).
 
 ### Example
