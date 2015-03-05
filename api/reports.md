@@ -82,7 +82,7 @@ Name | Type | Description
 -----|------|------------
 `access_token`|`string`|A `read`-scope access token for your project. Required.
 `bucket_size`|`integer`|Size of each bucket, in seconds. Valid values are `3600` (hour) and `86400` (day). Optional, default `86400`. Timezone for all buckets is GMT.
-`buckets`|`integer`|Number of buckets to return. Must be in range `[2, 60]`. Optional, default `60`.
+`buckets`|`integer`|Number of buckets to return. Must be in range `[2, 366]`. Optional, default `60`.
 `environments`|`string`|Comma-separated list of environments to filter by. Optional; empty means "any environment".
 `min_level`|`string`|Minimum item level to filter by. One of `debug`, `info`, `warning`, `error`, or `critical`. Optional, default `error`
 `max_level`|`string`|Maximum item level to filter by. One of `debug`, `info`, `warning`, `error`, or `critical`. Optional, defaults to "no maximum"
