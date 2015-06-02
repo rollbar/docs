@@ -125,8 +125,63 @@ Response is JSON.
 ```
 
 
+## Activated counts
+
+Analogous to "Daily New/Reactivated Items" graph on the Dashboard.
+
+    GET /api/1/reports/activated_counts
+
+Returns an array of recent counts as `[timestamp, count]` pairs, where each `count` is the number of items that were first seen or reactivated in the time range `[timestamp, timestamp + bucket_size - 1]`.
+
+Timestamps are UNIX timestamps, in whole seconds.
+
+### Query Parameters
+
+Name | Type | Description
+-----|------|------------
+`access_token`|`string`|A `read`-scope access token for your project. Required.
+`bucket_size`|`integer`|Size of each bucket, in seconds. Only valid value is `86400` (day). Data wil be returned in the project timezone.
+`buckets`|`integer`|Number of buckets to return. Must be in range `[2, 366]`. Optional, default `60`.
+`environments`|`string`|Comma-separated list of environments to filter by. Optional; empty means "any environment".
+
+### Example
+
+```bash
+curl 'https://api.rollbar.com/api/1/reports/activated_counts?access_token=aaaabbbbccccddddeeeeffff00001111&bucket_size=86400&buckets=4&environments=production,staging'
+```
+
+### Response
+
+Response is JSON.
+
+```javascript
+{
+  "err": 0,
+  "result": [
+    [
+      // timestamp
+      1408561200,
+      // count (number of occurrences from time 1408561200 until time 1408564799)
+      0
+    ],
+    [
+      1408564800,
+      0
+    ],
+    [
+      1408568400,
+      0
+    ],
+    [
+      1408572000,
+      6
+    ]
+  ]
+}
+```
+
 
 -----
 
-Last updated: September 17, 2014
+Last updated: June 2, 2015
 
