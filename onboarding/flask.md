@@ -11,7 +11,7 @@ pip install rollbar
 
 Here's a simple Flask app that demonstrates how you import and initialize the Rollbar
 notifier end gister an exception handler.
-```
+```python
 from flask import Flask
 app = Flask(__name__)
 
