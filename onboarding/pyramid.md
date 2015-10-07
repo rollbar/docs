@@ -11,7 +11,7 @@ pip install rollbar
 
 In your ``ini`` file (e.g. ``production.ini``), add ``rollbar.contrib.pyramid`` to the end of your ``pyramid.includes``:
 
-```
+```ini
 [app:main]
 pyramid.includes =
     pyramid_debugtoolbar
@@ -20,7 +20,7 @@ pyramid.includes =
   
 And add these rollbar configuration variables:
 
-```
+```ini
 [app:main]
 rollbar.access_token = {{ server_access_token }}
 rollbar.environment = production
@@ -31,14 +31,14 @@ The above will configure Rollbar to catch and report all exceptions that occur i
 
 To do this, first change your ```ini``` file to use a ```pipeline```. Change this:
 
-```
+```ini
 [app:main]
 #...
 ```
 
 To:
 
-```
+```ini
 [pipeline:main]
 pipeline =
     rollbar
