@@ -62,7 +62,7 @@ branch = master
 root = %(here)s
 ```
 
-Note that the access_token, environment, and other Rollbar config params do need to be present in both the ```app``` section and the ```filter``` section.
+Note that the access_token, environment, and other Rollbar config params need to be present in both the ```app``` section and the ```filter``` section.
 
 
 For additional pyrollbar configuration options, see [Configuring pyrollbar](https://github.com/rollbar/pyrollbar).
