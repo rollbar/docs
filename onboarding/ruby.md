@@ -67,4 +67,4 @@ instructions for using Rollbar with specific web frameworks, see:
 * [Configuring rollbar-gem](https://github.com/rollbar/rollbar-gem).
 * [Using Rollbar with Rails](https://github.com/rollbar/rollbar-gem).
 * [Using Rollbar with Rack](https://github.com/rollbar/rollbar-gem).
-* [Tracking Capistrano Deploys]](https://github.com/rollbar/rollbar-gem).
+* [Tracking Capistrano Deploys](https://github.com/rollbar/rollbar-gem).
