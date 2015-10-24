@@ -1,32 +1,34 @@
-## Installation
+1. Install [pyrollbar](https://github.com/rollbar/pyrollbar) with [pip](http://pip.readthedocs.org/en/stable/quickstart/):
 
-To send errors to Rollbar from your Python application you should use 
-[pyrollbar](http://github.com/rollbar/pyrollbar) notifier library. Install pyrollbar with pip:
+    ```python
+    pip install rollbar
+    ```
 
-```python
-pip install rollbar
-```
+2. In your ``settings.py``, add ``'rollbar.contrib.django.middleware.RollbarNotifierMiddleware'`` as the last item in ``MIDDLEWARE_CLASSES``:
 
-## Add Rollbar to Your Django Application
+    ```python
+    MIDDLEWARE_CLASSES = (
+        # ... other middleware classes ...
+        'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
+    )
+    ```
 
-In your ``settings.py``, add ``'rollbar.contrib.django.middleware.RollbarNotifierMiddleware'`` as the last item in ``MIDDLEWARE_CLASSES``:
+3. Add the following in ``settings.py``:
 
-```python
-MIDDLEWARE_CLASSES = (
-    # ... other middleware classes ...
-    'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
-)
-```
+    ```python
+    ROLLBAR = {
+        'access_token': '{{ server_access_token }}',
+        'environment': 'development' if DEBUG else 'production',
+        'root': BASE_DIR,
+    }
+    import rollbar
+    rollbar.init(**ROLLBAR)
+    ```
 
-Add these configuration variables in ``settings.py``:
+4. Send a test message:
 
-```python
-ROLLBAR = {
-    'access_token': '{{ server_access_token }}',
-    'environment': 'development' if DEBUG else 'production',
-    'branch': 'master',
-    'root': '/absolute/path/to/code/root',
-}
-```
-
-For additional pyrollbar configuration options, see [Configuring pyrollbar](https://github.com/rollbar/pyrollbar).
+    ```shell
+    python manage.py shell
+    >>> import rollbar
+    >>> rollbar.report_message("Hello world")
+    ```

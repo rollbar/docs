@@ -24,5 +24,3 @@ var _rollbarConfig = {
 3. Type the following and press enter:
     
     `window.onerror("TestError: Hello world", window.location.href)`
-
-Rollbar will process it within just a few seconds. 
