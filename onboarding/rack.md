@@ -1,23 +1,20 @@
-## Installation
+## Install the gem
 
-To send errors to Rollbar from your Ruby application you should use
-[rollbar-gem](http://github.com/rollbar/rollbar-gem) notifier library.
-
-If you're using bundler, add
+Add to your Gemfile:
 
 ```ruby
-gem 'rollbar', '~> 1.5.3'
+gem 'rollbar', '~> 2.5.0'
 ```
 
-and run
+Then run:
 
-```sh
+```shell
 bundle install
 ```
 
-otherwise you can simply
+If you don't use bundler:
 
-```sh
+```
 gem install rollbar
 ```
 
@@ -32,9 +29,6 @@ Rollbar.configure do |config|
   # ...
 end
 ```
-
-<!-- RemoveNextIfProject -->
-Be sure to replace ```{{ server_access_token }}``` with your project's ```post_server_item``` access token, which you can find in the Rollbar.com interface.
 
 This monkey patches `Rack::Builder` to work with Rollbar automatically.
 
@@ -67,5 +61,3 @@ $ rake rollbar:test
 ```
 
 This will raise an exception within a test request; if it works, you'll see a stacktrace in the console, and the exception will appear in the Rollbar dashboard.
-
-
