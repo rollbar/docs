@@ -27,7 +27,7 @@ a message to Rollbar is as simple as:
 require 'rollbar'
 
 Rollbar.configure do |config|
-  config.access_token = '{{ server_access_token}}'
+  config.access_token = '{{ server_access_token }}'
 end
 
 Rollbar.error('Hello world')
