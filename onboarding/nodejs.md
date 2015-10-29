@@ -5,6 +5,7 @@ Install the Rollbar [node.js](https://github.com/rollbar/node_rollbar) notifier 
 ```bash
 $ npm install --save rollbar
 ```
+
 ## Send a Message to Rollbar
 
 ```javascript
