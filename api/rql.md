@@ -4,7 +4,7 @@ These calls require a project-level access token with `read` scope, which should
 
 ## Create a RQL job
 
-Creates a new RQLjob if `force_refresh` is true or one for the same `query_string` does not already exist. Returns the found or newly-created RQL job object.
+Creates a new RQL job if `force_refresh` is true or one for the same `query_string` does not already exist. Returns the found or newly-created RQL job object.
 
     POST /api/1/rql/jobs
 
@@ -129,7 +129,7 @@ The response will be a RQL job result resource, example:
       "rowcount": 1,
       "executionTime": 123
     },
-    "job": {...} // A RQL job resource if result=job is set in the query string
+    "job": {...} // A RQL job resource if expand=job is set in the query string
   }
 }
 
