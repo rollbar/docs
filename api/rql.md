@@ -29,7 +29,7 @@ The response will be a RQL Job resource, example:
     "id": 123,  // job id
     "project_id": 456,
     "query_string": "show tables",
-    "status": "new",
+    "status": "new", // One of "new", "running", "success", "failed", "cancelled", or "timed_out"
     "job_hash": "abcdefabcdefabcdef",
     "date_created": 1446598885,
     "date_modified": 1446598885
@@ -55,7 +55,7 @@ The response will be a RQL Job resource, example:
     "id": 123,  // job id
     "project_id": 456,
     "query_string": "show tables",
-    "status": "new",
+    "status": "new", // One of "new", "running", "success", "failed", "cancelled", or "timed_out"
     "job_hash": "abcdefabcdefabcdef",
     "date_created": 1446598885,
     "date_modified": 1446598885
@@ -87,7 +87,7 @@ The response will be a RQL Job resource, example:
     "id": 123,  // job id
     "project_id": 456,
     "query_string": "show tables",
-    "status": "new",
+    "status": "new", // One of "new", "running", "success", "failed", "cancelled", or "timed_out"
     "job_hash": "abcdefabcdefabcdef",
     "date_created": 1446598885,
     "date_modified": 1446598885,
