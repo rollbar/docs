@@ -4,6 +4,7 @@ a future release.
 
 1. Download the new On-Premise distribution *.tar.gz* file
 2. Uncompress and unarchive
+
    ```sh
    cd rollbar-enterprise_2016-03-01 && ./install.sh
    ```
@@ -15,6 +16,7 @@ a future release.
    ./stop.sh
    ```
 4. Install the new version
+
    ```sh
    ./install.sh
    ```
@@ -27,6 +29,7 @@ a future release.
    ./configure.sh -f ../PREVIOUS_INSTALLATION_DIRECTORY/.settings --save
    ```
 6. Start/upgrade to the new version
+
    ```sh
    ./start.sh --run-migrations
    ```
