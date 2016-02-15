@@ -1,4 +1,4 @@
-The upgrade process currently requires stopping all Rollbar services before performing the upgrade. 
+**Note:** The upgrade process currently requires stopping all Rollbar services before performing the upgrade. 
 During this time, errors will not be captured. We will provide a zero-downtime upgrade process in 
 a future release.
 
