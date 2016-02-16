@@ -55,3 +55,10 @@ There are a couple of extra steps that a required in order to upgrade from a ver
   Previous versions save data in */data/** but the newer version stores data in */opt/rollbar*. 
   In order to upgrade from one of these versions, you will need to rename the */data/** directories
   to */opt/rollbar/** before running *start.sh*.
+  
+  E.g.
+  
+  ```sh
+  mkdir -p /opt/rollbar
+  mv /data/* /opt/rollbar/
+  ```
