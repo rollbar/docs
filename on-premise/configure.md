@@ -55,6 +55,18 @@ These configuration files are installed into */etc/rollbar* by the *configuratio
 You should **not** edit these files by hand since they will be overwritten by the *configuration.sh*
 script.
 
+## Custom SSL Certs
+
+The On-Premise configuration script will generate a self-signed SSL cert to use for the initial setup. We recommend
+using your own SSL cert which matches the FQDN you provide *configure.sh*.
+
+To add your own cert, replace the generated */etc/rollbar/rollbar.cert* and */etc/rollbar/rollbar.key* files
+with your own. Make sure the provided SSL cert does not have a password.
+
+**Note:** These files will be overwritten each time you run *configure.sh* so be sure to replace
+them each time you re-run the configuration script. We will provide a cleaner mechanism for using your own
+certs in a future release.
+
 ## Networking
 
 Rollbar services run in Docker containers. These containers are able to talk to each other on the 
