@@ -47,13 +47,8 @@ For a full list of the different services you can install and run, see the
 ## Requirements
 
 - Download and unarchive the *.tar.gz* file onto your hosts
-- The *.settings* file from your original Rollbar host copied onto your other hosts
-- The private IP address of your original Rollbar host to use with the **--join** flag
-  - To get this, run the following on your original Rollbar host
-   
-    ```sh
-    ifconfig `grep IFACE .settings | awk 'BEGIN {FS="\""};{print $2}'`
-    ```
+- The *.settings* file from your original Rollbar host copied onto your other hosts in the same
+  directory as the *configure.sh* script.
 
 ## Configure
 
@@ -63,18 +58,18 @@ you would like to install and run.
 ### Run the bundled MySQL database
   
 ```sh
-./configure.sh -f path/to/settings/file --join IP --services mysql --save
+./configure.sh -f .settings --services mysql --save
 ```
   
 ### Run extra Rollbar workers
  
 ```sh
-./configure.sh -f path/to/settings/file --join IP --services worker --save
+./configure.sh -f .settings --services worker --save
 ```
   
 ### Add capacity to the Rollbar API/Web tier
 
 ```sh
-./configure.sh -f path/to/settings/file --join IP --services api,web --save
+./configure.sh -f .settings --services api,web --save
 ```
 
