@@ -26,6 +26,9 @@ a future release.
    you uncompressed the original archive into. Copy this file into the new distribution directory
    and name it ".settings".
    
+   If you do not have this file it is likely that you are upgrading from a version built before 
+   2/16/2016. See instructions below.
+   
    ```sh
    ./configure.sh -f .settings --save
    ```
@@ -34,3 +37,21 @@ a future release.
    ```sh
    ./start.sh --run-migrations
    ```
+
+### Upgrading from a version built before 2/16/2016
+
+There are a couple of extra steps that a required in order to upgrade from a version build before
+2.16.2016.
+
+- The configure step will require some extra information for external services
+  
+  If you are using any external services, (e.g. your own MySQL, Redis, Memcache, Beanstalk, Postfix server)
+  you will need to provide these IPs to the configure script. 
+
+  See `configure.sh -h` for more information on which parameters to use.
+
+- Data directories will need to be moved into the new location
+
+  Previous versions save data in */data/** but the newer version stores data in */opt/rollbar*. 
+  In order to upgrade from one of these versions, you will need to rename the */data/** directories
+  to */opt/rollbar/** before running *start.sh*.
