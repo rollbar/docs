@@ -43,10 +43,12 @@ a future release.
 There are a couple of extra steps that a required in order to upgrade from a version build before
 2.16.2016.
 
-- The configure step will require some extra information for external services
+- The configure step will require some extra information for external services and the hostname
   
   If you are using any external services, (e.g. your own MySQL, Redis, Memcache, Beanstalk, Postfix server)
   you will need to provide these IPs to the configure script. 
+
+  Also, you will need to specify the hostname for the Rollbar server. See the `--name` parameter.
 
   See `configure.sh -h` for more information on which parameters to use.
 
