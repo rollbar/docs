@@ -64,3 +64,5 @@ There are a couple of extra steps that a required in order to upgrade from a ver
   mkdir -p /opt/rollbar
   mv /data/* /opt/rollbar/
   ```
+
+If you run into any trouble, please contact support@rollbar.com and we will get you set up quickly.
