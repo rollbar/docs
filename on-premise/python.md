@@ -26,6 +26,7 @@ particular environment.
 The new settings will go into your init call:
 
 ```rollbar.init('POST_SERVER_ITEM_ACCESS_TOKEN',
+             'ENVIRONMENT',
              endpoint='https://<internal fqdn>/api/1/',
              verify_https=False)```
 
