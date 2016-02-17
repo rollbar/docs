@@ -1,3 +1,28 @@
+# Setup
+
+## Docker and Docker Compose
+
+To download and install the latest Docker:
+
+```
+apt-get update
+apt-get install apt-transport-https ca-certificates
+echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" > /etc/apt/sources.list.d/docker.list
+apt-get update
+apt-get purge lxc-docker
+apt-cache policy docker-engine
+apt-get install linux-image-extra-$(uname -r)
+apt-get install docker-engine
+service docker start
+```
+
+To install the required version of Docker Compose:
+
+```
+curl -L https://github.com/docker/compose/releases/download/1.6.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+chmod +x /usr/local/bin/docker-compose
+```
+
 # Single host
 
 1. Download the on-premise distribution .tar.gz file
