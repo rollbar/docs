@@ -41,7 +41,7 @@ a future release.
 ### Upgrading from a version built before 2/16/2016
 
 There are a couple of extra steps that a required in order to upgrade from a version build before
-2.16.2016.
+2/16/2016.
 
 - The configure step will require some extra information for external services and the hostname
   
