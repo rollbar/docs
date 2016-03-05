@@ -81,8 +81,8 @@ Timestamps are UNIX timestamps, in whole seconds.
 Name | Type | Description
 -----|------|------------
 `access_token`|`string`|A `read`-scope access token for your project. Required.
-`bucket_size`|`integer`|Size of each bucket, in seconds. Valid values are `3600` (hour) and `86400` (day). Optional, default `86400`. Timezone for all buckets is GMT.
-`buckets`|`integer`|Number of buckets to return. Must be in range `[2, 366]`. Optional, default `60`.
+`bucket_size`|`integer`|Size of each bucket, in seconds. Valid values are `60` (minute), `3600` (hour), and `86400` (day). Optional, default `86400`. Timezone for all buckets is GMT.
+`buckets`|`integer`|Number of buckets to return. Must be in range `[2, 366]` for hour or day buckets, and `[2, 240]` for minute buckets. Optional, default `60`.
 `environments`|`string`|Comma-separated list of environments to filter by. Optional; empty means "any environment".
 `min_level`|`string`|Minimum item level to filter by. One of `debug`, `info`, `warning`, `error`, or `critical`. Optional, default `error`
 `max_level`|`string`|Maximum item level to filter by. One of `debug`, `info`, `warning`, `error`, or `critical`. Optional, defaults to "no maximum"
@@ -183,5 +183,5 @@ Response is JSON.
 
 -----
 
-Last updated: June 2, 2015
+Last updated: March 4, 2016
 
