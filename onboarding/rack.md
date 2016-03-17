@@ -3,7 +3,7 @@
 Add to your Gemfile:
 
 ```ruby
-gem 'rollbar', '~> 2.7.1'
+gem 'rollbar', '~> 2.8.3'
 ```
 
 Then run:
