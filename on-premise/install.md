@@ -107,5 +107,5 @@ The quickest fix is to add your hostname to */etc/hosts*.
    
 E.g.
 ```
-echo "127.0.0.1 $(hostname)" >> /etc/hosts 
+echo "127.0.1.1 $(hostname)" >> /etc/hosts 
 ```
