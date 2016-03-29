@@ -98,3 +98,14 @@ you would like to install and run.
 ./configure.sh -f .settings --services api,web --save
 ```
 
+### FAQ
+
+#### Q. Why am I seeing "sudo: unable to resolve host ..." when I run *configure.sh*?
+
+Depending on your host configuration, it's possible that your hostname cannot be resolved. 
+The quickest fix is to add your hostname to */etc/hosts*.
+   
+E.g.
+```
+echo "127.0.0.1 $(hostname)" >> /etc/hosts 
+```
