@@ -37,6 +37,12 @@ a future release.
    ```sh
    ./start.sh --run-migrations
    ```
+   
+### FAQ
+
+#### Q. Why am I seeing "sudo: unable to resolve host ..." when I run *configure.sh*?
+
+See the answer [here](https://github.com/rollbar/docs/blob/on-prem-v1/on-premise/install.md#q-why-am-i-seeing-sudo-unable-to-resolve-host--when-i-run-configuresh).
 
 ### Upgrading from a version built before 2/16/2016
 
