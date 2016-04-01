@@ -13,6 +13,7 @@ apt-get purge lxc-docker
 apt-cache policy docker-engine
 apt-get install linux-image-extra-$(uname -r)
 apt-get install docker-engine
+service docker stop
 service docker start
 ```
 
