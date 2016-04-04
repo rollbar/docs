@@ -25,20 +25,24 @@ particular environment.
 
 The new settings will go into your init call:
 
-```rollbar.init('POST_SERVER_ITEM_ACCESS_TOKEN',
+```py
+rollbar.init('POST_SERVER_ITEM_ACCESS_TOKEN',
              'ENVIRONMENT',
              endpoint='https://<internal fqdn>/api/1/',
-             verify_https=False)```
+             verify_https=False)
+```
 
 ## django
 
 The new settings will go into `settings.py`:
 
-```ROLLBAR = {
+```py
+ROLLBAR = {
     'access_token': 'POST_SERVER_ITEM_ACCESS_TOKEN',
     'environment': 'development' if DEBUG else 'production',
     'branch': 'master',
     'root': '/absolute/path/to/code/root',
     'endpoint': 'https://<internal fqdn>/api/1/',
     'verify_https': False
-}```
+}
+```
