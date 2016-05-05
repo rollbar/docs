@@ -94,7 +94,8 @@ services to be used by Rollbar.
 
 **Note:** The current On-Premise distribution does not work with MySQL SSL connections. This will be fixed in a future release.
 
-**Note:** Parameterization of the MySQL username/password will be implemented in a future release. This is possible to do with the current release but requires editing some configuration files. Please contact support@rollbar.com for more information.
+**Note:** Parameterization of the MySQL username/password will be implemented in a future release. This is possible to do with the
+current release but requires editing some configuration files. Please contact support@rollbar.com for more information.
 
 Rollbar has been tested to work with MySQL/Percona 5.6.
 
@@ -117,6 +118,14 @@ CREATE USER haproxy@'%';
 
 FLUSH PRIVILEGES;
 ```
+
+### RDS
+
+Rollbar has been tested to work with MySQL 5.6 (specifically 5.6.27, but any 5.6 version should work).
+
+Settings need to be tweaked in RDS before Rollbar code will work with it.  Change the `log_bin_trust_function_creators` setting
+to make this work.  Create a new parameter group, change the `log_bin_trust_function_creators` setting to `1`, then apply the parameter group
+to the RDS instance.  Do this before configuring and starting the Rollbar docker containers.
 
 ### SphinxSearch
 
