@@ -60,7 +60,7 @@ Details
 
 ### Response Codes
 
-If your access token does not have a rate limit or has not yet reached
+If your access token has a rate limit and has reached
 it, all successful API calls will result in a HTTP 429 (Too Many
 Requests) response code. Once the limit is reached, there can be a short
 delay before our servers begin to reply with a 429. This does not mean
@@ -74,5 +74,4 @@ handle the 429 response code.
 ### Billing
 
 At the end of your billing cycle, the total charge is calculated based
-on all items saved and processed. This will only include items that were
-not rate limited.
+on all items saved and processed. This will not include items that were not processed due to your rate limits.
