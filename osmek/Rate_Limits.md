@@ -61,7 +61,7 @@ Details
 ### Response Codes
 
 If your access token has a rate limit and has reached
-it, all successful API calls will result in a HTTP 429 (Too Many
+it, all successful API calls will result in an HTTP 429 (Too Many
 Requests) response code. Once the limit is reached, there can be a short
 delay before our servers begin to reply with a 429. This does not mean
 that these items will count towards your bill. These items will not be
