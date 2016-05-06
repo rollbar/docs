@@ -13,13 +13,14 @@ apt-get purge lxc-docker
 apt-cache policy docker-engine
 apt-get install linux-image-extra-$(uname -r)
 apt-get install docker-engine
+service docker stop
 service docker start
 ```
 
 To install the required version of Docker Compose:
 
 ```
-curl -L https://github.com/docker/compose/releases/download/1.6.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+curl -L https://github.com/docker/compose/releases/download/1.6.1/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
 chmod +x /usr/local/bin/docker-compose
 ```
 
@@ -98,3 +99,14 @@ you would like to install and run.
 ./configure.sh -f .settings --services api,web --save
 ```
 
+### FAQ
+
+#### Q. Why am I seeing "sudo: unable to resolve host ..." when I run *configure.sh*?
+
+Depending on your host configuration, it's possible that your hostname cannot be resolved. 
+The quickest fix is to add your hostname to */etc/hosts*.
+   
+E.g.
+```
+echo "127.0.1.1 $(hostname)" >> /etc/hosts 
+```
