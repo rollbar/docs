@@ -122,3 +122,7 @@ E.g.
 ```
 echo "127.0.1.1 $(hostname)" >> /etc/hosts
 ```
+
+#### Q. My email doesn't seem to be sending.  What's up with that?
+
+Take a look at our [email page](email.md).
