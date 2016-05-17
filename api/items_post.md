@@ -365,13 +365,14 @@ The example JSON payload below describes all the required and optional params th
     // If omitted, we'll determine this on the backend.
     "title": "NameError when setting last project in views/project.py",
 
-    // Optional: uuid
+    // Semi-Optional: uuid
     // A string, up to 36 characters, that uniquely identifies this occurrence.
     // While it can now be any latin1 string, this may change to be a 16 byte field in the future.
     // We recommend using a UUID4 (16 random bytes).
     // The UUID space is unique to each project, and can be used to look up an occurrence later.
     // It is also used to detect duplicate requests. If you send the same UUID in two payloads, the second
     // one will be discarded.
+    // If you are implementing a notifer please generate this in your client.
     "uuid": "d4c7acef55bf4c9ea95e4fe9428a8287",
 
     // Optional: notifier
