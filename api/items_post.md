@@ -115,16 +115,45 @@ The example JSON payload below describes all the required and optional params th
               "post": []
             },
 
-            // Optional: args
+            // (Deprecated) Optional: args
             // List of values of positional arguments to the method/function call
             // NOTE: as this can contain sensitive data, you may want to scrub the values
             "args": ["<Request object>", 25],
 
-            // Optional: kwargs
+            // (Deprecated) Optional: kwargs
             // Object of keyword arguments (name => value) to the method/function call
             // NOTE: as this can contain sensitive data, you may want to scrub the values
             "kwargs": {
               "force": true
+            },
+
+            // Optional: argspec
+            // List of the names of the arguments to the method/function call.
+            "argspec": ["request", "user"],
+
+            // Optional: varargspec
+            // If the function call takes an arbitrary number of unnamed positional arguments,
+            // the name of the argument that is the list containing those arguments.
+            // For example, in Python, this would typically be "args" when "*args" is used.
+            // The actual list will be found in locals.
+            "varargspec": "args",
+
+            // Optional: keywordspec
+            // If the function call takes an arbitrary number of keyword arguments, the name
+            // of the argument that is the object containing those arguments.
+            // For example, in Python, this would typically be "kwargs" when "**kwargs" is used.
+            // The actual object will be found in locals.
+            "keywordspec": "kwargs",
+
+            // Optional: locals
+            // Object of local variables for the method/function call.
+            // The values of variables from argspec, vararspec and keywordspec
+            // can be found in locals.
+            "locals": {
+                "request": "<Request object>",
+                "user": "<User object>",
+                "args": [true, "Python"],
+                "kwargs": {"level": "warning"}
             }
           },
           {
