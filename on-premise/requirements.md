@@ -13,7 +13,7 @@ equivalent of m4.xlarge.
 
 ## Operating System and Packages
 
-- Ubuntu 14.04+
+- Ubuntu 14.04
 - Docker v1.9.1+
   - Tested with Docker 1.9.1, 1.10.1
 - Docker Compose 1.6.1
