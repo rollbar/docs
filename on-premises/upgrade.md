@@ -2,7 +2,7 @@
 During this time, errors will not be captured. We will provide a zero-downtime upgrade process in 
 a future release.
 
-1. Download the new On-Premise distribution *.tar.gz* file
+1. Download the new On-Premises distribution *.tar.gz* file
 2. Uncompress and unarchive
 
    ```sh
@@ -42,7 +42,7 @@ a future release.
 
 #### Q. Why am I seeing "sudo: unable to resolve host ..." when I run *configure.sh*?
 
-See the answer [here](https://github.com/rollbar/docs/blob/on-prem-v1/on-premise/install.md#q-why-am-i-seeing-sudo-unable-to-resolve-host--when-i-run-configuresh).
+See the answer [here](https://github.com/rollbar/docs/blob/master/on-premises/install.md#q-why-am-i-seeing-sudo-unable-to-resolve-host--when-i-run-configuresh).
 
 ### Upgrading from a version built before 2/16/2016
 

@@ -1,4 +1,4 @@
-# Requirements for Rollbar On-Premise
+# Requirements for Rollbar On-Premises
 
 ## Hardware
 

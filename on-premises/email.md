@@ -1,10 +1,10 @@
 # Email
 
-The on-premise Rollbar instance sends emails via standard SMTP.  The
+The on-premises Rollbar instance sends emails via standard SMTP.  The
 server to use can be configured when running the `configure.sh` program.
 This defaults to using the bundled postfix server solution.
 
-We setup your on-premise Rollbar instance to send emails with a from
+We set up your on-premises Rollbar instance to send emails with a from
 address patterned like `rollbar@yourdomain.com`.  The username part of
 the address is always `rollbar`.  The `yourdomain.com` portion comes
 from the FQDN you specify when running configure.sh.  This gives you a
@@ -36,7 +36,7 @@ solution when you don't have another one.
 
 When configuring your installation (running configure.sh), be sure to
 specify the `--smtp_host`, `--smtp_user`, and `--smtp_password`
-options. This will setup your on-premise Rollbar instance to use your
+options. This will set up your on-premises Rollbar instance to use your
 external SMTP provider.
 
 ## Amazon SES

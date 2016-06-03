@@ -38,7 +38,7 @@ chmod +x /usr/local/bin/docker-compose
 
 # Single host
 
-1. Download the on-premise distribution .tar.gz file
+1. Download the on-premises distribution .tar.gz file
    - Example: *rollbar-enterprise_2016-02-12.tar.gz*
 2. Uncompress and unarchive
 
@@ -65,7 +65,7 @@ chmod +x /usr/local/bin/docker-compose
 # Multiple Hosts
 
 Before you read this, take a moment to familiarize yourself with the
-[Rollbar On-Premise architecture](architecture.md "Rollbar On-Premise Architecture") and
+[Rollbar On-Premises architecture](architecture.md "Rollbar On-Premises Architecture") and
 the [advanced configuration](configure.md#advanced "Advanced Rollbar Configuration")
 documentation.
 
@@ -74,7 +74,7 @@ which services you want to run on the extra hosts. Below are some common choices
 
 - Run your MySQL database on a separate, dedicated host
   - Run your own managed MySQL database - See the [Advanced Configuration](configure.md#advanced "Advanced Rollbar Configuration") instructions.
-  - Run the bundled MySQL database that came with the On-Premise distribution
+  - Run the bundled MySQL database that came with the On-Premises distribution
 - Run extra Rollbar data pipeline workers
 - Add capacity to the Rollbar API tier by adding more API servers
 - Add capacity to the Rollbar Web tier by running more Web servers
