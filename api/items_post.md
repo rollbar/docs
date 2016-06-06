@@ -250,7 +250,7 @@ The example JSON payload below describes all the required and optional params th
     // The name of the language your code is written in.
     // This can affect the order of the frames in the stack trace. The following languages set the most
     // recent call first - 'ruby', 'javascript', 'php', 'java', 'objective-c', 'lua'
-    // It was also change the way the individual frames are displayed, with what is most consistent with
+    // It will also change the way the individual frames are displayed, with what is most consistent with
     // users of the language.
     "language": "python",
 
