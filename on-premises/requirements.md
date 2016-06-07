@@ -2,8 +2,8 @@
 
 ## Hardware
 
-The single-host install should work well with the following specs - The
-AWS EC2 equivalent of m4.xlarge.
+The single-host install should work well with the following specs.  This
+is the equivalent an AWS EC2 m4.xlarge instance.
 
 - 4+ core
 - 16GB RAM
@@ -28,7 +28,7 @@ In some of the environments we've encountered, the built-in SMTP server
 has problems sending mail.  Generally this is from things like bad IP
 address reputation or lack of good SPF and DKIM setups.  Needless to
 say, you'll almost certainly want to run your own SMTP server, or hook
-in to a service like Mailgun or Amazon SES.  If you care about email,
+in to a service like Mailgun or Amazon SES.  If you care about email
 notifications actually working, that is.
 
 ## Network Configuration
