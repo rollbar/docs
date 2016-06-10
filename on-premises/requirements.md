@@ -28,8 +28,7 @@ In some of the environments we've encountered, the built-in SMTP server
 has problems sending mail.  Generally this is from things like bad IP
 address reputation or lack of good SPF and DKIM setups.  Needless to
 say, you'll almost certainly want to run your own SMTP server, or hook
-in to a service like Mailgun or Amazon SES.  If you care about email
-notifications actually working, that is.
+in to a service like Mailgun or Amazon SES.
 
 ## Network Configuration
 
@@ -59,9 +58,9 @@ services, but not ports:
 If you're running Rollbar on multiple hosts, you'll need to make sure
 the following ports are open on your private network for the services on
 each host to talk to each other. Do *NOT* open these ports on your
-public network because we don't have any encryption or authentication
-between our internal services and you would get pwned very quickly
-indeed.
+public network because we did not design these services to be publicly
+facing and there isn't any encryption or authentication between them,
+which is very dangerous on the open internet.
 
 * moxui - 8080
 * react renderer - 8081
