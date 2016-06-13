@@ -48,17 +48,19 @@ that your self-hosted Rollbar instance is running on.
 If you're running some of the base services yourself instead of using
 the Rollbar supplied docker instances, you'll need to make sure all the
 necessary ports are open on your private network to talk to these
-services.  You won't want to expose these ports publicly unless you are
-*VERY* sure that you've got all your security ducks in a row (and you
-almost certainly don't).  We expect each service to be running on its
-default port, since we give you a way to specify IP addresses for these
-services, but not ports:
+services:
 
 * mysql - 3306
 * memcached - 11211
 * redis - 6379
 * beanstalk - 11300
 * sphinx - 9306
+
+(You won't want to expose these ports publicly unless you are *VERY*
+sure that you've got all your security ducks in a row [and you almost
+certainly don't].  We expect each service to be running on its default
+port; we give you a way to specify IP addresses for these services, but
+not ports.)
 
 If you're running Rollbar on multiple hosts, you'll need to make sure
 the following ports are open on your private network for the services on
