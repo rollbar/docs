@@ -33,12 +33,17 @@ in to a service like Mailgun or Amazon SES.
 ## Network Configuration
 
 We assume that you will at least have a publicly facing network and a
-private network for the docker host or hosts (if not more).  The
-following ports need to be open, both on the public and private
-networks:
+private network for the docker host or hosts.  The following ports need
+to be open, both on the public and private networks:
 
 * outbound ports: 25 (smtp), 80 (http) && 443 (https)
 * inbound ports: 80 (http) && 443 (https)
+
+Our code is configured to send outbound email over smtp using port 25.
+You will almost certainly need to open this port for outbound traffic.
+The only instance where this might not be true is if you are using
+your own smtp server that's available on the same private network
+that your self-hosted Rollbar instance is running on.
 
 If you're running some of the base services yourself instead of using
 the Rollbar supplied docker instances, you'll need to make sure all the
