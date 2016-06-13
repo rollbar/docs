@@ -29,7 +29,7 @@ In your Application delegate implementation file, add the following import state
 Then add the following to `application:didFinishLaunchingWithOptions:`:
 
 ```objective-c
-[Rollbar initWithAccessToken:@"{{ server_access_token }}"];
+[Rollbar initWithAccessToken:@"{{ client_access_token }}"];
 ```
 
 That's all you need to do to report crashes to Rollbar. To get symbolicated stack traces, follow the instructions in the "Symbolication" section below.
@@ -50,7 +50,7 @@ You can log arbitrary messages using the log methods:
 [Rollbar infoWithMessage:@"Test message"];
 
 // Log a critical, with some additional key-value data
-[Rollbar criticalWithMessage:@"Unexcpected data from server" data:@{@"endpoint": endpoint,
+[Rollbar criticalWithMessage:@"Unexpected data from server" data:@{@"endpoint": endpoint,
                                                                     @"result": result}];
 
 // Or log at a named level
@@ -58,4 +58,3 @@ You can log arbitrary messages using the log methods:
 ```
 
 For additional configuration information, see the documentation for [rollbar-ios](https://github.com/rollbar/rollbar-ios).
-
