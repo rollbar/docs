@@ -5,15 +5,14 @@ requests made by bots.
 
 ### Using Custom Grouping
 
-You can create a [Custom
-Grouping](https://rollbar.com/docs/custom-grouping/) rule to group all
+You can create a [Custom Grouping](/docs/custom-grouping/) rule to group all
 errors from known bots into their own Item in Rollbar, separate from
 your other data. Then mute that item or change its severity.
 
 Here's an example custom grouping rule to ignore client-side JavaScript
 errors that are caused by the Baidu spider:
 
-``` {data-language="json"}
+```json
 [
    {
      "condition": {
@@ -47,7 +46,7 @@ If you would rather ignore them completely, you can filter them out
 before they are sent to the Rollbar API in the first place. For example,
 for client-side JavaScript:
 
-``` {data-language="javascript"}
+```js
 _rollbarConfig = {
   // current config...
   checkIgnore: function(isUncaught, args, payload) {

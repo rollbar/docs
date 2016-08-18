@@ -1,8 +1,7 @@
 # Items
 
-These calls require a project-level access token, which should be provided in the query string. The prefix for all URLs is `https://api.rollbar.com`
-
-<!-- Sub:[TOC] -->
+These calls require a project-level access token, which should be provided in the query string.
+The prefix for all URLs is `https://api.rollbar.com`
 
 ---
 
@@ -12,9 +11,12 @@ These calls require a project-level access token, which should be provided in th
 
 Requires `read` scope.
 
-`:id` must be an item ID for an item in the project. These IDs are returned as the `id` field in other API calls, and can be found in the Rollbar UI on URLs like "https://rollbar.com/item/272505123/instance/909858456/" (272505123 is the Item ID).
+`:id` must be an item ID for an item in the project. These IDs are returned as the `id` field in
+other API calls, and can be found in the Rollbar UI on URLs like
+"https://rollbar.com/item/272505123/instance/909858456/" (272505123 is the Item ID).
 
-Note that they are NOT found in in URLs like "https://rollbar.com/project/123/item/456/" -- that is the "counter", which can be used in the following API call.
+Note that they are NOT found in in URLs like "https://rollbar.com/project/123/item/456/" -- that
+is the "counter", which can be used in the following API call.
 
 
 ---
@@ -25,7 +27,8 @@ Note that they are NOT found in in URLs like "https://rollbar.com/project/123/it
 
 Requires `read` scope.
 
-`:counter` must be an item counter for an item in the project. The counter can be found in URLs like "https://rollbar.com/project/123/item/456/" (456 is the counter).
+`:counter` must be an item counter for an item in the project. The counter can be found in
+URLs like "https://rollbar.com/project/123/item/456/" (456 is the counter).
 
 The success response is a 301 redirect like this:
 
@@ -59,7 +62,10 @@ Requires `read` scope.
 
 ### Query String Parameters
 
-Aside from `access_token`, `page`, and `ids`,, the query string params are the same as you might see when using the search functionality on the "Items" part of the Rollbar UI. So you can copy-paste the query string from the address bar while on the Items page, and use that same query string in this API call.
+Aside from `access_token`, `page`, and `ids`,, the query string params are the same as you might
+see when using the search functionality on the "Items" part of the Rollbar UI. So you can
+copy-paste the query string from the address bar while on the Items page, and use that same query
+string in this API call.
 
 Name | Type | Description
 -----|------|-------------
@@ -119,7 +125,7 @@ Name | Type | Description
 
 Mark item `275123456` as resolved:
 
-```
+```bash
 curl -X PATCH 'https://api.rollbar.com/api/1/item/275123456?access_token=abcd1234abcd1234' \
   --header "Content-Type: application/json" \
   --data '{"status": "resolved"}'

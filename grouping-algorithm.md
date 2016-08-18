@@ -93,8 +93,7 @@ together.
 If our default algorithm is separating things that you would like to see
 grouped together, you can set grouping rules to tell Rollbar to group
 them together. This can be found in Settings -\> Grouping. Please see
-the [Custom
-Grouping](https://rollbar.com/docs/guides_custom_grouping/) guide to
+the [Custom Grouping](/docs/custom-grouping/) guide to
 learn more.
 
 ### Customizing Grouping in Code
@@ -113,7 +112,7 @@ string longer than 40 characters, we'll use its SHA1 hash instead.
 
 <div id="fingerprint-browserjs" class="tab-pane active">
 
-``` {data-language="javascript"}
+```js
 Rollbar.scope({fingerprint: "abcdefg"}).error("Something went wrong");
 // This will be grouped with the above
 Rollbar.scope({fingerprint: "abcdefg"}).error("Something else went wrong");
@@ -123,7 +122,7 @@ Rollbar.scope({fingerprint: "abcdefg"}).error("Something else went wrong");
 
 <div id="fingerprint-python" class="tab-pane">
 
-``` {data-language="python"}
+```python
 # exceptions
 try:
   do_something()
@@ -151,7 +150,7 @@ pull request!) on the GitHub repo for the appropriate library.
 If you're using our API directly to send us data, you can set your own
 fingerprint by simply passing it in the JSON payload. For example:
 
-``` {data-language="json"}
+```json
 {
   "access_token": "your-post_server_item-access-token",
   "data": {

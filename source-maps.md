@@ -24,7 +24,7 @@ For the minified-to-source translation to work, we need:
     You'll get one of these if you give Rollbar an Error object, in a
     browser that provides column numbers. Like this:
 
-    ``` {data-language="javascript"}
+    ```js
     try {
       throw new Error("Something went wrong");
     } catch (e) {
@@ -58,7 +58,7 @@ For the minified-to-source translation to work, we need:
 Add these two parameters to the `_rollbarConfig` object that you have
 included in the on-page javascript snippet:
 
-``` {data-language="javascript"}
+```js
 var _rollbarConfig = {
   // add these new params:
   payload: {
@@ -78,7 +78,7 @@ var _rollbarConfig = {
 If you need to set this configuration after the Rollbar library has been
 initialized, use `Rollbar.configure()`:
 
-``` {data-language="javascript"}
+```js
 Rollbar.configure({
   payload: {
     client: {
@@ -104,7 +104,7 @@ Specification](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b
 you should place a comment like the following at the bottom of your
 minified JavaScript files:
 
-``` {data-language="javascript"}
+```js
 //# sourceMappingURL=URL_TO_SOURCE_MAP
 ```
 
@@ -129,7 +129,7 @@ production), upload a source map package via our API.
 
 Here's an example cURL command:
 
-``` {data-language="bash"}
+```bash
 curl https://api.rollbar.com/api/1/sourcemap \
   -F access_token=aaaabbbbccccddddeeeeffff00001111 \
   -F version=version_string_here \
@@ -201,7 +201,7 @@ In the above example:
 Here's an example Closure Compiler command run from `example/` to
 generate the above files:
 
-``` {data-language="bash"}
+```bash
 java -jar compiler.jar --js static/js/site.js --js static/js/util.js --js_output_file static/js/example.min.js --create_source_map static/js/example.min.map
 ```
 
@@ -211,7 +211,7 @@ Closure Compiler doesn't provide a way to do this automatically.
 
 Here is the same command for UglifyJS2:
 
-``` {data-language="bash"}
+```bash
 uglifyjs static/js/site.js static/js/util.js --output static/js/example.min.js --source-map static/js/example.min.map
 ```
 
@@ -228,7 +228,7 @@ first error after a deploy occurs).
 
 Here is a sample command:
 
-``` {data-language="bash"}
+```bash
 curl https://api.rollbar.com/api/1/sourcemap/download
   -F access_token=aaaabbbbccccddddeeeeffff00001111 \  
   -F version=92429d82a41e930486c6de5ebda9602d55c39986 \  

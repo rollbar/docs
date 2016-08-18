@@ -1,18 +1,16 @@
-<span class="date">06/11/14 at 11:03 PM</span>
-
 Here's an MSBuild target to notify Rollbar of a publish. Requires
 [RollbarSharp](https://github.com/mroach/RollbarSharp) web.config
 entries, and git on your PATH.
 
-``` {data-language="xml"}
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Target Name="NotifyRollbarOfDeploy" AfterTargets="MSDeployPublish">
-    <XmlPeek XmlInputPath="$(_PackageTempDir)\web.config" 
+    <XmlPeek XmlInputPath="$(_PackageTempDir)\web.config"
              Query="//appSettings/add[@key='Rollbar.AccessToken']/@value">
       <Output TaskParameter="Result" ItemName="RollbarAccessToken" />
     </XmlPeek>
-    <XmlPeek XmlInputPath="$(_PackageTempDir)\web.config" 
+    <XmlPeek XmlInputPath="$(_PackageTempDir)\web.config"
              Query="//appSettings/add[@key='Rollbar.Environment']/@value">
       <Output TaskParameter="Result" ItemName="RollbarEnvironment" />
     </XmlPeek>

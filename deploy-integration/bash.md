@@ -1,8 +1,6 @@
-<span class="date">05/20/14 at 02:36 PM</span>
-
 Use Curl to send an HTTP POST:
 
-``` {data-language="bash"}
+```bash
 ACCESS_TOKEN=POST_SERVER_ITEM_ACCESS_TOKEN
 ENVIRONMENT=production
 LOCAL_USERNAME=`whoami`
@@ -20,7 +18,7 @@ has completed successfully.
 
 If the POST is successful, you will receive a JSON response like:
 
-``` {data-language="json"}
+```json
 {"data": {}}
 ```
 
@@ -47,5 +45,3 @@ rollbar\_username
 
 comment
 :   Deploy comment (e.g. what is being deployed). Optional.
-
-

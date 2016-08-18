@@ -1,13 +1,11 @@
 # Teams
 
-In Rollbar, users are allowed to access projects if they are part of a team that can access that project. Teams belong to accounts, and can be associated (many-to-many) with Projects and Users.
+In Rollbar, users are allowed to access projects if they are part of a team that can access that
+project. Teams belong to accounts, and can be associated (many-to-many) with Projects and Users.
 
-These calls require an account-level access token, which should be provided in the query string. The prefix for all URLs is `https://api.rollbar.com`
+These calls require an account-level access token, which should be provided in the query string.
+The prefix for all URLs is `https://api.rollbar.com`
 
-
-<!-- Sub:[TOC] -->
-
-----
 
 ## Get a team
 
@@ -36,7 +34,8 @@ Name | Type | Description
 `name`|`string`|**Required.** Name of the team. Max length 32 characters.
 `access_level`|`string`|**Required.** Can be either `standard`, `light`, or `view`.
 
-Params must be supplied as JSON, and as the body of the request. Be sure to set the header `Content-Type: application/json`.
+Params must be supplied as JSON, and as the body of the request. Be sure to set the
+header `Content-Type: application/json`.
 
 
 ## Delete a team
@@ -90,4 +89,3 @@ Be careful, there is no undo!
 -----
 
 Last updated: September 16, 2014
-

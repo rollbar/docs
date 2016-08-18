@@ -1,22 +1,20 @@
-<span class="date">05/20/14 at 03:55 PM</span>
-
 ### Capistrano 3
 
 Add to your `Gemfile`:
 
-``` {data-language="ruby"}
+```ruby
 gem 'rollbar', '~1.2.7'
 ```
 
 Add to your `Capfile`:
 
-``` {data-language="ruby"}
+```ruby
 require 'rollbar/capistrano3'
 ```
 
 Add to your `deploy.rb`:
 
-``` {data-language="ruby"}
+```ruby
 set :rollbar_token, 'POST_SERVER_ITEM_ACCESS_TOKEN'
 set :rollbar_env, Proc.new { fetch :stage }
 set :rollbar_role, Proc.new { :app }
@@ -30,13 +28,13 @@ correctly.
 
 Add to your Gemfile:
 
-``` {data-language="ruby"}
+```ruby
 gem 'rollbar', '~1.2.7'
 ```
 
 Add to your `deploy.rb`:
 
-``` {data-language="ruby"}
+```ruby
 require 'rollbar/capistrano'
 set :rollbar_token, 'POST_SERVER_ITEM_ACCESS_TOKEN'
 ```
@@ -58,6 +56,6 @@ rollbar\_env
 
 For `capistrano/multistage`, try:
 
-``` {data-language="ruby"}
+```ruby
 set(:rollbar_env) { stage }
 ```

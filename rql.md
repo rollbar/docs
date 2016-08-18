@@ -75,7 +75,7 @@ Built-in Functions
 Examples
 --------
 
-``` {data-language="sql"}
+```sql
 SELECT request.user_ip, min(timestamp), max(timestamp), count(*)
 FROM item_occurrence
 WHERE item.counter = 47
@@ -84,13 +84,13 @@ ORDER BY count(*) DESC
 LIMIT 10
 ```
 
-``` {data-language="sql"}
+```sql
 SELECT timestamp, body.message.body
 FROM item_occurrence
 WHERE item.counter BETWEEN 40 AND 50
 ```
 
-``` {data-language="sql"}
+```sql
 SELECT *
 FROM item_occurrence
 WHERE item.counter = 1
@@ -269,4 +269,3 @@ Known Bugs
 -   An aggregation query that does not match any rows will return no
     results at all, instead of a row indicating that zero rows were
     found.
-

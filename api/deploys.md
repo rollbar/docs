@@ -1,8 +1,7 @@
 # Deploys
 
-These calls require a project-level access token, which should be provided in the query string. The prefix for all URLs is `https://api.rollbar.com`
-
-<!-- Sub:[TOC] -->
+These calls require a project-level access token, which should be provided in the query string.
+The prefix for all URLs is `https://api.rollbar.com`.
 
 ---
 
@@ -25,9 +24,16 @@ Name | Type | Description
 
 ### Examples
 
-See our example integrations for tracking deploys from [Bash](/docs/deploys_bash/), [Capistrano](/docs/deploys_capistrano), [Engine Yard](/docs/deploys_engineyard), [Fabric](/docs/deploys_fabric), [Heroku](/docs/deploys_heroku), and [MSBuild](/docs/deploys_msbuild).
+See our example integrations for tracking deploys from
+[Bash](/docs/deploy-integration/bash/),
+[Capistrano](/docs/deploy-integration/capistrano/),
+[Engine Yard](/docs/deploy-integration/engineyard/),
+[Fabric](/docs/deploy-integration/fabric/),
+[Heroku](/docs/deploy-integration/heroku/), and
+[MSBuild](/docs/deploy-integration/msbuild/).
 
-Record a deploy of the "production" environment, revision "aaaafff", rollbar user "brianr", with comment "just a test":
+Record a deploy of the "production" environment, revision "aaaafff", rollbar user "brianr", with
+comment "just a test":
 
 ```bash
 curl 'https://api.rollbar.com/api/1/deploy/' -F access_token=abcdef1234 -F environment=production -F revision=aaaafff -F rollbar_username=brianr -F comment="just a test"
@@ -42,7 +48,9 @@ curl 'https://api.rollbar.com/api/1/deploy/' -F access_token=abcdef1234 -F envir
 
 Requires `read` scope.
 
-`:id` must be an ID for a deploy in the project. These IDs are returned as the `id` field in other API calls, and can be found in the Rollbar UI on URLs like "https://rollbar.com/deploy/12345/" (12345 is the Deploy ID).
+`:id` must be an ID for a deploy in the project. These IDs are returned as the `id` field in other
+API calls, and can be found in the Rollbar UI on URLs like "https://rollbar.com/deploy/12345/"
+(12345 is the Deploy ID).
 
 
 ---

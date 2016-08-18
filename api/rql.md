@@ -1,10 +1,12 @@
 # RQL
 
-These calls require a project-level access token with `read` scope, which should be provided in the query string. The prefix for all URLs is `https://api.rollbar.com`.
+These calls require a project-level access token with `read` scope, which should be provided in
+the query string. The prefix for all URLs is `https://api.rollbar.com`.
 
 ## Create a RQL job
 
-Creates a new RQL job if `force_refresh` is true or one for the same `query_string` does not already exist. Returns the found or newly-created RQL job object.
+Creates a new RQL job if `force_refresh` is true or one for the same `query_string` does not
+already exist. Returns the found or newly-created RQL job object.
 
     POST /api/1/rql/jobs
 
@@ -15,7 +17,8 @@ Name | Type | Description
 `query_string`|`string`|**Required.** The RQL string to use for the job
 `force_refresh`|`bool`| Force job creation, `1/true` or `0/false`. Default: `false`
 
-Params must be supplied as JSON, and as the body of the request. Be sure to set the header `Content-Type: application/json`.
+Params must be supplied as JSON, and as the body of the request. Be sure to set the
+header `Content-Type: application/json`.
 
 
 ### Response
@@ -138,7 +141,8 @@ The response will be a RQL job result resource, example:
 
 ## List all RQL jobs
 
-Returns a list of RQL job resources from the project. The response will be a list of RQL job resources ordered by job id descending and paginated at 20 per page.
+Returns a list of RQL job resources from the project. The response will be a list of RQL job
+resources ordered by job id descending and paginated at 20 per page.
 
     GET /api/1/rql/jobs
 

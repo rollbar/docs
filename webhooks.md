@@ -49,7 +49,7 @@ configure that by editing each rule.
 
 The basic payload format is:
 
-``` {data-language="json"}
+```json
 {
     "event_name": "EVENT_NAME",
     "data": {
@@ -86,8 +86,8 @@ Examples
 
 New item (JSON):
 
-``` {data-language="json"}
-{ 
+```json
+{
   "event_name": "new_item",
   "data": {
     "item": {
@@ -155,12 +155,12 @@ New item (JSON):
 
 10\^nth occurrence (JSON):
 
-``` {data-language="json"}
+```json
 {
-  "event_name": "exp_repeat_item", 
+  "event_name": "exp_repeat_item",
   "data": {
     "item": {
-      "public_item_id": null, 
+      "public_item_id": null,
       "integrations_data": {},
       "last_activated_timestamp": 1382655421,
       "unique_occurrences": null,
@@ -186,7 +186,7 @@ New item (JSON):
         "level": "error",
         "timestamp": 1382656140,
         "server": {
-          "host": "dev", 
+          "host": "dev",
           "argv": [
             ""
           ]
@@ -194,14 +194,14 @@ New item (JSON):
         "environment": "production",
         "framework": "unknown",
         "notifier": {
-          "version": "0.5.12", 
+          "version": "0.5.12",
           "name": "pyrollbar"
         },
         "metadata": {
-          "access_token": "", 
+          "access_token": "",
           "debug": {
             "routes": {
-              "start_time": 1382212089369, 
+              "start_time": 1382212089369,
               "counters": {
                 "post_item": 3278360
               }
@@ -225,7 +225,7 @@ New item (JSON):
 
 Resolved Item (XML):
 
-``` {data-language="xml"}
+```xml
 <rollbar>
     <event_name>resolved_item</event_name>
     <data>
@@ -292,19 +292,19 @@ Resolved Item (XML):
 
 Deploy (JSON):
 
-``` {data-language="json"}
+```json
 {
-  "event_name": "deploy", 
+  "event_name": "deploy",
   "data": {
     "deploy": {
-      "comment": "deploying webs", 
-      "user_id": 1, 
-      "finish_time": 1382656039, 
-      "start_time": 1382656038, 
-      "id": 187585, 
-      "environment": "production", 
-      "project_id": 90, 
-      "local_username": "brian", 
+      "comment": "deploying webs",
+      "user_id": 1,
+      "finish_time": 1382656039,
+      "start_time": 1382656038,
+      "id": 187585,
+      "environment": "production",
+      "project_id": 90,
+      "local_username": "brian",
       "revision": "e4b9b7db860b2e5ac799f8c06b9498b71ab270bb"
     }
   }

@@ -1,9 +1,7 @@
-<span class="date">05/20/14 at 03:59 PM</span>
-
 Here's an example Fabric command. Call this from your `deploy` command
 when a deploy has completed successfully.
 
-``` {data-language="python"}
+```python
 import requests
 def rollbar_record_deploy():
     access_token = 'POST_SERVER_ITEM_ACCESS_TOKEN'
@@ -45,5 +43,3 @@ rollbar\_username
 
 comment
 :   Deploy comment (e.g. what is being deployed). Optional.
-
-

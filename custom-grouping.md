@@ -14,7 +14,7 @@ project you want to configure.
 
 Here's an example configuration:
 
-``` {data-language="json"}
+```json
 [{"title": "Timeout Error",
   "fingerprint": "timeout-error",
   "condition": {"path": "body.trace.exception.class", "eq": "TimeoutError"}
@@ -94,8 +94,8 @@ The language name
 Much more is available; you can use any of the data in the occurrence
 payload. The exact elements available vary by library; right now the
 best way to see what's available is to read the source code of your
-library, inspect an actual instance using our API, or read the [Items
-API docs](../../docs/api_items/).
+library, inspect an actual instance using our API, or read the
+[Items API docs](../../docs/api_items/).
 
 The following operators are available:
 
@@ -146,7 +146,7 @@ a number, defaulting to 0.
 
 **Example:** Match items whose exception class is NameError
 
-``` {data-language="json"}
+```json
 {
   "path": "body.trace.exception.class",
   "eq": "NameError"
@@ -156,7 +156,7 @@ a number, defaulting to 0.
 **Example:** Match items whose exception class is TypeError or
 ValueError, and exception message contains the string "database"
 
-``` {data-language="json"}
+```json
 {
   "all": [
     { "any": [
@@ -192,13 +192,13 @@ special markers achieve many kinds of grouping.
 
 Here's an example complete configuration with three rules.
 
-``` {data-language="json"}
+```json
 [
   {
     "title": "Connection error",
     "fingerprint": "connection-error",
     "condition": {
-      "path": "body.trace.exception.class", 
+      "path": "body.trace.exception.class",
       "in": ["EOFError", "Errno::ECONNREFUSED", "Errno::ETIMEDOUT"]
     }
   },

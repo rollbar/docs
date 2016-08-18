@@ -1,5 +1,3 @@
-<span class="date">05/20/14 at 04:02 PM</span>
-
 ### Other platforms
 
 When a deploy has completed successfully, make an HTTP POST to
@@ -23,5 +21,3 @@ rollbar\_username
 
 comment
 :   Deploy comment (e.g. what is being deployed). Optional.
-
-
