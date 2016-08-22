@@ -1,5 +1,3 @@
-<span class="date">11/07/14 at 06:45 PM</span>
-
 Rollbar provides a few ways to filter or ignore errors that happen in
 requests made by bots.
 

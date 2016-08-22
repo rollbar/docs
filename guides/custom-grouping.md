@@ -1,5 +1,3 @@
-<span class="date">05/14/14 at 08:53 PM</span>
-
 ### Overview
 
 If our [default grouping algorithm](../../docs/guides_grouping/) is
@@ -63,33 +61,13 @@ evaluates to true for *any* of the matching elements.
 
 Here are a few useful paths:
 
-body.trace.exception.class
-
-Exception class name
-
-body.trace.exception.message
-
-Exception message
-
-body.trace.frames.0.filename
-
-Filename of the first stack frame
-
-body.trace.frames.-1.filename
-
-Filename of the last stack frame
-
-body.trace.frames.\*.filename
-
-Filename of any stack frame
-
-body.trace.frames.\*.method
-
-Method/function name of any stack frame
-
-language
-
-The language name
+| body.trace.exception.class | Exception class name
+| body.trace.exception.message | Exception message
+| body.trace.frames.0.filename | Filename of the first stack frame
+| body.trace.frames.-1.filename | Filename of the last stack frame
+| body.trace.frames.\*.filename | Filename of any stack frame
+| body.trace.frames.\*.method | Method/function name of any stack frame
+| language | The language name
 
 Much more is available; you can use any of the data in the occurrence
 payload. The exact elements available vary by library; right now the
@@ -99,46 +77,16 @@ library, inspect an actual instance using our API, or read the
 
 The following operators are available:
 
-eq
-
-Equals
-
-neq
-
-Not Equals
-
-in
-
-Contained in the string or list
-
-nin
-
-Not contained in the string or list
-
-contains
-
-Contains the string, element, or key
-
-ncontains
-
-Does not contain the string, element, or key (or is not a string, array,
-or object)
-
-gt
-
-Greater than
-
-gte
-
-Greater than or equal to
-
-lt
-
-Less than
-
-lte
-
-Less than or equal to
+| eq | Equals
+| neq | Not Equals
+| in | Contained in the string or list
+| nin | Not contained in the string or list
+| contains | Contains the string, element, or key
+| ncontains | Does not contain the string, element, or key (or is not a string, array, or object)
+| gt | Greater than
+| gte | Greater than or equal to
+| lt | Less than
+| lte | Less than or equal to
 
 For the numeric operators (gt, gte, lt, lte): the right side must be a
 number, and the left side (data from the occurrence) will be coerced to

@@ -1,5 +1,3 @@
-<span class="date">05/21/14 at 06:43 PM</span>
-
 If your project is integrated with GitHub, you can include Rollbar item
 identifiers in your commit messages to auto-resolve the associated items
 when deploying.

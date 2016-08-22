@@ -1,7 +1,4 @@
-<span class="date">05/21/14 at 07:10 PM</span>
-
-Overview
---------
+### Overview
 
 Rate limits allow you to control how many occurrences are saved and
 processed. In turn, this gives you control over how many occurrences
@@ -14,20 +11,19 @@ limit window begins.
 
 If you go over your rate limit, a new error will be generated in your
 project: it will show up on your dashboard, on your API errors page, and
-(depending on your notification settings) you will recieve an email. You
+(depending on your notification settings) you will receive an email. You
 can then resolve, comment and configure notification settings for the
 generated error the same way you would for others. Note: these errors
 are not counted towards your bill.
 
 You can change your rate limits as often as you want.
 
-Configuration
--------------
+### Configuration
 
 Starting from a project, Go to Settings -\> Project Access Tokens and
 click on the
 
-* *
+<button class="btn btn-sm" style="padding: 5px 10px;"><span class="glyphicon glyphicon-pencil"></span></button>
 
 button next to the access token to configure.
 
@@ -46,14 +42,14 @@ are:
 Finally, enter in the maximum number of items to be saved and processed
 in the text box to the left of the dropdown menu and click the
 
-* *
+<button class="btn btn-sm" style="padding: 5px 10px;"><span class="glyphicon glyphicon-ok"></span></button>
 
 button to save.
 
 e.g. 100 in 5 minutes
 
-<span class="label label-info">Note</span> New rate limits and changes
-to existing limits will take effect immediately.
+**Note:** New rate limits and changes to existing limits will take effect immediately.
+{: .warning}
 
 Details
 -------
@@ -67,11 +63,12 @@ delay before our servers begin to reply with a 429. This does not mean
 that these items will count towards your bill. These items will not be
 processed and will not appear on your dashboard.
 
-<span class="label label-important">Important</span> If you're using a
-custom script or library to POST items you should make sure it can
+**Important!** If you're using a custom script or library to POST items you should make sure it can
 handle the 429 response code.
+{: .error}
 
 ### Billing
 
 At the end of your billing cycle, the total charge is calculated based
-on all items saved and processed. This will not include items that were not processed due to your rate limits.
+on all items saved and processed. This will not include items that were not processed due to your
+rate limits.

@@ -1,5 +1,3 @@
-<span class="date">10/14/14 at 03:42 PM</span>
-
 Every occurrence in Rollbar has a timestamp. The timestamps that you see
 throughout the Rollbar UI and API are the according to Rollbar's
 servers. We use and continuously
@@ -26,4 +24,3 @@ be a unix timestamp as well. You can see this in two places:
     `customer_timestamp`.</span>
 2.  <span style="line-height: 1.5em;">Via RQL, you can select it as the
     column name `metadata.customer_timestamp`</span>
-

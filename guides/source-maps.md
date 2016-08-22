@@ -1,7 +1,4 @@
-<span class="date">05/21/14 at 07:00 PM</span>
-
-Overview
---------
+### Overview
 
 If you minify your JavaScript code for use in production, you've
 probably noticed that the stacktraces you see in Rollbar reference the
@@ -14,8 +11,7 @@ minified code references back into the original source. The result is:
     number, method name, and code snippet
 -   error grouping should be more resilient to code changes
 
-Basic Setup
------------
+### Basic Setup
 
 For the minified-to-source translation to work, we need:
 
@@ -53,7 +49,7 @@ For the minified-to-source translation to work, we need:
     Compiler](https://developers.google.com/closure/compiler/) or [UglifyJS
     2](https://github.com/mishoo/UglifyJS2).
 
-### Step 1: Enable source maps
+#### Step 1: Enable source maps
 
 Add these two parameters to the `_rollbarConfig` object that you have
 included in the on-page javascript snippet:
@@ -92,12 +88,12 @@ Rollbar.configure({
 });
 ```
 
-### Step 2: Provide your source map
+#### Step 2: Provide your source map
 
 If your source map is publicly web-accessible, we can download it
 automatically. Otherwise, you can upload it via our API.
 
-#### Option A (Easiest): Automatic download
+##### Option A (Easiest): Automatic download
 
 As specified in the [Source Map
 Specification](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit),
@@ -122,7 +118,7 @@ also less reliable than the upload method, since the source map won't be
 downloaded yet when the first few errors come in. We recommend the
 upload method for production use.
 
-#### Option B (Recommended): Upload pre-deploy
+##### Option B (Recommended): Upload pre-deploy
 
 At the beginning of your deploy script (before the new code is in
 production), upload a source map package via our API.
@@ -139,7 +135,7 @@ curl https://api.rollbar.com/api/1/sourcemap \
   -F static/js/util.js=@static/js/util.js
 ```
 
-#### Params
+##### Params
 
 access\_token
 :   Your rollbar access token. Should be a post\_server\_item token (the
@@ -165,7 +161,7 @@ source\_map
      Value should be the contents of the source file, as a multipart
     file upload.
 
-#### Response Codes
+##### Response Codes
 
 200 OK
 :   Upload received successfully.
@@ -215,10 +211,9 @@ Here is the same command for UglifyJS2:
 uglifyjs static/js/site.js static/js/util.js --output static/js/example.min.js --source-map static/js/example.min.map
 ```
 
-Advanced Setup
---------------
+### Advanced Setup
 
-### Triggering an automatic download
+#### Triggering an automatic download
 
 If you're using the Automatic Download method, you can notify our API to
 trigger a download for each of your minified files. Doing this will
@@ -235,7 +230,7 @@ curl https://api.rollbar.com/api/1/sourcemap/download
   -F minified_url=http://example.com/static/js/example.min.js
 ```
 
-#### Params
+##### Params
 
 access\_token
 :   Your rollbar access token. Should be a post\_server\_item token (the
@@ -251,17 +246,16 @@ minified\_url
 :   The full URL of the minified file. Should start with `http:` or
     `https:`
 
-Resources
----------
+### Resources
 
 -   If you use Gulp, try
     [gulp-rollbar](https://github.com/ismriv/gulp-rollbar) to integrate
     the upload step into your build process.
 
-FAQ
----
+### FAQ
 
 #### What if I have more than one minified file?
+{: .no_toc}
 
 That's fine -- just upload a source map package for each minified file,
 each time your code version changes. Note that the code version is
@@ -269,6 +263,7 @@ global to your project, so you will have to upload the package for each
 one every time you deploy, even if only one of them changed.
 
 #### Does it matter what tool I used to build the source map?
+{: .no_toc}
 
 It shouldn't, as long as the tool builds source maps adhering the V3 of
 the source map spec.
@@ -279,11 +274,13 @@ Compiler](https://developers.google.com/closure/compiler/) and [UglifyJS
 and having problems, please let us know.
 
 #### What happens if I don't upload the source map package?
+{: .no_toc}
 
 We'll still process incoming errors immediately, but skip the
 minified-to-source translation.
 
 #### Where is my data stored?
+{: .no_toc}
 
 The source map package (including the source map itself and any source
 files you upload) is stored in our MySQL cluster. We encrypt the
@@ -297,6 +294,7 @@ includes:
     MySQL cluster
 
 #### It's not working. How can I debug this?
+{: .no_toc}
 
 Here are a few common problems:
 

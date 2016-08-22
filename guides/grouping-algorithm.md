@@ -1,5 +1,3 @@
-<span class="date">05/21/14 at 07:19 PM</span>
-
 Overview
 --------
 
