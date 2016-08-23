@@ -1,17 +1,12 @@
-<span class="date">03/02/15 at 11:13 AM</span>
-
-How to Integrate Logstash with Rollbar
-======================================
+## How to Integrate Logstash with Rollbar
 
 Logstash can send events collected from any log file to Rollbar.
 
-Setup
------
+### Setup
 
 Setting up a complete Logstash system is beyond the scope of this
-documentation. If you're new to Logstash, please see [Getting Started
-with
-Logstash](http://logstash.net/docs/1.4.2/tutorials/getting-started-with-logstash).
+documentation. If you're new to Logstash, please see
+[Getting Started with Logstash](http://logstash.net/docs/1.4.2/tutorials/getting-started-with-logstash).
 
 1.  Once you have Logstash working, install
     the [logstash-output-rollbar](https://github.com/rollbar/logstash-output-rollbar)
@@ -35,10 +30,9 @@ Logstash](http://logstash.net/docs/1.4.2/tutorials/getting-started-with-logstash
 2.  Configure Logstash to send events to Rollbar (see Plugin
     Configuration below) 
 
-Plugin Configuration 
----------------------
+### Plugin Configuration 
 
-### Synopsis
+#### Synopsis
 
 This is what the Rollbar outconfiguration might look like in your
 Logstash config file. Note that you can have multiple `rollbar` sections
@@ -56,7 +50,7 @@ levels, ets.:
       }
     }
 
-### Details
+#### Details
 
 **access\_token**
 :   A Rollbar project access token. This can be the same
@@ -80,8 +74,7 @@ levels, ets.:
 :   This is the URL for the Rollbar API endpoint. You shouldn't need to
     specify this value in your Logstash configuration.
 
-Using the Plugin
-----------------
+### Using the Plugin
 
 Beyond configuring the plugin, you have a great deal of control over how
 events will appear in Rollbar by adding fields to your Logstash event
@@ -94,8 +87,8 @@ Logstash event (see examples below).
 
 You can also add a `rollbar` field to your Logstash event to populate
 other metadata fields in your Rollbar event.  The following Rollbar
-events fields (described also [API Reference - Items
-(POST)](https://rollbar.com/docs/api/items_post/) can be set based on
+events fields (described also
+[API Reference - Items (POST)](https://rollbar.com/docs/api/items_post/) can be set based on
 Logstash values.
 
 -   platform
@@ -110,8 +103,7 @@ Logstash values.
 -   title
 -   uuid
 
-Example Configuration
----------------------
+### Example Configuration
 
 The following example doesn't necessarily follow Logstash best practices
 for filtering (the grok filters are rather cumbersome and should be
