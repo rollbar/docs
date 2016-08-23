@@ -1,7 +1,32 @@
-## Installation
+### General
 
-Download the Rollbar [rollbar-php](https://github.com/rollbar/rollbar-php) notifier
-and place rollbar.php somewhere in your path.
+Download [rollbar.php](https://raw.githubusercontent.com/rollbar/rollbar-php/v0.18.2/src/rollbar.php) and [Level.php](https://raw.githubusercontent.com/rollbar/rollbar-php/v0.18.2/src/Level.php)
+and put them together somewhere you can access.
+
+### If Using Composer
+
+Add `rollbar/rollbar` to your `composer.json`:
+
+```json
+{
+    "require": {
+        "rollbar/rollbar": "~0.18.2"
+    }
+}
+```
+
+### Upcoming Release
+
+If you'd like to run the next release of rollbar-php, you can use it via composer by adding the following to
+your `composer.json`
+
+```json
+{
+    "require": {
+        "rollbar/rollbar": "~1.0.0-beta"
+    }
+}
+```
 
 ## Send a Message to Rollbar
 
