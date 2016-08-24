@@ -8,7 +8,7 @@ Log messages have a level (`critical`, `error`, `warning`,
 `info`, or `debug`), a body (just a string), and any arbitrary optional
 parameters you want to include.
 
-* [Ruby](#ruby)
+* {: .active} [Ruby](#ruby)
 * [Python](#python)
 * [PHP](#php)
 * [Node.js](#nodejs)

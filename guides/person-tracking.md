@@ -15,7 +15,7 @@ As well as the list of all people who have ever experienced an error, sorted by 
 
 
 
-* [Python](#python)
+* {: .active} [Python](#python)
 * [Ruby](#ruby)
 * [Browser Javascript](#javascript)
 * [Node](#node)
@@ -126,21 +126,21 @@ function beforeRequestHandler(request) {
 ```
 {: .tab-pane #node}
 
-```objc
+```objective_c
 // In order to record the current user in an iOS application you must call
 // `initWithAccessToken` with the optional `RollbarConfiguration` object.
 
 // Something like this will work:
 
 RollbarConfiguration *config = [RollbarConfiguration configuration];
-[config setPersonId:@"42", username:"dadams", email:dadams@example.com"];
+[config setPersonId:@"42", username:"dadams", email:"dadams@example.com"];
 
 [Rollbar initWithAccessToken:@"POST_CLIENT_ITEM_ACCESS_TOKEN" configuration:config];
 
 // If you've already initialized the notifier, you can update the person later by
 // getting the `config` object and calling `setPersonId` on it:
 
-[config setPersonId:@"42", username:"dadams", email:dadams@example.com"];
+[config setPersonId:@"42", username:"dadams", email:"dadams@example.com"];
 ```
 {: .tab-pane #ios}
 
@@ -161,7 +161,7 @@ public void onCreate(Bundle savedInstanceState) {
 {: .tab-pane #android}
 
 
-```java
+```actionscript
 // In flash you must configure the Rollbar person when first initializing the
 // notifier. The fourth argument to `Rollbar.init` is `person`. This argument
 // can be passed an id string, an object, or a function (which returns an

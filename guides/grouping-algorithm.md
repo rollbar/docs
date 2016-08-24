@@ -102,23 +102,50 @@ Occurrences with the same fingerprint will be grouped together. The
 fingerprint should be a string up to 40 characters long. If you pass a
 string longer than 40 characters, we'll use its SHA1 hash instead.
 
--   [Browser JS](#fingerprint-browserjs)
--   [Python](#fingerprint-python)
--   [Other](#fingerprint-other)
+* {: .active} [Browser JS](#javascript)
+* [Node.js](#nodejs)
+* [PHP](#php)
+* [Python](#python)
+* [Ruby](#ruby)
+* [Other](#other)
+{: .nav .nav-tabs}
 
 <div class="tab-content">
-
-<div id="fingerprint-browserjs" class="tab-pane active">
 
 ```js
 Rollbar.scope({fingerprint: "abcdefg"}).error("Something went wrong");
 // This will be grouped with the above
 Rollbar.scope({fingerprint: "abcdefg"}).error("Something else went wrong");
 ```
+{: .tab-pane .active #javascript}
 
-</div>
+```js
+// errors
+try {
+  do_something();
+} catch (e) {
+  rollbar.handleErrorWithPayloadData(e, {fingerprint: "abcdefg"});
+}
 
-<div id="fingerprint-python" class="tab-pane">
+// messages
+rollbar.reportMessageWithPayloadData("Something went wrong", {level: "error", fingerprint: "hijkl"});
+```
+{: .tab-pane #nodejs}
+
+
+```php
+<?php
+// exceptions
+try {
+    do_something();
+} catch (Exception $e) {
+    Rollbar::report_exception($e, null, array('fingerprint' => 'abcdefg'));
+}
+
+// messages
+Rollbar::report_message("Something went wrong", "error", null, array('fingerprint' => 'hijkl'));
+```
+{: .tab-pane #php}
 
 ```python
 # exceptions
@@ -130,16 +157,27 @@ except:
 # messages
 rollbar.report_message("Something went wrong", payload_data={'fingerprint': 'hijkl'})
 ```
+{: .tab-pane #python}
 
-</div>
+```ruby
+# exceptions
+begin
+  do_something
+rescue => e
+  Rollbar.scope({:fingerprint => "abcdefg"}).error(e)
+end
 
-<div id="fingerprint-other" class="tab-pane">
+# messages
+Rollbar.scope({:fingerprint => "abcdefg"}).error("Something went wrong")
+```
+{: .tab-pane #ruby}
 
-Passing custom fingerprints in the other libraries is not supported yet.
-If you want this, please email team@rollbar.com or open an issue (or
-pull request!) on the GitHub repo for the appropriate library.
-
-</div>
+```
+See the docs for the Rollbar library you are using for instructions on how to set
+specific keys in the payload. To send the fingerprint, you'll just need to set the
+"fingerprint" key in the payload to the value you want.
+```
+{: .tab-pane #other}
 
 </div>
 
