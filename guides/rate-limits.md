@@ -20,7 +20,7 @@ You can change your rate limits as often as you want.
 
 ### Configuration
 
-Starting from a project, Go to Settings -\> Project Access Tokens and
+Starting from a project, Go to Settings -> Project Access Tokens and
 click on the
 
 <button class="btn btn-sm" style="padding: 5px 10px;"><span class="glyphicon glyphicon-pencil"></span></button>

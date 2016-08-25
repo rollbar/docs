@@ -85,4 +85,4 @@ Rollbar.scope({person: {id: "123"}}).info("User logged in");
 
 </div>
 
-For more details, please see our <a href="/docs/">documentation</a>.
+For more details, please see our [documentation](../../).

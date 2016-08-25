@@ -498,4 +498,5 @@ The Items API can return the following status codes:
 | 429 | Too Many Requests | Request dropped because the rate limit has been reached for this access token, or the account is on the Free plan and the plan limit has been reached.
 | 500 | Internal Server Error | There was an error on Rollbar's end
 
-If you encounter any other errors, or don't understand an error you see, please [contact support](/contact/).
+If you encounter any other errors, or don't understand an error you see, please
+[contact support](https://rollbar.com/contact/).

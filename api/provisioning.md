@@ -135,9 +135,9 @@ This returns the invite object:
 That's it for the tutorial, but there's much more you can do with the provisioning API. For more
 information, see the following pages:
 
-- [Projects](/docs/api/projects/)
-- [Teams](/docs/api/teams/)
-- [Invites](/docs/api/invites/)
+- [Projects](../projects/)
+- [Teams](../teams/)
+- [Invites](../invites/)
 
 -----
 

@@ -3,7 +3,7 @@ requests made by bots.
 
 ### Using Custom Grouping
 
-You can create a [Custom Grouping](/docs/custom-grouping/) rule to group all
+You can create a [Custom Grouping](../custom-grouping/) rule to group all
 errors from known bots into their own Item in Rollbar, separate from
 your other data. Then mute that item or change its severity.
 

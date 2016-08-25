@@ -92,4 +92,4 @@ If we don't have a notifier for your language or platform, please email us at
 [team@rollbar.com](mailto:team@rollbar.com?subject=Please+make+a+notifier+for+my+platform).
 
 You can also integrate directly with our API.
-[View the documentation](/docs/api/items/).
+[View the documentation](../../api/items/).

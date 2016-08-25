@@ -1,13 +1,13 @@
 ### Overview
 
-If our [default grouping algorithm](../../docs/guides_grouping/) is
+If our [default grouping algorithm](../grouping-algorithm/) is
 separating occurrences that you would rather have grouped together, or
 grouping occurrences together you would rather have separated, you can
 set up Custom Grouping Rules. These are configured through the interface
 and executed in our processing pipeline. You can create rules for both
 exceptions and messages.
 
-To set your custom grouping rules, go to Settings -\> Grouping for the
+To set your custom grouping rules, go to Settings -> Grouping for the
 project you want to configure.
 
 Here's an example configuration:
@@ -73,7 +73,7 @@ Much more is available; you can use any of the data in the occurrence
 payload. The exact elements available vary by library; right now the
 best way to see what's available is to read the source code of your
 library, inspect an actual instance using our API, or read the
-[Items API docs](../../docs/api_items/).
+[Items API docs](../../api/items/).
 
 The following operators are available:
 

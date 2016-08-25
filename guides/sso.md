@@ -1,4 +1,4 @@
-If your Rollbar account is on a [paid plan](/pricing/), then you can enable
+If your Rollbar account is on a [paid plan](https://rollbar.com/pricing/), then you can enable
 [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language)-based single sign-on (SSO)
 using [Google Apps for Work](https://apps.google.com/) and/or [Okta](https://www.okta.com/).
 

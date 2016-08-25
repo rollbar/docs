@@ -14,7 +14,7 @@ clause. No DISTINCT, HAVING, subqueries, or joins yet.
 
 ### Syntax
 
-Simple-ish queries are supported. SELECT, FROM, and WHERE are requried.
+Simple-ish queries are supported. SELECT, FROM, and WHERE are required.
 GROUP BY, ORDER BY, and LIMIT are optional.
 
 `SELECT *` \*may\* be used (as long as there is no GROUP BY). It will
@@ -25,7 +25,7 @@ SQL keywords and built-in function names are case-insensitive (i.e.
 `SELECT` and `select` are both fine).
 
 Names (i.e. column names) should start with a lowercase letter and may
-contain letters, numbers, and periods (for specifiying a JSON path). If
+contain letters, numbers, and periods (for specifying a JSON path). If
 you need any other characters (i.e. a hyphen, or to start with an
 uppercase letter), escape with backticks (i.e.
 `` `request.headers.User-Agent` ``)
@@ -51,7 +51,7 @@ uppercase letter), escape with backticks (i.e.
 -   `concat(str1, str2, ...)`: returns the string resulting from
     concatenating all arguments
 -   `concat_ws(sep, str1, str2, ...)`: returns the string resulting from
-    concatening the second argument and beyond, separated by the first
+    concatenating the second argument and beyond, separated by the first
     argument
 -   `lower(str)`: converts str to lowercase
 -   `upper(str)`: converts str to uppercase

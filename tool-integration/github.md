@@ -59,4 +59,4 @@ to set up your GitHub issues integration.
 ### Resolving Items
 
 For information on resolving Rollbar items via commit, you can find the
-documentation at [Resolving Items via Commits](/docs/guides/resolve-via-commits/).
+documentation at [Resolving Items via Commits](../../guides/resolve-via-commits/).

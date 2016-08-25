@@ -1,5 +1,4 @@
-Overview
---------
+### Overview
 
 Rollbar has two key concepts: *Occurrences* and *Items*.
 An *occurrence* is a single event instance: an exception or log message,
@@ -24,7 +23,7 @@ We do this keeping our basic notifications—new item, reactivated item—in
 mind, trying to maximize the signal-to-noise ratio. The goal is that
 when you see a notification about a "new item", it really is something
 new that you haven't seen before, and that if a new issue starts
-occuring, it will result in a new item being created in Rollbar.
+occurring, it will result in a new item being created in Rollbar.
 
 When the above goals are in conflict, we generally err on the side of
 creating more issues. That is, we think it's better to get a few
@@ -64,8 +63,7 @@ the big ones:
 -   for JavaScript errors, we attempt to match the error message against
     a known database, to include data from the exception message when
     useful, and to group across browsers. Read more about JavaScript
-    grouping in [the blog
-    post](https://rollbar.com/blog/post/2013/03/21/improved-grouping-for-javascript-errors/).
+    grouping in [the blog post](https://rollbar.com/blog/improved-grouping-for-javascript-errors).
 
 ### Message Grouping
 
@@ -90,8 +88,8 @@ together.
 
 If our default algorithm is separating things that you would like to see
 grouped together, you can set grouping rules to tell Rollbar to group
-them together. This can be found in Settings -\> Grouping. Please see
-the [Custom Grouping](/docs/custom-grouping/) guide to
+them together. This can be found in Settings -> Grouping. Please see
+the [Custom Grouping](../custom-grouping/) guide to
 learn more.
 
 ### Customizing Grouping in Code
