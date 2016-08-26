@@ -26,7 +26,7 @@ future release.
 
    The settings file from your previous install will be stored in the
    directory you uncompressed the original archive into. Copy this file
-   into the new distribution directory and name it ".settings".
+   into the new distribution directory and name it `.settings`.
 
    If you do not have this file it is likely that you are upgrading from
    a version built before 2/16/2016. See instructions below.
@@ -42,8 +42,7 @@ future release.
 
 ### FAQ
 
-#### Q. Why am I seeing "sudo: unable to resolve host ..." when I run
-`configure.sh`?
+#### Q. Why am I seeing `sudo: unable to resolve host ...` when I run `configure.sh`?
 
 See the answer
 [here](https://github.com/rollbar/docs/blob/master/on-premises/install.md#q-why-am-i-seeing-sudo-unable-to-resolve-host--when-i-run-configuresh).
