@@ -2,9 +2,11 @@
 
 ## Docker and Docker Compose
 
-Full Docker installation instructions for Ubuntu: https://docs.docker.com/engine/installation/linux/ubuntulinux/
+Full Docker installation instructions for Ubuntu:
+https://docs.docker.com/engine/installation/linux/ubuntulinux/
 
-Here's a cheat sheet to download and install Docker Engine on Ubuntu 14.04 LTS:
+Here's a cheat sheet to download and install Docker Engine on Ubuntu
+14.04 LTS:
 
 ```sh
 sudo apt-get update
@@ -27,7 +29,8 @@ sudo usermod -aG docker ubuntu
 # then log out and log back in
 ```
 
-Full Docker Compose installation instructions: https://docs.docker.com/compose/install/
+Full Docker Compose installation instructions:
+https://docs.docker.com/compose/install/
 
 Here's a cheat sheet to install the required version of Docker Compose:
 
@@ -39,7 +42,7 @@ sudo chmod +x /usr/local/bin/docker-compose
 # Single host
 
 1. Download the on-premises distribution .tar.gz file
-   - Example: *rollbar-enterprise_2016-02-12.tar.gz*
+   - Example: `rollbar-enterprise_2016-02-12.tar.gz`
 2. Uncompress and unarchive
 
     ```sh
@@ -65,33 +68,37 @@ sudo chmod +x /usr/local/bin/docker-compose
 # Multiple Hosts
 
 Before you read this, take a moment to familiarize yourself with the
-[Rollbar On-Premises architecture](architecture.md "Rollbar On-Premises Architecture") and
-the [advanced configuration](configure.md#advanced "Advanced Rollbar Configuration")
-documentation.
+[Rollbar On-Premises architecture](architecture.md "Rollbar On-Premises
+Architecture") and the [advanced configuration](configure.md#advanced
+"Advanced Rollbar Configuration") documentation.
 
-You can install Rollbar on one or more hosts. Before you start, you will need to determine
-which services you want to run on the extra hosts. Below are some common choices:
+You can install Rollbar on one or more hosts. Before you start, you will
+need to determine which services you want to run on the extra
+hosts. Below are some common choices:
 
 - Run your MySQL database on a separate, dedicated host
-  - Run your own managed MySQL database - See the [Advanced Configuration](configure.md#advanced "Advanced Rollbar Configuration") instructions.
-  - Run the bundled MySQL database that came with the On-Premises distribution
+  - Run your own managed MySQL database - See the [Advanced
+    Configuration](configure.md#advanced "Advanced Rollbar
+    Configuration") instructions.
+  - Run the bundled MySQL database that came with the On-Premises
+    distribution
 - Run extra Rollbar data pipeline workers
 - Add capacity to the Rollbar API tier by adding more API servers
 - Add capacity to the Rollbar Web tier by running more Web servers
 
-For a full list of the different services you can install and run, see the
-[configuration](configure.md "Rollbar Configuration") documentation.
+For a full list of the different services you can install and run, see
+the [configuration](configure.md "Rollbar Configuration") documentation.
 
 ## Requirements
 
-- Download and unarchive the *.tar.gz* file onto your hosts
-- The *.settings* file from your original Rollbar host copied onto your other hosts in the same
-  directory as the *configure.sh* script.
+- Download and unarchive the `.tar.gz` file onto your hosts
+- The `.settings` file from your original Rollbar host copied onto your
+  other hosts in the same directory as the `configure.sh` script.
 
 ## Configure
 
-Next, run the *configuration.sh* script on your new hosts but this time, specify which services
-you would like to install and run.
+Next, run the `configure.sh` script on your new hosts but this time,
+specify which services you would like to install and run.
 
 ### Run the bundled MySQL database
 
@@ -113,10 +120,11 @@ you would like to install and run.
 
 ### FAQ
 
-#### Q. Why am I seeing "sudo: unable to resolve host ..." when I run *configure.sh*?
+#### Q. Why am I seeing "sudo: unable to resolve host ..." when I run `configure.sh`?
 
-Depending on your host configuration, it's possible that your hostname cannot be resolved.
-The quickest fix is to add your hostname to */etc/hosts*.
+Depending on your host configuration, it's possible that your hostname
+cannot be resolved.  The quickest fix is to add your hostname to
+`/etc/hosts`.
 
 E.g.
 ```
