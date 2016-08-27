@@ -63,7 +63,11 @@ sudo chmod +x /usr/local/bin/docker-compose
     ```sh
     ./start.sh --run-migrations
     ```
-6. Navigate your browser to https://rollbar.mycompany.com/
+6. Initialize ElasticSearch
+    ```sh
+    ./utils.sh --es-init --es-index
+    ```
+7. Navigate your browser to https://rollbar.mycompany.com/
 
 # Multiple Hosts
 

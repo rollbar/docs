@@ -40,6 +40,16 @@ future release.
    ./start.sh --run-migrations
    ```
 
+7. Initialize ElasticSearch
+
+   We've changed from using Sphinx as our search engine to
+   ElasticSearch.  As a result of this, you'll need to initialize
+   ElasticSearch before search will work in your application.
+
+   ```sh
+   ./utils.sh --es-init --es-index
+   ```
+
 ### FAQ
 
 #### Q. Why am I seeing `sudo: unable to resolve host ...` when I run `configure.sh`?
