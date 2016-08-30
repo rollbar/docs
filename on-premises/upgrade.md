@@ -4,10 +4,12 @@ not be captured. We will provide a zero-downtime upgrade process in a
 future release.
 
 1. Download the new On-Premises distribution `.tar.gz` file
-2. Uncompress and unarchive
+2. Uncompress and unarchive (file and directory names will change with
+   the release version)
 
    ```sh
-   cd rollbar-enterprise_2016-03-01 && ./install.sh
+   tar -xzvf rollbar-on-prem-server-v0.7.0.tgz
+   cd rollbar-enterprise_2016-08-24
    ```
 3. Stop all Rollbar services
 
