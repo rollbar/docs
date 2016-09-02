@@ -88,7 +88,7 @@ Logstash event (see examples below).
 You can also add a `rollbar` field to your Logstash event to populate
 other metadata fields in your Rollbar event.  The following Rollbar
 events fields (described also
-[API Reference - Items (POST)](../../api/items_post/) can be set based on
+[API Reference - Items (POST)](https://rollbar.com/docs/api/items_post/) can be set based on
 Logstash values.
 
 -   platform

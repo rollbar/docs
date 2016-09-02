@@ -89,7 +89,7 @@ together.
 If our default algorithm is separating things that you would like to see
 grouped together, you can set grouping rules to tell Rollbar to group
 them together. This can be found in Settings -> Grouping. Please see
-the [Custom Grouping](../custom-grouping/) guide to
+the [Custom Grouping](https://rollbar.com/docs/custom-grouping/) guide to
 learn more.
 
 ### Customizing Grouping in Code

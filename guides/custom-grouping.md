@@ -1,6 +1,6 @@
 ### Overview
 
-If our [default grouping algorithm](../grouping-algorithm/) is
+If our [default grouping algorithm](https://rollbar.com/docs/grouping-algorithm/) is
 separating occurrences that you would rather have grouped together, or
 grouping occurrences together you would rather have separated, you can
 set up Custom Grouping Rules. These are configured through the interface
@@ -73,7 +73,7 @@ Much more is available; you can use any of the data in the occurrence
 payload. The exact elements available vary by library; right now the
 best way to see what's available is to read the source code of your
 library, inspect an actual instance using our API, or read the
-[Items API docs](../../api/items/).
+[Items API docs](https://rollbar.com/docs/api/items/).
 
 The following operators are available:
 

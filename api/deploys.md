@@ -25,12 +25,12 @@ Name | Type | Description
 ### Examples
 
 See our example integrations for tracking deploys from
-[Bash](../../deploy-integration/bash/),
-[Capistrano](../../deploy-integration/capistrano/),
-[Engine Yard](../../deploy-integration/engineyard/),
-[Fabric](../../deploy-integration/fabric/),
-[Heroku](../../deploy-integration/heroku/), and
-[MSBuild](../../deploy-integration/msbuild/).
+[Bash](https://rollbar.com/docs/deploys/bash/),
+[Capistrano](https://rollbar.com/docs/deploys/capistrano/),
+[Engine Yard](https://rollbar.com/docs/deploys/engineyard/),
+[Fabric](https://rollbar.com/docs/deploys/fabric/),
+[Heroku](https://rollbar.com/docs/deploys/heroku/), and
+[MSBuild](https://rollbar.com/docs/deploys/msbuild/).
 
 Record a deploy of the "production" environment, revision "aaaafff", rollbar user "brianr", with
 comment "just a test":

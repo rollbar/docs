@@ -22,6 +22,6 @@ resolve in a commit message:
 -   Short item ID, eg. `rb#22` This appears at the top left of an item
     page.
 
-Then execute a deploy by hitting the [deploy API endpoint](../../deploy-integration/bash/).
+Then execute a deploy by hitting the [deploy API endpoint](https://rollbar.com/docs/deploys/bash/).
 The items referenced in any of the commit messages of the deploy will be resolved using the
 revision specified in the deploy params.

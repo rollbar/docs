@@ -135,9 +135,9 @@ This returns the invite object:
 That's it for the tutorial, but there's much more you can do with the provisioning API. For more
 information, see the following pages:
 
-- [Projects](../projects/)
-- [Teams](../teams/)
-- [Invites](../invites/)
+- [Projects](https://rollbar.com/docs/api/projects/)
+- [Teams](https://rollbar.com/docs/api/teams/)
+- [Invites](https://rollbar.com/docs/api/invites/)
 
 -----
 

@@ -21,8 +21,8 @@ Items can change from Active to Resolved in these ways:
 
 -   Manually changed by a user in the Rollbar UI (by pressing "Resolve"
     or "Set Status" -> "Resolved")
--   Set via the [Rollbar API](../../api/items/#modify-an-item)
--   [Resolved via commit message](../resolve-via-commits/) when that
+-   Set via the [Rollbar API](https://rollbar.com/docs/api/items/#modify-an-item)
+-   [Resolved via commit message](https://rollbar.com/docs/resolve-via-commits/) when that
     commit is deployed
 -   Autoresolved on deploy, when enabled (see Settings -> Deploys)
 -   Autoresolved after not occurring for a period of time, when enabled
@@ -32,7 +32,7 @@ Items can change from Active to Muted in these ways:
 
 -   Manually changed by a user in the Rollbar UI (by pressing "Mute" or
     "Set Status" -> "Muted")
--   Set via the [Rollbar API](../../api/items/#modify-an-item)
+-   Set via the [Rollbar API](https://rollbar.com/docs/api/items/#modify-an-item)
 
 ### Resolved
 
@@ -61,14 +61,14 @@ Items can change from Resolved to Active in these ways:
 
 -   Manually changed by a user in the Rollbar UI (by pressing "Reopen"
     or "Set Status" -> "Active")
--   Set via the [Rollbar API](../../api/items/#modify-an-item)
+-   Set via the [Rollbar API](https://rollbar.com/docs/api/items/#modify-an-item)
 -   Automatically on the next occurrence of the same item (subject to
     the version constraint described above)
 
 Items can change from Resolved to Muted in these ways:
 
 -   Manually changed by a user in the Rollbar UI (by pressing "Reopen")
--   Set via the [Rollbar API](../../api/items/#modify-an-item)
+-   Set via the [Rollbar API](https://rollbar.com/docs/api/items/#modify-an-item)
 
 ### Muted
 
@@ -88,17 +88,17 @@ sight.
 Muted items are still indexed, searchable, etc. and can be changed back
 to Active at any time. For this reason, occurrences of Muted items do
 count for billing purposes. If you need to reduce your usage, you should
-set a [rate limit](../rate-limits/) or filter it
+set a [rate limit](https://rollbar.com/docs/rate-limits/) or filter it
 before it is sent to Rollbar.
 
 Items can change from Muted to Active in these ways:
 
 -   Manually changed by a user in the Rollbar UI (by pressing "Unmute"
     or "Set Status" -> "Muted")
--   Set via the [Rollbar API](../../api/items/#modify-an-item)
+-   Set via the [Rollbar API](https://rollbar.com/docs/api/items/#modify-an-item)
 
 Items can change from Muted to Resolved in these ways:
 
 -   Manually changed by a user in the Rollbar UI (by pressing "Set
     Status" -> "Resolved")
--   Set via the [Rollbar API](../../api/items/#modify-an-item)
+-   Set via the [Rollbar API](https://rollbar.com/docs/api/items/#modify-an-item)
