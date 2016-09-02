@@ -9,7 +9,7 @@ whatever else you can imagine. If the API is missing something you'd
 like to see, please [let us know](mailto:team@rollbar.com).
 
 At this time the best way to discover the available resources/calls is
-by exploring the [test console](https://rollbar.com/docs/api/test-console/).
+by exploring the [test console](https://rollbar.com/docs/test_console/).
 
 ### Timestamps
 
