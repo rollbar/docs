@@ -95,7 +95,7 @@ curl 'https://api.rollbar.com/api/1/items/?access_token=abcd5678&level=error&lev
 
 Used to modify an item's state. Currently supports:
 
-- setting the status
+- setting the status, level, title, assigned user
 - when resolving, setting the "resolved in version"
 
 ### Query String Parameters
@@ -112,20 +112,23 @@ The following params must be supplied as JSON, and as the body of the request. B
 
 Name | Type | Description
 -----|------|-------------
-`status`|`string`|**Required.** Valid values: `active`, `resolved`, `muted`
+`status`|`string`|If present, the new status. Valid values: `active`, `resolved`, `muted`
 `resolved_in_version`|`string`|If not empty, a string up to 40 characters describing the version that the item was resolved in. Only used if `status` is set to `resolved`.
+`level`|`string`|If present, the new level. Valid values: 'critical', 'error', 'warning', 'info', 'debug'
+`title`|`string`|If present, the new title. Should be a string with length 1 to 255.
+`assigned_user_id`|`int`|If present, the new assigned user ID. Valid values are `null` or any user ID with access to this item.
 
 ### Examples
 
-Mark item `275123456` as resolved:
+Mark item `275123456` as resolved in version `aabbcc1`:
 
 ```
 curl -X PATCH 'https://api.rollbar.com/api/1/item/275123456?access_token=abcd1234abcd1234' \
   --header "Content-Type: application/json" \
-  --data '{"status": "resolved"}'
+  --data '{"status": "resolved", "resolved_in_version": "aabbcc1"}'
 ```
 
 
 -----
 
-Last updated: May 12, 2014
+Last updated: September 3, 2016
