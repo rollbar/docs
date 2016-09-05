@@ -1,13 +1,11 @@
 # Reports
 
-This collection of API calls allows access to the same kind of reports as on the Dashboard in the UI.
+This collection of API calls allows access to the same kind of reports as on the Dashboard in
+the UI.
 
-These calls require a project-level access token with `read` scope, which should be provided in the query string. The prefix for all URLs is `https://api.rollbar.com`
+These calls require a project-level access token with `read` scope, which should be provided in
+the query string. The prefix for all URLs is `https://api.rollbar.com`
 
-
-<!-- Sub:[TOC] -->
-
-----
 
 ## Top recent active items
 
@@ -15,9 +13,12 @@ Analogous to the "Top 10 items in last 24 hours" report on the Dashboard.
 
     GET /api/1/reports/top_active_items
 
-Returns the top 10 active items in the specified environments (default "any environment"), ordered descending by level (critical first) and then descending by the count within the specied time period (default "last 24 hours").
+Returns the top 10 active items in the specified environments (default "any environment"),
+ordered descending by level (critical first) and then descending by the count within the specied
+time period (default "last 24 hours").
 
-The return value includes both the items and an array of the counts for each hour. The counts array has the oldest counts first.
+The return value includes both the items and an array of the counts for each hour. The counts
+array has the oldest counts first.
 
 ### Query Parameters
 
@@ -68,11 +69,13 @@ Response is JSON.
 
 ## Occurrence counts
 
-Analogous to "Hourly Error/Critical Occurrences" and "Daily Error/Critical Occurrences" on the Dashboard.
+Analogous to "Hourly Error/Critical Occurrences" and "Daily Error/Critical Occurrences" on
+the Dashboard.
 
     GET /api/1/reports/occurrence_counts
 
-Returns an array of recent counts as `[timestamp, count]` pairs, where each `count` is the number of matching occurrences in the time range `[timestamp, timestamp + bucket_size - 1]`.
+Returns an array of recent counts as `[timestamp, count]` pairs, where each `count` is the number
+of matching occurrences in the time range `[timestamp, timestamp + bucket_size - 1]`.
 
 Timestamps are UNIX timestamps, in whole seconds.
 
@@ -131,7 +134,9 @@ Analogous to "Daily New/Reactivated Items" graph on the Dashboard.
 
     GET /api/1/reports/activated_counts
 
-Returns an array of recent counts as `[timestamp, count]` pairs, where each `count` is the number of items that were first seen or reactivated in the time range `[timestamp, timestamp + bucket_size - 1]`.
+Returns an array of recent counts as `[timestamp, count]` pairs, where each `count` is the number
+of items that were first seen or reactivated in the time
+range `[timestamp, timestamp + bucket_size - 1]`.
 
 Timestamps are UNIX timestamps, in whole seconds.
 
@@ -184,4 +189,3 @@ Response is JSON.
 -----
 
 Last updated: March 4, 2016
-

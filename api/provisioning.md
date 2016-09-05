@@ -1,10 +1,11 @@
 # Provisioning API
 
-You can use this set of API calls to create projects, invite users to join them, and perform a few basic administration features. 
+You can use this set of API calls to create projects, invite users to join them, and perform a few
+basic administration features.
 
-API calls in this section require an access token from your *account*. These tokens can be found in Account Settings &raquo; Access Tokens.
+API calls in this section require an access token from your *account*. These tokens can be found in
+Account Settings &raquo; Access Tokens.
 
-<!-- Sub:[TOC] -->
 
 ## Tutorial
 
@@ -22,28 +23,28 @@ To create a project, use the `POST /projects` call.
 ```bash
 ACCESS_TOKEN=WRITE_ACCOUNT_ACCESS_TOKEN
 API_BASE='https://api.rollbar.com/api/1'
-curl -X POST "$API_BASE/projects?access_token=$ACCESS_TOKEN" \ 
+curl -X POST "$API_BASE/projects?access_token=$ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{"name": "Project X"}'
 ```
 
 This returns your new project. Note the `id`; we'll need it later.
 
-```js
+```json
 {
   "err": 0,
   "result": {
     "id": 200,
     "account_id": 100,
     "name": "Project X"
-    // ... other properties ommitted
   }
 }
 ```
 
 ### Create a Team
 
-In Rollbar, users access projects via Teams. To add a user to the project, we'll need to create a Team, add the team to the project, and the finally invite the user to the team.
+In Rollbar, users access projects via Teams. To add a user to the project, we'll need to create a
+Team, add the team to the project, and the finally invite the user to the team.
 
 To create a team, use the `POST /teams` call.
 
@@ -57,7 +58,7 @@ curl -X POST "$API_BASE/teams?access_token=$ACCESS_TOKEN" \
 
 This returns the new team. Note the `id`; we'll need it in the next step.
 
-```js
+```json
 {
   "err": 0,
   "result": {
@@ -85,7 +86,7 @@ curl -X PUT "$API_BASE/team/$TEAM_ID/project/$PROJECT_ID?access_token=$ACCESS_TO
 
 This returns a the team-project object:
 
-```js
+```json
 {
   "err": 0,
   "result": {
@@ -97,7 +98,9 @@ This returns a the team-project object:
 
 ### Invite the User to the Team
 
-We now have a new project and a team that can access it. Let's invite someone to it, by email address. If they are already a Rollbar user, they'll be added to the team immediately. Otherwise, they will be added to the team once they accept the invite that was emailed to them.
+We now have a new project and a team that can access it. Let's invite someone to it, by email
+address. If they are already a Rollbar user, they'll be added to the team immediately. Otherwise,
+they will be added to the team once they accept the invite that was emailed to them.
 
 Use `POST /team/:id/invites`:
 
@@ -112,7 +115,7 @@ curl -X POST "$API_BASE/team/$TEAM_ID/invites?access_token=$ACCESS_TOKEN" \
 
 This returns the invite object:
 
-```js
+```json
 {
   "err": 0,
   "result": {
@@ -129,11 +132,12 @@ This returns the invite object:
 
 ## More Resources
 
-That's it for the tutorial, but there's much more you can do with the provisioning API. For more information, see the following pages:
+That's it for the tutorial, but there's much more you can do with the provisioning API. For more
+information, see the following pages:
 
-- [Projects](/docs/api/projects/)
-- [Teams](/docs/api/teams/)
-- [Invites](/docs/api/invites/)
+- [Projects](https://rollbar.com/docs/api/projects/)
+- [Teams](https://rollbar.com/docs/api/teams/)
+- [Invites](https://rollbar.com/docs/api/invites/)
 
 -----
 

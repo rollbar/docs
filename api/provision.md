@@ -2,26 +2,25 @@
 
 Last updated: August 5, 2013
 
-<!-- Sub:[TOC] -->
-
 ## Users
 
 To create a new Rollbar user, call the ```provision/user``` endpoint with the following params:
 
-  <dl>
-  <dt>username</dt>
-  <dd>Must be unique across all Rollbar usernames.
+username
+:  Must be unique across all Rollbar usernames.
 
-The username must match the following regular expression, ```[a-zA-Z][a-zA-Z0-9_-]*```.
+   The username must match the following regular expression, ```[a-zA-Z][a-zA-Z0-9_-]*```.
 
-  </dd>
-  <dt>email</dt>
-  <dd>Must be unique across all Rollbar email addresses. This will be the default email address used for all communication, including alerts and forgotten password emails.</dd>
-  <dt>password</dt>
-  <dd>Passwords are never stored on our servers and are encrypted via HTTPS during transmission.</dd>
-  <dt>source</dt>
-  <dd>Optional string used to identify where this account was provisioned from.</dd>
-  </dl>
+email
+:  Must be unique across all Rollbar email addresses. This will be the default email address used
+   for all communication, including alerts and forgotten password emails.
+
+password
+:  Passwords are never stored on our servers and are encrypted via HTTPS during transmission.
+
+source
+: Optional string used to identify where this account was provisioned from.
+
 
 When a new user is provisioned an account and starter project are also created.
 
@@ -31,7 +30,7 @@ When a new user is provisioned an account and starter project are also created.
 curl "https://api.rollbar.com/api/1/provision/user/" -d"username=test" -d"email=test@rollbar.com" -d"password=PA$$w0RD"
 ```
 
-  Response
+Response
 
 ```javascript
 {

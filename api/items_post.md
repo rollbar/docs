@@ -1,18 +1,24 @@
-_**Note:**  This documentation is provided for authors of custom integration libraries. If your application is built on one of our supported platforms, you can use a pre-built library instead of rolling your own._
+_**Note:**  This documentation is provided for authors of custom integration libraries. If your
+application is built on one of our supported platforms, you can use a pre-built library
+instead of rolling your own._
 
 ### Overview
 
-Rollbar receives Occurrences (exceptions and messages) via a RESTful JSON API. Clients send JSON data via an HTTP POST to `https://api.rollbar.com/api/1/item/`
+Rollbar receives Occurrences (exceptions and messages) via a RESTful JSON API. Clients send
+JSON data via an HTTP POST to `https://api.rollbar.com/api/1/item/`
 
-We strongly recommend using HTTPS, but HTTP is also supported. For HTTP, use `http://api.rollbar.com/api/1/item/`
+We strongly recommend using HTTPS, but HTTP is also supported. For HTTP,
+use `http://api.rollbar.com/api/1/item/`
 
-POSTed JSON data is accepted either as the body of the request, or form-encoded as the value of the `payload` parameter (which should be the only parameter).
+POSTed JSON data is accepted either as the body of the request, or form-encoded as the value of
+the `payload` parameter (which should be the only parameter).
 
 All responses (including error responses) are returned as JSON.
 
 ### Simple Example
 
-Here is a bare-bones request to report a message using Python. Note that the `access_token` is part of the JSON payload, and that the encoded JSON payload is sent as the request body.
+Here is a bare-bones request to report a message using Python. Note that the `access_token` is part
+of the JSON payload, and that the encoded JSON payload is sent as the request body.
 
 ```python
 import json, requests
@@ -33,7 +39,8 @@ json_encoded_payload = json.dumps(payload)
 requests.post('https://api.rollbar.com/api/1/item/', data=json_encoded_payload)
 ```
 
-If your library does not allow you to specify the raw POST body, you can send it form-encoded as the value of the <code>payload</code> parameter. For example, using Python:
+If your library does not allow you to specify the raw POST body, you can send it form-encoded as
+the value of the `payload` parameter. For example, using Python:
 
 ```python
 requests.post('https://api.rollbar.com/api/1/item/', data={'payload': json_encoded_payload})
@@ -41,7 +48,8 @@ requests.post('https://api.rollbar.com/api/1/item/', data={'payload': json_encod
 
 ### Data Format
 
-The example JSON payload below describes all the required and optional params that Rollbar understands. The meaning of each key is explained in the comments.
+The example JSON payload below describes all the required and optional params that Rollbar
+understands. The meaning of each key is explained in the comments.
 
 ```javascript
 {
@@ -424,13 +432,15 @@ The example JSON payload below describes all the required and optional params th
 }
 ```
 
-Note that you can send us whatever data you want and we'll store it. Max paylaod size is 128kb. For best results, put custom data in "request", "server", "client", "person", or "custom".
+Note that you can send us whatever data you want and we'll store it. Max paylaod size is 128kb.
+For best results, put custom data in `request`, `server`, `client`, `person`, or `custom`.
 
 ### Response Format
 
 #### Success
 
-On success, this endpoint will respond with HTTP status code 200, and a JSON response like the following:
+On success, this endpoint will respond with HTTP status code 200, and a JSON response like
+the following:
 
 ```javascript
 {
@@ -454,7 +464,8 @@ On success, this endpoint will respond with HTTP status code 200, and a JSON res
 }
 ```
 
-On error, this endpoint will respond with an HTTP error code 400 or higher, and a JSON response like the following:
+On error, this endpoint will respond with an HTTP error code 400 or higher, and a JSON response
+like the following:
 
 ```javascript
 {
@@ -475,23 +486,17 @@ See the next section for more details about the response codes.
 
 The Items API can return the following status codes:
 
-<dl class="dl-horizontal">
-  <dt>200</dt>
-    <dd><strong>Success.</strong> The item was accepted for processing.</dd>
-  <dt>400</dt>
-    <dd><strong>Bad request.</strong> No JSON payload was found, or it could not be decoded.</dd>
-  <dt>401</dt>
-    <dd><strong>Unauthorized.</strong> No access token was found in the request.</dd>
-  <dt>403</dt>
-    <dd><strong>Access denied.</strong> Check that your <code>access_token</code> is valid, enabled, and has the correct scope. The response will contain a `message` key explaining the problem.</dd>
-  <dt>413</dt>
-    <dd><strong>Request Too Large.</strong> Max payload size is 128kb. Try removing or truncating unnecessary large data included in the payload, like whole binary files or long strings.</dd>
-  <dt>422<dt>
-    <dd><strong>Unprocessable payload.</strong> A syntactically valid JSON payload was found, but it had one or more semantic errors. The response will contain a "message" key describing the errors.</dd>
-  <dt>429</dt>
-    <dd><strong>Too Many Requests</strong> - Request dropped because the rate limit has been reached for this access token, or the account is on the Free plan and the plan limit has been reached.</dd>
-  <dt>500</dt>
-    <dd><strong>Internal server error.</strong> There was an error on Rollbar's end.</dd>
-</dl>
+|---
+| Code | Type | Description
+|-|-|-
+| 200 | Success | The item was accepted for processing.
+| 400 | Bad request | No JSON payload was found, or it could not be decoded.
+| 401 | Unauthorized | No access token was found in the request.
+| 403 | Access denied | Check that your `access_token` is valid, enabled, and has the correct scope. The response will contain a `message` key explaining the problem.
+| 413 | Request entity too large | Max payload size is 128kb. Try removing or truncating unnecessary large data included in the payload, like whole binary files or long strings.
+| 422 | Unprocessable Entity | A syntactically valid JSON payload was found, but it had one or more semantic errors. The response will contain a `message` key describing the errors.
+| 429 | Too Many Requests | Request dropped because the rate limit has been reached for this access token, or the account is on the Free plan and the plan limit has been reached.
+| 500 | Internal Server Error | There was an error on Rollbar's end
 
-If you encounter any other errors, or don't understand an error you see, please [contact support](/support).
+If you encounter any other errors, or don't understand an error you see, please
+[contact support](https://rollbar.com/contact/).
