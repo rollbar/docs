@@ -18,11 +18,11 @@ it's usually too late when you find out.
 
 ## Purge Data
 
-The `utils.sh` script has an option for purging data. It requires you to
-know the project id, project slug, and a unix timestamp for when to
-start your purge.  It'll purge all items in that project older than the
-timestamp.  Therefore, `utils.sh` also has an option to give you a list
-of all your projects and their slugs.
+The `utils.sh` script has an option for purging raw item data. It
+requires you to know the project id, project slug, and a unix timestamp
+for when to start your purge.  It'll purge all raw items in that project
+older than the timestamp.  Therefore, `utils.sh` also has an option to
+give you a list of all your projects and their slugs.
 
 First, get your project information:
 
@@ -71,6 +71,9 @@ $ ./utils.sh --purge 1:HProject:1473633024
 ```
 
 ## Compact raw_item Table
+
+Once you've purged the data, you'll need to compact the raw item table
+in the database to reclaim the space.
 
 Currently, you'll need to compact the raw item table by hand.  We don't
 have a utility for that yet.  This will be easiest for people who manage
