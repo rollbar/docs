@@ -1,0 +1,19 @@
+## How to Integrate HipChat with Rollbar
+
+Rollbar can send messages about exceptions and deploys to a room in [HipChat](https://hipchat.com/).
+
+### Setup
+
+Configuration is per-project in Rollbar.
+
+1.  Head to the Notification settings page for a project: Dashboard -> Settings -> Notifications -> HipChat.
+    ![]()
+
+2.  Enter the API Auth Token, Room name or ID, and server URL (if you host HipChat on your own server), and click 'Enable HipChat Integration'.
+    ![]()
+
+3.  Congrats! HipChat is now integrated with Rollbar. Default rules will
+    have been created for the various events that Rollbar notifies on.
+    You can customize the rules by editing them, deleting them, or
+    adding new ones.
+    ![]()
