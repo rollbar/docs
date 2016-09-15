@@ -8,16 +8,16 @@ in [PagerDuty](http://pagerduty.com/).
 1.  From the PagerDuty dashboard, click Services from the navigation bar
     at the top of the page.
 
-    ![](http://photos.osmek.com/pagerduty_1.133232.o.png)
+    ![](../images/tools/pagerduty/dashboard.png)
 
 2.  On the right side of the page, click the green Add New
     Service button.
 
-    ![](http://photos.osmek.com/pagerduty_2.133233.o.png)
+    ![](../images/tools/pagerduty/add-new-service.png)
 
 3.  Fill in the service name (e.g. "Rollbar").
 
-    ![](http://photos.osmek.com/pagerduty_3.133234.o.png)
+    ![](../images/tools/pagerduty/add-a-service.png)
 
 4.  Select an escalation policy.
 
@@ -28,31 +28,31 @@ in [PagerDuty](http://pagerduty.com/).
 7.  On the service page under Integration Settings, note the string next
     to Service API key.
 
-    ![](http://photos.osmek.com/pagerduty_4.133235.o.png)
+    ![](../images/tools/pagerduty/service-api-key.png)
 
 ### In Rollbar
 
 1.  Navigate to the Dashboard of the project you want to integrate with
     PagerDuty
 
-    ![](http://photos.osmek.com/pagerduty_5.133222.o.png)
+    ![](../images/tools/dashboard.png)
 
 2.  Click Settings
 
-    ![](http://photos.osmek.com/pagerduty_6.133223.o.png)
+    ![](../images/tools/settings.png)
 
 3.  Click Notifications
 
-    ![](http://photos.osmek.com/pagerduty_7.133224.o.png)
+    ![](../images/tools/notifications.png)
 
 4.  Click PagerDuty
 
-    ![](http://photos.osmek.com/pagerduty_8.133236.o.png)
+    ![](../images/tools/pagerduty/channels.png)
 
 5.  Copy-paste the Service API key from PagerDuty into the box in
     Rollbar.
 
-    ![](http://photos.osmek.com/pagerduty_9.133237.o.png)
+    ![](../images/tools/pagerduty/pagerduty-api-key.png)
 
 6.  Press Enable PagerDuty Integration.
 
@@ -63,4 +63,4 @@ in [PagerDuty](http://pagerduty.com/).
     resolved in Rollbar. If you want, you can customize the default
     rules by editing, adding, or deleting them.
 
-    ![](http://photos.osmek.com/pagerduty_10.133238.o.png)
+    ![](../images/tools/pagerduty/add-rule.png)
