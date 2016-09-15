@@ -11,15 +11,15 @@ Turn application errors in your [Rollbar](https://rollbar.com/) projects into Is
 2. Add your JIRA username, password, and server URL, and click 'Enable JIRA integration'. 
    ![]()
 
-4. Once you've authorized, you'll be able to customize the type of notifications and frequency you
+3. Once you've authorized, you'll be able to customize the type of notifications and frequency you
    want to automatically create Issues on your JIRA Projects.
    ![]()
 
-5. Turn specific Items in Rollbar into Issues in JIRA. When viewing an Item in Rollbar simply click
+4. Turn specific Items in Rollbar into Issues in JIRA. When viewing an Item in Rollbar simply click
    the button "Create JIRA Issue" to send the error details to JIRA.
    ![]()
 
-6. You can also link an Item in Rollbar to an existing JIRA Issue. When viewing an Item, select the
+5. You can also link an Item in Rollbar to an existing JIRA Issue. When viewing an Item, select the
    drop down next to the JIRA button and then click "Link existing JIRA Issue" and copy and paste
    the URL for the JIRA Issue you would like to link.
    ![]()
