@@ -24,7 +24,7 @@ See our [privacy policy](http://rollbar.com/privacy) for more information.
 
 Our [privacy policy](http://rollbar.com/privacy) details the type of data we collect via our website and notifiers.
 
-All data collected from our notifiers is stored in raw and aggregated forms. Both the aggregated and raw data are available via our website as well as our API. More information about our API can be found [here](http://rollbar.com/docs/api_overview/).
+All data collected from our notifiers is stored in raw and aggregated forms. Both the aggregated and raw data are available via our website as well as our API. More information about our API can be found [here](http://rollbar.com/docs/api/).
 
 ## Data transmission
 

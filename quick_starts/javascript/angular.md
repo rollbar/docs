@@ -1,3 +1,0 @@
-## Add Rollbar to Your Angular Application
-
-...

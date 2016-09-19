@@ -4,7 +4,7 @@ Muted.
 
 ### Active
 
-![](http://photos.osmek.com/Screenshot-2014-11-18-122008.140812.o.png)
+![](../images/guides/active-resolved-muted/active.png)
 
 All items start as Active. In the Active state:
 
@@ -36,7 +36,7 @@ Items can change from Active to Muted in these ways:
 
 ### Resolved
 
-![](http://photos.osmek.com/Screenshot-2014-11-18-122204.140813.o.png)
+![](../images/guides/active-resolved-muted/resolved.png)
 
 Resolved items represent issues that are believed to be fixed. In the
 Resolved state:
@@ -72,7 +72,7 @@ Items can change from Resolved to Muted in these ways:
 
 ### Muted
 
-![](http://photos.osmek.com/Screenshot-2014-11-18-122244.140814.o.png)
+![](../images/guides/active-resolved-muted/muted.png)
 
 Muted items represent issues that are not currently worth
 investigating. In the Muted state:

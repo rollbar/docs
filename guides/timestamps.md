@@ -11,7 +11,7 @@ Timestamps that are displayed in human-readable form use the timezone
 configured at the project level. This ensures that everyone on your
 team, even if distributed, sees the same absolute timestamps.
 
-Timestamps returned from the [API](https://rollbar.com/docs/api_overview/) are unix
+Timestamps returned from the [API](https://rollbar.com/docs/api/) are unix
 timestamps, as are timestamps in [RQL](https://rollbar.com/docs/rql/) queries.
 
 The original timestamp reported to Rollbar by your application is

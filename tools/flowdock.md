@@ -7,30 +7,30 @@ in [Flowdock](http://flowdock.com/).
     in Flowdock, and note the token for the flow where you want to
     receive Rollbar notifications.
 
-    ![](http://photos.osmek.com/flowdock_1.133218.o.png) 
+    ![](../images/tools/flowdock/api-token.png) 
 
 ### In Rollbar
 
 1.  Navigate to the Dashboard of the project you want to integrate with
     Flowdock
 
-    ![](http://photos.osmek.com/pagerduty_5.133222.o.png) 
+    ![](../images/tools/dashboard.png)
 
 2.  Click Settings
 
-     ![](http://photos.osmek.com/pagerduty_6.133223.o.png)
+     ![](../images/tools/settings.png)
 
 3.  Click Notifications
 
-    ![](http://photos.osmek.com/pagerduty_7.133224.o.png) 
+    ![](../images/tools/notifications.png)
 
 4.  Click Flowdock
 
-     ![](http://photos.osmek.com/flowdock_2.133219.o.png)
+     ![](../images/tools/flowdock/channels.png)
 
 5.  Copy-paste the API Token from Flowdock into the box in Rollbar.
 
-     ![](http://photos.osmek.com/flowdock_3.133220.o.png)
+     ![](../images/tools/flowdock/flowdock-integration.png)
 
 6.  Press Enable Flowdock Integration.
 
@@ -39,4 +39,4 @@ in [Flowdock](http://flowdock.com/).
     flow. If you want, you can customize the default rules by editing,
     adding, or deleting them.
 
-     ![](http://photos.osmek.com/flowdock_4.133221.o.png)
+     ![](../images/tools/flowdock/add-rule.png)
