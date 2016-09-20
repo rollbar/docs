@@ -9,7 +9,8 @@ Configuration is per-project in Rollbar.
 
 1.  Head to the Notification settings page for a project: Dashboard ->
     Settings -> Notifications -> Slack.
-    ![](http://photos.osmek.com/Screenshot-2014-09-23-192621.138859.o.png)
+
+    ![](../images/tools/slack/channel.png)
 
 2.  Click **Connect with Slack**
 
@@ -19,10 +20,12 @@ Configuration is per-project in Rollbar.
 4.  Select the channel or group you wish to receive messages for
 
 5.  Click **Enable Slack Integration**
-    ![](http://photos.osmek.com/Screenshot-2014-09-23-193001.138861.o.png)
+
+    ![](../images/tools/slack/enable.png)
 
 6.  Congrats! Slack is now integrated with Rollbar. Default rules will
     have been created for the various events that Rollbar notifies on.
     You can customize the rules by editing them, deleting them, or
     adding new ones.
-    ![](http://photos.osmek.com/Screenshot-2014-09-23-192846.138860.o.png)
+
+    ![](../images/tools/slack/add-rule.png)

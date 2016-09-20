@@ -7,7 +7,7 @@ who write in to support. We use this ourself and love it.
 The Rollbar app will appear on the right sidebar in the Conversation
 view. It looks like this:
 
-![](http://photos.osmek.com/helpscout_1.133226.o.png)
+![](../images/tools/helpscout/rollbar-app.png)
 
 ### Setup Instructions
 
@@ -15,15 +15,15 @@ Note that this requires a paid Help Scout account.
 
 1.  In HelpScout, click Apps in the top bar
 
-    ![](http://photos.osmek.com/helpscout_3.133228.o.png)
+    ![](../images/tools/helpscout/apps-button.png)
 
 2.  Click "Build a Custom App"
 
-    ![](http://photos.osmek.com/helpscout_4.133229.o.png)
+    ![](../images/tools/helpscout/custom-app.png)
 
 3.  Click "Create App".
 
-    ![](http://photos.osmek.com/helpscout_5.133230.o.png)
+    ![](../images/tools/helpscout/create-app.png)
 
 4.  Fill out the form as follows. Make sure to replace
     PROJECT\_READ\_ACCESS\_TOKEN with a 'read' scope access token for
@@ -37,7 +37,7 @@ Note that this requires a paid Help Scout account.
     -   Debug Mode: Off
     -   Mailboxes: check all
 
-     ![](http://photos.osmek.com/helpscout_2.133227.o.png) 
+     ![](../images/tools/helpscout/form.png)
 
 5.  Press "Save".
 
