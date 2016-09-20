@@ -2,7 +2,7 @@
 
 If you use [Help Scout](https://www.helpscout.net/) for support, you can
 integrate it with Rollbar to see recent errors that affected your users
-who write in to support. We use this ourself and love it.
+who write in to support.
 
 The Rollbar app will appear on the right sidebar in the Conversation
 view. It looks like this:
