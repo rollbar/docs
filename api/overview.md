@@ -6,7 +6,7 @@ system. It is used by our official libraries to report exceptions,
 deploys, and other messages. It can be used to create notifiers for
 additional languages, get data out to integrate with other systems, or
 whatever else you can imagine. If the API is missing something you'd
-like to see, please [let us know](mailto:team@rollbar.com).
+like to see, please [let us know](mailto:support@rollbar.com).
 
 At this time the best way to discover the available resources/calls is
 by exploring the [test console](https://rollbar.com/docs/test_console/).
@@ -63,6 +63,8 @@ The API can return the following error codes:
 
 ### Examples
 
-[Jonathan Slate](https://github.com/jslate) put together
-[rolltools](https://github.com/jslate/rolltools), a Ruby gem that
-provides a few utilities using the Rollbar API.
+Link | Author | Language | Description
+-----|--------|----------|------------
+[api-examples](https://github.com/rollbar/api-examples)|Rollbar|Python|Examples using RQL, deploys, occurrences, and reports
+[api-people-example](https://github.com/rollbar/api-people-example)|Rollbar|Python|Shows how to gather the Person data for each occurrence of a list of items
+[rolltools](https://github.com/jslate/rolltools)|[Jonathan Slate](https://github.com/jslate)|Ruby|A few utilities using the Rollbar API
