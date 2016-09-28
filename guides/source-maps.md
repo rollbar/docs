@@ -248,9 +248,17 @@ minified\_url
 
 ### Resources
 
--   If you use Gulp, try
-    [gulp-rollbar](https://github.com/ismriv/gulp-rollbar) to integrate
-    the upload step into your build process.
+Members of the Rollbar community have created some plugins to integrate
+the source map upload step into their build process. The Rollbar team
+does not maintain them, but we are happy to provide support to maintainers.
+
+Build System | Link
+-------------|-----
+Gulp|[gulp-rollbar](https://github.com/ismriv/gulp-rollbar)
+Webpack|[rollbar-sourcemap-webpack-plugin](https://github.com/thredup/rollbar-sourcemap-webpack-plugin)
+
+If you've written a plugin or other resource that you'd like us to link here,
+please let us know! Send us an email at <support@rollbar.com>
 
 ### FAQ
 
@@ -325,4 +333,4 @@ chat box or email <support@rollbar.com>
 
 ------------------------------------------------------------------------
 
-Last updated: March 7, 2013
+Last updated: September 27, 2016
