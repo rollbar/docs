@@ -28,4 +28,8 @@ Turn application errors in your [Rollbar](https://rollbar.com/) projects into Is
 
 Congratulations! You have now integrated Rollbar with your JIRA account. Events from Rollbar will
 automatically create Issues on your JIRA Projects. If you want, you can customize the default rules
-by editing, adding, or deleting them.  
+by editing, adding, or deleting them.
+
+### View Rollbar info in JIRA
+By adding the [Rollbar for JIRA](https://marketplace.atlassian.com/plugins/com.rollbar.jira/cloud/overview) add-on to your JIRA, you can view Rollbar error data in the corresponding JIRA issues.
+
