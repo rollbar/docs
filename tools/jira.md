@@ -8,7 +8,7 @@ Turn application errors in your [Rollbar](https://rollbar.com/) projects into Is
    will select JIRA from the list of "Available Channels".
    ![](../images/tools/jira/jira1.png)
 
-2. Add your JIRA username, password, and server URL, and click 'Enable JIRA integration'. 
+2. Add your JIRA username, password, and server URL, and click 'Enable JIRA integration'.
    ![](../images/tools/jira/jira2.png)
 
 3. Once you've authorized, you'll be able to customize the type of notifications and frequency you
@@ -31,23 +31,30 @@ automatically create Issues on your JIRA Projects. If you want, you can customiz
 by editing, adding, or deleting them.
 
 ### View Rollbar info in JIRA
-By adding the [Rollbar for JIRA](https://marketplace.atlassian.com/plugins/com.rollbar.jira/cloud/overview) add-on to your JIRA, you can view Rollbar error data in the corresponding JIRA issues.
+By adding the [Rollbar for JIRA](https://marketplace.atlassian.com/plugins/com.rollbar.jira/cloud/overview)
+add-on to your JIRA, you can view Rollbar error data in the corresponding JIRA issues.
+
 ![](../images/tools/jira/jira_rollbar.png)
+
 The data appears in the right column in a section entitled 'Rollbar Linked Items' and includes:
+
 * Occurrences and deployments in the past 24 hours
 * Error status
-* # of total occurrences
-* # of unique IPs affected
+* Number of total occurrences
+* Number of unique IPs affected
 * Datetime first seen
 * Datetime last seen
 
 To install the Rollbar for JIRA add-on within your JIRA account:
+
 1. Go to JIRA Administration --> Add-ons
-2. Enter "Rollbar" in the search field 
+2. Enter "Rollbar" in the search field
 3. Click on "Install" on the Rollbar for JIRA add-on
 
 To install Rollbar for JIRA from the Atlassian Marketplace:
-1. Go to https://marketplace.atlassian.com/plugins/com.rollbar.jira/cloud/overview
+
+1. Go to <https://marketplace.atlassian.com/plugins/com.rollbar.jira/cloud/overview>
 2. Click 'Get it Now'
 
-If you've already set up your Rollbar account to create issues in JIRA per the instructions above, you will automatically start seeing Rollbar Linked Item data in your linked JIRA issues.
+If you've already set up your Rollbar account to create issues in JIRA per the instructions above,
+you will automatically start seeing Rollbar Linked Item data in your linked JIRA issues.
