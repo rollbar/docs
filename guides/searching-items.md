@@ -74,3 +74,12 @@ Stack Trace
 : `nofiles:evildomain.com` finds items where no stack trace filenames contain "evildomain.com"
 : `minfiles:2` finds items with at least 2 filenames in the stack trace
 : `maxfiles:10` finds items with at most 10 filenames in the stack trace
+
+Code Version
+: `code_version:abcdef` finds items that have been seen in the code_version `abcdef`
+
+Fingerprint
+: `fingerprint:my-custom-fingerprint` finds items that have the fingerprint `my-custom-fingerprint` (exact match, useful in conjunction with Custom Grouping or sending your own fingerprint string)
+
+Item Number
+: `#123` finds the item with counter number `123`
