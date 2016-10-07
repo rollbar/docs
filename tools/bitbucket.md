@@ -43,18 +43,13 @@ Congratulations! You have now integrated Rollbar with your Bitbucket account. Ev
 automatically create Issues in your Bitbucket Repositories. If you want, you can customize the default rules
 by editing, adding, or deleting them.
 
+### Bitbucket Pipelines
+
+Bitbucket Pipelines can be configured to report every deployment to Rollbar.  For more information and step-by-step instructions, check out https://bitbucket.org/rollbar/rollbar-bitbucket-pipelines
+
 ### View Rollbar info in Bitbucket
 By adding the [Rollbar for Bitbucket](https://marketplace.atlassian.com/plugins/com.rollbar.jira/cloud/overview)
 add-on to your Bitbucket, you can view Rollbar error data in the corresponding Bitbucket issues.
-
-The data appears in the right column in a section entitled 'Rollbar Linked Items' and includes:
-
-* Occurrences and deployments in the past 24 hours
-* Error status
-* Number of total occurrences
-* Number of unique IPs affected
-* Datetime first seen
-* Datetime last seen
 
 To install the Rollbar for Bitbucket add-on within your Bitbucket account:
 
@@ -64,7 +59,7 @@ To install the Rollbar for Bitbucket add-on within your Bitbucket account:
 
 To install Rollbar for Bitbucket from the Atlassian Marketplace:
 
-1. Go to <https://marketplace.atlassian.com/plugins/com.rollbar.jira/cloud/overview>
+1. Go to <https://marketplace.atlassian.com/plugins/rollbar/cloud/overview>
 2. Click 'Get it Now'
 
 If you've already set up your Rollbar account to create issues in Bitbucket per the instructions above,
