@@ -47,8 +47,6 @@ by editing, adding, or deleting them.
 By adding the [Rollbar for Bitbucket](https://marketplace.atlassian.com/plugins/com.rollbar.jira/cloud/overview)
 add-on to your Bitbucket, you can view Rollbar error data in the corresponding Bitbucket issues.
 
-![](../images/tools/bitbucket/bitbucket_rollbar.png)
-
 The data appears in the right column in a section entitled 'Rollbar Linked Items' and includes:
 
 * Occurrences and deployments in the past 24 hours
