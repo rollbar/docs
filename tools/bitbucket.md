@@ -1,8 +1,19 @@
 ## Connecting Bitbucket to Rollbar
-Turn application errors in your [Rollbar](https://rollbar.com/) projects into Issues in your
-[Bitbucket](https://bitbucket.org/) Repositories.
 
-### In Rollbar
+View the source code mentioned in Rollbar tracebacks and deploys with a single click, and turn application errors in your [Rollbar](https://rollbar.com/) projects into Issues in your [Bitbucket](https://bitbucket.org/) Repositories.
+
+### Enabling Source Code Linking in a Rollbar Project
+
+1. Go to the Settings section of your project then click on Source Control. 
+
+2. If you have not yet connected to your Bitbucket account, click on Connect to Bitbucket and complete the authorization process.
+
+3.  Select a repository from the list of available repositories, enter the branch (default is 'master') and a project root within the repository (usually this can be left blank), then save the settings.
+
+### Viewing Bitbucket Source Code from Rollbar
+Once you've successfully connected to a Bitbucket repository, Rollbar error tracebacks and deploy reports will include links to specific lines of code and revisions in your repository.
+
+### Creating Bitbucket Issues from a Rollbar Project
 
 1. Visit the Settings page in Rollbar and go to Notifications. From the Notifications Settings you
    will select Bitbucket Issues from the list of "Available Channels".
