@@ -46,7 +46,9 @@ by editing, adding, or deleting them.
 ### Bitbucket Pipelines
 
 Bitbucket Pipelines can be configured to report every deployment to Rollbar.  For more information and step-by-step instructions, check out [https://bitbucket.org/rollbar/rollbar-bitbucket-pipelines](https://bitbucket.org/rollbar/rollbar-bitbucket-pipelines).
+
 ### View Rollbar info in Bitbucket
+
 By adding the [Rollbar for Bitbucket](https://marketplace.atlassian.com/plugins/com.rollbar.jira/cloud/overview)
 add-on to your Bitbucket, you can view Rollbar error data in the corresponding Bitbucket issues.
 
