@@ -34,8 +34,8 @@ uppercase letter), escape with backticks (i.e.
 
 -   `+`, `-`, `/`, `*, DIV, MOD`
 -   `AND`, `OR`, `NOT`
--   `=`{title="equals"}, `!=`{title="not equals"},
-    `<>`{title="not equals"}, `>`, `>=`, `<`, `<=`, `BETWEEN`,
+-   `=`, `!=`,
+    `<>`, `>`, `>=`, `<`, `<=`, `BETWEEN`,
     `NOT BETWEEN`, `LIKE`, `NOT LIKE`
 
 #### Built-in Functions
