@@ -5,10 +5,13 @@ View the source code mentioned in Rollbar tracebacks and deploys with a single c
 ### Enabling Source Code Linking in a Rollbar Project
 
 1. Go to the Settings section of your project then click on Source Control. 
+   ![](../images/tools/bitbucket/bitbucket9.png)
 
 2. If you have not yet connected to your Bitbucket account, click on Connect to Bitbucket and complete the authorization process.
+   ![](../images/tools/bitbucket/bitbucket10.png)
 
 3.  Select a repository from the list of available repositories, enter the branch (default is 'master') and a project root within the repository (usually this can be left blank), then save the settings.
+   ![](../images/tools/bitbucket/bitbucket11.png)
 
 ### Viewing Bitbucket Source Code from Rollbar
 Once you've successfully connected to a Bitbucket repository, Rollbar error tracebacks and deploy reports will include links to specific lines of code and revisions in your repository.
