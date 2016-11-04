@@ -218,7 +218,6 @@ function get_current_user() {
 $config['person_fn'] = 'get_current_user';
 ?>
 ```
-
 {: .tab-pane #php}
 
 </div>
