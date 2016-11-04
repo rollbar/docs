@@ -189,4 +189,37 @@ Rollbar.init(this, accessToken, environment, getCurrentUser); //For user, id 42
 ```
 {: .tab-pane #flash}
 
+{ .tab-pane #.net}
+
+```.NET
+
+Rollbar.PersonData(() => new Person
+{
+    Id = 123,
+    Username = "rollbar",
+    Email = "user@rollbar.com"
+});
+```
+{ .tab-pane #.net}
+
+{ .tab-pane #php}
+
+```php
+<?php
+function get_current_user() {
+    if ($_SESSION['user_id']) {
+        return array(
+            'id' => $_SESSION['user_id'], // required - value is a string
+            'username' => $_SESSION['username'], // optional - value is a string
+            'email' => $_SESSION['user_email'] // optional - value is a string
+        );
+    }
+    return null;
+}
+$config['person_fn'] = 'get_current_user';
+?>
+```
+
+{ .tab-pane #php}
+
 </div>

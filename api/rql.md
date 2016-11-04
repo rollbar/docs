@@ -20,6 +20,10 @@ Name | Type | Description
 Params must be supplied as JSON, and as the body of the request. Be sure to set the
 header `Content-Type: application/json`.
 
+Example cURL request:
+
+`curl --data "query_string=select * from item_occurrence where item.counter=1&access_token=[ your read access token here]" https://api.rollbar.com/api/1/rql/jobs`
+
 
 ### Response
 
@@ -168,4 +172,4 @@ Name | Type | Description
 
 -----
 
-Last updated: February 12, 2016
+Last updated: November 4, 2016

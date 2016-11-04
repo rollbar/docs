@@ -116,6 +116,8 @@ ValueError, and exception message contains the string "database"
 }
 ```
 
+Note: If your exception has nested stack traces, rather than using `body.trace.exception.message`, you'll need to use `body.trace_chain.0.exception.message`, and so on for any paths that begin with `body.trace`. 
+
 ### Templating
 
 Both `fingerprint` and `title` can contain template markers (wrapped in

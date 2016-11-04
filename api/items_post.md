@@ -349,7 +349,7 @@ understands. The meaning of each key is explained in the comments.
       // branch: Name of the checked-out source control branch. Defaults to "master"
       "branch": "master",
 
-      // Optiona: code_version
+      // Optional: code_version
       // String describing the running code version on the server
       // See note about "code_version" above
       "code_version": "b6437f45b7bbbb15f5eddc2eace4c71a8625da8c",
