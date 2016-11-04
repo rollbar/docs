@@ -22,7 +22,7 @@ As well as the list of all people who have ever experienced an error, sorted by 
 * [iOS](#ios)
 * [Android](#android)
 * [Flash](#flash)
-* [.NET](#.net)
+* [.NET](#net)
 * [PHP](#php)
 {: .nav .nav-tabs}
 
@@ -192,8 +192,7 @@ Rollbar.init(this, accessToken, environment, getCurrentUser); //For user, id 42
 {: .tab-pane #flash}
 
 
-```.NET
-
+```
 Rollbar.PersonData(() => new Person
 {
     Id = 123,
@@ -201,9 +200,9 @@ Rollbar.PersonData(() => new Person
     Email = "user@rollbar.com"
 });
 ```
-{: .tab-pane #.net}
+{: .tab-pane #net}
 
-```php
+```
 <?php
 function get_current_user() {
     if ($_SESSION['user_id']) {
