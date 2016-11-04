@@ -22,6 +22,8 @@ As well as the list of all people who have ever experienced an error, sorted by 
 * [iOS](#ios)
 * [Android](#android)
 * [Flash](#flash)
+* [.NET](#.net)
+* [PHP](#php)
 {: .nav .nav-tabs}
 
 <div class="tab-content">

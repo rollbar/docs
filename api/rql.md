@@ -22,7 +22,7 @@ header `Content-Type: application/json`.
 
 Example cURL request:
 
-`curl --data "query_string=select * from item_occurrence where item.counter=1&access_token=[ your read access token here]" https://api.rollbar.com/api/1/rql/jobs`
+`curl --data "query_string=select * from item_occurrence where item.counter=1&access_token=[your read access token here]" https://api.rollbar.com/api/1/rql/jobs`
 
 
 ### Response
