@@ -202,6 +202,7 @@ Rollbar.PersonData(() => new Person
 ```
 {: .tab-pane #net}
 
+
 ```
 <?php
 function get_current_user() {
