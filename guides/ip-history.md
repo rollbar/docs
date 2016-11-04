@@ -8,4 +8,4 @@ You'll be able to see all events affecting that IP:
 
 ![](../images/guides/ip-history/ip-history2.png)
 
-There's also a handy link to the WHOIS record for the IP.
+There's also geolocation information (when available) and a handy link to the WHOIS record for the IP.
