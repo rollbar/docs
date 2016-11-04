@@ -146,6 +146,7 @@ These columns are available under the "item." prefix:
 | `item.status` | Status (active, resolved, muted)
 | `item.level` | Level (critical, error, warning, info, debug)
 | `item.resolved_in_version` | Revision the item was last resolved in
+| `client.javascript.browser` | Raw raw user agent string.
 
 #### deploy
 
