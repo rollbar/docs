@@ -191,7 +191,6 @@ Rollbar.init(this, accessToken, environment, getCurrentUser); //For user, id 42
 ```
 {: .tab-pane #flash}
 
-{ .tab-pane #.net}
 
 ```.NET
 
@@ -202,9 +201,7 @@ Rollbar.PersonData(() => new Person
     Email = "user@rollbar.com"
 });
 ```
-{ .tab-pane #.net}
-
-{ .tab-pane #php}
+{: .tab-pane #.net}
 
 ```php
 <?php
@@ -222,6 +219,6 @@ $config['person_fn'] = 'get_current_user';
 ?>
 ```
 
-{ .tab-pane #php}
+{: .tab-pane #php}
 
 </div>
