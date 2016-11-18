@@ -1,9 +1,8 @@
 If your Rollbar account is on a [paid plan](https://rollbar.com/pricing/), then you can enable
 [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language)-based single sign-on (SSO)
-using [Google Apps for Work](https://apps.google.com/) and/or [Okta](https://www.okta.com/).
+using [Google Apps for Work](https://apps.google.com/), [Okta](https://www.okta.com/), or [Bitium](https://support.bitium.com/administration/saml-rollbar/).
 
-NOTE: Users must already exist before they can authenticate via SSO. User provisioning via SSO is
-not currently supported.
+NOTE: Users must already exist before they can authenticate via SSO. User provisioning via SSO is not currently supported.
 {: .warning}
 
 ### Enabling SSO with Google Apps for Work
@@ -66,3 +65,7 @@ NOTE: You must be an admin of your Okta account to complete the following steps.
 
 Once SSO with Okta has been successfully configured, users can login via the Okta "My Applications"
 screen, a Chrome Plugin, or the Rollbar login page.
+
+### Enabling SSO with Bitium
+
+Check out [Configuring SAML for Rollbar](https://support.bitium.com/administration/saml-rollbar/) on the Bitium site for full instructions.
