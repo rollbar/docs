@@ -32,6 +32,7 @@ by editing, adding, or deleting them.
 
 ### View Rollbar info in JIRA
 _NOTE: This feature is only available in JIRA Cloud, not in self-hosted JIRA versions_
+
 By adding the [Rollbar for JIRA](https://marketplace.atlassian.com/plugins/com.rollbar.jira/cloud/overview)
 add-on to your JIRA Cloud instance, you can view Rollbar error data in the corresponding JIRA issues.
 
