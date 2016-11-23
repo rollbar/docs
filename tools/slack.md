@@ -33,4 +33,4 @@ Configuration is per-project in Rollbar.
 ### Tips & Tricks
 
 * You can mention specific Slack users in notification messages using the syntax `@username`
-* To mention `@channel`,`@group`,`@here`, or `@everyone`, use the syntax `<!channel>`,`<!group>`,`<!here>`, or `<!everyone>`.
+* To mention `@channel`, `@group`, `@here`, or `@everyone`, use the syntax `<!channel>`, `<!group>`, `<!here>`, or `<!everyone>`.
