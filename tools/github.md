@@ -7,7 +7,8 @@ particular commit is deployed, and show the commits that were included with each
 Get started by going to your [account settings](https://www.rollbar.com/settings/integrations).
 Navigate to the GitHub tab and click 'Connect with GitHub':
 
-![](https://d26gfdfi90p7cf.cloudfront.net/Screen-Shot-2016-03-21-at-122445-PM.152726.272x257x1.png)
+![](../docs/images/tools/github/github1.png)
+![](../docs/images/tools/github/github2.png)
 
 This enables single sign on (you can log in with the 'Log in with GitHub' button), and enables the
 GitHub integration settings for all your projects.
@@ -19,13 +20,16 @@ a single repository. This has to be done once per project.
 
 #### Link to GitHub
 
-Navigate to your project settings. ("Settings" in top navbar). On the left-hand-side navbar click
-"Source Control". Then, click the GitHub icon.
+1. Go to the Settings section of your project then click on Source Control. Then click on GitHub.
+![](../docs/images/tools/github/github3.png)
 
-Fill out the form as appropriate to your project. The form elements are mostly self-explanatory, but
-the project root may not be entirely clear. This is for projects that include some top-level
-directories that don't exist on the server. Those directories need to be re-prefixed to make the
-source files correctly link. Typically you can leave this blank.
+2. Click Connect to GitHub. 
+![](../docs/images/tools/github/github4.png)
+![](../docs/images/tools/github/github5.png)
+
+3. Select a repository from the list of available repositories, enter the branch (default is 'master') and a project root within the repository (usually this can be left blank), then save the settings.
+![](../docs/images/tools/github/github6.png)
+![](../docs/images/tools/github/github7.png)
 
 #### Configure your notifier
 
