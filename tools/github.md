@@ -20,7 +20,7 @@ a single repository. This has to be done once per project.
 #### Link to GitHub
 
 Navigate to your project settings. ("Settings" in top navbar). On the left-hand-side navbar click
-"Source Control". Then, click on the GitHub icon.
+"Source Control". Then, click the GitHub icon.
 
 Fill out the form as appropriate to your project. The form elements are mostly self-explanatory, but
 the project root may not be entirely clear. This is for projects that include some top-level
