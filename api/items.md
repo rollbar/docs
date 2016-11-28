@@ -11,9 +11,7 @@ The prefix for all URLs is `https://api.rollbar.com`
 
 Requires `read` scope.
 
-`:id` must be an item ID for an item in the project. These IDs are returned as the `id` field in
-other API calls, and can be found in the Rollbar UI on URLs like
-"https://rollbar.com/item/272505123/instance/909858456/" (272505123 is the Item ID).
+`:id` must be an item ID for an item in the project. These IDs are returned as the `id` field in other API calls.
 
 Note that they are NOT found in in URLs like "https://rollbar.com/project/123/item/456/" -- that
 is the "counter", which can be used in the following API call.
@@ -137,4 +135,4 @@ curl -X PATCH 'https://api.rollbar.com/api/1/item/275123456?access_token=abcd123
 
 -----
 
-Last updated: September 3, 2016
+Last updated: November 28, 2016
