@@ -1,4 +1,7 @@
 ## Set up Linking
+
+Hello world
+
 Each line in your stack trace can be linked to your code in GitLab if it's hosted in a single repository. This has to be done once per project.
 
 1. Go to the Settings section of your project then click on Source Control.
@@ -19,4 +22,3 @@ Each line in your stack trace can be linked to your code in GitLab if it's hoste
 
 ## Viewing GitLab Source Code from Rollbar
 Once you've successfully connected to a GitLab repository, Rollbar error tracebacks and deploy reports will include links to specific lines of code and revisions in your repository.
-
