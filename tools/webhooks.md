@@ -5,6 +5,7 @@ external service. Webhooks can be sent for the same triggers as our
 other notifications channels:
 
 -   New item (`new_item`)
+-   Every occurrence (`occurrence`)
 -   Item reactivated (`reactivated_item`)
 -   10^nth occurrence (`exp_repeat_item`)
 -   Item resolved (`resolved_item`)
@@ -57,6 +58,7 @@ The basic payload format is:
 EVENT\_NAME will be one of:
 
 -   `new_item`
+-   `occurrence`
 -   `reactivated_item`
 -   `exp_repeat_item`
 -   `resolved_item`
@@ -142,6 +144,98 @@ New item (JSON):
       "counter": 4,
       "first_occurrence_id": 481761639,
       "activating_occurrence_id": 481761639
+    }
+  }
+}
+```
+
+Every occurrence (JSON):
+
+```json
+{
+  "event_name": "new_item",
+  "data": {
+    "item": {
+      "public_item_id": null,
+      "integrations_data": {},
+      "level_lock": 0,
+      "last_activated_timestamp": 1480713852,
+      "assigned_user_id": null,
+      "hash": "846d53400721434a78442645e0976fc82f009238",
+      "id": 418474069,
+      "environment": "production",
+      "title": "ValueError: Test",
+      "last_occurrence_id": 19007601096,
+      "last_occurrence_timestamp": 1480713852,
+      "platform": 0,
+      "first_occurrence_timestamp": 1480713852,
+      "project_id": 93341,
+      "resolved_in_version": null,
+      "status": 1,
+      "unique_occurrences": null,
+      "title_lock": 0,
+      "last_occurrence": {
+        "body": {
+          "trace": {
+            "frames": [
+              {
+                "filename": "test.py",
+                "code": "raise ValueError('Test')",
+                "lineno": 5,
+                "locals": {
+                  "__builtins__": "<type 'module'>",
+                  "__file__": "test.py",
+                  "__package__": null,
+                  "__name__": "__main__",
+                  "rollbar": "<type 'module'>",
+                  "__doc__": null
+                },
+                "method": "<module>"
+              }
+            ],
+            "exception": {
+              "message": "Test",
+              "class": "ValueError"
+            }
+          }
+        },
+        "uuid": "5ccf5483-1dfc-453a-aa80-ac857ed5df87",
+        "language": "python 2.7.12",
+        "level": "error",
+        "timestamp": 1480713852,
+        "server": {
+          "host": "test.local",
+          "pid": 11277,
+          "argv": ["test.py"]
+        },
+        "environment": "production",
+        "framework": "unknown",
+        "notifier": {
+          "version": "0.13.8",
+          "name": "pyrollbar"
+        },
+        "metadata": {
+          "access_token": "",
+          "debug": {
+            "routes": {
+              "start_time": 1480645795776,
+              "counters": {
+                "post_item": 475931
+              }
+            }
+          },
+        "customer_timestamp": 1480713851,
+        "api_server_hostname": "dal05api2",
+        "timestamp_ms": 1480713852386
+        }
+      },
+    "framework": 13,
+    "total_occurrences": 1,
+    "level": 40,
+    "counter": 2,
+    "last_modified_by": 2147,
+    "first_occurrence_id": 19007601096,
+    "activating_occurrence_id": 19007601096
     }
   }
 }
