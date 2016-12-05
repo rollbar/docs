@@ -32,10 +32,10 @@ uppercase letter), escape with backticks (i.e.
 
 #### Operators
 
--   `+`, `-`, `/`, `*, DIV, MOD`
+-   `+`, `-`, `/`, `*`, `DIV`, `MOD`
 -   `AND`, `OR`, `NOT`
 -   `=`, `!=`,
-    `<>`, `>`, `>=`, `<`, `<=`, `BETWEEN`,
+    `<>`, `>`, `>=`, `<`, `<=`, `IN`, `NOT IN`, `BETWEEN`,
     `NOT BETWEEN`, `LIKE`, `NOT LIKE`
 
 #### Built-in Functions
