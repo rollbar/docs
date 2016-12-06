@@ -88,7 +88,7 @@ WHERE item.counter BETWEEN 40 AND 50
 ```sql
 SELECT *
 FROM item_occurrence
-WHERE item.counter = 1
+WHERE item.counter IN (1,2,3)
 ```
 
 ### Tips
