@@ -4,8 +4,6 @@ Muted.
 
 ### Active
 
-![](../images/guides/active-resolved-muted/active.png)
-
 All items start as Active. In the Active state:
 
 -   The item can appear on the Dashboard
@@ -35,8 +33,6 @@ Items can change from Active to Muted in these ways:
 -   Set via the [Rollbar API](https://rollbar.com/docs/api/items/#modify-an-item)
 
 ### Resolved
-
-![](../images/guides/active-resolved-muted/resolved.png)
 
 Resolved items represent issues that are believed to be fixed. In the
 Resolved state:
