@@ -11,6 +11,9 @@ for each Item describe the Item as a whole (not the subset of occurrences that m
 Level
 : Filters items by current level. Critical, Error, Warning, Info, Debug. Click on/off to choose
   any or all.
+  
+Owner
+: Filters items based on assigned owner.  Find  items assigned to a specify project member, _any_ project member, or unassigned.
 
 Status
 : Filters items by current status. Active, Resolved, Muted or Any Status.
@@ -44,11 +47,6 @@ Server Host
 
 Context
 : `context:home#index` finds items with context matching "home#index" (prefix search)
-
-Assignment
-: `assigned:me` finds items assigned to you
-: `assigned:adalovelace` finds items assigned to the user adalovelace
-: `assigned:unassigned` finds items not assigned to anyone
 
 Comments
 : `has:comments` finds items that have comments
