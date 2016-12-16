@@ -11,9 +11,9 @@ for each Item describe the Item as a whole (not the subset of occurrences that m
 Level
 : Filters items by current level. Critical, Error, Warning, Info, Debug. Click on/off to choose
   any or all.
-  
+ 
 Owner
-: Filters items based on assigned owner.  Find  items assigned to a specify project member, _any_ project member, or unassigned.
+: Filters items based on assigned owner. Find items assigned to a specific project member, _any_ project member, or unassigned.
 
 Status
 : Filters items by current status. Active, Resolved, Muted or Any Status.
