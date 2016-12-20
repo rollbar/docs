@@ -68,7 +68,7 @@ string in this API call.
 Name | Type | Description
 -----|------|-------------
 `access_token`|`string`|**Required.** A `read`-scope project access token.
-`assigned_user`|`string`|If not empty, only items assigned to the specified user will be returned. You can also use the keywords `assigned` (items that are assigned to any owner) or `unassigned` (items with no owner).
+`assigned_user`|`string`|If not empty, only items assigned to the specified user will be returned. Must be a valid Rollbar username, or you can use the keywords `assigned` (items that are assigned to any owner) or `unassigned` (items with no owner).
 `environment`|`string`|If not empty, only items in the specified environment will be returned. Specify multiple times to filter by multiple environments.
 `framework`|`string`|If not empty, only items in the specified framework will be returned. Specify multiple times to filter by multiple frameworks.
 `ids`|comma-separated list of integers|If not empty, list of item IDs to return, instead of using all items in the project.
