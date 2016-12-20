@@ -68,13 +68,14 @@ string in this API call.
 Name | Type | Description
 -----|------|-------------
 `access_token`|`string`|**Required.** A `read`-scope project access token.
-`level`|`string`|If not empty, only items with the specified level will be returned. Valid values: `'debug'`, `'info'`, `'warning'`, `'error'`, `'critical'`. Specifiy multiple times to filter by multiple levels.
-`status`|`string`|If not empty, only items with the specified status will be returned. Valid values: `'active'`, `'resolved'`, `'muted'`. Specify multiple times to filter by multiple statuses.
+`assigned_user`|`string`|If not empty, only items assigned to the specified user will be returned. You can also use the keywords `assigned` (items that are assigned to any owner) or `unassigned` (items with no owner).
 `environment`|`string`|If not empty, only items in the specified environment will be returned. Specify multiple times to filter by multiple environments.
 `framework`|`string`|If not empty, only items in the specified framework will be returned. Specify multiple times to filter by multiple frameworks.
-`query`|`string`|A query string, using the same format as the search box on the Items page.
 `ids`|comma-separated list of integers|If not empty, list of item IDs to return, instead of using all items in the project.
+`level`|`string`|If not empty, only items with the specified level will be returned. Valid values: `'debug'`, `'info'`, `'warning'`, `'error'`, `'critical'`. Specifiy multiple times to filter by multiple levels.
 `page`|`integer`|Page number, starting from 1. 100 items are returned per page.
+`query`|`string`|A query string, using the same format as the search box on the Items page.
+`status`|`string`|If not empty, only items with the specified status will be returned. Valid values: `'active'`, `'resolved'`, `'muted'`. Specify multiple times to filter by multiple statuses.
 
 ### Examples
 
