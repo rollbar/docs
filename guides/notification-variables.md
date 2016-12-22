@@ -7,7 +7,7 @@ When an item has changed and triggered a notification, the following variables a
 
 Variable | Description/Values
 ---------| ------------
-<pre>{{link}}</pre> | Item URL
+`\{\{link\}\}` | Item URL
 ```{{project_slug}}``` | Project name
 ```{{title}}``` | Item title
 ```{{summary}}```| Item summary
