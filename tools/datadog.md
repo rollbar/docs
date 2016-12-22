@@ -12,22 +12,19 @@ instructions below.
 
 Configuration is per-project in Rollbar.
 
-1. On Datadog, head to the APIs page to get your API Key (copy to your clipboard): Integrations → APIs.
-   ![](https://d26gfdfi90p7cf.cloudfront.net/rollbar-datadog-keys.152870.l.png)
+1. In Datadog, go to **Integrations → APIs** and copy your API key.
 
-2. In Rollbar, go to the Notification settings page for a project: Dashboard → Settings →
-   Notifications → Datadog.
-   ![](https://d26gfdfi90p7cf.cloudfront.net/rollbar-datadog.152871.l.png)
-
+2. In Rollbar, go to the Notification settings page for a project: **Dashboard → Settings →
+   Notifications → Datadog**.
+  
 3. Add your Datadog API key.
-   ![](https://d26gfdfi90p7cf.cloudfront.net/rollbar-datadog-integration.152873.l.png)
 
-4. Click Enable Datadog Integration
+4. Click **Enable Datadog Integration**
 
 Congrats! Datadog is now integrated with Rollbar. Once integrated, the default notification 'Rules'
 will be activated and sent to your Datadog account.
 
-## Customizing Datadog Events
+## Customizing Datadog Notification Rules
 
 The Datadog event created by each notification rule can be customized using [notification variables](/docs/notification-variables/) and filters.  Additionally, you may specify a different API key for each notification rule if you wish to send the events to a different Datadog account.
 
