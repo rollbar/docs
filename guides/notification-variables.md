@@ -2,6 +2,11 @@
 
 Rollbar supports variables in notifications using a familiar `{{"{{VARIABLE_NAME"}}}}` syntax.  Different variable values are available depending on the type of event that triggers the notification.
 
+## Usage Examples
+### Default Deploy Message to Slack
+`[{{"{{project_slug"}}}}] {{"{{username"}}}} deployed revision {{"{{revision"}}}} to {{"{{environment"}}}} {{"{{link"}}}}
+
+
 ## Items
 When an item has changed and triggered a notification, the following variables are available:
 
