@@ -31,7 +31,7 @@ will be activated and sent to your Datadog account.
 
 The Datadog event created by each notification rule can be customized using [notification variables](/docs/notification-variables/) and filters.  Additionally, you may specify a different API key for each notification rule if you wish to send the events to a different Datadog account.
 
-## Automatic event priority
+## Automatic Event Priority
 When creating an event in Datadog from Rollbar, you can explicitly set the priority (`low`, `normal`) or allow Rollbar to automatically determine the priority.  Here's how priority is automatically determined:
 
 Rollbar Notification Rule | Datadog Priority
@@ -39,7 +39,7 @@ Rollbar Notification Rule | Datadog Priority
 Item resolved | `low`
 _Everything else_ |	`normal`
 
-## Automatic event type
+## Automatic Event Type
 When creating an event in Datadog from Rollbar, you can explicitly set the type (`error`, `warning`, `info`, `success`) or allow Rollbar to automatically determine the type.  Here's how type is automatically determined:
 
 Rollbar Notification Rule | Datadog Event Type
