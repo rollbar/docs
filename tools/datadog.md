@@ -40,7 +40,7 @@ Item resolved | `low`
 _Everything else_ |	`normal`
 
 ## Automatic event type
-When creating an event in Datadog from Rollbar, you can explicitly set the type (`error`, `warning`, `info`, `success`) or allow Rollbar to automatically determine the priority.  Here's how priority is automatically determined:
+When creating an event in Datadog from Rollbar, you can explicitly set the type (`error`, `warning`, `info`, `success`) or allow Rollbar to automatically determine the type.  Here's how type is automatically determined:
 
 Rollbar Notification Rule | Datadog Event Type
 --------------------------|-------------------
