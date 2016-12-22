@@ -33,6 +33,7 @@ The Datadog event created by each notification rule can be customized using [not
 
 ## Automatic event priority
 When creating an event in Datadog from Rollbar, you can explicitly set the priority (`low`, `normal`) or allow Rollbar to automatically determine the priority.  Here's how priority is automatically determined:
+
 Rollbar Notification Rule | Datadog Priority
 -------------|-----------------
 Item resolved | `low`
