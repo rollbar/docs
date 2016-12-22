@@ -8,6 +8,10 @@ _Default Deploy Message to Slack:_
 
 `[{{"{{project_slug"}}}}] {{"{{username"}}}} deployed revision {{"{{revision"}}}} to {{"{{environment"}}}} {{"{{link"}}}}`
 
+_Default Event title for Datadog:_
+
+`[{{"{{project_slug"}}}}] {{"{{environment"}}}} - {{"{{trigger_description"}}}} {{"{{level"}}}}: {{"{{title"}}}}`
+
 ## Items
 When an item has changed and triggered a notification, the following variables are available:
 
@@ -17,7 +21,7 @@ Variable | Description/Values
 `{{"{{project_slug"}}}}` | Project name
 `{{"{{title"}}}}` | Item title
 `{{"{{summary"}}}}`| Item summary
-`{{"{{markdown_summary"}}}}` | ???
+{% comment %}`{{"{{markdown_summary"}}}}` | ??? {% endcomment %}
 `{{"{{environment"}}}}` | Environment reported in item (e.g. `production`, `staging`, etc.)
 `{{"{{level"}}}}` | `Critical`, `Error`, `Warning`, `Info`, `Debug`
 `{{"{{status"}}}}` | `Active`, `Resolved`, `Muted`
@@ -38,7 +42,7 @@ Variable | Description/Values
 `{{"{{status"}}}}` | `Active`, `Resolved`, `Muted`
 `{{"{{occurrence_title"}}}}` | Same as item title
 `{{"{{occurrence_link"}}}}` | Occurrence URL
-TODO | Explain what additional values are available on occurrences
+{% comment %} TODO | Explain what additional values are available on occurrences {% endcomment %}
 
 ## Deploys
 When a deploy triggers a notification, the following variables are available:
