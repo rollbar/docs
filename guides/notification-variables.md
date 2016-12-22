@@ -39,11 +39,11 @@ When a deploy triggers a notification, the following variables are available:
 
 Variable | Description/Values
 ---------| ------------
-'project_slug': project.slug,
-        'username': deploy.username or deploy.local_username or 'unknown',
-        'revision': deploy.revision,
-        'environment': deploy.environment,
-        'link': request.route_url('deploy/index', id=deploy.id, account=project.account),
-        'start_time': h.format_timestamp(deploy.start_time, project),
-        'finish_time': h.format_timestamp(deploy.finish_time, project),
-        'comment': deploy.comment or ''
+`{{project_slug}}` | Project name
+`{{username}}` | Rollbar user who triggered the deploy, or `unknown`
+`{{revision}}` | Deployed revision
+`{{environment}}` | Environment to which the deploy occurred (e.g. `production`, `staging`, etc.)
+`{{link}}` | URL of deploy details in Rollbar
+`{{start_time}}` | Deploy start time _(formatted based on project timezone setting)_
+`{{finish_time}}`| Deploy finish time _(formatted based on project timezone setting)_
+`{{comment}}` | Deploy comment
