@@ -21,7 +21,7 @@ Variable | Description/Values
 `{{"{{project_slug"}}}}` | Project name
 `{{"{{title"}}}}` | Item title
 `{{"{{summary"}}}}`| Item summary
-{% comment %}`{{"{{markdown_summary"}}}}` | ??? {% endcomment %}
+`{{"{{markdown_summary"}}}}` | Items summary including markdown
 `{{"{{environment"}}}}` | Environment reported in item (e.g. `production`, `staging`, etc.)
 `{{"{{level"}}}}` | `Critical`, `Error`, `Warning`, `Info`, `Debug`
 `{{"{{status"}}}}` | `Active`, `Resolved`, `Muted`
