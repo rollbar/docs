@@ -1,8 +1,8 @@
-#Using Variables in Rollbar Notifications
+# Using Variables in Rollbar Notifications
 
 Rollbar supports variables in notifications using a familiar `{{VARIABLE_NAME}}` syntax.  Different variable values are available depending on the type of event that triggers the notification.
 
-##Items
+## Items
 When an item has changed and triggered a notification, the following variables are available:
 
 Variable | Description/Values
@@ -20,7 +20,7 @@ Variable | Description/Values
 `{{last_occurrence_time}}` | Friendly-formatted timestamp of last occurrence (e.g. `1 minute ago`)
 `{{last_occurrence_link}}` | Last occurrence URL
 
-##Occurrences
+## Occurrences
 When occurrences of an item trigger a notification, the following variables are available:
 
 Variable | Description/Values
@@ -34,7 +34,7 @@ Variable | Description/Values
 `{{occurrence_link}}` | Occurrence URL
 TODO | Explain what additional values are available on occurrences
 
-##Deploys
+## Deploys
 When a deploy triggers a notification, the following variables are available:
 
 Variable | Description/Values
