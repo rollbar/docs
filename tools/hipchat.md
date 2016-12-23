@@ -17,3 +17,6 @@ Configuration is per-project in Rollbar.
     You can customize the rules by editing them, deleting them, or
     adding new ones.
     ![](../images/tools/hipchat/hipchat3.png)
+   
+### Tips & Tricks
+* You can customize the content of Hipchat messages using [notication variables](/docs/notification-variables/).
