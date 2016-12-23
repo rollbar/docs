@@ -40,3 +40,6 @@ in [Flowdock](http://flowdock.com/).
     adding, or deleting them.
 
      ![](../images/tools/flowdock/add-rule.png)
+
+### Tips & Tricks
+* You can customize the content of Flowdock messages using [notication variables](/docs/notification-variables/).
