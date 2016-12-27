@@ -14,7 +14,7 @@ Here is an example cURL command to upload a `mapping.txt` file:
 
 ```bash
 curl 'https://api.rollbar.com/api/1/proguard' \
-  -F access_token=POST_SERVER_ITEM_ACCESS_TOKEN \
-  -F version=0.0.10 \
-  -F mapping=@path/to/mapping.txt
+	-F access_token=POST_SERVER_ITEM_ACCESS_TOKEN \
+	-F version=0.0.10 \
+	-F mapping=@path/to/mapping.txt
 ```

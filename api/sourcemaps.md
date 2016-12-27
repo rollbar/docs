@@ -23,12 +23,12 @@ Example:
 
 ```bash
 curl https://api.rollbar.com/api/1/sourcemap \
-    -F access_token=aaaabbbbccccddddeeeeffff00001111 \
-    -F version=version_string_here \
-    -F minified_url=http://example.com/static/js/example.min.js \
-    -F source_map=@static/js/example.min.map \
-    -F static/js/site.js=@static/js/site.js \
-    -F static/js/util.js=@static/js/util.js
+	-F access_token=aaaabbbbccccddddeeeeffff00001111 \
+	-F version=version_string_here \
+	-F minified_url=http://example.com/static/js/example.min.js \
+	-F source_map=@static/js/example.min.map \
+	-F static/js/site.js=@static/js/site.js \
+	-F static/js/util.js=@static/js/util.js
 ```
 
 In the above example, our website is `http://example.com`, we have a minified JavaScript file at `http://example.com/js/example.min.js`, and we have a source tree like this:
@@ -62,6 +62,6 @@ Example:
 ```
 curl https://api.rollbar.com/api/1/sourcemap/download
 	-F access_token=aaaabbbbccccddddeeeeffff00001111 \  
-    -F version=92429d82a41e930486c6de5ebda9602d55c39986 \  
-    -F minified_url=http://example.com/static/js/example.min.js
+	-F version=92429d82a41e930486c6de5ebda9602d55c39986 \  
+	-F minified_url=http://example.com/static/js/example.min.js
 ```
