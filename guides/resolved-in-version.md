@@ -28,30 +28,3 @@ The other notifiers have very similar top-level code_version configuration setti
 If you resolve an item within Rollbar in a certain version and also specify a code_version, we use both of these values to decide whether or not to reactivate the item.
 
 For example: Let's say you have a bug in version 1.0 of your app. The bug is fixed and will be deployed to users in verision 1.1, but that won’t happen for a few days. You can just resolve the Rollbar item associated with this bug now, but also specify that the resolved version is 1.1. You will no longer get reactivation notifications for this item until occurrences of this item with a code_version >= 1.1 come in.
-
-
-### Auto-resolving items in GitHub commits
-
-If you connect Rollbar with GitHub, this process will also work with Git SHAs. We’ll query the GitHub API to determine whether one commit is a parent of the other.
-
-You can now also include Rollbar item tags in your GitHub commit messages to automatically resolve them in the correct revision when deploying. Just include one of the following strings in your commits for each item you want to resolve:
-
-```
-fix $ref
-fixed $ref
-fixes $ref
-resolve $ref
-resolved $ref
-resolves $ref
-close $ref
-closed $ref
-closes $ref
-```
-
-Where `$ref` is one of the following item tags:
-
-Full item URL, eg. `https://rollbar.com/item/123456789`
-Item ID, eg. `rb#123456789`
-Short item ID, eg. `rb#22` (This appears at the top left of an item page.)
-
-Then execute a deploy by hitting the deploy API endpoint. The items referenced in any of the commit messages of the deploy will be resolved using the respective revision of that commit.
