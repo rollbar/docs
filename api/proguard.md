@@ -1,0 +1,20 @@
+To upload the `mapping.txt` file generated in the obfuscation process of using ProGuard, call the `api/1/proguard` endpoint with the following params:
+
+access_token
+:	a project-level access token
+
+version
+:	a string indicating the current code version. This must match the `android:versionName` in your app's `AndroidManifest.xml`, corresponding to 	the version the `mapping.txt` was generated for.
+
+mapping
+:	the path to `mapping.txt`
+
+
+Here is an example cURL command to upload a `mapping.txt` file:
+
+```bash
+curl 'https://api.rollbar.com/api/1/proguard' \
+  -F access_token=POST_SERVER_ITEM_ACCESS_TOKEN \
+  -F version=0.0.10 \
+  -F mapping=@path/to/mapping.txt
+```

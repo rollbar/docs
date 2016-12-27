@@ -1,4 +1,4 @@
-These calls require a project-level access token, which should be provided in the query string. The prefix for all URLs is https://api.rollbar.com
+These calls require a project-level access token, which should be provided in the query string. The prefix for all URLs is `https://api.rollbar.com`.
 
 # Upload
 
