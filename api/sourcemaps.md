@@ -45,9 +45,10 @@ example/static/js/util.js
 
 You can notify our API to trigger a download for each of your minified files. 
 
-Call the `api/1/sourcemap` endpoint with the following params:
+Call the `api/1/sourcemap/download` endpoint with the following params:
 
 access_token
+:	a project-level access token
 
 version
 :	a string indicating the current code version
