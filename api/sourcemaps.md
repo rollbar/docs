@@ -2,11 +2,10 @@ These calls require a project-level access token, which should be provided in th
 
 # Upload
 
-To upload your source maps at the beginning of your deploy script (before the new code is in production), run the following cURL command.
-
-Call the `api/1/sourcemap` endpoint with the following params:
+To upload your source maps at the beginning of your deploy script (before the new code is in production), call the `api/1/sourcemap` endpoint with the following params:
 
 access_token
+:	a project-level access token
 
 version
 :	a string indicating the current code version
@@ -17,7 +16,8 @@ minified_url
 source_map
 :	the URL for the source map file
 
-other params as needed for your source map tree.
+other params 
+:	as needed for your source tree.
 
 Example:
 
