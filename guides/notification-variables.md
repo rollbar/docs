@@ -42,6 +42,15 @@ Variable | Description/Values
 `{{"{{status"}}}}` | `Active`, `Resolved`, `Muted`
 `{{"{{occurrence_title"}}}}` | Same as item title
 `{{"{{occurrence_link"}}}}` | Occurrence URL
+`{{"{{PAYLOAD_DATA_FIELD"}}}}` | Any data value sent in the JSON payload may be used as a variable, including custom data.  For example, if your JSON payload includes
+{% highlight json %}
+{
+  "handler": {
+    "key": "process-job"
+    "id": 100
+  }
+}
+{% endhighlight %}, then you can use the variables `{{"{{handler.key"}}}}` and `{{"{{handler.id"}}}}` in your notifications.
 {% comment %} TODO | Explain what additional values are available on occurrences {% endcomment %}
 
 ## Deploys
