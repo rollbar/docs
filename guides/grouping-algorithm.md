@@ -54,6 +54,9 @@ Things to note:
     code at the beginning of the file).
 -   We don't use the exception message, as it often contains input that
     varies for each call.
+-   When server.root is set, we strip the root off of each filename and replace 
+    it with a constant string. So the filenames used for grouping will be 
+    different than if server.root is not set.
 
 We've added a number of tweaks to this basic algorithm. Here are some of
 the big ones:
