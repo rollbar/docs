@@ -42,7 +42,7 @@ Variable | Description/Values
 `{{"{{status"}}}}` | `Active`, `Resolved`, `Muted`
 `{{"{{occurrence_title"}}}}` | Same as item title
 `{{"{{occurrence_link"}}}}` | Occurrence URL
-*JSON payload values* | Any data value sent in the JSON payload of an occurrence may be used as a variable, including custom data.  Examples of usage are `{{"{{request.url"}}}}` and `{{"{{server.host"}}}}`.  If your JSON payload includes the custom values\\ `{{"{{ handler: { key: process-job, id:100"}}}}`\\ then you can use the variables `{{"{{handler.key"}}}}` and `{{"{{handler.id"}}}}` in your notifications.  To view the full set of available values, look at the "Params" values of an occurrence in your project. 
+*JSON payload values* | Any data value sent in the JSON payload of an occurrence may be used as a variable, including custom data.  Examples of usage are `{{"{{request.url"}}}}` and `{{"{{server.host"}}}}`.  If your JSON payload includes the custom values `{{"{{ handler: { key: process-job, id:100"}}}}` then you can use the variables `{{"{{handler.key"}}}}` and `{{"{{handler.id"}}}}` in your notifications.  To view the full set of available values, look at the "Params" values of an occurrence in your project. 
 
 
 ## Deploys
