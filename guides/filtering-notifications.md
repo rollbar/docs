@@ -49,6 +49,8 @@ on. The following fields are available:
 | Threshold | Sets the High Occurrence Rate threshold
 | Window | Sets the High Occurrence Rate window
 
+You can use a regular expression in your notification filter if you wish. Rollbar uses [Python's regex engine](https://docs.python.org/2/library/re.html). 
+
 #### Editing a Filter
 
 After adding a filter you can edit the filter by changing the form fields. Most of the filter fields
