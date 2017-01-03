@@ -1,4 +1,4 @@
-If you are on an Enterprise plan, you have access to our Enterprise security controls. These are advanced security features that will help keep all of your data safe, protected, and centralized from disruptions. All features are accessed through the Account Settings page.
+If your subscription includes these features, you have access to our Enterprise Security Controls. These are advanced security features that will help keep all of your data safe, protected, and centralized from disruptions. All features are accessed through the Account Settings page.
 
 # User List
 
