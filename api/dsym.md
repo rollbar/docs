@@ -1,24 +1,23 @@
-To upload your .dSYM files, POST to the the `api/1/dsym` endpoint with the following params:
+## Upload your .dSYM files
 
-access_token
-:	your `post_server_item` access token
+	`POST /api/1/dsym` 
 
-version
-:	a string indicating the current code version.
+Requires `post_server_item` scope.
 
-bundle_identifier
-:	your bundle identifier
+### Form Data Parameters
 
-dsym
-:	path to your zipped dSYM file. See [here](https://raw.githubusercontent.com/rollbar/rollbar-ios/master/upload_dsym.py) for more info on this.
+Name | Type | Description
+-----|------|-------------
+`access_token`|`string`|**Required** A `post_server_item`-scope project access token.
+`bundle_identifier`|`string`|**Required** The current code version.
+`dsym`|`file name`|**Required** Your zipped dSYM file. See [here](https://raw.githubusercontent.com/rollbar/rollbar-ios/master/upload_dsym.py) for more info.
 
-
-Here is an example cURL command to upload your .dSYM files:
+### Example
 
 ```bash
 curl -X POST "https://api.rollbar.com/api/1/dsym"
 	-F access_token=POST_SERVER_ITEM_ACCESS_TOKEN \
 	-F version=0.1.2 \
 	-F bundle_identifier="com.apple.xcode.dsym.org.rollbar.DelightfulApp" \
-	-F dsym=@path/to/dsym.zip" \
+	-F dsym=dsym.zip \
 ```

@@ -1,25 +1,17 @@
-These calls require a project-level access token, which should be provided in the query string. The prefix for all URLs is `https://api.rollbar.com`.
+## Upload
 
-# Upload
+	`POST /api/1/sourcemap/`
 
-To upload your source maps at the beginning of your deploy script (before the new code is in production), call the `api/1/sourcemap` endpoint with the following params:
+### Form Data Parameters
 
-access_token
-:	a project-level access token
+Name | Type | Description
+`access_token`|`string`|**Required** A project access token.
+`version`|`string`|**Required** The current code version.
+`minified_url`|`string`|**Required** The full URL of the minified file, as it appears in the stack trace. This should start with `http:` or `https:`.
+`source_map`|`file name`|**Required** Your source map file.
+`source file paths`|`file name`|The source files themselves.
 
-version
-:	a string indicating the current code version
-
-minified_url
-:	the full URL of the minified file. This should start with `http:` or `https:`, which we'll strip off.
-
-source_map
-:	the URL for the source map file
-
-other params 
-:	as needed for your source tree.
-
-Example:
+### Example
 
 ```bash
 curl https://api.rollbar.com/api/1/sourcemap \
@@ -41,23 +33,19 @@ example/static/js/site.js
 example/static/js/util.js
 ```
 
-# Download
+# Trigger An Automatic Download
 
-You can notify our API to trigger a download for each of your minified files. 
+	`POST /api/1/sourcemap/download`
 
-Call the `api/1/sourcemap/download` endpoint with the following params:
+### Form Data Parameters
 
-access_token
-:	a project-level access token
-
-version
-:	a string indicating the current code version
-
-minified_url
-:	the full URL of the minified file. This should start with `http:` or `https:`, which we'll strip off.
+Name | Type | Description
+`access_token`|`string`|**Required** A project access token.
+`version`|`string`|**Required** The current code version.
+`minified_url`|`string`|**Required** The full URL of the minified file, as it appears in the stack trace. This should start with `http:` or `https:`.
 
 
-Example:
+### Example
 
 ```
 curl https://api.rollbar.com/api/1/sourcemap/download
