@@ -35,7 +35,7 @@ example/static/js/util.js
 
 # Trigger An Automatic Download
 
-	`POST /api/1/sourcemap/download`
+	POST /api/1/sourcemap/download
 
 ### Form Data Parameters
 
