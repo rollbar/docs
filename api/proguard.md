@@ -1,6 +1,6 @@
 ## Upload your `mapping.txt` file
 
-	`POST /api/1/proguard/`
+	POST /api/1/proguard/
 
 Requires `post_server_item` scope.
 

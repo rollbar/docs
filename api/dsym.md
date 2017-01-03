@@ -1,6 +1,6 @@
 ## Upload your .dSYM files
 
-	`POST /api/1/dsym` 
+	POST /api/1/dsym
 
 Requires `post_server_item` scope.
 

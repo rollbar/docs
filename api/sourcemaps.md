@@ -1,6 +1,6 @@
 ## Upload
 
-	`POST /api/1/sourcemap/`
+	POST /api/1/sourcemap/
 
 ### Form Data Parameters
 
