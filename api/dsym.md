@@ -1,8 +1,8 @@
-## Upload your .dSYM files
+## Upload an iOS .dSYM file
 
 	POST /api/1/dsym
 
-Requires `post_server_item` scope.
+This is usually done via the [upload_dsym.py](https://raw.githubusercontent.com/rollbar/rollbar-ios/master/upload_dsym.py) script. For more information on this, see the "Symbolication using .dSYM files" section of our [iOS notifier docs](https://rollbar.com/docs/notifier/rollbar-ios/).
 
 ### Form Data Parameters
 
@@ -10,7 +10,7 @@ Name | Type | Description
 -----|------|-------------
 `access_token`|`string`|**Required** A `post_server_item`-scope project access token.
 `bundle_identifier`|`string`|**Required** The current code version.
-`dsym`|`file name`|**Required** Your zipped dSYM file. See [here](https://raw.githubusercontent.com/rollbar/rollbar-ios/master/upload_dsym.py) for more info.
+`dsym`|`file upload`|**Required** Your zipped dSYM file. See [here](https://raw.githubusercontent.com/rollbar/rollbar-ios/master/upload_dsym.py) for more info.
 
 ### Example
 

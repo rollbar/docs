@@ -1,15 +1,15 @@
 ## Upload
 
-	POST /api/1/sourcemap/
+	POST /api/1/sourcemap
 
 ### Form Data Parameters
 
 Name | Type | Description
-`access_token`|`string`|**Required** A project access token.
+`access_token`|`string`|**Required** A `post_server_item`-scope project access token.
 `version`|`string`|**Required** The current code version.
 `minified_url`|`string`|**Required** The full URL of the minified file, as it appears in the stack trace. This should start with `http:` or `https:`.
-`source_map`|`file name`|**Required** Your source map file.
-`source file paths`|`file name`|The source files themselves.
+`source_map`|`file upload`|**Required** Your source map file.
+`source file paths`|`file upload`|The source files themselves.
 
 ### Example
 
@@ -33,14 +33,14 @@ example/static/js/site.js
 example/static/js/util.js
 ```
 
-# Trigger An Automatic Download
+## Trigger An Automatic Download
 
 	POST /api/1/sourcemap/download
 
 ### Form Data Parameters
 
 Name | Type | Description
-`access_token`|`string`|**Required** A project access token.
+`access_token`|`string`|**Required** A `post_server_item`-scope project access token.
 `version`|`string`|**Required** The current code version.
 `minified_url`|`string`|**Required** The full URL of the minified file, as it appears in the stack trace. This should start with `http:` or `https:`.
 
