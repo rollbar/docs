@@ -49,6 +49,8 @@ For the minified-to-source translation to work, we need:
     Compiler](https://developers.google.com/closure/compiler/) or [UglifyJS
     2](https://github.com/mishoo/UglifyJS2).
 
+    You can include the source inside the source map. We'll look for it in 'sourcesContent' as per the source map standard.
+
 #### Step 1: Enable source maps
 
 Add these two parameters to the `_rollbarConfig` object that you have
@@ -326,6 +328,12 @@ Here are a few common problems:
     the top level map. Each section can either be embedded source map or
     a reference to an external source map. Unfortunately, we don't yet
     support this source map format.
+-   Don't forget to update the version number when you update your JavaScript.
+    If you don't, the filename, line and column numbers will be incorrect.
+-   The value of `minified_url` must be the full URL of the minified file.
+    This should start with `http:` or `https:`, which we'll strip off.
+-   If you're a Rails asset pipeline user, be sure you aren't generating source
+    maps off an already minified file.  
 
 We're working on the tools to make debugging this setup easier, but for
 now, feel free to contact support and we'll walk you through it. Use the
