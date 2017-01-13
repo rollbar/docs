@@ -49,7 +49,7 @@ For the minified-to-source translation to work, we need:
     Compiler](https://developers.google.com/closure/compiler/) or [UglifyJS
     2](https://github.com/mishoo/UglifyJS2).
 
-    You can include the source inside the source map. We'll look for it in 'sourcesContent' as per the source map standard.
+    You can include the source inside the source map. We'll look for it in `sourcesContent` as per the source map standard.
 
 #### Step 1: Enable source maps
 
