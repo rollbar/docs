@@ -19,5 +19,5 @@ curl -X POST "https://api.rollbar.com/api/1/dsym"
 	-F access_token=POST_SERVER_ITEM_ACCESS_TOKEN \
 	-F version=0.1.2 \
 	-F bundle_identifier="com.apple.xcode.dsym.org.rollbar.DelightfulApp" \
-	-F dsym=dsym.zip
+	-F dsym=@dsym.zip
 ```

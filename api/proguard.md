@@ -16,5 +16,5 @@ Name | Type | Description
 curl 'https://api.rollbar.com/api/1/proguard' \
 	-F access_token=POST_SERVER_ITEM_ACCESS_TOKEN \
 	-F version=0.0.10 \
-	-F mapping=mapping.txt
+	-F mapping=@mapping.txt
 ```
