@@ -24,6 +24,7 @@ As well as the list of all people who have ever experienced an error, sorted by 
 * [Flash](#flash)
 * [.NET](#net)
 * [PHP](#php)
+* [Java](#java)
 {: .nav .nav-tabs}
 
 <div class="tab-content">
@@ -219,5 +220,19 @@ $config['person_fn'] = 'get_current_user';
 ?>
 ```
 {: .tab-pane #php}
+
+```
+import com.rollbar.Rollbar;
+import com.rollbar.payload.data.Person;
+
+public class HelloWorld {
+    public static final Rollbar rollbar = new Rollbar(<token>, <env>);
+    public static void main(String[] args) {
+        Person person = new Person();
+        Rollbar personRollbar = rollbar.person(person);
+    }
+}
+```
+{: .tab-pane #java}
 
 </div>
