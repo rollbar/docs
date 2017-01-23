@@ -123,8 +123,6 @@ Column names starting with "item." reference the item, and all other
 column names reference the occurrence. Column names that do not exist in
 a particular occurrence evaluate to NULL.
 
-These columns are available under the "item." prefix:
-
 | Name | Description
 |-|-
 | `item.id` | System-wide ID
@@ -144,9 +142,47 @@ These columns are available under the "item." prefix:
 | `item.total_occurrences` | Number of occurrences since last resolved
 | `item.last_modified_by` | ID of the user who last modified this item
 | `item.status` | Status (active, resolved, muted)
+| `item.timestamp` | When the error occurred, as a unix timestamp
 | `item.level` | Level (critical, error, warning, info, debug)
+| `item.language` | The name of the language your code is written in
+| `item.code_version` | The version of the application code
+| `item.context` | An identifier for which part of your application the error came from
+| `item.fingerprint` | A string controlling how the occurrence is grouped
+| `item.title` | The occurrence title
+| `item.uuid` | A string that uniquely identifies the occurrence
 | `item.resolved_in_version` | Revision the item was last resolved in
-| `client.javascript.browser` | Raw raw user agent string.
+| `item.notifier.name` | Name of the library that sent the item
+| `item.notifier.library` | The version string of the library that sent the item
+| `client.javascript.browser` | Raw user agent string
+| `client.javascript.code_version` | The running code version in JavaScript
+| `client.javascript.source_map_enabled` | Whether or not source map deobfuscation is enabled
+| `client.javascript.guess_uncaught_frames` | Whether or not frame guessing is enabled
+| `body.trace.exception.class` | The exception class name
+| `body.trace.exception.message` | The exception message
+| `body.trace.exception.description` | The exception description
+| `body.message.body` | The primary message text
+| `body.message.foo` | Any arbitrary keys of metadata you sent
+| `body.crash_report.raw` | The raw crash report
+| `request.url` | Full URL where the error occurred
+| `request.method` | The request method
+| `request.headers` | Object containing the request headers
+| `request.params` | Any routing parameters
+| `request.GET` | Query string parameters
+| `request.query_string` | The raw query string
+| `request.POST` | POST parameters
+| `request.body` | The raw POST body
+| `request.user_ip` | The user's IP address as a string
+| `person.id` | A string identifying the user in your system
+| `person.username` | A username string
+| `person.email` | An email string
+| `server.host` | The server hostname
+| `server.root` | Path to the application code root
+| `server.branch` | Name of the checked-out source control branch
+| `server.code_version` | String describing the running code version on the server
+| `custom.foo` | Any arbitrary metadata you sent
+
+
+Note: If your exception has nested stack traces, rather than using `body.trace.exception.message`, you'll need to use `body.trace_chain.0.exception.message`, and so on for any paths that begin with `body.trace`. 
 
 #### deploy
 
