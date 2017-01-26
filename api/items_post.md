@@ -121,6 +121,10 @@ understands. The meaning of each key is explained in the comments.
               // Optional: post
               // List of lines of code after the "code" line
               "post": []
+
+              // Optional: class_name
+              // A string containing the Java class name (sent automatically by the Java notifier)
+              "class_name": "java.lang.String"
             },
 
             // (Deprecated) Optional: args
