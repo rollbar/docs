@@ -123,7 +123,7 @@ understands. The meaning of each key is explained in the comments.
               "post": []
 
               // Optional: class_name
-              // A string containing the Java class name (sent automatically by the Java notifier)
+              // A string containing the class name
               "class_name": "java.lang.String"
             },
 
