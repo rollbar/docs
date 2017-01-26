@@ -122,7 +122,7 @@ occurrence and the item it is associated with. Column names starting with "item.
 reference the item, and all other column names reference the occurrence.
 Column names that do not exist in a particular occurrence evaluate to NULL.
 
-The following columns exist for every row in `item\_occurrence`:
+The following columns exist for every row in `item_occurrence`:
 
 | Name | Description
 |-|-
@@ -142,10 +142,10 @@ The following columns exist for every row in `item\_occurrence`:
 | `item.last_occurrence_timestamp` | Timestamp of the most recent occurrence
 | `item.last_modified_by` | ID of the user who last modified this item
 | `item.level` | Item level (50=critical, 40=error, 30=warning, 20=info, 10=debug)
-| `item.resolved_in_version` | Revision the item was last marked as resolved in
+| `item.resolved_in_version` | The revision the item was last marked as resolved in
 | `item.status` | Status (as an integer: 1=active, 2=resolved, 3=muted)
 | `item.title` | Computed title
-| `item.total_occurrences` | Number of occurrences since last resolved
+| `item.total_occurrences` | The number of occurrences since the last time this item was resolved
 | `occurrence_id` | System-wide Occurrence ID
 | `timestamp` | Timestamp of the occurrence, as a Unix timestamp
 
@@ -166,16 +166,16 @@ Here are some common column names, all of which refer to data for the occurrence
 | `body.trace.exception.message` | The exception message (if the occurrence is a single exception)
 | `body.trace_chain.0.exception.class` | The first exception class (if the occurrence is a list of nested exceptions)
 | `body.trace_chain.0.exception.message` | The first exception message (if the occurrence is a list of nested exceptions)
-| `client.javascript.browser` | Raw user agent string (from rollbar.js)
+| `client.javascript.browser` | Raw user agent string (from [rollbar.js](/docs/notifier/rollbar.js/))
 | `client.javascript.code_version` | The running code version in JavaScript
 | `client.javascript.source_map_enabled` | Whether or not source map deobfuscation is enabled
 | `client.javascript.guess_uncaught_frames` | Whether or not frame guessing is enabled
-| `client.runtime_ms` | How long the page was open before the event occurred (rollbar.js)
+| `client.runtime_ms` | How long the page was open before the event occurred ([rollbar.js](/docs/notifier/rollbar.js/))
 | `code_version` | The version of the application code
 | `context` | An identifier for which part of your application the error came from
 | `custom.foo` | Arbitrary metadata you sent
 | `custom.foo.bar` | Nested arbitrary metadata you sent
-| `language` | The name of the reported langauge for the event
+| `language` | The name of the reported language for the event
 | `notifier.name` | Name of the library that sent the item
 | `notifier.version` | The version string of the library that sent the item
 | `person.id` | A string identifying the user in your system
