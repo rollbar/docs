@@ -106,7 +106,7 @@ WHERE item.counter IN (1,2,3)
 
 ### Limitations
 
--   At most 100 rows will be returned per query (though any number of
+-   At most 1000 rows will be returned per query (though any number of
     rows may be examined)
 -   No `DISTINCT`, `HAVING`, subqueries, joins, or unions
 -   No `ANY`, `ALL`, `EXISTS`
