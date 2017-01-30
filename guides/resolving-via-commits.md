@@ -17,10 +17,8 @@ resolve in a commit message:
 
  Where `$ref` is one of the following:
 
--   Full item URL, eg. `https://rollbar.com/item/123456789`
+-   Full item URL, eg. `https://rollbar.com/rivkah/Test-PHP/items/2/`
 -   Item ID, eg. `rb#123456789`
--   Short item ID, eg. `rb#22` This appears at the top left of an item
-    page.
 
 Then execute a deploy by hitting the [deploy API endpoint](https://rollbar.com/docs/deploys/bash/).
 The items referenced in any of the commit messages of the deploy will be resolved using the
