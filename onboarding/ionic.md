@@ -1,0 +1,1 @@
+Rollbar doesn't maintain an official Ionic notifier. However, [this blog post](https://rollbar.com/blog/rollbar-integration-for-ionic/) should help you integrate Rollbar with your Ionic app.
