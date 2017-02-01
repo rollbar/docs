@@ -1,3 +1,5 @@
+# Capistrano Deployment Integration
+
 ### Capistrano 3
 
 Add to your `Gemfile`:
