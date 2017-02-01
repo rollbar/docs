@@ -1,3 +1,5 @@
+# Connect Rollbar to Github
+
 Rollbar is better with GitHub! Get single-sign on with GitHub, send your rollbar items to GitHub
 Issues, link your Rollbar stack traces to the code where it happened, resolve items when a
 particular commit is deployed, and show the commits that were included with each deploy.
