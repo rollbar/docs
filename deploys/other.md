@@ -1,4 +1,4 @@
-### Other platforms
+# Other platforms
 
 When a deploy has completed successfully, make an HTTP POST to
 `https://api.rollbar.com/api/1/deploy/` with the following params:

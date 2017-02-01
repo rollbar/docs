@@ -1,4 +1,4 @@
-### Overview
+# Source Maps
 
 If you minify your JavaScript code for use in production, you've
 probably noticed that the stacktraces you see in Rollbar reference the

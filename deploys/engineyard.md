@@ -1,3 +1,4 @@
+# Engine Yard Deploy Integration
 Use Engine Yard's deploy hook functionality. Simply
 create deploy/after\_restart.rb in your Engine Yard app with the
 following contents:

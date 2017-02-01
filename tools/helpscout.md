@@ -1,4 +1,4 @@
-## Using Rollbar inside Help Scout
+# Using Rollbar inside Help Scout
 
 If you use [Help Scout](https://www.helpscout.net/) for support, you can
 integrate it with Rollbar to see recent errors that affected your users

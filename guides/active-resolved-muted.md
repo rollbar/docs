@@ -1,3 +1,5 @@
+# Active/ Resolved/ Muted
+
 In Rollbar, all Items have a *status* that determines where they appear
 and how they behave. There are three statuses: Active, Resolved, and
 Muted.

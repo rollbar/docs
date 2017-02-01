@@ -1,3 +1,5 @@
+# Two-Factor Authentication (2FA)
+
 Two-Factor Authentication (2FA) provides an extra layer of security to your Rollbar account by
 requiring a one-time code in addition to a password each time you log in. Two-Factor Authentication
 can be enabled by each user.

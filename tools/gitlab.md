@@ -1,3 +1,5 @@
+# Connect Rollbar to Gitlab
+
 ## Set up Linking
 
 Each line in your stack trace can be linked to your code in GitLab if it's hosted in a single repository. This has to be done once per project.

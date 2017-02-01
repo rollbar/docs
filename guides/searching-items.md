@@ -1,3 +1,5 @@
+# Searching Items
+
 On the Items view, you can filter your Items by many different properties. Some properties are
 direct properties of the items themselves, while others are evaluated against the occurrences of the
 item.

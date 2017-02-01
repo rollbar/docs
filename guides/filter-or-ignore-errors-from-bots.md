@@ -1,3 +1,5 @@
+# Filter or Ignore Errors from Bots
+
 Rollbar provides a few ways to filter or ignore errors that happen in
 requests made by bots.
 
