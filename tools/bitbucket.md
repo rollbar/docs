@@ -1,4 +1,4 @@
-## Connecting Bitbucket to Rollbar
+# Connecting Bitbucket to Rollbar
 
 View the source code mentioned in Rollbar tracebacks and deploys with a single click, and turn application errors in your [Rollbar](https://rollbar.com/) projects into Issues in your [Bitbucket](https://bitbucket.org/) Repositories.
 
