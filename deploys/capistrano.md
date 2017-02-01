@@ -1,4 +1,4 @@
-# Capistrano Deployment Integration
+# Capistrano Deploy Integration
 
 ### Capistrano 3
 
