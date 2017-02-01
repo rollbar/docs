@@ -1,3 +1,5 @@
+# UUIDs
+
 The Rollbar API supports including a UUID with occurrence reports which
 can later be used to look up that exact occurrence. UUIDs are generated
 by the client library, not returned from the API. A few use-cases
