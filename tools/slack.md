@@ -1,4 +1,4 @@
-## How to Integrate Slack with Rollbar
+## Connecting Rollbar to Slack
 
 Rollbar can send messages about exceptions and deploys to a channel or
 group in [Slack](https://slack.com/).
