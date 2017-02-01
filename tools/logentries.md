@@ -1,4 +1,4 @@
-## Sending Logentries alerts to Rollbar
+# Sending Logentries Alerts to Rollbar
 
 If you use [Logentries](https://logentries.com), you can set up alerts
 to report to Rollbar. For example, you can create an tag matching
