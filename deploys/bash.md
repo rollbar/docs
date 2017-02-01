@@ -1,7 +1,5 @@
 # Bash deployment integration
 
-<!-- Sub:[TOC] -->
-
 Use Curl to send an HTTP POST:
 
 ```bash
