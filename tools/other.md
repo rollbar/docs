@@ -1,4 +1,4 @@
-## Other Integrations
+# Other Integrations
 
 ### Clojure
 
