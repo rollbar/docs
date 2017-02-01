@@ -1,4 +1,4 @@
-## How to Integrate PagerDuty with Rollbar
+# Connecting Rollbar to PagerDuty
 
 Rollbar can create, update, and resolve Incidents
 in [PagerDuty](http://pagerduty.com/).
