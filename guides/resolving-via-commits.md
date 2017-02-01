@@ -1,3 +1,5 @@
+# Resolving via Commit Messages
+
 If your project is integrated with [GitHub](/docs/github/), [Bitbucket](/docs/bitbucket), or [Gitlab](/docs/gitlab/) then you can include Rollbar item
 identifiers in your commit messages to auto-resolve the associated items
 when deploying.
