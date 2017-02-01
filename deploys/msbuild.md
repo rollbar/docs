@@ -1,3 +1,5 @@
+# MSBuild Deploy Integration
+
 Here's an MSBuild target to notify Rollbar of a publish. Requires
 [RollbarSharp](https://github.com/mroach/RollbarSharp) web.config
 entries, and git on your PATH.
