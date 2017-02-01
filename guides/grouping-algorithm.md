@@ -1,4 +1,4 @@
-#Grouping Algorithm
+# Grouping Algorithm
 
 Rollbar has two key concepts: *Occurrences* and *Items*.
 An *occurrence* is a single event instance: an exception or log message,
