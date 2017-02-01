@@ -1,4 +1,4 @@
-### Overview
+# Custom Grouping
 
 If our [default grouping algorithm](https://rollbar.com/docs/grouping-algorithm/) is
 separating occurrences that you would rather have grouped together, or
