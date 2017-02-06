@@ -12,7 +12,7 @@ In order to ensure that Rollbar links to the correct version of your source, be 
 
 ## Links from deploys to commits
 When a Rollbar project is connected to a git repository, the list of commits included in each deploy will include URLs so you can view the diff for each commit.
-![Deploy with links to commits](/images/guides/source-control/deploy-source-links.png)
+![Deploy with links to commits](../images/guides/source-control/deploy-source-links.png)
 
 ## View undeployed commits
 
