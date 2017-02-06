@@ -3,7 +3,9 @@
 _Last updated February 3, 2017_
 
 ## Outbound IP Addresses 
+
 Rollbar.com uses the IP addresses listed below to make outbound connections to webhooks, on-premise JIRA and HipChat instances, and so on. If you run such services behind a firewall, you will need to whitelist these IPs so that Rollbar can reach them. Ports 80 and 443 may be used.
+
 ```
 50.23.219.116
 50.23.231.132
@@ -21,8 +23,11 @@ Rollbar.com uses the IP addresses listed below to make outbound connections to w
 192.155.197.228
 192.155.197.238
 ```
+
 ## Rollbar API Servers
+
 The IP addresses below are for the Rollbar API servers. If you need to whitelist what IP addresses your own servers can connect to, add these IP addresses to that whitelist so that you/your servers can connect to the Rollbar API.
+
 ```
 37.58.71.74
 50.97.241.205
