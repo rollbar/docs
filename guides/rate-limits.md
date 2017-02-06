@@ -1,4 +1,4 @@
-### Overview
+# Rate Limits
 
 Rate limits allow you to control how many occurrences are saved and
 processed. In turn, this gives you control over how many occurrences

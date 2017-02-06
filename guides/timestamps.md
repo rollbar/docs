@@ -1,3 +1,5 @@
+# Timestamps
+
 Every occurrence in Rollbar has a timestamp. The timestamps that you see
 throughout the Rollbar UI and API are the according to Rollbar's
 servers. We use and continuously

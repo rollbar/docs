@@ -1,4 +1,4 @@
-## How to Integrate HipChat with Rollbar
+# Connect Rollbar to Hipchat
 
 Rollbar can send messages about exceptions and deploys to a room in [HipChat](https://hipchat.com/).
 

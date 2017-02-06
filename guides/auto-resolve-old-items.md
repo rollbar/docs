@@ -1,3 +1,5 @@
+# Auto-Resolve Old Items
+
 You can configure Rollbar to auto-resolve everything that hasn't been seen in more than X days. This feature is available on the Cleanup page in your project settings. 
 
 To do this:

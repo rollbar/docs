@@ -1,4 +1,4 @@
-## How to Integrate Pivotal Tracker with Rollbar
+## Connecting Rollbar to Pivotal
 
 You can turn Rollbar events into Stories in [Pivotal Tracker](https://www.pivotaltracker.com/).
 

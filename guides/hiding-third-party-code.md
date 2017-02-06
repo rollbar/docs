@@ -1,3 +1,5 @@
+# Hiding Third-Party Code
+
 When using libraries or frameworks you will often have large portions of well-tested third party
 code that is unlikely to have caused an error for you. In order to keep the focus on your code
 Rollbar will collapse stack frames from third party code.

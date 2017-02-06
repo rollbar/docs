@@ -1,7 +1,7 @@
-Important: RQL is a work in progress. While it's generally stable,
-expect bugs at the corners.
+# RQL
 
-### Overview
+_Important: RQL is a work in progress. While it's generally stable,
+expect bugs at the corners._
 
 RQL ("Rollbar Query Language") is an attempt at exposing a rich querying
 interface to the data in Rollbar. Its goal is to be SQL-like, so it

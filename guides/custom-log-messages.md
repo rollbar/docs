@@ -1,4 +1,4 @@
-### Logging things that aren't exceptions
+# Custom Log Messages
 
 You can send any log message to Rollbar, not just exceptions. Log messages can have the same
 attached metadata as exceptions (request, server, person, etc.) and go through a similar

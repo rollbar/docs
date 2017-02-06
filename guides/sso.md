@@ -1,3 +1,5 @@
+# Single Sign-On (SSO)
+
 If your Rollbar account is on a [paid plan](https://rollbar.com/pricing/), then you can enable
 [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language)-based single sign-on (SSO)
 using [Google Apps for Work](https://apps.google.com/), [Okta](https://www.okta.com/), or [Bitium](https://support.bitium.com/administration/saml-rollbar/).

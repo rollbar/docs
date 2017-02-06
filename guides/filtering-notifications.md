@@ -1,3 +1,5 @@
+# Filtering Notifications
+
 Having access to an error's full history is great, but you may not want to be notified every time a
 customer hits an error you know about. To adjust the circumstances in which you receive
 notifications you can use notification filters.

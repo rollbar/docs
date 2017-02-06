@@ -1,3 +1,5 @@
+# Rollbar Terminology
+
 Rollbar has some unique terms for talking about errors you send us. 
 
 ### Item

@@ -1,4 +1,4 @@
-## Connecting Rollbar to Datadog
+# Connecting Rollbar to Datadog
 
 Are you new to Rollbar?
 [If so, click here to learn more about Rollbar and sign up!](https://rollbar.com/)

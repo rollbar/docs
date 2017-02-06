@@ -1,3 +1,4 @@
+# Connecting Rollbar to Split
 
 Are you new to Rollbar?
 [If so, click here to learn more about Rollbar and sign up!](https://rollbar.com/signup/)
