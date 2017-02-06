@@ -28,6 +28,7 @@ To learn more, check out [Resolving Items via commit](..//resolve-via-commits/)
 
 ## Setup Instructions
 To connect a Rollbar project to your git repository, just follow the steps on one of the following pages.
+
 * [Github](../github/)
 * [Bitbucket](../bitbucket/)
 * [Gitlab](../gitlab/)
