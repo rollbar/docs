@@ -16,7 +16,7 @@ When a Rollbar project is connected to a git repository, the list of commits inc
 
 ## View undeployed commits
 Any commit that has been merged to your master branch but not yet deployed will be highlighted at the top of the Deploys screen.
-
+![Undeployed commits](../images/guides/source-control/undeployed_changes.png)
 ## Resolve items via commit messages
 By adding an appropriately formatted message when committing a code change, you can tell Rollbar to automatically mark an item as resolved as soon as the commit is deployed to production.
 
