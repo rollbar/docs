@@ -2,6 +2,8 @@
 
 If you notify Rollbar every time you deploy or release your app, you'll unlock several features that will help your debugging process.
 
+[Instructions for reporting deploys](/docs/deploys/) are available for [Bash](/docs/deploys/bash/), [Capistrano](/docs/deploys/capistrano), [Engine Yard](/docs/deploys/engineyard/), [Fabric](/docs/deploys/fabric/), [Heroku](/docs/deploys/heroku), [MSBuild](/docs/deploys/msbuild), [Powershell](/docs/deploys/powershell), and [other tools and languages](/docs/api/deploys/#record-create-a-deploy).
+
 ## Deploys Screen
 
 The deploy screen shows a detailed view of all deployments made to a particular environment.
