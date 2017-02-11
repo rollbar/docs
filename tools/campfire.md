@@ -1,7 +1,6 @@
 ## Connecting Rollbar to Campfire
 
-Rollbar can send messages about exceptions and deploys to a channel or
-group in [Campfire](https://campfirenow.com/).
+Rollbar can send messages about exceptions and deploys to a Room in [Campfire](https://campfirenow.com/).
 
 ### Setup
 
