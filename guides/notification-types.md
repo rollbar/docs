@@ -21,7 +21,7 @@ Summary of daily error/message activity in a project | |
 
 ## Customizing Notifications
 
-Rollbar gives you a great deal of control over when notifications are triggered and how they appear.  To learn more, check out:
+Rollbar gives you a great deal of control over when notifications are triggered and how they appear.
 * [Notification Filters]()
 * [Notification Variables]()
 
