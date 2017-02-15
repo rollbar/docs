@@ -44,11 +44,11 @@ Deploys will appear in your live item feed so you can quickly see whether a rece
 
 ![](../images/guides/deploys/deploy-items.png)
 
-## Automatically Resolve Items on Deploy
+## Auto-Resolve on Deploy
 
 You may want to resolve all active items every time you deploy, so that only new occurrences of errors and messages will appear in your live feed.  This can be configured via **Project Settings --> Deploys**.
 
-## Setting up Deploy Tracking
+## Set Up
 
 Deploy tracking in Rollbar can be set up in minutes:
 
