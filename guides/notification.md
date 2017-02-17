@@ -16,8 +16,7 @@ This page describes the types of notifications you can configure across all avai
 | _Item Reopened_ | An error/message is marked `Active` by a user. | |
 | _Item Reactivated_ | An error/message occurs again after being marked `Resolved`. | ![](../images/guides/notifications/slack_reactivated.png)|
 | _Deploy_ | A new [deploy] is reported. |![](../images/guides/notifications/slack_deploy.png) |
-| _Daily Summary_ | _(Available in email only)_ 
-Summary of daily error/message activity in a project | |
+| _Daily Summary_ | _(Available in email only)_ Summary of daily error/message activity in a project | |
 
 ## Customizing Notifications
 
