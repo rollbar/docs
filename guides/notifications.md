@@ -1,6 +1,6 @@
 # Notification Types
 
-Rollbar supports many different [messaging tools](/docs/tools/) where your team can get notified about errors and important events.  Notifications can be customized using [variables](/docs/notification-variables) and triggered in specific conditions using [filters](/docs/filtering-notifications).
+Rollbar supports many different [messaging and incident management tools](/docs/tools/#messaging) where your team can get notified about errors and important events.  Notifications can be customized using [variables](/docs/notification-variables) and triggered in specific conditions using [filters](/docs/filtering-notifications).
 
 This page describes the types of notifications you can configure across all available channels.
 
