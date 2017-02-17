@@ -13,7 +13,7 @@ This page describes the types of notifications you can configure across all avai
 | _Item Resolved_ | An error/message is marked `Resolved`. |
 | _Item Reopened_ | An error/message is marked `Active` by a user. |
 | _Item Reactivated_ | An error/message occurs again after being marked `Resolved`. |
-| _Deploy_ | A new [deploy] is reported. |
+| _Deploy_ | A new [deploy](/deploy-tracking/) is reported. |
 | _Daily Summary_ | _(Available in email only)_ Summary of daily error/message activity in a project |
 
 ## Customizing Notifications
