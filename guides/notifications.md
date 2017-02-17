@@ -1,8 +1,6 @@
 # Notification Types
 
-Rollbar supports [many different messaging tools](/integrations/) where your team can get notified about errors and important events.
-
-These notifications can be customized using [variables]() and triggered only in very specific conditions using [filters]().
+Rollbar supports [many different messaging tools](/integrations/) where your team can get notified about errors and important events.  Notifications can be customized using [variables](/docs/notification-variables) and triggered only in very specific conditions using [filters](/docs/filtering-notifications).
 
 This page describes the types of notifications you can configure across all available channels.
 
@@ -21,14 +19,15 @@ This page describes the types of notifications you can configure across all avai
 ## Customizing Notifications
 
 Rollbar gives you a great deal of control over when notifications are triggered and how they appear.
-* [Notification Filters]()
-* [Notification Variables]()
+
+* [Notification Filters](/docs/notification-variables)
+* [Notification Variables](/docs/filtering-notifications)
 
 ## Setup Instructions
 
 ### Messaging Apps
 
-* [Slack]()
+* [Slack](/docs/tools/slack/)
 * [Hipchat]()
 * [Flowdock]()
 * [Campfire]()
