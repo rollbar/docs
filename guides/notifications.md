@@ -20,8 +20,8 @@ This page describes the types of notifications you can configure across all avai
 
 Rollbar gives you a great deal of control over when notifications are triggered and how they appear.
 
-* [Notification Filters](/docs/notification-variables)
-* [Notification Variables](/docs/filtering-notifications)
+* [Notification Filters](/docs/filtering-notifications)
+* [Notification Variables](/docs/notification-variables)
 
 ## Setup Instructions
 
