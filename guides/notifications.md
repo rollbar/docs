@@ -24,21 +24,23 @@ Rollbar gives you a great deal of control over when notifications are triggered 
 * [Notification Filters]()
 * [Notification Variables]()
 
-## Notification Setup
-Setup procedures vary depending on which tools you are using.
+## Setup Instructions
 
 ### Messaging Apps
+
 * [Slack]()
 * [Hipchat]()
 * [Flowdock]()
 * [Campfire]()
 
 ### IT Alerting & Incident Management
+
 * [PagerDuty]()
 * [VictorOps]()
 * [OpsGenie]()
 * [Datadog]()
 
 ### Build Your Own
+
 * [Webhooks]()
 
