@@ -21,8 +21,10 @@ Asana integration is configured on a per-project basis in Rollbar.
 * Click on **Settings** then **Notifications**
 * Click on **Asana**.
 * Select which authorization token will be used to create and update Asana tasks, as well as the Workspace or Team where the tasks will be located, then click **Save Settings** 
-* Specify the rules you'd like to have for automatically creating and updating Asana tasks.  For more details on the available options, see our [Issue Tracking guide](/docs/issue-tracking/#automatic-issue-tracking).
+* Specify the rules you'd like to have for automatically creating and updating Asana tasks.  For more details on the available options, see our [issue tracking guide](/docs/issue-tracking/#automatic-issue-tracking).
 * To ensure that your account is correctly configured, click **Send Test Notification**.  If successful, you'll see a link that allows you to view the test task which was created.
 * To activate the Asana integration, set the toggle to **Enabled**.
 
-Your project is now ready to [manually](/docs/issues-tracking/#manual-issue-tracking/) or [automatically](/docs/issue-tracking/#automatic-issue-tracking) create and update Asana tasks.
+## Creating & Managing Asana Tasks
+
+For details on how to [manually](/docs/issues-tracking/#manual-issue-tracking) and [automatically](/docs/issue-tracking/#automatic-issue-tracking) create and update Asana tasks, check out our [issue tracking guide](/docs/issue-tracking/)
