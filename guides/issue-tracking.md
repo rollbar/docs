@@ -38,7 +38,16 @@ You can change or remove the link via the dropdown menu on the `View` button.
 
 ## Automatic Issue Tracking
 
-TODO....
+Each Rollbar project can be configured to automatically create and update issues in response to triggering events.
+
+To configure the rules for automatic issue tracking, go to **Settings**, then **Notifications** and select your issue tracker.
+
+![](../images/guides/issue-tracking/issues_add_rule.png)
+
+Rules can be filtered to only trigger in specific conditions (e.g. only create issues for errors in production that have occurred at least 10 times).
+
+![](../images/guides/issue-tracking/issues_edit_rule.png)
+
 
 ## Setup Instructions
 * [JIRA](/docs/jira/)
