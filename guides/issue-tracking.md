@@ -19,7 +19,7 @@ Additionally, Rollbar can be configured to _automatically_:
 
 ## Manual Issue Tracking
 
-Screenshots below are for JIRA , but the same features/concepts apply to all issue tracker integrations.{: .info}
+Screenshots below are for JIRA , but the same features/concepts apply to all issue tracker integrations. {: .info}
 
 When issue tracking is enabled for a project, users can manually create an issue for a Rollbar error by clicking the `Create` button at the top of the screen.
 
@@ -27,7 +27,7 @@ When issue tracking is enabled for a project, users can manually create an issue
 
 It's also possible to link a Rollbar error to an existing issue.
 
-![](../images/guides/issue-tracking/create_issue.png)
+![](../images/guides/issue-tracking/link_issue.png)
 
 When a Rollbar error is linked to an issue, the `Create` button is replaced with a `View` button that will take you directly to the issue in your tracker.
 
