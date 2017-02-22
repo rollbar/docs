@@ -44,10 +44,9 @@ To configure the rules for automatic issue tracking, go to **Settings**, then **
 
 ![](../images/guides/issue-tracking/issues_add_rule.png)
 
-Rules can be filtered to only trigger in specific conditions (e.g. only create issues for errors in production that have occurred at least 10 times).
+Rules can be filtered to only trigger in specific conditions (e.g. only create issues for items in production that have level error or higher).
 
 ![](../images/guides/issue-tracking/issues_edit_rule.png)
-
 
 ## Setup Instructions
 * [JIRA](/docs/jira/)
