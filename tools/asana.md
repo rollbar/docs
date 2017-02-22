@@ -27,4 +27,4 @@ Asana integration is configured on a per-project basis in Rollbar.
 
 ## Creating & Managing Asana Tasks
 
-For details on how to [manually](/docs/issues-tracking/#manual-issue-tracking) and [automatically](/docs/issue-tracking/#automatic-issue-tracking) create and update Asana tasks, check out our [issue tracking guide](/docs/issue-tracking/)
+For instructions on how to [manually](/docs/issues-tracking/#manual-issue-tracking) and [automatically](/docs/issue-tracking/#automatic-issue-tracking) create and update Asana tasks, check out our [issue tracking guide](/docs/issue-tracking/).
