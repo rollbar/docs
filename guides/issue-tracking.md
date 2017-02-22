@@ -15,11 +15,10 @@ Additionally, Rollbar can be configured to _automatically_:
 * **Reopen** a linked issue when a Rollbar error is reactivated or reopened by a user.
 * **Resolve** a linked issue when a Rollbar error is resolved.
 
-## Automatic Issue Tracking
-
 ## Manual Issue Tracking
 
-Screenshots below are for JIRA , but the same features/concepts apply to all issue tracker integrations. {: .info}
+Screenshots below are for JIRA , but the same features/concepts apply to all issue tracker integrations.
+{: .info}
 
 When issue tracking is enabled for a project, users can manually create an issue for a Rollbar error by clicking the `Create` button at the top of the screen.
 
@@ -36,6 +35,11 @@ When a Rollbar error is linked to an issue, the `Create` button is replaced with
 You can change or remove the link via the dropdown menu on the `View` button.
 
 ![](../images/guides/issue-tracking/unlink_issue.png)
+
+## Automatic Issue Tracking
+
+TODO....
+
 ## Setup Instructions
 * [JIRA](/docs/jira/)
 * [Trello](/docs/trello/)
