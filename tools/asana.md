@@ -14,7 +14,7 @@ In order to create tasks in your Asana account, at least one user in your Rollba
 
 Once you've successfully connected to your Asana account, you will see a message `Your Asana account YOUR_ASANA_LOGIN is connected.`
 
-## Configure project-level settings
+## Configure Project Settings
 
 Asana integration is configured on a per-project basis in Rollbar.
 
@@ -25,6 +25,6 @@ Asana integration is configured on a per-project basis in Rollbar.
 * To ensure that your account is correctly configured, click **Send Test Notification**.  If successful, you'll see a link that allows you to view the test task which was created.
 * To activate the Asana integration, set the toggle to **Enabled**.
 
-## Creating & Managing Asana Tasks
+## Create & Manage Asana Tasks
 
 For instructions on how to [manually](/docs/issue-tracking/#manual-issue-tracking) and [automatically](/docs/issue-tracking/#automatic-issue-tracking) create and update Asana tasks, check out our [issue tracking guide](/docs/issue-tracking/).
