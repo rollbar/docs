@@ -47,13 +47,13 @@ evaluates to true for *any* of the matching elements.
 
 Here are a few useful paths:
 
-| body.trace.exception.class | Exception class name
-| body.trace.exception.message | Exception message
-| body.trace.frames.0.filename | Filename of the first stack frame
-| body.trace.frames.-1.filename | Filename of the last stack frame
-| body.trace.frames.\*.filename | Filename of any stack frame
-| body.trace.frames.\*.method | Method/function name of any stack frame
-| language | The language name
+| `body.trace.exception.class` | Exception class name
+| `body.trace.exception.message` | Exception message
+| `body.trace.frames.0.filename` | Filename of the first stack frame
+| `body.trace.frames.-1.filename` | Filename of the last stack frame
+| `body.trace.frames.\*.filename` | Filename of any stack frame
+| `body.trace.frames.\*.method` | Method/function name of any stack frame
+| `language` | The language name
 
 Much more is available; you can use any of the data in the occurrence
 payload. The exact elements available vary by library; right now the
