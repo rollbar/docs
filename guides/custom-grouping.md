@@ -1,47 +1,33 @@
 # Custom Grouping
 
-If our [default grouping algorithm](https://rollbar.com/docs/grouping-algorithm/) is
-separating occurrences that you would rather have grouped together, or
-grouping occurrences together you would rather have separated, you can
-set up Custom Grouping Rules. These are configured through the interface
-and executed in our processing pipeline. You can create rules for both
-exceptions and messages.
+If our [default grouping algorithm](https://rollbar.com/docs/grouping-algorithm/) is separating occurrences that you would rather have grouped together, or grouping occurrences together you would rather have separated, you can set up Custom Grouping Rules.
 
-To set your custom grouping rules, go to Settings -> Grouping for the
-project you want to configure.
+To set your custom grouping rules, go to **Settings -> Grouping** for the project you want to configure.
 
 Here's an example configuration:
 
 ```json
-[{"title": "Timeout Error",
-  "fingerprint": "timeout-error",
-  "condition": {"path": "body.trace.exception.class", "eq": "TimeoutError"}
-}]
+[
+  {"condition": {"path": "body.trace.exception.class", "eq": "TimeoutError"},
+    "fingerprint": "timeout-error",
+    "title": "Timeout Error"
+  },
+  {"condition": {"path": "body.trace.exception.class", "eq": "IndexError"},
+    "fingerprint": "index-error",
+    "title": "Index Error"
+  }
+]
 ```
 
-The above configuration is a list of rules. Each rule consists of a
-`condition`, a `fingerprint`, and a `title`. Rules are applied in order,
-testing the `condition` against the incoming occurrence. If a match is
-found, the rule's fingerprint and title will override our default
-algorithm.
+The above configuration is a list of rules. Each rule is a JSON object that consists of a
+`condition`, a `fingerprint`, and a `title`. 
 
-Occurrences that have the same fingerprint are grouped together into an
-Item. The calculated title of the first occurrence of an Item is used as
-the title of the Item, and is only changed if the item is resolved and
-then later reactivated. On reactivation, the title of the reactivating
-occurrence is used as the new Item title.
+Rules are applied in order, testing the `condition` against the incoming occurrence. If a match is
+found, the rule's `fingerprint` and `title` will be used instead of our [default grouping algorithm](/docs/grouping-algorithm/).
 
-### Title
+Occurrences with the same `fingerprint` are grouped together into an _Item_. 
 
-The `title` must be a string, of length 1-255 characters. You can change
-the title in this configuration without affecting grouping. The new
-title will take effect if the item is reactivated.
-
-### Fingerprint
-
-The `fingerprint` must be a string, 40 characters or less, and unique
-within this configuration. Occurrences with the same fingerprint are
-grouped together into an Item.
+The `title` of the first occurrence of an Item is used as the title of the Item, and is only changed if the item is resolved and then later reactivated. Upon reactivation, the title of the reactivating occurrence is used as the new Item title.
 
 ### Condition
 
@@ -137,6 +123,18 @@ Additionally, any part of the occurrence JSON body may be referenced by
 path. For example, `{{ body.trace.exception.class }}` will be replaced
 with the exception class. You can combine this with static text or the
 special markers achieve many kinds of grouping.
+
+### Fingerprint
+
+Occurrences with the same `fingerprint` are grouped together into an Item. If the `fingerprint` value defined in the rule is over 40 characters, it will be converted into a SHA.
+
+### Title
+
+The `title` must be a string, of length 1-255 characters. You can change
+the title in this configuration without affecting grouping. The new
+title will take effect if the item is reactivated.
+
+
 
 ### Complete Example
 
