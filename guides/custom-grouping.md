@@ -33,10 +33,10 @@ The `title` of the first occurrence of an Item is used as the title of the Item,
 
 The `condition` is defined as a single JSON object. It can either be:
 
--   a leaf condition, having a "path" key and an operator key (see list
-    below)
--   a branch condition, having a single key named "any", "all", or
-    "none", whose value is a list of other conditions
+-   a leaf condition, having a `path` key and an operator key (see list
+    below).
+-   a branch condition, having a single key named `any`, `all`, or
+    `none`, whose value is a list of other conditions.
 
 The `path` describes a path from the root of the occurrence data to the
 data that the condition tests. Use dots (`.`) to select object
@@ -63,18 +63,18 @@ library, inspect an actual instance using our API, or read the
 
 The following operators are available:
 
-| eq | Equals
-| neq | Not Equals
-| in | Contained in the string or list
-| nin | Not contained in the string or list
-| contains | Contains the string, element, or key
-| ncontains | Does not contain the string, element, or key (or is not a string, array, or object)
-| gt | Greater than
-| gte | Greater than or equal to
-| lt | Less than
-| lte | Less than or equal to
+| `eq` | Equals
+| `neq` | Not Equals
+| `in` | Contained in the string or list
+| `nin` | Not contained in the string or list
+| `contains` | Contains the string, element, or key
+| `ncontains` | Does not contain the string, element, or key (or is not a string, array, or object)
+| `gt` | Greater than
+| `gte` | Greater than or equal to
+| `lt` | Less than
+| `lte` | Less than or equal to
 
-For the numeric operators (gt, gte, lt, lte): the right side must be a
+For the numeric operators (`gt`, `gte`, `lt`, `lte`): the right side must be a
 number, and the left side (data from the occurrence) will be coerced to
 a number, defaulting to 0.
 
@@ -126,15 +126,11 @@ special markers achieve many kinds of grouping.
 
 ### Fingerprint
 
-Occurrences with the same `fingerprint` are grouped together into an Item. If the `fingerprint` value defined in the rule is over 40 characters, it will be converted into a SHA.
+Occurrences with the same `fingerprint` are grouped together into an Item.
 
 ### Title
 
-The `title` must be a string, of length 1-255 characters. You can change
-the title in this configuration without affecting grouping. The new
-title will take effect if the item is reactivated.
-
-
+The `title` is a text description that is displayed when viewing an item.  It must be a string, of length 1-255 characters. You can change the title in this configuration without affecting grouping. The new title will take effect if the item is reactivated after being resolved.
 
 ### Complete Example
 
@@ -142,29 +138,29 @@ Here's an example complete configuration with three rules.
 
 ```json
 [
-  {
-    "title": "Connection error",
-    "fingerprint": "connection-error",
+  { 
     "condition": {
       "path": "body.trace.exception.class",
       "in": ["EOFError", "Errno::ECONNREFUSED", "Errno::ETIMEDOUT"]
-    }
+    },
+    "fingerprint": "connection-error",
+    "title": "Connection error"
   },
-  {
-    "title": "Timeout error in payments code",
-    "fingerprint": "payments-timeout-error",
+  { 
     "condition": {"all": [
       {"path": "body.trace.exception.class", "eq": "TimeoutError"},
       {"path": "body.trace.frames.*.filename", "contains": "payments"}
-    ]}
+    ]},
+    "fingerprint": "payments-timeout-error",
+    "title": "Timeout error in payments code"
   },
   {
-    "title": "{{ default_title }} in {{ context }}",
-    "fingerprint": "{{ default_fingerprint }}-{{ context }}",
     "condition": {
       "path": "body.trace.exception.class",
       "eq": "ActionController::RoutingError"
     }
+    "fingerprint": "{{ default_fingerprint }}-{{ context }}",
+    "title": "{{ default_title }} in {{ context }}"
   }
 ]
 ```
