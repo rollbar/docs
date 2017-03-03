@@ -248,6 +248,44 @@ minified\_url
 :   The full URL of the minified file. Should start with `http:` or
     `https:`
 
+### Using Source Maps On Many Domains
+
+If you'd like to use source maps with the same code that is deployed on many domains, use the following code:
+
+```javascript
+var _rollbarConfig = {
+  // ...
+  transform: function(payload) {
+    var trace = payload.data.body.trace;
+    // Change 'yourdomainhere' to your domain.
+    var locRegex = /^(https?):\/\/[a-zA-Z0-9._-]+\.yourdomainhere\.com(.*)/;
+    if (trace && trace.frames) {
+      for (var i = 0; i < trace.frames.length; i++) {
+        var filename = trace.frames[i].filename;
+        if (filename) {
+          var m = filename.match(locRegex);
+          // Be sure that the minified_url when uploading includes 'dynamichost'
+          trace.frames[i].filename = m[1] + 'dynamichost' + m[2];          
+        }
+      }
+    }
+  }
+}
+
+```
+
+Be sure to change your hostname in the `minified_url` parameter to `dynamichost` when uploading your source map files:
+
+```bash
+curl https://api.rollbar.com/api/1/sourcemap \
+  -F access_token=aaaabbbbccccddddeeeeffff00001111 \
+  -F version=version_string_here \
+  -F minified_url=http://dynamichost/static/js/example.min.js \
+  -F source_map=@static/js/example.min.map \
+  -F static/js/site.js=@static/js/site.js \
+  -F static/js/util.js=@static/js/util.js
+```
+
 ### Resources
 
 Members of the Rollbar community have created some plugins to integrate
