@@ -70,8 +70,6 @@ Items can change from Resolved to Muted in these ways:
 
 ### Muted
 
-![](../images/guides/active-resolved-muted/muted.png)
-
 Muted items represent issues that are not currently worth
 investigating. In the Muted state:
 

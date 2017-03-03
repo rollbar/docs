@@ -3,30 +3,28 @@
 Turn application errors in your [Rollbar](https://rollbar.com/) projects into Tasks in your
 [Asana](https://asana.com/) Projects.
 
-### In Rollbar
+## Authorize Rollbar
 
-1. Visit the Settings page in Rollbar and go to Notifications. From the Notifications Settings you
-   will select Asana from the list of "Available Channels".
-   ![](../images/tools/asana/asana1.png)
+In order to create tasks in your Asana account, at least one user in your Rollbar account must authorize Rollbar to access Asana.
+{: .info}
 
-2. Add your Asana personal access token or API key, and click 'Enable Asana integration'.
-   ![](../images/tools/asana/asana2.png)
+* Click on your avatar and select **User Settings**.
+* Click on **Connected Accounts** and select 'Asana'.
+* Click on **Connect to Asana** and then complete the authorization flow.  
 
-3. Once you've authorized, you'll be able to customize the type of notifications and frequency you
-   want to automatically create Tasks in your Asana Projects.
-   ![](../images/tools/asana/asana3.png)
+Once you've successfully connected to your Asana account, you will see a message `Your Asana account YOUR_ASANA_LOGIN is connected.`
 
-4. Turn specific Items in Rollbar into Tasks in Asana. When viewing an Item in Rollbar simply click
-   the button "Create Asana Task" to send the error details to Asana.
-   ![](../images/tools/asana/asana4.png)
-   ![](../images/tools/asana/asana5.png)
-   ![](../images/tools/asana/asana6.png)
+## Configure Project Settings
 
-5. You can also link an Item in Rollbar to an existing Asana Task. When viewing an Item, select the
-   drop down next to the Asana button and then click "Link existing Asana Task" and copy and paste
-   the URL for the Asana Task you would like to link.
-   ![](../images/tools/asana/asana7.png)
+Asana integration is configured on a per-project basis in Rollbar.
 
-Congratulations! You have now integrated Rollbar with your Asana account. Events from Rollbar will
-automatically create Tasks on your Asana Projects. If you want, you can customize the default rules
-by editing, adding, or deleting them.
+* Click on **Settings** then **Notifications**
+* Click on **Asana**.
+* Select which authorization token will be used to create and update Asana tasks, as well as the Workspace or Team where the tasks will be located, then click **Save Settings** 
+* Specify the rules you'd like to have for automatically creating and updating Asana tasks.  For more details on the available options, see our [issue tracking guide](/docs/issue-tracking/#automatic-issue-tracking).
+* To ensure that your account is correctly configured, click **Send Test Notification**.  If successful, you'll see a link that allows you to view the test task which was created.
+* To activate the Asana integration, set the toggle to **Enabled**.
+
+## Create & Manage Asana Tasks
+
+For instructions on how to [manually](/docs/issue-tracking/#manual-issue-tracking) and [automatically](/docs/issue-tracking/#automatic-issue-tracking) create and update Asana tasks, check out our [issue tracking guide](/docs/issue-tracking/).
