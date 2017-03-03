@@ -158,7 +158,7 @@ Here's an example complete configuration with three rules.
     "condition": {
       "path": "body.trace.exception.class",
       "eq": "ActionController::RoutingError"
-    }
+    },
     "fingerprint": "{{ default_fingerprint }}-{{ context }}",
     "title": "{{ default_title }} in {{ context }}"
   }
