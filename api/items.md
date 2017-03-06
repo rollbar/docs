@@ -13,7 +13,7 @@ Requires `read` scope.
 
 `:id` must be an item ID for an item in the project. These IDs are returned as the `id` field in other API calls.
 
-Note that they are NOT found in in URLs like "https://rollbar.com/project/123/item/456/" -- that
+Note that they are NOT found in in URLs like "https://rollbar.com/myaccount/myproject/items/456/" -- that
 is the "counter", which can be used in the following API call.
 
 
@@ -26,7 +26,7 @@ is the "counter", which can be used in the following API call.
 Requires `read` scope.
 
 `:counter` must be an item counter for an item in the project. The counter can be found in
-URLs like "https://rollbar.com/project/123/item/456/" (456 is the counter).
+URLs like "https://rollbar.com/myaccount/myproject/items/456/" (456 is the counter).
 
 The success response is a 301 redirect like this:
 
