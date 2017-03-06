@@ -136,4 +136,4 @@ curl -X PATCH 'https://api.rollbar.com/api/1/item/275123456?access_token=abcd123
 
 -----
 
-Last updated: November 28, 2016
+Last updated: March 6, 2017
