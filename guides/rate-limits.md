@@ -21,11 +21,7 @@ You can change your rate limits as often as you want.
 ## Configuration
 
 Starting from a project, Go to Settings -> Project Access Tokens and
-click on the
-
-<button class="btn btn-sm" style="padding: 5px 10px;"><span class="glyphicon glyphicon-pencil"></span></button>
-
-button next to the access token to configure.
+click on the pencil icon to edit.
 
 Next, choose a time window from the rate limit dropdown menu. Choices
 are:
@@ -39,22 +35,12 @@ are:
 7.  1 week
 8.  30 days
 
-Finally, enter in the maximum number of items to be saved and processed
-in the text box to the left of the dropdown menu and click the
-
-<button class="btn btn-sm" style="padding: 5px 10px;"><span class="glyphicon glyphicon-ok"></span></button>
-
-button to save.
-
-e.g. 100 in 5 minutes
+Finally, enter in the maximum number of items to be saved and processed in the text box to the left of the dropdown menu and click the checkmark to save.
 
 **Note:** New rate limits and changes to existing limits will take effect immediately.
 {: .warning}
 
-Details
--------
-
-## Response Codes
+## API Response Codes
 
 If your access token has a rate limit and has reached
 it, all successful API calls will result in an HTTP 429 (Too Many
