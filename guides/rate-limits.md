@@ -73,7 +73,7 @@ Whenever a rate limit is hit in a project, Rollbar will automatically generate a
 
 You can configure a special _Every Occurrence_ notification rule to detect these messages and notify the appropriate team members via any supported channel.
 
-![](../images/guides/rate-limits/rate-limit-notifications.png)
+![](../images/guides/rate-limits/rate-limit-notification.png)
 
 To identify rate limit notifications, use the following filters:
 
