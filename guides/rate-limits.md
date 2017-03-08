@@ -75,6 +75,11 @@ You can configure a special _Every Occurrence_ notification rule to detect these
 
 ![](../images/guides/rate-limits/rate-limit-notifications.png)
 
+To identify rate limit notifications, use the following filters:
+
+* **Source:** `System Message`
+* **Title** *contains* `Your rate limit has been reached for access_token`
+
 ## Billing
 
 At the end of your billing cycle, the total charge is calculated based
