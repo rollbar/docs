@@ -69,9 +69,9 @@ handle the 429 response code.
 
 ## Notifications
 
-Whenever a rate limit is hit in a project, Rollbar will automatically generate a `System Message` error within the project with the title `Your rate limit has been reached for access_token TOKEN_NAME`.
+When a rate limit is hit in a project, Rollbar automatically generates a `System Message` error with the title `Your rate limit has been reached for access_token TOKEN_NAME`.
 
-You can configure a special _Every Occurrence_ notification rule to detect these messages and notify the appropriate team members via any supported channel.
+You can configure a special _Every Occurrence_ notification rule to detect these messages and notify the appropriate team members via any notifications channel.
 
 ![](../images/guides/rate-limits/rate-limit-notification.png)
 
