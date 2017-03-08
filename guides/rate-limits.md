@@ -18,7 +18,7 @@ are not counted towards your bill.
 
 You can change your rate limits as often as you want.
 
-### Configuration
+## Configuration
 
 Starting from a project, Go to Settings -> Project Access Tokens and
 click on the
@@ -54,7 +54,7 @@ e.g. 100 in 5 minutes
 Details
 -------
 
-### Response Codes
+## Response Codes
 
 If your access token has a rate limit and has reached
 it, all successful API calls will result in an HTTP 429 (Too Many
@@ -67,8 +67,18 @@ processed and will not appear on your dashboard.
 handle the 429 response code.
 {: .error}
 
-### Billing
+## Notifications
+
+Whenever a rate limit is hit in a project, Rollbar will automatically generate a `System Message` error within the project with the title `Your rate limit has been reached for access_token TOKEN_NAME`.
+
+You can configure a special _Every Occurrence_ notification rule to detect these messages and notify the appropriate team members via any supported channel.
+
+
+
+## Billing
 
 At the end of your billing cycle, the total charge is calculated based
 on all items saved and processed. This will not include items that were not processed due to your
 rate limits.
+
+
