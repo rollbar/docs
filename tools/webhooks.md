@@ -4,14 +4,14 @@ You can set up webhooks to make Rollbar push data to any arbitrary
 external service. Webhooks can be sent for the same triggers as our
 other notifications channels:
 
--   New item (`new_item`)
--   Every occurrence (`occurrence`)
--   Item reactivated (`reactivated_item`)
 -   10^nth occurrence (`exp_repeat_item`)
--   High occurrence rate (`item_velocity`)
--   Item resolved (`resolved_item`)
--   Item reopened (`reopened_item`)
 -   Deploy (`deploy`)
+-   Every occurrence (`occurrence`)
+-   High occurrence rate (`item_velocity`)
+-   Item reactivated (`reactivated_item`)
+-   Item reopened (`reopened_item`)
+-   Item resolved (`resolved_item`)
+-   New item (`new_item`)
 
 ### Configuration
 
@@ -58,14 +58,14 @@ The basic payload format is:
 
 EVENT\_NAME will be one of:
 
+-   `exp_repeat_item`
+-   `deploy`
+-   `item_velocity`
 -   `new_item`
 -   `occurrence`
 -   `reactivated_item`
--   `exp_repeat_item`
--   `item_velocity`
--   `resolved_item`
 -   `reopened_item`
--   `deploy`
+-   `resolved_item`
 
 `OBJECT_TYPE` will be one of:
 
@@ -82,10 +82,10 @@ threshold (e.g. 10, 100, etc.).
 
 `item_velocity` payloads will contain an additional key, `trigger` inside
 `data` which holds three additional keys:
-`window_size`, the number of seconds in the high occurrence
-rate window (e.g. 5, 60, 300, etc.), `window_size_description`, a human-readable
-version of the window size (e.g. '100 seconds', '1 hour', etc.) and `threshold`,
-how many events were triggered during the window to send the notification.
+
+-  `window_size`, the number of seconds in the high occurrence rate window (e.g. 5, 60, 300, etc.)
+-   `window_size_description`, a human-readable version of the window size (e.g. '100 seconds', '1 hour', etc.)
+-   `threshold`, how many events were triggered during the window to send the notification.
 
 ### Examples
 
@@ -318,7 +318,7 @@ High occurrence rate (JSON):
     "occurrences": 10,
     "trigger": {
       "window_size": 300,
-      "window_size_description":  "5 minutes",
+      "window_size_description": "5 minutes",
       "threshold": 100
     }
   }
