@@ -4,13 +4,14 @@ You can set up webhooks to make Rollbar push data to any arbitrary
 external service. Webhooks can be sent for the same triggers as our
 other notifications channels:
 
--   New item (`new_item`)
--   Every occurrence (`occurrence`)
--   Item reactivated (`reactivated_item`)
 -   10^nth occurrence (`exp_repeat_item`)
--   Item resolved (`resolved_item`)
--   Item reopened (`reopened_item`)
 -   Deploy (`deploy`)
+-   Every occurrence (`occurrence`)
+-   High occurrence rate (`item_velocity`)
+-   Item reactivated (`reactivated_item`)
+-   Item reopened (`reopened_item`)
+-   Item resolved (`resolved_item`)
+-   New item (`new_item`)
 
 ### Configuration
 
@@ -57,13 +58,14 @@ The basic payload format is:
 
 EVENT\_NAME will be one of:
 
+-   `exp_repeat_item`
+-   `deploy`
+-   `item_velocity`
 -   `new_item`
 -   `occurrence`
 -   `reactivated_item`
--   `exp_repeat_item`
--   `resolved_item`
 -   `reopened_item`
--   `deploy`
+-   `resolved_item`
 
 `OBJECT_TYPE` will be one of:
 
@@ -77,6 +79,13 @@ returned by our Read API.
 `exp_repeat_item` payloads will contain one additional key inside
 `data`: `occurrences`, the number of occurrences in the crossed
 threshold (e.g. 10, 100, etc.).
+
+`item_velocity` payloads will contain an additional key, `trigger` inside
+`data` which holds three additional keys:
+
+-  `window_size`, the number of seconds in the high occurrence rate window (e.g. 5, 60, 300, etc.)
+-   `window_size_description`, a human-readable version of the window size (e.g. '100 seconds', '1 hour', etc.)
+-   `threshold`, how many events were triggered during the window to send the notification.
 
 ### Examples
 
@@ -241,6 +250,80 @@ Every occurrence (JSON):
 }
 ```
 
+High occurrence rate (JSON):
+
+```json
+{
+  "event_name": "item_velocity",
+  "data": {
+    "item": {
+      "public_item_id": null,
+      "integrations_data": {},
+      "last_activated_timestamp": 1382655421,
+      "unique_occurrences": null,
+      "id": 272716944,
+      "environment": "production",
+      "title": "testing aobg98wrwe",
+      "last_occurrence_id": 481777744,
+      "last_occurrence_timestamp": 1382656142,
+      "platform": 0,
+      "first_occurrence_timestamp": 1382655421,
+      "project_id": 90,
+      "resolved_in_version": null,
+      "status": 1,
+      "hash": "c595b2ae0af9b397bb6bdafd57104ac4d5f6b382",
+      "last_occurrence": {
+        "body": {
+          "message": {
+            "body": "testing aobg98wrwe"
+          }
+        },
+        "uuid": "fd3a2d6f-3383-42ef-b65f-7d84cfad1b2c",
+        "language": "python",
+        "level": "error",
+        "timestamp": 1382656140,
+        "server": {
+          "host": "dev",
+          "argv": [
+            ""
+          ]
+        },
+        "environment": "production",
+        "framework": "unknown",
+        "notifier": {
+          "version": "0.5.12",
+          "name": "pyrollbar"
+        },
+        "metadata": {
+          "access_token": "",
+          "debug": {
+            "routes": {
+              "start_time": 1382212089369,
+              "counters": {
+                "post_item": 3278360
+              }
+            }
+          },
+          "customer_timestamp": 1382656140,
+          "api_server_hostname": "web5"
+        }
+      },
+      "framework": 0,
+      "total_occurrences": 10,
+      "level": 40,
+      "counter": 4,
+      "first_occurrence_id": 481761639,
+      "activating_occurrence_id": 481761639
+    },
+    "occurrences": 10,
+    "trigger": {
+      "window_size": 300,
+      "window_size_description": "5 minutes",
+      "threshold": 100
+    }
+  }
+}
+```
 10^nth occurrence (JSON):
 
 ```json
@@ -401,4 +484,4 @@ Deploy (JSON):
 
 ------------------------------------------------------------------------
 
-Last updated: May 21, 2014
+Last updated: March 8, 2017
