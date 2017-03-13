@@ -19,14 +19,15 @@ As well as the list of all people who have ever experienced an error, sorted by 
 
 * {: .active} [Python](#python)
 * [Ruby](#ruby)
-* [Browser JS](#javascript)
+* [PHP](#php)
 * [Node](#node)
+* [.NET](#net)
+* [Java](#java)
+* [Browser JS](#javascript)
 * [iOS](#ios)
 * [Android](#android)
 * [Flash](#flash)
-* [.NET](#net)
-* [PHP](#php)
-* [Java](#java)
+
 {: .nav .nav-tabs}
 
 <div class="tab-content">
