@@ -19,7 +19,7 @@ As well as the list of all people who have ever experienced an error, sorted by 
 
 * {: .active} [Python](#python)
 * [Ruby](#ruby)
-* [Browser Javascript](#javascript)
+* [Browser JS](#javascript)
 * [Node](#node)
 * [iOS](#ios)
 * [Android](#android)
