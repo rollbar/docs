@@ -72,6 +72,78 @@ end
 ```
 {: .tab-pane #ruby}
 
+```
+<?php
+function get_current_user() {
+    if ($_SESSION['user_id']) {
+        return array(
+            'id' => $_SESSION['user_id'], // required - value is a string
+            'username' => $_SESSION['username'], // optional - value is a string
+            'email' => $_SESSION['user_email'] // optional - value is a string
+        );
+    }
+    return null;
+}
+$config['person_fn'] = 'get_current_user';
+?>
+```
+{: .tab-pane #php}
+
+
+
+```js
+// node_rollbar works by inspecting the `request` for a `rollbar_person`,
+// `user` or `user_id` field (in that order). The first one it finds
+// it uses as the person data assuming the object contains at least
+// the `id` field. Both `email` and `username` are also specially treated.
+
+/**
+* This is a pretend function that gets called before the handler for the
+* request itself. It adds the appropriate object to the request so Rollbar
+* can send the person data
+*/
+function beforeRequestHandler(request) {
+  request.rollbar_person = {
+    id: 42,
+    email: 'dadams@example.com',
+    username: 'dadams'
+  }
+}
+
+// For a request with only a `user_id` field, the person is sent as
+// follows: `{ id: request.user_id }`. If `user_id` is a function it will
+// be evaluated before sending.
+
+// If you are using the Passport authentication library no additional
+// configuration is needed to make this work as expected.
+```
+{: .tab-pane #node}
+
+```
+Rollbar.PersonData(() => new Person
+{
+    Id = 123,
+    Username = "rollbar",
+    Email = "user@rollbar.com"
+});
+```
+{: .tab-pane #net}
+
+
+```
+import com.rollbar.Rollbar;
+import com.rollbar.payload.data.Person;
+
+public class HelloWorld {
+    public static final Rollbar rollbar = new Rollbar(<token>, <env>);
+    public static void main(String[] args) {
+        Person person = new Person();
+        Rollbar personRollbar = rollbar.person(person);
+    }
+}
+```
+{: .tab-pane #java}
+
 ```js
 // To track the current user in Javascript you can alter your `_rollbarConfig`
 // like so:
@@ -101,34 +173,6 @@ Rollbar.configure({
 });
 ```
 {: .tab-pane #javascript}
-
-```js
-// node_rollbar works by inspecting the `request` for a `rollbar_person`,
-// `user` or `user_id` field (in that order). The first one it finds
-// it uses as the person data assuming the object contains at least
-// the `id` field. Both `email` and `username` are also specially treated.
-
-/**
-* This is a pretend function that gets called before the handler for the
-* request itself. It adds the appropriate object to the request so Rollbar
-* can send the person data
-*/
-function beforeRequestHandler(request) {
-  request.rollbar_person = {
-    id: 42,
-    email: 'dadams@example.com',
-    username: 'dadams'
-  }
-}
-
-// For a request with only a `user_id` field, the person is sent as
-// follows: `{ id: request.user_id }`. If `user_id` is a function it will
-// be evaluated before sending.
-
-// If you are using the Passport authentication library no additional
-// configuration is needed to make this work as expected.
-```
-{: .tab-pane #node}
 
 ```objective_c
 // In order to record the current user in an iOS application you must call
@@ -192,48 +236,5 @@ function getCurrentUser() {
 Rollbar.init(this, accessToken, environment, getCurrentUser); //For user, id 42
 ```
 {: .tab-pane #flash}
-
-
-```
-Rollbar.PersonData(() => new Person
-{
-    Id = 123,
-    Username = "rollbar",
-    Email = "user@rollbar.com"
-});
-```
-{: .tab-pane #net}
-
-
-```
-<?php
-function get_current_user() {
-    if ($_SESSION['user_id']) {
-        return array(
-            'id' => $_SESSION['user_id'], // required - value is a string
-            'username' => $_SESSION['username'], // optional - value is a string
-            'email' => $_SESSION['user_email'] // optional - value is a string
-        );
-    }
-    return null;
-}
-$config['person_fn'] = 'get_current_user';
-?>
-```
-{: .tab-pane #php}
-
-```
-import com.rollbar.Rollbar;
-import com.rollbar.payload.data.Person;
-
-public class HelloWorld {
-    public static final Rollbar rollbar = new Rollbar(<token>, <env>);
-    public static void main(String[] args) {
-        Person person = new Person();
-        Rollbar personRollbar = rollbar.person(person);
-    }
-}
-```
-{: .tab-pane #java}
 
 </div>
