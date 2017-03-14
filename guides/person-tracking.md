@@ -5,15 +5,15 @@ in our Rails and Django libraries, and is easy to set up for the rest.
 
 You can see which people were affected by any one error:
 
-![](https://d26gfdfi90p7cf.cloudfront.net/features-people1.133037.o.png)
+![](../images/guides/person-tracking/people_item.png)
 
 Or the history of errors experienced by a particular person:
 
-![](https://d26gfdfi90p7cf.cloudfront.net/features-people2.133038.o.png)
+![](../images/guides/person-tracking/person_detail.png)
 
 As well as the list of all people who have ever experienced an error, sorted by most recent error:
 
-![](https://d26gfdfi90p7cf.cloudfront.net/features-people3.133039.o.png)
+![](../images/guides/person-tracking/people_project.png)
 
 * {: .active} [Python](#python)
 * [Ruby](#ruby)
