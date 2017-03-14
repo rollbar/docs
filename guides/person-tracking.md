@@ -15,8 +15,6 @@ As well as the list of all people who have ever experienced an error, sorted by 
 
 ![](https://d26gfdfi90p7cf.cloudfront.net/features-people3.133039.o.png)
 
-
-
 * {: .active} [Python](#python)
 * [Ruby](#ruby)
 * [PHP](#php)
@@ -67,12 +65,12 @@ end
 
 # If you are *not* using Rails, Rollbar will automatically pick up
 # the `rollbar.person_data` key in the Rack environment and pass it
-# on to the Rollbar website. It *must* have at least an `id` field.
+# on to the Rollbar website. It *must* have at least an `id` field.d
 # `username` and `email` will also be treated specially.
 ```
 {: .tab-pane #ruby}
 
-```
+```php
 <?php
 function get_current_user() {
     if ($_SESSION['user_id']) {
@@ -88,8 +86,6 @@ $config['person_fn'] = 'get_current_user';
 ?>
 ```
 {: .tab-pane #php}
-
-
 
 ```js
 // node_rollbar works by inspecting the `request` for a `rollbar_person`,
@@ -192,7 +188,6 @@ RollbarConfiguration *config = [RollbarConfiguration configuration];
 ```
 {: .tab-pane #ios}
 
-
 ```java
 // After initializing Rollbar you can configure the person with the `setPersonData` method:
 
@@ -207,7 +202,6 @@ public void onCreate(Bundle savedInstanceState) {
 // `id` method returns null then no person will be recorded. Username and email are optional.
 ```
 {: .tab-pane #android}
-
 
 ```actionscript
 // In flash you must configure the Rollbar person when first initializing the
@@ -236,5 +230,4 @@ function getCurrentUser() {
 Rollbar.init(this, accessToken, environment, getCurrentUser); //For user, id 42
 ```
 {: .tab-pane #flash}
-
 </div>
