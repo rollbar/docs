@@ -126,7 +126,7 @@ Rollbar.PersonData(() => new Person
 {: .tab-pane #net}
 
 
-```
+```java
 import com.rollbar.Rollbar;
 import com.rollbar.payload.data.Person;
 
@@ -230,4 +230,5 @@ function getCurrentUser() {
 Rollbar.init(this, accessToken, environment, getCurrentUser); //For user, id 42
 ```
 {: .tab-pane #flash}
+
 </div>
