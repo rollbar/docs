@@ -24,7 +24,8 @@ As well as the list of all people who have ever experienced an error, sorted by 
 * [Browser JS](#javascript)
 * [iOS](#ios)
 * [Android](#android)
-* [Flash](#flash) {: .nav .nav-tabs}
+* [Flash](#flash) 
+{: .nav .nav-tabs}
 
 <div class="tab-content">
 
