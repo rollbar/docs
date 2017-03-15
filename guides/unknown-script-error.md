@@ -40,7 +40,7 @@ rspadd Access-Control-Allow-Origin:\ *
 ## ExpressJS
 
 Add the following to your app:
-```
+```javascript
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
