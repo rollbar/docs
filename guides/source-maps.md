@@ -265,7 +265,7 @@ var _rollbarConfig = {
         if (filename) {
           var m = filename.match(locRegex);
           // Be sure that the minified_url when uploading includes 'dynamichost'
-          trace.frames[i].filename = m[1] + 'dynamichost' + m[2];          
+          trace.frames[i].filename = m[1] + '://dynamichost' + m[2];          
         }
       }
     }
