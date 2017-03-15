@@ -7,10 +7,7 @@ particular commit is deployed, and show the commits that were included with each
 ### Connect your Account
 
 Get started by going to your [account settings](https://www.rollbar.com/settings/integrations).
-Navigate to the GitHub tab and click 'Connect with GitHub':
-
-![](../images/tools/github/github1.png)
-![](../images/tools/github/github2.png)
+Navigate to the GitHub tab and click 'Connect with GitHub'.
 
 This enables single sign on (you can log in with the 'Log in with GitHub' button), and enables the
 GitHub integration settings for all your projects.
@@ -23,15 +20,8 @@ a single repository. This has to be done once per project.
 #### Link to GitHub
 
 1. Go to the Settings section of your project then click on Source Control. Then click on GitHub.
-![](../images/tools/github/github3.png)
-
 2. Click Connect to GitHub. 
-![](../images/tools/github/github4.png)
-![](../images/tools/github/github5.png)
-
 3. Select a repository from the list of available repositories, enter the branch (default is 'master') and a project root within the repository (usually this can be left blank), then save the settings.
-![](../images/tools/github/github6.png)
-![](../images/tools/github/github7.png)
 
 #### Configure your notifier
 
