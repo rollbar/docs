@@ -14,13 +14,13 @@ Setting the `Access-Control-Allow-Origin` header to `*` signifies that the resou
 
 Here are some examples on how to set this header in various environments:
 
-## Apache
+#### Apache
 
 In the folders where your JavaScript files will be served from, create an `.htaccess` file with the following contents:
 
 `Header add Access-Control-Allow-Origin "*"`
 
-## Nginx
+#### Nginx
 
 Add the `add_header` directive to the location block that serves your JavaScript files:
 ```
@@ -30,14 +30,14 @@ location ~ ^/assets/ {
 }
 ```
 
-## HAProxy
+#### HAProxy
 
 Add the following to your asset backend where JavaScript files are served from:
 ```
 rspadd Access-Control-Allow-Origin:\ *
 ```
 
-## ExpressJS
+#### ExpressJS
 
 Add the following to your app:
 
