@@ -2,7 +2,7 @@
 
 ### General
 
-Download [rollbar.php](https://raw.githubusercontent.com/rollbar/rollbar-php/v0.18.2/src/rollbar.php) and [Level.php](https://raw.githubusercontent.com/rollbar/rollbar-php/v0.18.2/src/Level.php)
+Download <a href="https://raw.githubusercontent.com/rollbar/rollbar-php/v0.18.2/src/rollbar.php" target="_blank" rel="noopener">rollbar.php</a> and <a href="https://raw.githubusercontent.com/rollbar/rollbar-php/v0.18.2/src/Level.php" target="_blank" rel="noopener">Level.php</a>
 and put them together somewhere you can access.
 
 ### If Using Composer
@@ -57,5 +57,5 @@ throw new Exception('test 2');
 Within a few seconds of loading this page, the message and errors should appear in your Rollbar dashboard.
 
 Once you've verified you have the notifier library installed, your access token works,
-and you can connect to rollbar, the [rollbar-php](https://github.com/rollbar/rollbar-php)
+and you can connect to rollbar, the <a href="https://github.com/rollbar/rollbar-php" target="_blank" rel="noopener">rollbar-php</a>
 documentation can show you how to automatically report exceptions and log message to Rollbar.

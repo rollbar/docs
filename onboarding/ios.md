@@ -1,6 +1,6 @@
 ## Installation
 
-### With [Cocoapods](http://cocoapods.org/)
+### With <a href="http://cocoapods.org/" target="_blank" rel="noopener">Cocoapods</a>
 
 In your Podfile:
 
@@ -12,7 +12,7 @@ Make sure to declare your platform as `ios` at the top of your Podfile. E.g:
 
 ### Without Cocoapods
 
-1. Download the [Rollbar framework](https://github.com/rollbar/rollbar-ios/releases/download/v0.1.3/Rollbar.zip).
+1. Download the <a href="https://github.com/rollbar/rollbar-ios/releases/download/v0.1.3/Rollbar.zip" target="_blank" rel="noopener">Rollbar framework</a>.
 
 2. Extract the Rollbar directory in the zip file to your Xcode project directory.
 
@@ -38,7 +38,7 @@ That's all you need to do to report crashes to Rollbar. To get symbolicated stac
 
 Crashes will be saved to disk when they occur, then reported to Rollbar the next time the app is launched.
 
-Rollbar uses [PLCrashReporter](https://www.plcrashreporter.org/) to capture uncaught exceptions and fatal signals. Note that only one crash reporter can be active per app. If you initialize multiple crash reporters (i.e. Rollbar alongside other services), only the last one initialized will be active.
+Rollbar uses <a href="https://www.plcrashreporter.org/" target="_blank" rel="noopener">PLCrashReporter</a> to capture uncaught exceptions and fatal signals. Note that only one crash reporter can be active per app. If you initialize multiple crash reporters (i.e. Rollbar alongside other services), only the last one initialized will be active.
 
 ### Logging
 
@@ -57,4 +57,4 @@ You can log arbitrary messages using the log methods:
 [Rollbar logWithLevel:@"warning" message:@"Simple warning log message"];
 ```
 
-For additional configuration information, see the documentation for [rollbar-ios](https://github.com/rollbar/rollbar-ios).
+For additional configuration information, see the documentation for <a href="https://github.com/rollbar/rollbar-ios" target="_blank" rel="noopener">rollbar-ios</a>.
