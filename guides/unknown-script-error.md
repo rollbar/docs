@@ -40,6 +40,7 @@ rspadd Access-Control-Allow-Origin:\ *
 ## ExpressJS
 
 Add the following to your app:
+
 ```
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -47,6 +48,7 @@ app.use(function(req, res, next) {
   next();
 });
 ```
+
 More examples for different platforms here - http://enable-cors.org/server_expressjs.html
 
 ## IIS
