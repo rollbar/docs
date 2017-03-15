@@ -1,5 +1,5 @@
 # Summary
-This happens when your JS code is hosted on a different domain (i.e. a CDN). To fix, set `Access-Control-Allow-Origin: *` on the JS file, and `crossorigin="anonymous"` on the `<script>` tag.  
+This happens when your JS code is hosted on a different domain (i.e. a CDN). To fix, set `Access-Control-Allow-Origin: *` on the JS file, and `crossorigin="anonymous"` on the `<SCRIPT>` tag.  
 
 If the script errors are coming from Javascript that you don't maintain, you can suppress them using the [ignoreMessages option in Rollbar.js](/docs/notifier/rollbar.js/#ignoring-specific-exception-messages)
 
@@ -69,7 +69,6 @@ In IIS, you can use the following code in your `web.config`:
 
 **2. Set crossorigin="anonymous" on the script tag**
 
-In your HTML source, for each of the scripts that you've set the `access-control-allow-origin` header for, set `crossorigin="anonymous"` on the `SCRIPT` tag.
+In your HTML source, for each of the scripts that you've set the `access-control-allow-origin` header for, set `crossorigin="anonymous"` on the `<SCRIPT>` tag.
 
 Make sure you verify that the header is being sent for the script file before adding the `crossorigin` property on the script tag. In Firefox, if the `crossorigin` attribute is present but the `Access-Control-Allow-Origin` header is not, the script won't be executed.
-
