@@ -14,17 +14,8 @@ view. It looks like this:
 Note that this requires a paid Help Scout account.
 
 1.  In HelpScout, click Apps in the top bar
-
-    ![](../images/tools/helpscout/apps-button.png)
-
 2.  Click "Build a Custom App"
-
-    ![](../images/tools/helpscout/custom-app.png)
-
 3.  Click "Create App".
-
-    ![](../images/tools/helpscout/create-app.png)
-
 4.  Fill out the form as follows. Make sure to replace
     PROJECT\_READ\_ACCESS\_TOKEN with a 'read' scope access token for
     the relevant project.
@@ -36,12 +27,7 @@ Note that this requires a paid Help Scout account.
     -   Secret Key: PROJECT\_READ\_ACCESS\_TOKEN
     -   Debug Mode: Off
     -   Mailboxes: check all
-
-     ![](../images/tools/helpscout/form.png)
-
 5.  Press "Save".
-
- 
 
 Now when you navigate to a conversation in Help Scout, you'll see the
 Rollbar app showing the most recent 10 occurrences that affected the
