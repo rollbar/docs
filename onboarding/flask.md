@@ -1,7 +1,7 @@
 ## Installation
 
 To send errors to Rollbar from your Python application you should use 
-[pyrollbar](http://github.com/rollbar/pyrollbar) notifier library. Install pyrollbar with pip:
+<a href="http://github.com/rollbar/pyrollbar" target="_blank" rel="noopener">pyrollbar</a> notifier library. Install pyrollbar with pip:
 
 ```python
 pip install rollbar
@@ -54,4 +54,4 @@ if __name__ == '__main__':
     app.run()
 ```
 
-For additional pyrollbar configuration options, see [Configuring pyrollbar](https://github.com/rollbar/pyrollbar).
+For additional pyrollbar configuration options, see <a href="http://github.com/rollbar/pyrollbar" target="_blank" rel="noopener">Configuring pyrollbar</a>.

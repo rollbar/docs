@@ -1,6 +1,6 @@
 ## Installation
 
-Download [rollbar-android.jar](https://github.com/rollbar/rollbar-android/releases/latest) and place it in your Android project's `libs` directory.
+Download <a href="https://github.com/rollbar/rollbar-android/releases/latest" target="_blank" rel="noopener">rollbar-android.jar</a> and place it in your Android project's `libs` directory.
 
 Add the following line in your custom Application subclass's `onCreate()` to initialize Rollbar:
 
@@ -33,4 +33,4 @@ To report your own messages, call `reportMessage()`:
 Rollbar.reportMessage("A test message", "debug"); // default level is "info"
 ```
 
-For additional configuration information, see the documentation for the [rollbar-android](https://github.com/rollbar/rollbar-android) notifier.
+For additional configuration information, see the documentation for the <a href="https://github.com/rollbar/rollbar-android " target="_blank" rel="noopener">rollbar-android</a> notifier.

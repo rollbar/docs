@@ -1,7 +1,7 @@
 ## Installation
 
 To send errors to Rollbar from your Python application you should use 
-[pyrollbar](http://github.com/rollbar/pyrollbar) notifier library. Install pyrollbar with pip:
+<a href="http://github.com/rollbar/pyrollbar " target="_blank" rel="noopener">pyrollbar</a> notifier library. Install pyrollbar with pip:
 
 ```python
 pip install rollbar
@@ -45,9 +45,9 @@ Once you've verified that the notifier is configured correctly and can communica
 want to add the notifier to your existing applications. For additional configuration options and 
 instructions for using Rollbar with specific web frameworks, see:
 
-- [Configuring pyrollbar](https://github.com/rollbar/pyrollbar#configuration)
-- [Using pyrollbar with Django](https://github.com/rollbar/pyrollbar#django)
-- [Using pyrollbar with Pyramid](https://github.com/rollbar/pyrollbar#pyramid)
-- [Using pyrollbar with Flask](https://github.com/rollbar/rollbar-flask-example)
-- [Using pyrollbar with Bottle](https://github.com/rollbar/pyrollbar#bottle)
-- [Using pyrollbar from the command line](https://github.com/rollbar/pyrollbar#command-line-usage)
+- <a href="https://github.com/rollbar/pyrollbar#configuration" target="_blank" rel="noopener">Configuring pyrollbar</a>
+- <a href="https://github.com/rollbar/pyrollbar#django" target="_blank" rel="noopener">Using pyrollbar with Django</a>
+- <a href="https://github.com/rollbar/pyrollbar#pyramid" target="_blank" rel="noopener">Using pyrollbar with Pyramid</a>
+- <a href="https://github.com/rollbar/rollbar-flask-example" target="_blank" rel="noopener">Using pyrollbar with Flask</a>
+- <a href="https://github.com/rollbar/pyrollbar#bottle" target="_blank" rel="noopener">Using pyrollbar with Bottle</a>
+- <a href="https://github.com/rollbar/pyrollbar#command-line-usage" target="_blank" rel="noopener">Using pyrollbar from the command line</a>

@@ -1,4 +1,4 @@
 Rollbar doesn't maintain an official Dart notifier library, however the following
 community-supported library is available:
 
-* [rollbar.dar](https://github.com/Mixbook/rollbar.dart) by Anton Astashov from [Mixbook](http://www.mixbook.com)
+* <a href="https://github.com/Mixbook/rollbar.dart" target="_blank" rel="noopener">rollbar.dar</a>by Anton Astashov from <a href="http://www.mixbook.com" target="_blank" rel="noopener">Mixbook</a>

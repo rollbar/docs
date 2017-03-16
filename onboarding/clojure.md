@@ -1,6 +1,6 @@
 Rollbar doesn't maintain an official Clojure notifier library, however the following
 community-supported libraries are available:
 
-* [cljs-rollbar](https://github.com/nervous-systems/cljs-rollbar) by [Moe Aboulkheir](https://github.com/moea)
-* [rollcage](https://github.com/circleci/rollcage) by [Mark O'Morian](https://github.com/marcomorain) from [CircleCI](https://circleci.com/)
-* [crowboar](https://github.com/mcohen01/crowbar) by [Michael Cohen](https://github.com/mcohen01)
+* <a href="https://github.com/nervous-systems/cljs-rollbar" target="_blank" rel="noopener">cljs-rollbar</a> by <a href="https://github.com/moea" target="_blank" rel="noopener">Moe Aboulkheir</a>
+* <a href="https://github.com/circleci/rollcage" target="_blank" rel="noopener">rollcage</a> by <a href="https://github.com/marcomorain" target="_blank" rel="noopener">Mark O'Morian</a> from <a href="https://circleci.com/" target="_blank" rel="noopener">CircleCI</a>
+* <a href="https://github.com/mcohen01/crowbar" target="_blank" rel="noopener">crowboar</a> by <a href="https://github.com/mcohen01" target="_blank" rel="noopener">Michael Cohen</a>

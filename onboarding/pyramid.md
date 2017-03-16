@@ -1,4 +1,4 @@
-1&#8203;. Install [pyrollbar](https://github.com/rollbar/pyrollbar) with [pip](http://pip.readthedocs.org/en/stable/quickstart/):
+1&#8203;. Install <a href="https://github.com/rollbar/pyrollbar" target="_blank" rel="noopener">pyrollbar</a> with <a href="http://pip.readthedocs.org/en/stable/quickstart/" target="_blank" rel="noopener">pip</a>:
 
 ```shell
 pip install rollbar

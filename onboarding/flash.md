@@ -1,4 +1,4 @@
-1. Download the [flash_rollbar](https://github.com/rollbar/flash_rollbar/tree/master/src) code or just the [Rollbar.swc](https://github.com/rollbar/flash_rollbar/blob/master/build/swc/Rollbar.swc) file.
+1. Download the <a href="https://github.com/rollbar/flash_rollbar/tree/master/src" target="_blank" rel="noopener">flash_rollbar</a> code or just the <a href="https://github.com/rollbar/flash_rollbar/blob/master/build/swc/Rollbar.swc" target="_blank" rel="noopener">Rollbar.swc</a> file.
 2. Place the ```flash_rollbar/src``` directory in your source path or place the ```Rollbar.swc``` file in your project's library path.
 3. Call ```Rollbar.init(this, accessToken, environment);``` from your top-level ```DisplayObject```.
 
