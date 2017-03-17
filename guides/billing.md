@@ -3,8 +3,13 @@
 The following applies to accounts created via Rollbar.com.  See the section <a href="#partner-billing">Partner Billing</a> for details on how billing works if you created an account elsewhere.
 {: .info}
 
-## Overage Charges & Automatic Upgrades
-The following applies to monthly subscriptions for accounts created via Rollbar.com
+## Billing Cycles
+
+For both monthly and annual plans, your account will have a billing cycle that starts on the day of the month when you originally signed up for the plan.  The billing cycle is used to calculate your monthly usage.   If you sign up after the 28th of a month, then your billing cycle date will vary depending on the lenght of the month.
+
+
+## Overages & Upgrades
+The following applies to monthly subscriptions for accounts created via Rollbar.com  Annual plans are not automatically upgraded.
 {: .info}
 
 If you exceed your monthly event limit, you can now pay *per event* over the limit.  If your overage charge is sufficiently high that it would be more economical to upgrade to the next plan, then we'll do it for you automatically and you won't be charged for the overages.  Here's how it works:
@@ -17,6 +22,12 @@ If you exceed your monthly event limit, you can now pay *per event* over the lim
 | Premium	| $599	| 4,000,000 |	$0.30 |	N/A |
 				
 Once your account has been automatically upgraded, it will remain at the new plan level for future billing cycles.  You can change your plan at any time by going to **Account Settings --> Choose Plan**.  If you choose a lower plan level, the change will take effect at the start of your next monthly billing cycle.
+
+You may also upgrade your subscription manually at any time by going to **Account Settings --> Choose Plan**.
+
+### Disabling Overages
+
+If you are on a strict budget and don't mind missing some errors, then you can choose to disable overage charges at **Account Settings --> Billing Info**.  If overages are disabled and you reach your plan limit, we will not process new errors until your next billing cycle begins.
 
 ### Overage Billing
 Overage charges are calculated at the end of your billing cycle, and are included in the next month's subscription charge.
@@ -33,7 +44,7 @@ On May 10th, your monthly charge will be $58.53
 * $49.00 for your subscription May 10 - June 9.
 ```
 
-## Upgrade Billing
+### Upgrade Billing
 If your account is upgraded (manually by you or automatically by us), then you will be charged immediately for the difference between your old plan and your new one.  Your monthly billing date will remain the same.
 
 Here's an example of how this works:
@@ -47,6 +58,16 @@ You are immediately charged ($149 - $49 = $100) for the upgrade to Startup.
 
 Your next charge will be on May 10 for $149.
 ```
+
+## Annual Plans
+
+Rollbar annual plans offer a way to pre-pay for usage at a rate equivalent to receiving two months free in a year.
+
+### Overages & Annual Plans
+
+If you are on an annual plan and exceed your monthly event limit, the cost of the additional events is deducted from the remaining balance of your prepayment, and your annual plan will end before 12 months.
+
+When the funds in an annual plan are fully depleted, your account will be charged the amount of the annual plan again, and a new annual cycle will begin.
 
 ## Partner Billing
 
