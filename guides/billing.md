@@ -8,7 +8,7 @@ The following applies to accounts created via Rollbar.com.  See the section <a h
 For both monthly and annual plans, your account will have a billing cycle that starts on the day of the month when you originally signed up for the plan.  The billing cycle is used to calculate your monthly usage.   If you sign up after the 28th then your billing cycle date will vary depending on the length of the month.
 
 ## Overages & Upgrades
-The following applies to monthly subscriptions for accounts created via Rollbar.com  Annual plans are not automatically upgraded.
+The following applies to monthly subscriptions for accounts created via Rollbar.com.  Annual plans are not automatically upgraded.
 {: .info}
 
 If you exceed your monthly event limit, you can now pay *per event* over the limit.  If your overage charge is sufficiently high that it would be more economical to upgrade to the next plan, then we'll do it for you automatically and you won't be charged for the overages.  Here's how it works:
@@ -74,5 +74,5 @@ When the funds in an annual plan are fully depleted, your account will be charge
 
 If you created your account through Heroku, then your Rollbar subscription is included in your monthly Heroku bill.
 
-Rollbar cannot automatically upgrade accounts created through Heroku.  If you reach your monthly event limit, then error data will not be processed until you migrate your plan([instructions here](https://devcenter.heroku.com/articles/rollbar#migrating-between-plans)) or a new monthly billing cycle begins.
+Rollbar cannot automatically upgrade accounts created through Heroku.  If you reach your monthly event limit, then error data will not be processed until you migrate your plan ([instructions here](https://devcenter.heroku.com/articles/rollbar#migrating-between-plans)) or a new monthly billing cycle begins.
 
