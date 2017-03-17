@@ -2,7 +2,7 @@
 
 ## Overage Charges & Automatic Upgrades
 The following applies to monthly subscriptions for accounts created via Rollbar.com
-{: info}
+{: .info}
 
 If you exceed your monthly event limit, you can now pay *per event* over the limit.  If your overage charge is sufficiently high that it would be more economical to upgrade to the next plan, then we'll do it for you automatically and you won't be charged for the overages.  Here's how it works:
 
