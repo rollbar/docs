@@ -5,8 +5,7 @@ The following applies to accounts created via Rollbar.com.  See the section <a h
 
 ## Billing Cycles
 
-For both monthly and annual plans, your account will have a billing cycle that starts on the day of the month when you originally signed up for the plan.  The billing cycle is used to calculate your monthly usage.   If you sign up after the 28th of a month, then your billing cycle date will vary depending on the lenght of the month.
-
+For both monthly and annual plans, your account will have a billing cycle that starts on the day of the month when you originally signed up for the plan.  The billing cycle is used to calculate your monthly usage.   If you sign up after the 28th then your billing cycle date will vary depending on the length of the month.
 
 ## Overages & Upgrades
 The following applies to monthly subscriptions for accounts created via Rollbar.com  Annual plans are not automatically upgraded.
