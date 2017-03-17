@@ -1,4 +1,7 @@
-# Rollbar Billing Explained
+# How Billing Works
+
+The following applies to monthly subscriptions for accounts created via Rollbar.com.  See the section <a href="#partner-billing">Partner Billing</a> for details on how billing works if you created an account elsewhere.
+{: .info}
 
 ## Overage Charges & Automatic Upgrades
 The following applies to monthly subscriptions for accounts created via Rollbar.com
@@ -19,6 +22,7 @@ Once your account has been automatically upgraded, it will remain at the new pla
 Overage charges are calculated at the end of your billing cycle, and are included in the next month's subscription charge.
 
 Here's an example of how this works:
+
 ```
 Your bootstrap ($49/mo) plan is billed each month on the 10th.
 
@@ -33,6 +37,7 @@ On May 10th, your monthly charge will be $58.53
 If your account is upgraded (manually by you or automatically by us), then you will be charged immediately for the difference between your old plan and your new one.  Your monthly billing date will remain the same.
 
 Here's an example of how this works:
+
 ```
 Your bootstrap ($49/mo) plan is billed each month on the 10th.
 
@@ -42,3 +47,4 @@ You are immediately charged ($149 - $49 = $100) for the upgrade to Startup.
 
 Your next charge will be on May 10 for $149.
 ```
+## Partner Billing
