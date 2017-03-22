@@ -6,7 +6,7 @@ If your application has an international user base, you may be receiving Javascr
 
 While Rollbar can't translate error messages into your preferred language, it is possible to group errors by language so that you have fewer items to manage.
 
-Here are a few [custom grouping](/docs/custom-grouping/) recipes to match messages based on language:
+Here are a few [custom grouping](/docs/custom-grouping/) recipes to match errors based on browser language:
 
 ## One supported language
 
