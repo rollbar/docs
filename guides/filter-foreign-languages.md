@@ -15,8 +15,7 @@ The following rule groups errors where `client.language.javascript` does not con
 ```
   {
     "condition": {
-      "ncontains": "en-", 
-      "path": "client.javascript.language"
+       "path": "client.javascript.language","ncontains": "en-"
     }, 
     "fingerprint": "non-en error", 
     "title": "non-english error"
