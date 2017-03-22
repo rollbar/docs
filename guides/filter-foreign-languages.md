@@ -2,7 +2,7 @@
 
 If your application has an international user base, you may be receiving Javascript error reports in the local language of your users' browsers.
 
-![](../images/filter-foreign-languages/error_spanish.png)
+![](../images/guides/filter-foreign-languages/error_spanish.png)
 
 While Rollbar can't translate error messages into your preferred language, it is possible to group errors by language so that you have fewer items to manage.
 
