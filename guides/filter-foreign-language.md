@@ -8,7 +8,7 @@ While Rollbar can't translate error messages into your preferred language, it is
 
 Here are a few [custom grouping](/docs/custom-grouping/) recipes to match messages based on language:
 ## One supported language
-The following rule looks for errors where `client.language.javascript` does not contain `en-`:
+The following rule groups errors where `client.language.javascript` does not contain `en-`:
 ```
   {
     "condition": {
@@ -21,14 +21,15 @@ The following rule looks for errors where `client.language.javascript` does not 
 ```
 
 ## Multiple supported languages
-Suppose you're only interested in errors in English, French, and German.  Then the following will group these together:
+The following rule groups errors where `client.language.javascript` does not contain `en-`,`fr-`,`de-`, or `es-`:
 ```
 {
   "condition":{
     "all":[
       {"path":"client.javascript.language","ncontains":"en-"},
       {"path":"client.javascript.language","ncontains":"fr-"},
-      {"path":"client.javascript.language","ncontains":"de-"}
+      {"path":"client.javascript.language","ncontains":"de-"},
+      {"path":"client.javascript.language","ncontains":"es-"}
     ]
   },
   "fingerprint": "non-supported language error",
