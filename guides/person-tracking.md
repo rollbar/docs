@@ -24,7 +24,7 @@ As well as the list of all people who have ever experienced an error, sorted by 
 * [Browser JS](#javascript)
 * [iOS](#ios)
 * [Android](#android)
-* [Flash](#flash) 
+* [Flash](#flash)
 {: .nav .nav-tabs}
 
 <div class="tab-content">
@@ -61,7 +61,7 @@ end
 Rollbar.configure do |config|
   config.person_id_method = 'get_id'
   config.person_username_method = 'get_username'
-  config.person_email_metohd = 'primary_email'
+  config.person_email_method = 'primary_email'
 end
 
 # If you are *not* using Rails, Rollbar will automatically pick up
