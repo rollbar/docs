@@ -1,6 +1,7 @@
 ## Connecting Rollbar to Campfire
 
-Rollbar can send messages about exceptions and deploys to a Room in [Campfire](https://campfirenow.com/).
+For general information about Rollbar's alerting features, check out the [Notifications guide](../notifications/). 
+{: .info}
 
 ### Setup
 
