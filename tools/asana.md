@@ -3,7 +3,8 @@
 Turn application errors in your [Rollbar](https://rollbar.com/) projects into Tasks in your
 [Asana](https://asana.com/) Projects.
 
-For general instructions on using Rollbar's issue tracking features, check out the [Issue Tracking guide](../issue-tracking/). {: .info}
+For general instructions on using Rollbar's issue tracking features, check out the [Issue Tracking guide](../issue-tracking/). 
+{: .info}
 
 ## Authorize Rollbar
 
