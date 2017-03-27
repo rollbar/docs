@@ -29,7 +29,6 @@ You may also upgrade your subscription manually at any time by going to **Accoun
 Rollbar will send an email alert to all members of the Owners team when an account's monthly usage reaches:
 
 * **70%** of monthly limit
-* **90%** of monthly limit
 * **100%** of monthly limit
 
 An additional email will be sent to the Owners if the account is automatically upgraded.
