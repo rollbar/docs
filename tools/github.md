@@ -14,6 +14,9 @@ GitHub integration settings for all your projects.
 
 ### Set up Linking
 
+For general information about Rollbar's Git integration, check out the [Source Control guide](../source-control/). 
+{: .info}
+
 Each line in your stack trace can be linked to your code in GitHub if it's hosted in
 a single repository. This has to be done once per project.
 
@@ -43,6 +46,9 @@ Code that is considered in-project because of the 'project_package_paths' key wi
 to GitHub at this time.
 
 ### GitHub Issues
+
+For general information about Rollbar's issue tracking features, check out the [Issue Tracking guide](../issue-tracking/). 
+{: .info}
 
 After connecting with GitHub you can integrate GitHub issues to automatically create
 issues when Rollbar items arrive, or to add a 'Create GitHub Issue' button to the item page. You

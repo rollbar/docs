@@ -1,6 +1,7 @@
 ## Connecting Trello to Rollbar
-Turn application errors in your [Rollbar](https://rollbar.com/) projects into Cards on your
-[Trello](https://trello.com/) Boards.
+
+For general information about Rollbar's issue tracking features, check out the [Issue Tracking guide](../issue-tracking/). 
+{: .info}
 
 ### In Rollbar
 

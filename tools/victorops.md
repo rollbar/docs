@@ -1,6 +1,7 @@
 # Connecting Rollbar to VictorOps
 
-You can turn Rollbar events into Alerts in [VictorOps](https://victorops.com/).
+For general information about Rollbar's alerting features, check out the [Notifications guide](../notifications/). 
+{: .info}
 
 ### Setup
 

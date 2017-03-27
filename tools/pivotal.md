@@ -1,6 +1,7 @@
 ## Connecting Rollbar to Pivotal
 
-You can turn Rollbar events into Stories in [Pivotal Tracker](https://www.pivotaltracker.com/).
+For general information about Rollbar's issue tracking features, check out the [Issue Tracking guide](../issue-tracking/). 
+{: .info}
 
 ### Connect your Account
 

@@ -1,6 +1,7 @@
 # Connect Rollbar to Hipchat
 
-Rollbar can send messages about exceptions and deploys to a room in [HipChat](https://hipchat.com/).
+For general information about Rollbar's alerting features, check out the [Notifications guide](../notifications/). 
+{: .info}
 
 ### Setup
 

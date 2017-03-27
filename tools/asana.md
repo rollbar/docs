@@ -1,7 +1,7 @@
 # Connecting Asana to Rollbar
 
-Turn application errors in your [Rollbar](https://rollbar.com/) projects into Tasks in your
-[Asana](https://asana.com/) Projects.
+For general information about Rollbar's issue tracking features, check out the [Issue Tracking guide](../issue-tracking/). 
+{: .info}
 
 ## Authorize Rollbar
 

@@ -1,6 +1,7 @@
 # Connecting Rollbar to Sprintly
 
-You can turn Rollbar events into Items in [Sprintly](https://sprint.ly).
+For general information about Rollbar's issue tracking features, check out the [Issue Tracking guide](../issue-tracking/). 
+{: .info}
 
 ### Setup
 

@@ -1,7 +1,7 @@
 ## Connecting Rollbar to Slack
 
-Rollbar can send messages about exceptions and deploys to a channel or
-group in [Slack](https://slack.com/).
+For general information about Rollbar's alerting features, check out the [Notifications guide](../notifications/). 
+{: .info}
 
 ### Setup
 
@@ -22,6 +22,6 @@ Configuration is per-project in Rollbar.
 ### Tips & Tricks
 
 * You can customize the content of Slack messages using [notication variables](/docs/notification-variables/).
-* In addition to notification variables, any data value sent in the JSON payload of an item or occurrence may be used as a variable, including custom data. Examples of usage are {{"{{body.request.url"}}}} and {{"{{body.server.host"}}}}. If your JSON payload includes the custom values {{"{{ handler: { key: process-job, id:100"}}}} then you can use the variables {{"{{body.handler.key"}}}} and {{"{{body.handler.id"}}}} in your notifications. To view the full set of available values, look at the "Params" values of an occurrence in your project. All params besides the ones listed in the above notification variables *must* be prefaced with "body".
+* In addition to notification variables, any data value sent in the JSON payload of an item or occurrence may be used as a variable, including custom data. Examples of usage are `{{"{{body.request.url"}}}}` and `{{"{{body.server.host"}}}}`. If your JSON payload includes the custom values `{{"{{ handler: { key: process-job, id:100"}}}}` then you can use the variables `{{"{{body.handler.key"}}}}` and `{{"{{body.handler.id"}}}}` in your notifications. To view the full set of available values, look at the "Params" values of an occurrence in your project. All params besides the ones listed in the above notification variables *must* be prefaced with "body".
 * You can mention specific Slack users in notification messages using the syntax `<@username>`.
 * To mention `@channel`, `@group`, `@here`, or `@everyone`, use the syntax `<!channel>`, `<!group>`, `<!here>`, or `<!everyone>`.

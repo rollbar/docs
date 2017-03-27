@@ -2,6 +2,9 @@
 
 ## Set up Linking
 
+For general information about Rollbar's Git integration, check out the [Source Control guide](../source-control/). 
+{: .info}
+
 Each line in your stack trace can be linked to your code in GitLab if it's hosted in a single repository. This has to be done once per project.
 
 1. Go to the Settings section of your project, then click on Source Control --> GitLab --> Connect to GitLab.
@@ -12,6 +15,9 @@ Each line in your stack trace can be linked to your code in GitLab if it's hoste
 Once you've successfully connected to a GitLab repository, Rollbar error tracebacks and deploy reports will include links to specific lines of code and revisions in your repository.
 
 ## Creating GitLab Issues from a Rollbar Project
+
+For general information about Rollbar's issue tracking features, check out the [Issue Tracking guide](../issue-tracking/). 
+{: .info}
 
 1. Visit the Settings page in Rollbar and go to Notifications. From the Notifications Settings you
    will select GitLab Issues from the list of "Available Channels".

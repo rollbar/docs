@@ -1,7 +1,7 @@
 # Connecting JIRA to Rollbar
 
-Turn application errors in your [Rollbar](https://rollbar.com/) projects into Issues in your
-[JIRA](https://www.atlassian.com/software/jira) Projects.
+For general information about Rollbar's issue tracking features, check out the [Issue Tracking guide](../issue-tracking/). 
+{: .info}
 
 ### In Rollbar
 
