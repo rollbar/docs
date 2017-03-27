@@ -32,7 +32,7 @@ Rollbar will send an email alert to all members of the Owners team when an accou
 * **90%** of monthly limit
 * **100%** of monthly limit
 
-An additional email will be sent to the Owners if the account is automatically upgraded
+An additional email will be sent to the Owners if the account is automatically upgraded.
 
 ### Disabling On-Demand
 
