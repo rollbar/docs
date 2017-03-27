@@ -32,6 +32,9 @@ Once you've successfully connected to a Bitbucket repository, Rollbar error trac
 
 ### Creating Bitbucket Issues from a Rollbar Project
 
+For general information about Rollbar's issue tracking features, check out the [Issue Tracking guide](../issue-tracking/). 
+{: .info}
+
 1. Visit the Settings page in Rollbar and go to Notifications. From the Notifications Settings you
    will select Bitbucket Issues from the list of "Available Channels".
 2. Click "Connect with Bitbucket".
