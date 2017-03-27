@@ -4,6 +4,9 @@ View the source code mentioned in Rollbar tracebacks and deploys with a single c
 
 ### Enabling Source Code Linking in a Rollbar Project
 
+For general information about Rollbar's Git integration, check out the [Source Control guide](../source-control/). 
+{: .info}
+
 1. Go to the Settings section of your project then click on Source Control. 
 2. If you have not yet connected to your Bitbucket account, click on Connect to Bitbucket and complete the authorization process.
 3.  Select a repository from the list of available repositories, enter the branch (default is 'master') and a project root within the repository (usually this can be left blank), then save the settings.
