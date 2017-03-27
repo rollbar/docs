@@ -1,7 +1,7 @@
 # Connect Rollbar to Flowdock
 
-Rollbar can send messages about exceptions or deploys to your flow
-in [Flowdock](http://flowdock.com/).
+For general information about Rollbar's alerting features, check out the [Notifications guide](../notifications/). 
+{: .info}
 
 ### In Flowdock
 
