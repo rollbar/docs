@@ -24,6 +24,16 @@ Once your account has been automatically upgraded, it will remain at the new pla
 
 You may also upgrade your subscription manually at any time by going to **Account Settings --> Choose Plan**.
 
+### Usage & Upgrade Alerts
+
+Rollbar will send an email alert to all members of the Owners team when an account's monthly usage reaches:
+
+* **70%** of monthly limit
+* **90%** of monthly limit
+* **100%** of monthly limit
+
+An additional email will be sent to the Owners if the account is automatically upgraded.
+
 ### Disabling On-Demand
 
 If you are on a strict budget and don't mind missing some errors, then you can choose to disable on-demand events at **Account Settings --> Billing Info**.  If on-demand is disabled and you reach your plan limit, we will not process new errors until your next billing cycle begins.
