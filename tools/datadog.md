@@ -1,12 +1,6 @@
 # Connecting Rollbar to Datadog
 
-Are you new to Rollbar?
-[If so, click here to learn more about Rollbar and sign up!](https://rollbar.com/)
-{: .info}
-
-Improve your monitoring and connect Rollbar to Datadog. Rollbar users can syndicate exceptions,
-errors and code deployments as 'Events' in [Datadog](https://www.datadoghq.com/). Installation
-instructions below.
+Rollbar users can syndicate exceptions, errors and code deployments as 'Events' in [Datadog](https://www.datadoghq.com/).
 
 ### Setup
 
