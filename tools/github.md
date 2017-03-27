@@ -44,6 +44,9 @@ to GitHub at this time.
 
 ### GitHub Issues
 
+For general information about Rollbar's issue tracking features, check out the [Issue Tracking guide](../issue-tracking/). 
+{: .info}
+
 After connecting with GitHub you can integrate GitHub issues to automatically create
 issues when Rollbar items arrive, or to add a 'Create GitHub Issue' button to the item page. You
 should do this for each project you want integrated with GitHub issues.
