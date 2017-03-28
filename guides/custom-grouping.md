@@ -13,14 +13,13 @@ Here's an example configuration:
     "title": "Timeout Error"
   },
   {"condition": {"path": "body.trace.exception.class", "eq": "IndexError"},
-    "fingerprint": "index-error",
-    "title": "Index Error"
+    "fingerprint": "index-error"
   }
 ]
 ```
 
 The above configuration is a list of rules. Each rule is a JSON object that consists of a
-`condition`, a `fingerprint`, and a `title`. 
+`condition`, a `fingerprint`, and an optional `title`. 
 
 Rules are applied in order, testing the `condition` against the incoming occurrence. If a match is
 found, the rule's `fingerprint` and `title` will be used instead of our [default grouping algorithm](/docs/grouping-algorithm/).
