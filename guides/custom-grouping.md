@@ -60,7 +60,7 @@ You can use any value in your JSON payload as a path, including custom data.  To
 
 Here's a simple example of some error JSON:
 
-```
+```json
 {
   "body": {
     "trace": {
