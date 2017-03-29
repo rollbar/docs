@@ -84,7 +84,7 @@ Here's a simple example of some error JSON:
   }
 }
 ```
-In this example, the value of `body.trace.frames.0.lineno` is `32`, and the value of `body.server.host` is `web01`. 
+In this example, the value of `body.trace.frames.0.lineno` is `32`, and the value of `server.host` is `web01`. 
 
 ### Operators
 
