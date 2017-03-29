@@ -44,7 +44,9 @@ place of an array index or property name to select all matching
 elements; in this case, the condition will pass if the operator
 evaluates to true for *any* of the matching elements.
 
-Here are a few useful paths:
+### Path
+
+Here are a few commonly paths:
 
 | `body.trace.exception.class` | Exception class name
 | `body.trace.exception.message` | Exception message
@@ -54,24 +56,51 @@ Here are a few useful paths:
 | `body.trace.frames.\*.method` | Method/function name of any stack frame
 | `language` | The language name
 
-Much more is available; you can use any of the data in the occurrence
-payload. The exact elements available vary by library; right now the
-best way to see what's available is to read the source code of your
-library, inspect an actual instance using our API, or read the
-[Items API docs](https://rollbar.com/docs/api/items/).
+You can use any value in your JSON payload as a path, including custom data.  To view your JSON payloads, go into an occurrence and click on **View JSON** at the bottom of the screen.
+
+Here's a simple example of some error JSON:
+
+```
+{
+  "body": {
+    "trace": {
+      "frames": [
+        {
+          "method": "HTMLDocument.e._wrapped", 
+          "lineno": 32, 
+          "colno": 100, 
+          "filename": "https://cdnjs.cloudflare.com/ajax/libs/rollbar.js/1.9.3/rollbar.min.js"
+        }
+      ], 
+      "exception": {
+        "message": "Boomerang is not defined", 
+        "class": "ReferenceError", 
+        "description": "Error while initializing Heroku header"
+      }
+    }
+  },
+  "server": {
+    "host": "web01"
+  }
+ }
+ ```
+ 
+In this example, the value of `body.trace.frames.0.lineno` is `32`, and the value of `body.server.host` is `web01`. 
+
+### Operators
 
 The following operators are available:
 
-| `eq` | Equals
-| `neq` | Not Equals
-| `in` | Contained in the string or list
-| `nin` | Not contained in the string or list
-| `contains` | Contains the string, element, or key
-| `ncontains` | Does not contain the string, element, or key (or is not a string, array, or object)
-| `gt` | Greater than
-| `gte` | Greater than or equal to
-| `lt` | Less than
-| `lte` | Less than or equal to
+| `eq` | Equals |
+| `neq` | Not Equals |
+| `in` | Contained in the string or list |
+| `nin` | Not contained in the string or list |
+| `contains` | Contains the string, element, or key |
+| `ncontains` | Does not contain the string, element, or key (or is not a string, array, or object) |
+| `gt` | Greater than |
+| `gte` | Greater than or equal to |
+| `lt` | Less than |
+| `lte` | Less than or equal to |
 
 For the numeric operators (`gt`, `gte`, `lt`, `lte`): the right side must be a
 number, and the left side (data from the occurrence) will be coerced to
