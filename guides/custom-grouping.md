@@ -46,7 +46,7 @@ evaluates to true for *any* of the matching elements.
 
 ### Path
 
-Here are a few commonly paths:
+Here are a few commonly used paths:
 
 | `body.trace.exception.class` | Exception class name
 | `body.trace.exception.message` | Exception message
