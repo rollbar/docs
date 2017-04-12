@@ -171,5 +171,3 @@ Name | Type | Description
 
 
 -----
-
-Last updated: November 4, 2016
