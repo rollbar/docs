@@ -105,5 +105,3 @@ Response:
 ```
 
 -----
-
-Last updated: November 13, 2014
