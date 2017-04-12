@@ -27,5 +27,3 @@ Example response:
 Note that `id` is immutable, but all other fields are mutable.
 
 -----
-
-Last updated: March 24, 2014

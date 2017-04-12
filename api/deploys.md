@@ -87,5 +87,3 @@ curl 'https://api.rollbar.com/api/1/deploys/?access_token=abcd5678&page=2'
 
 
 -----
-
-Last updated: October 14, 2015

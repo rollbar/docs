@@ -46,5 +46,3 @@ use `DELETE /team/:team_id/user/:user_id` instead.
 
 
 -----
-
-Last updated: September 16, 2014

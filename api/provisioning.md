@@ -140,5 +140,3 @@ information, see the following pages:
 - [Invites](https://rollbar.com/docs/api/invites/)
 
 -----
-
-Last updated: November 26, 2013

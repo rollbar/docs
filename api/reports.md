@@ -187,5 +187,3 @@ Response is JSON.
 
 
 -----
-
-Last updated: March 4, 2016

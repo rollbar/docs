@@ -87,5 +87,3 @@ Be careful, there is no undo!
     DELETE /api/1/team/:team_id/user/:user_id
 
 -----
-
-Last updated: September 16, 2014
