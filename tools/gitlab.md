@@ -9,9 +9,11 @@ Each line in your stack trace can be linked to your code in GitLab if it's hoste
 
 1. Go to the Settings section of your project, then click on Source Control --> GitLab or Gitlab CE/EE.
 
-1a. If you are using self-hosted Gitlab CE or EE, please follow the instructions in [GitLab as OAuth2 authentication service provider](https://docs.gitlab.com/ce/integration/oauth_provider.html) on the Gitlab site.  Rollbar's callback URL is `https://rollbar.com/callback/gitlab_oauth_connect/`.  Once you've successfully added the Rollbar app, Gitlab will provide an `Application ID` and `Secret`.  Enter these along with the URL for your Gitlab Server, then continue with the setup process described below.
-2. Click on Connect to Gitlab.  You will be taken to an authorization page in GitLab. Click Authorize.
-3. Select a repository from the list of available repositories, enter the branch (default is 'master') and a project root within the repository (usually this can be left blank), then save the settings.
+2. If you are using self-hosted Gitlab CE or EE, please follow the instructions in [GitLab as OAuth2 authentication service provider](https://docs.gitlab.com/ce/integration/oauth_provider.html) on the Gitlab site.  Rollbar's callback URL is `https://rollbar.com/callback/gitlab_oauth_connect/`.  Once you've successfully added the Rollbar app, Gitlab will provide an `Application ID` and `Secret`.  Enter these along with the URL for your Gitlab Server, then continue with the setup process described below.
+
+3. Click on Connect to Gitlab.  You will be taken to an authorization page in GitLab. Click Authorize.
+
+4. Select a repository from the list of available repositories, enter the branch (default is 'master') and a project root within the repository (usually this can be left blank), then save the settings.
 
 ## Viewing GitLab Source Code from Rollbar
 Once you've successfully connected to a GitLab repository, Rollbar error tracebacks and deploy reports will include links to specific lines of code and revisions in your repository.
