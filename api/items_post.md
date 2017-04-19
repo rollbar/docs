@@ -107,6 +107,11 @@ understands. The meaning of each key is explained in the comments.
             // Optional: code
             // The line of code
             "code": "_save_last_project(request, project_id, force=True)",
+            
+            // Optional: class_name
+            // A string containing the class name.
+            // Used in the UI when the payload's top-level "language" key has the value "java"
+            "class_name": "java.lang.String",
 
             // Optional: context
             // Additional code before and after the "code" line
@@ -121,10 +126,6 @@ understands. The meaning of each key is explained in the comments.
               // Optional: post
               // List of lines of code after the "code" line
               "post": []
-
-              // Optional: class_name
-              // A string containing the class name
-              "class_name": "java.lang.String"
             },
 
             // (Deprecated) Optional: args
