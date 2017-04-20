@@ -281,6 +281,16 @@ curl https://api.rollbar.com/api/1/sourcemap \
   -F static/js/util.js=@static/js/util.js
 ```
 
+## Managing Source Maps
+
+Source maps are stored per project, and are accessible by going to **Project Settings --> Source Maps**
+
+Within the source maps screen for a project, you can:
+* View all source map access attempts, including failed attempts to upload/download.
+* Download source maps.
+* Delete source maps.
+* Search for source maps based on `code_version` or the name of the associated Javascript file.
+
 ## Source Map Resources
 
 Members of the Rollbar community have created some plugins to integrate
