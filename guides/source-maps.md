@@ -1,6 +1,6 @@
 # Source Maps
 
-If you minify your JavaScript code for use in production, you may be seeing Rollbar erros that reference the
+If you minify your JavaScript code for use in production, you may be seeing Rollbar errors that reference the
 minified code, not the original source code.  In order to display stack traces with your original code, Rollbar needs access to the source maps for your minified Javascript.
 
 Benefits of providing your source maps to Rollbar include:
