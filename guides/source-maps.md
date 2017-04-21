@@ -1,17 +1,15 @@
 # Source Maps
 
-If you minify your JavaScript code for use in production, you've
-probably noticed that the stacktraces you see in Rollbar reference the
-minified code, not the original source code.
+If you minify your JavaScript code for use in production, you may be seeing Rollbar errors that reference the
+minified code, not the original source code.  In order to display stack traces with your original code, Rollbar needs access to the source maps for your minified Javascript.
 
-This feature makes use of JavaScript Source Maps to translate the
-minified code references back into the original source. The result is:
+Benefits of providing your source maps to Rollbar include:
 
 -   in stack traces, you'll see the original source filename, line
-    number, method name, and code snippet
+    number, method name, and code snippet so you can debug more easily
 -   error grouping should be more resilient to code changes
 
-### Basic Setup
+## Source Map Requirements
 
 For the minified-to-source translation to work, we need:
 
@@ -51,10 +49,10 @@ For the minified-to-source translation to work, we need:
 
     You can include the source inside the source map. We'll look for it in `sourcesContent` as per the source map standard.
 
-#### Step 1: Enable source maps
+## Enabling Source Map Translation in Rollbar
 
 Add these two parameters to the `_rollbarConfig` object that you have
-included in the on-page javascript snippet:
+included in the on-page Javascript snippet:
 
 ```js
 var _rollbarConfig = {
@@ -90,37 +88,11 @@ Rollbar.configure({
 });
 ```
 
-#### Step 2: Provide your source map
+## Providing Source Maps to Rollbar
 
-If your source map is publicly web-accessible, we can download it
-automatically. Otherwise, you can upload it via our API.
+We recommend that you upload source maps to Rollbar prior to each production deployment, however we can also attempt to download them automatically based on configuration data in your minifed Javascript files. 
 
-##### Option A (Easiest): Automatic download
-
-As specified in the [Source Map
-Specification](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit),
-you should place a comment like the following at the bottom of your
-minified JavaScript files:
-
-```js
-//# sourceMappingURL=URL_TO_SOURCE_MAP
-```
-
-**How it works:** If we receive a JavaScript error, source maps are
-enabled, and we don't already have the source map for the current code
-version, we will schedule an attempt to download it. For each stack
-frame, we'll first download the minified source file and look for a
-`sourceMappingUrl` comment. If it has one, we'll try to download that
-file and save it as the source map. Then for future errors, we'll use
-the source map to translate the minified frames back to original frames.
-
-This is the easiest method, but not suitable for all cases (i.e. if you
-don't want to expose your source map or code to the public web). It is
-also less reliable than the upload method, since the source map won't be
-downloaded yet when the first few errors come in. We recommend the
-upload method for production use.
-
-##### Option B (Recommended): Upload pre-deploy
+### Recommnended Method: Upload pre-deploy
 
 At the beginning of your deploy script (before the new code is in
 production), upload a source map package via our API.
@@ -137,7 +109,7 @@ curl https://api.rollbar.com/api/1/sourcemap \
   -F static/js/util.js=@static/js/util.js
 ```
 
-##### Params
+#### Params
 
 access\_token
 :   Your rollbar access token. Should be a post\_server\_item token (the
@@ -163,7 +135,7 @@ source\_map
      Value should be the contents of the source file, as a multipart
     file upload.
 
-##### Response Codes
+#### Response Codes
 
 200 OK
 :   Upload received successfully.
@@ -213,7 +185,30 @@ Here is the same command for UglifyJS2:
 uglifyjs static/js/site.js static/js/util.js --output static/js/example.min.js --source-map static/js/example.min.map
 ```
 
-### Advanced Setup
+
+### Alternative Method: Automatic download
+
+As specified in the [Source Map
+Specification](https://docs.google.com/document/d/1U1RGAehQwRypUTovF1KRlpiOFze0b-_2gc6fAH0KY0k/edit),
+you should place a comment like the following at the bottom of your
+minified JavaScript files:
+
+```js
+//# sourceMappingURL=URL_TO_SOURCE_MAP
+```
+**How it works:** If we receive a JavaScript error, source maps are
+enabled, and we don't already have the source map for the current code
+version, we will schedule an attempt to download it. For each stack
+frame, we'll first download the minified source file and look for a
+`sourceMappingUrl` comment. If it has one, we'll try to download that
+file and save it as the source map. Then for future errors, we'll use
+the source map to translate the minified frames back to original frames.
+
+This is the easiest method, but not suitable for all cases (i.e. if you
+don't want to expose your source map or code to the public web). It is
+also less reliable than the upload method, since the source map won't be
+downloaded yet when the first few errors come in. We recommend the
+upload method for production use.
 
 #### Triggering an automatic download
 
@@ -248,7 +243,7 @@ minified\_url
 :   The full URL of the minified file. Should start with `http:` or
     `https:`
 
-### Using Source Maps On Many Domains
+## Using Source Maps On Many Domains
 
 If you'd like to use source maps with the same code that is deployed on many domains, use the following code:
 
@@ -286,7 +281,17 @@ curl https://api.rollbar.com/api/1/sourcemap \
   -F static/js/util.js=@static/js/util.js
 ```
 
-### Resources
+## Managing Source Maps
+
+Source maps are stored per project, and are accessible by going to **Project Settings --> Source Maps**
+
+Within the source maps screen for a project, you can:
+* View all source map access attempts, including failed attempts to upload/download.
+* Download source maps.
+* Delete source maps.
+* Search for source maps based on `code_version` or the name of the associated Javascript file.
+
+## Source Map Resources
 
 Members of the Rollbar community have created some plugins to integrate
 the source map upload step into their build process. The Rollbar team
@@ -300,9 +305,9 @@ Webpack|[rollbar-sourcemap-webpack-plugin](https://github.com/thredup/rollbar-so
 If you've written a plugin or other resource that you'd like us to link here,
 please let us know! Send us an email at <support@rollbar.com>
 
-### FAQ
+## Source Map FAQ
 
-#### What if I have more than one minified file?
+### What if I have more than one minified file?
 {: .no_toc}
 
 That's fine -- just upload a source map package for each minified file,
@@ -310,24 +315,23 @@ each time your code version changes. Note that the code version is
 global to your project, so you will have to upload the package for each
 one every time you deploy, even if only one of them changed.
 
-#### Does it matter what tool I used to build the source map?
+### Does it matter what tool I used to build the source map?
 {: .no_toc}
 
-It shouldn't, as long as the tool builds source maps adhering the V3 of
-the source map spec.
+It shouldn't, as long as the tool builds source maps adhering the V3 of the source map spec.
 
 We've tested with [Closure
 Compiler](https://developers.google.com/closure/compiler/) and [UglifyJS
 2](https://github.com/mishoo/UglifyJS2). If you're using something else
 and having problems, please let us know.
 
-#### What happens if I don't upload the source map package?
+### What happens if I don't upload the source map package?
 {: .no_toc}
 
 We'll still process incoming errors immediately, but skip the
 minified-to-source translation.
 
-#### Where is my data stored?
+### Where is my data stored?
 {: .no_toc}
 
 The source map package (including the source map itself and any source
@@ -341,7 +345,7 @@ includes:
 -   un-minified file, line, column, and code snippet, stored in our
     MySQL cluster
 
-#### It's not working. How can I debug this?
+### It's not working. How can I debug this?
 {: .no_toc}
 
 Here are a few common problems:
@@ -372,11 +376,5 @@ Here are a few common problems:
     This should start with `http:` or `https:`, which we'll strip off.
 -   If you're a Rails asset pipeline user, be sure you aren't generating source
     maps off an already minified file.  
-
-We're working on the tools to make debugging this setup easier, but for
-now, feel free to contact support and we'll walk you through it. Use the
-chat box or email <support@rollbar.com>
-
-------------------------------------------------------------------------
-
-Last updated: September 27, 2016
+    
+ If your still not able to get source maps working, we're here to help!  Simply message us via the in-app chat or email <support@rollbar.com>
