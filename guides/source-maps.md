@@ -92,7 +92,7 @@ Rollbar.configure({
 
 We recommend that you upload source maps to Rollbar prior to each production deployment, however we can also attempt to download them automatically based on configuration data in your minifed Javascript files. 
 
-### Recommnended Method: Upload pre-deploy
+### Recommended Method: Upload pre-deploy
 
 At the beginning of your deploy script (before the new code is in
 production), upload a source map package via our API.
