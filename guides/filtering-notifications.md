@@ -11,7 +11,7 @@ click 'Settings' in the top menu, then click 'Notifications' in the left menu.
 
 ![](https://d26gfdfi90p7cf.cloudfront.net/Screen-Shot-2016-02-22-at-21637-PM.152242.l.png)
 
-Select the notification type you wish to adjust (for instance: Email, Github Issues, Slack). Now
+Select the notification type you wish to adjust (for instance: Email, GitHub Issues, Slack). Now
 decide which rule you want to adjust and click Configure.
 
 ![](https://d26gfdfi90p7cf.cloudfront.net/Screen-Shot-2016-02-22-at-21551-PM.152243.l.png)
@@ -51,7 +51,7 @@ on. The following fields are available:
 | Threshold | Sets the High Occurrence Rate threshold
 | Window | Sets the High Occurrence Rate window
 
-You can use a regular expression in your notification filter if you wish. Rollbar uses [Python's regex engine](https://docs.python.org/2/library/re.html). 
+You can use a regular expression in your notification filter if you wish. Rollbar uses [Python's regex engine](https://docs.python.org/2/library/re.html).
 
 #### Editing a Filter
 

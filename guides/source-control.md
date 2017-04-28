@@ -1,6 +1,6 @@
 # Integrating Rollbar with Source Control
 
-Rollbar can be integrated with your [Github](../github/), [Bitbucket](../bitbucket/), or [Gitlab](../gitlab/) repository.  When Rollbar is connected to your source control system, new debugging features are unlocked.
+Rollbar can be integrated with your [GitHub](../github/), [Bitbucket](../bitbucket/), or [GitLab](../gitlab/) repository.  When Rollbar is connected to your source control system, new debugging features are unlocked.
 
 ## View source from stack traces
 
@@ -29,6 +29,6 @@ To learn more, check out [Resolving Items via commit](..//resolve-via-commits/)
 ## Setup Instructions
 To connect a Rollbar project to your git repository, just follow the steps on one of the following pages.
 
-* [Github](../github/)
+* [GitHub](../github/)
 * [Bitbucket](../bitbucket/)
-* [Gitlab](../gitlab/)
+* [GitLab](../gitlab/)
