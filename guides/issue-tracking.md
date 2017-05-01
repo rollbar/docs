@@ -51,9 +51,9 @@ Rules can be filtered to only trigger in specific conditions (e.g. only create i
 ## Setup Instructions
 * [JIRA](/docs/jira/)
 * [Trello](/docs/trello/)
-* [Github](/docs/github/#github-issues)
+* [GitHub](/docs/github/#github-issues)
 * [Bitbucket](/docs/bitbucket/#creating-bitbucket-issues-from-a-rollbar-project)
-* [Gitlab](/docs/gitlab/#creating-gitlab-issues-from-a-rollbar-project)
+* [GitLab](/docs/gitlab/#creating-gitlab-issues-from-a-rollbar-project)
 * [Asana](/docs/asana)
 * [Pivotal](/docs/pivotal)
 * [Sprintly](/docs/sprintly)
