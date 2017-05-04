@@ -29,7 +29,6 @@ use \Rollbar\Rollbar;
 // Installs global error and exception handlers
 $config = array(
     // required
-    // replace 'POST_SERVER_ITEM_ACCESS_TOKEN' with your project's post_server_item
     'access_token' => '{{ server_access_token }}',
     // optional - environment name
     'environment' => 'production',
