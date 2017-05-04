@@ -30,7 +30,7 @@ use \Rollbar\Rollbar;
 $config = array(
     // required
     // replace 'POST_SERVER_ITEM_ACCESS_TOKEN' with your project's post_server_item
-    'access_token' => 'POST_SERVER_ITEM_ACCESS_TOKEN',
+    'access_token' => '{{ server_access_token }}',
     // optional - environment name
     'environment' => 'production',
     // optional - path to directory your code is in. Used for linking stack traces.
