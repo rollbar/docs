@@ -1,5 +1,3 @@
-### Installation
-
 ## Installation with Composer (recommended)
 
 Add `rollbar/rollbar` to your `composer.json`:
