@@ -2,7 +2,7 @@ If your team is overwhelmed with a lot of noisy JavaScript errors, and you're lo
 
 ## Ignore noisy errors on the client-side
 
-[Rollbar.js](/docs/notifier/rollbar.js/) enables you to ignore errors client-side if you wish. You can filter by any value in the payload, and ensure that the error never even gets sent to the Rollbar API. To do this, use the [checkIgnore](/docs/notifier/rollbar.js/configuration/#context) configuration function.
+[Rollbar.js](/docs/notifier/rollbar.js/) enables you to ignore errors client-side if you wish. You can filter by any value in the payload, and ensure that the error never even gets sent to the Rollbar API. To do this, use the [checkIgnore](/docs/notifier/rollbar.js/#context-1) configuration function.
 
 ```js
 var _rollbarConfig = {
