@@ -29,7 +29,7 @@ Rollbar.debug("Cron job starting")
 Rollbar.info("User logged in", :login_type => "email+password")
 
 # rich metadata will be included automatically, but if you want to override:
-Rollbar.scope(:person => {:id => "123"}).info("User logged in")
+Rollbar.scope(person => {:id => "123"}).info("User logged in")
 ```
 {: .tab-pane .active #ruby}
 
