@@ -51,11 +51,11 @@ For the minified-to-source translation to work, we need:
 
 ## Enabling Source Map Translation in Rollbar
 
-_For projects created May 16, 2017 and later_:
+_For projects created **May 16, 2017 and later**:_
 
 Source maps are automatically enabled in your project.  No additional configuration is needed.
 
-_For projects created before May 16, 2017_:
+_For projects created **before May 16, 2017**:_
 
 Source maps were not automatically enabled in your project.  The simplest way to enable them is to go to **Settings --> Migrations** and check **Enable source maps by default**. 
 
