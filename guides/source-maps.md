@@ -51,42 +51,13 @@ For the minified-to-source translation to work, we need:
 
 ## Enabling Source Map Translation in Rollbar
 
-Add these two parameters to the `_rollbarConfig` object that you have
-included in the on-page Javascript snippet:
+_For projects created May 16, 2017 and later_:
 
-```js
-var _rollbarConfig = {
-  // add these new params:
-  payload: {
-    client: {
-      javascript: {
-        source_map_enabled: true,
-        code_version: "some version string, such as a version number or git sha",
-        // Optionally have Rollbar guess which frames the error was thrown from
-        // when the browser does not provide line and column numbers.
-        guess_uncaught_frames: true
-      }
-    }
-  }
-};
-```
+Source maps are automatically enabled in your project.  No additional configuration is needed.
 
-If you need to set this configuration after the Rollbar library has been
-initialized, use `Rollbar.configure()`:
+_For projects created before May 16, 2017_:
 
-```js
-Rollbar.configure({
-  payload: {
-    client: {
-      javascript: {
-        source_map_enabled: true,
-        code_version: "some version string, such as a version number or git sha",
-        guess_uncaught_frames: true
-      }
-    }
-  }
-});
-```
+Source maps were not automatically enabled in your project.  The simplest way to enable them is to go to **Settings --> Migrations** and check **Enable source maps by default**. 
 
 ## Providing Source Maps to Rollbar
 
