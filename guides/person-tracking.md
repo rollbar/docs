@@ -89,7 +89,7 @@ $config['person_fn'] = 'get_current_user';
 {: .tab-pane #php}
 
 ```js
-// node_rollbar works by inspecting the `request` for a `rollbar_person`,
+// rollbar.js works by inspecting the `request` for a `rollbar_person`,
 // `user` or `user_id` field (in that order). The first one it finds
 // it uses as the person data assuming the object contains at least
 // the `id` field. Both `email` and `username` are also specially treated.
