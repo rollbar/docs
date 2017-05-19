@@ -2,9 +2,9 @@
 
 Item merging allows you to combine multiple items into one 'group item' for easier management and more accurate metrics.  All past and future occurrences of any merged items will automatically be combined.
 
-## Creating a new group item
+## Merge into a new item
 
-To create a new group item:
+The first time you encounter a duplicated error, you'll want to create a new 'group' item:
 
 * Select one or more items from the same environment in the Items feed.  An action bar will appear at the top of the screen.
 * Slide the toggle to Merge, set appropriate `Level`, `Status`, `Owner`, and `Source` values, type in a name for the new item, and click the Merge button.
