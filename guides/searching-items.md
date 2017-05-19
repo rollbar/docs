@@ -44,7 +44,7 @@ Title
 :  `hello world` finds items whose title contains both "hello" and "world" (infix search)
 
 Server Host
-: `host:web` finds items that occurred at least once on a host whose name starts with "web"
+: `host:web` finds items that occurred at least once on a host whose name starts with "web". Host filters do impact the occurrence count, causing it to reflect only the occurrences from the specified host.
   (prefix search)
 
 Context
