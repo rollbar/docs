@@ -11,23 +11,12 @@ $ npm install --save rollbar
 ```javascript
 // include and initialize the rollbar library with your access token
 var Rollbar = require("rollbar");
-var rollbar = new Rollbar({
-  accessToken: "{{ server_access_token }}",
-  captureUncaught: true,
-  payload: {
-    environment: 'test'
-  }
-});
+var rollbar = new Rollbar({{ server_access_token }});
+
+rollbar.log("Hello world!")
 ```
 
-## Test your installation
-
-1. Navigate your browser to a page that has Rollbar installed
-2. Open the javascript console (in Chrome: right-click, Inspect Element, Console tab)
-3. Type the following and press enter:
-
-    `window.onerror("TestError: Hello world", window.location.href)`
-The error should appear in your Rollbar dashboard within a few seconds.
+The message should appear in your Rollbar dashboard within a few seconds.
 
 Once you've verified you have the notifier library installed, your access token works,
 and you can connect to Rollbar, the <a href="https://github.com/rollbar/rollbar.js" target="_blank" rel="noopener">rollbar.js</a>
