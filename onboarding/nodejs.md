@@ -14,7 +14,7 @@ var Rollbar = require("rollbar");
 var rollbar = new Rollbar({{ server_access_token }});
 
 // record a generic message and send it to Rollbar
-rollbar.log("Hello world!")
+rollbar.log("Hello world!");
 ```
 
 The message should appear in your Rollbar dashboard within a few seconds.
