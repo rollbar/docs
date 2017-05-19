@@ -13,6 +13,7 @@ $ npm install --save rollbar
 var Rollbar = require("rollbar");
 var rollbar = new Rollbar({{ server_access_token }});
 
+// record a generic message and send it to Rollbar
 rollbar.log("Hello world!")
 ```
 
