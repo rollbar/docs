@@ -44,3 +44,46 @@ Title
 :  `hello world` finds items whose title contains both "hello" and "world" (infix search).
 
 Server Host
+: `host:web` finds items that occurred at least once on a host whose name starts with "web". Host filters impact the occurrence count, causing it to count only the occurrences from the specified host.
+  (prefix search)
+
+Context
+: `context:home#index` finds items with context matching "home#index" (prefix search).
+
+Comments
+: `has:comments` finds items that have comments.
+
+IP Address
+: `ip:101.102.103.104` finds items that were seen by the ip address "101.102.103.104" (exact match).
+
+People
+: `user_id:12345` finds items/people associated with the user id "12345".
+: `username:snowden` finds items/people associated with the username "snowden".
+: `email:dvader@theempire.org` finds items/people associated with the email "dvader@theempire.org".
+: `user_id:`, `username:` and `email:` searches default to prefix searches unless an explicit suffix
+  search is made.
+: e.g. searching for `username:alice` will return alice, alice1234, aliceasdf.
+: e.g. searching for `username:*alice` will not return alice1234, aliceasdf.
+: e.g. searching for `username:"alice"` will perform an exact match search.
+
+Stack Trace
+: `file:index.php` finds items with stack traces with at least one filename containing "index.php".
+: `topfile:mydomain.com` finds items where the topmost stack frame contains "mydomain.com".
+: `bottomfile:mydomain.com` finds items where the bottommost stack frame contains "mydomain.com".
+: `allfiles:mydomain.com` finds items where all stack trace filenames contain "mydomain.com".
+: `nofiles:evildomain.com` finds items where no stack trace filenames contain "evildomain.com".
+: `minfiles:2` finds items with at least 2 filenames in the stack trace.
+: `maxfiles:10` finds items with at most 10 filenames in the stack trace.
+
+Code Version
+: `code_version:abcdef` finds items that have been seen in the code_version `abcdef`.
+
+Item Number
+: `#123` finds the item with counter number `123`
+
+Merging
+: `is:group` finds group items that were created by merging similar items
+: `is:member` finds items that have been merged into a group
+
+Fingerprint
+: `fingerprint:my-custom-fingerprint` finds items that have the fingerprint `my-custom-fingerprint` (exact match, useful in conjunction with Custom Grouping or sending your own fingerprint string).
