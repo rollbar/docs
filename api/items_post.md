@@ -418,7 +418,7 @@ understands. The meaning of each key is explained in the comments.
     // The UUID space is unique to each project, and can be used to look up an occurrence later.
     // It is also used to detect duplicate requests. If you send the same UUID in two payloads, the second
     // one will be discarded.
-    // While optional, it is receommended that all clients generate and provide this field
+    // While optional, it is recommended that all clients generate and provide this field
     "uuid": "d4c7acef55bf4c9ea95e4fe9428a8287",
 
     // Optional: notifier
