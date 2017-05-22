@@ -419,7 +419,7 @@ understands. The meaning of each key is explained in the comments.
     // It is also used to detect duplicate requests. If you send the same UUID in two payloads, the second
     // one will be discarded.
     // While optional, it is recommended that all clients generate and provide this field
-    "uuid": "d4c7acef55bf4c9ea95e4fe9428a8287",
+    "uuid": "f81d4fae-7dec-11d0-a765-00a0c91e6bf6",
 
     // Optional: notifier
     // Describes the library used to send this event.
