@@ -1,8 +1,8 @@
-# Custom Grouping
+# Custom Grouping Rules
 
 If our [default grouping algorithm](https://rollbar.com/docs/grouping-algorithm/) is separating occurrences that you would rather have grouped together, or grouping occurrences together you would rather have separated, you can set up Custom Grouping Rules.
 
-To set your custom grouping rules, go to **Settings -> Grouping** for the project you want to configure.
+To set your custom grouping rules, go to **Settings -> Custom Grouping** for the project you want to configure.
 
 Here's an example configuration:
 
