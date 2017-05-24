@@ -28,7 +28,7 @@ Occurrences with the same `fingerprint` are grouped together into an _Item_.
 
 The `title` of the first occurrence of an Item is used as the title of the Item, and is only changed if the item is resolved and then later reactivated. Upon reactivation, the title of the reactivating occurrence is used as the new Item title.
 
-## Condition
+### Condition
 
 The `condition` is defined as a single JSON object. It can either be:
 
@@ -44,7 +44,7 @@ place of an array index or property name to select all matching
 elements; in this case, the condition will pass if the operator
 evaluates to true for *any* of the matching elements.
 
-### Path
+#### Path
 
 Here are a few commonly used paths:
 
@@ -86,7 +86,7 @@ Here's a simple example of some error JSON:
 ```
 In this example, the value of `body.trace.frames.0.lineno` is `32`, and the value of `server.host` is `web01`. 
 
-### Operators
+#### Operators
 
 The following operators are available:
 
@@ -131,15 +131,15 @@ ValueError, and exception message contains the string "database"
 
 Note: If your exception has nested stack traces, rather than using `body.trace.exception.message`, you'll need to use `body.trace_chain.0.exception.message`, and so on for any paths that begin with `body.trace`. 
 
-## Fingerprint
+### Fingerprint
 
 Occurrences with the same `fingerprint` are grouped together into an Item.
 
-## Title
+### Title
 
 The `title` is a text description that is displayed when viewing an item.  It must be a string, of length 1-255 characters. You can change the title in this configuration without affecting grouping. The new title will take effect if the item is reactivated after being resolved.
 
-## Templates
+### Templates
 
 Both `fingerprint` and `title` can contain template markers (wrapped in
 `{{ double_braces }}`) as well as hardcoded strings.
@@ -159,7 +159,7 @@ path. For example, `{{ body.trace.exception.class }}` will be replaced
 with the exception class. You can combine this with static text or the
 special markers achieve many kinds of grouping.
 
-## Complete Example
+### Complete Example
 
 Here's an example complete configuration with three rules.
 
