@@ -142,13 +142,13 @@ The `title` is a text description that is displayed when viewing an item.  It mu
 ### Templates
 
 Both `fingerprint` and `title` can contain template markers (wrapped in
-`{{ double_braces }}`) as well as hardcoded strings.
+`{{"{{double braces"}}}}`) as well as hardcoded strings.
 
 There are two special markers:
 
--   `{{ default_fingerprint }}`: will be replaced with the fingerprint
+-   `{{"{{default_fingerprint"}}}}`: will be replaced with the fingerprint
     hash calculated by our default algorithm.
--   `{{ default_title }}`: will be replaced with the title calculated by
+-   `{{"{{default_title"}}}}`: will be replaced with the title calculated by
     our default algorithm.
 
 These can be used to tune the grouping algorithm without entirely
