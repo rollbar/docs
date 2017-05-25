@@ -155,9 +155,13 @@ These can be used to tune the grouping algorithm without entirely
 replacing it.
 
 Additionally, any part of the occurrence JSON body may be referenced by
-path. For example, `{{"{{ body.trace.exception.class "}}}}` will be replaced
-with the exception class. You can combine this with static text or the
-special markers achieve many kinds of grouping.
+path.  For example 
+
+- `{{"{{ body.trace.exception.class "}}}}` will be replaced
+with the exception class.
+- `{{"{{ body.trace.exception.message "}}}}` will be replaced with the exception message.
+
+You can combine this with static text or the special markers achieve many kinds of grouping.
 
 ### Complete Example
 
