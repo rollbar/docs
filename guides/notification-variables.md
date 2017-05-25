@@ -23,6 +23,7 @@ Variable | Description/Values
 `{{"{{summary"}}}}`| Item summary
 `{{"{{markdown_summary"}}}}` | Items summary including markdown
 `{{"{{environment"}}}}` | Environment reported in item (e.g. `production`, `staging`, etc.)
+`{{"{{body.framework"}}}}` | Framework reported in item (e.g., `Rails`, `browser-js`, etc.)
 `{{"{{level"}}}}` | `Critical`, `Error`, `Warning`, `Info`, `Debug`
 `{{"{{status"}}}}` | `Active`, `Resolved`, `Muted`
 `{{"{{trigger_description"}}}}` | Description of event that triggered the notification
