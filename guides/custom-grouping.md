@@ -1,8 +1,8 @@
-# Custom Grouping Rules
+# Custom Fingerprinting Rules
 
-If our [default grouping algorithm](https://rollbar.com/docs/grouping-algorithm/) is separating occurrences that you would rather have grouped together, or grouping occurrences together you would rather have separated, you can set up Custom Grouping Rules.
+If our [default fingerprinting algorithm](https://rollbar.com/docs/grouping-algorithm/) is separating occurrences that you would rather have combined or vice versa, then you can set up Custom Fingerprinting Rules.
 
-To set your custom grouping rules, go to **Settings -> Custom Grouping** for the project you want to configure.
+To set your custom grouping rules, go to **Settings -> Custom Fingerprinting** for the project you want to configure.
 
 Here's an example configuration:
 
@@ -22,9 +22,9 @@ The above configuration is a list of rules. Each rule is a JSON object that cons
 `condition`, a `fingerprint`, and an optional `title`. 
 
 Rules are applied in order, testing the `condition` against the incoming occurrence. If a match is
-found, the rule's `fingerprint` and `title` will be used instead of our [default grouping algorithm](/docs/grouping-algorithm/).
+found, the rule's `fingerprint` and `title` will be used instead of our [default algorithm](/docs/grouping-algorithm/).
 
-Occurrences with the same `fingerprint` are grouped together into an _Item_. 
+Occurrences with the same `fingerprint` are combined into an _Item_. 
 
 The `title` of the first occurrence of an Item is used as the title of the Item, and is only changed if the item is resolved and then later reactivated. Upon reactivation, the title of the reactivating occurrence is used as the new Item title.
 
@@ -133,11 +133,11 @@ Note: If your exception has nested stack traces, rather than using `body.trace.e
 
 ### Fingerprint
 
-Occurrences with the same `fingerprint` are grouped together into an Item.
+Occurrences with the same `fingerprint` are combined into an Item.
 
 ### Title
 
-The `title` is a text description that is displayed when viewing an item.  It must be a string, of length 1-255 characters. You can change the title in this configuration without affecting grouping. The new title will take effect if the item is reactivated after being resolved.
+The `title` is an optional text description that is displayed when viewing an item.  It must be a string, of length 1-255 characters. You can change the title in this configuration without impacting the fingerprint. The new title will take effect if the item is reactivated after being resolved.
 
 ### Templates
 
@@ -151,17 +151,16 @@ There are two special markers:
 -   `{{"{{default_title"}}}}`: will be replaced with the title calculated by
     our default algorithm.
 
-These can be used to tune the grouping algorithm without entirely
+These can be used to tune the fingerprinting algorithm without entirely
 replacing it.
 
-Additionally, any part of the occurrence JSON body may be referenced by
-path.  For example 
+Additionally, any part of the occurrence JSON body may be referenced by path.  For example 
 
 - `{{"{{ body.trace.exception.class "}}}}` will be replaced
 with the exception class.
 - `{{"{{ body.trace.exception.message "}}}}` will be replaced with the exception message.
 
-You can combine this with static text or the special markers achieve many kinds of grouping.
+You can combine this with static text or the special markers achieve many kinds of fingerprinting.
 
 ### Complete Example
 
