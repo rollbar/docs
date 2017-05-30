@@ -1,6 +1,6 @@
 # Default Fingerprinting Algorithm
 
-When it comes to combining similar errors together, Rollbar has a few key concepts and term:
+When it comes to combining similar errors, Rollbar has a few key concepts and term:
 
 * An *occurrence* is a single event instance: an exception or log message, along with its associated metadata. 
 * A *fingerprint* is a string that is used to identify each occcurrence (more on this below).
