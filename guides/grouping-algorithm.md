@@ -3,7 +3,7 @@
 When it comes to combining similar errors, Rollbar has a few key concepts and term:
 
 * An *occurrence* is a single event instance: an exception or log message, along with its associated metadata. 
-* A *fingerprint* is a string that is used to identify each occcurrence (more on this below).
+* A *fingerprint* is a string used to identify each occcurrence (more on this below).
 * An *item* is the combination of all occurrences with the same fingerprint.
 
 Occurrences can be:
