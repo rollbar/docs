@@ -28,7 +28,7 @@ To learn more, check out [Resolving Items via commit](..//resolve-via-commits/)
 
 ### Server.Root
 
-In order to let our servers know that you want it to try linking your stack trace to the files on BitBucket you should send the `server.root` key. A lot of the time that can be "/", to indicate that all files can be linked to a file in your repository.
+In order to let our servers know that you want it to try linking your stack trace to the files on BitBucket you should send the `server.root` key. A lot of the time that can be `/`, to indicate that all files can be linked to a file in your repository.
 
 All [official Rollbar notifiers](../notifier/) can send this key. See the documentation for your notifiers to learn exactly how.
 
