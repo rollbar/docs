@@ -214,6 +214,10 @@ minified\_url
 :   The full URL of the minified file. Should start with `http:` or
     `https:`
 
+## Webpack Plugin
+
+There is a community-maintained [Rollbar Sourcemap Plugin for Webpack](https://github.com/thredup/rollbar-sourcemap-webpack-plugin).  Please check the [Readme doc](https://github.com/thredup/rollbar-sourcemap-webpack-plugin/blob/master/README.md) for details on the project and usage instructions. 
+
 ## Using Source Maps On Many Domains
 
 If you'd like to use source maps with the same code that is deployed on many domains, use the following code:
