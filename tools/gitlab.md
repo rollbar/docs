@@ -13,7 +13,7 @@ Each line in your stack trace can be linked to your code in GitLab if it's hoste
 
 3. Click on Connect to GitLab.  You will be taken to an authorization page in GitLab. Click Authorize.
 
-4. Select a repository from the list of available repositories, enter the branch (default is 'master') and a project root within the repository (usually this can be left blank), then save the settings.
+4. Select a repository from the list of available repositories, enter the branch (default is 'master') and a project root within the repository (usually this can be left blank - [click here](../source-control#serverroot) for more details), then save the settings.
 
 ## Viewing GitLab Source Code from Rollbar
 Once you've successfully connected to a GitLab repository, Rollbar error tracebacks and deploy reports will include links to specific lines of code and revisions in your repository.
