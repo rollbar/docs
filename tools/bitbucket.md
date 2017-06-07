@@ -11,25 +11,6 @@ For general information about Rollbar's Git integration, check out the [Source C
 2. If you have not yet connected to your Bitbucket account, click on Connect to Bitbucket and complete the authorization process.
 3.  Select a repository from the list of available repositories, enter the branch (default is 'master') and a project root within the repository (usually this can be left blank - [click here](../source-control#serverroot) for more details), then save the settings.
 
-#### Configure your notifier
-
-In order to let our servers know that you want it to try linking your stack trace to the files on
-BitBucket you should send the "server.root" key. A lot of the time that can be "/", to indicate that
-all files can be linked to a file in BitBucket.
-
-All official Rollbar notifiers can send this key. See the documentation for your notifiers to learn
-exactly how.
-
-An additional benefit of correctly setting the server root is that any strings of vendor code in
-your stack trace, portions that don't come from a subdirectory of your server root, will be
-collapsed. This lets you focus on where your code went wrong. It also improves how Rollbar groups
-that error. We strip off the server root from your code where possible before using the filenames as
-part of the grouping fingerprint. This means you can host the code from varying locations on your
-servers, and still correctly see otherwise identical errors as part of a single group.
-
-Code that is considered in-project because of the 'project_package_paths' key will *not* be linked
-to BitBucket at this time.
-
 ### Viewing Bitbucket Source Code from Rollbar
 Once you've successfully connected to a Bitbucket repository, Rollbar error tracebacks and deploy reports will include links to specific lines of code and revisions in your repository.
 
