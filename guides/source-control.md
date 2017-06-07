@@ -1,7 +1,6 @@
 # Integrating Rollbar with Source Control
 
-Rollbar can be integrated with your [GitHub](../github/), [Bitbucket](../bitbucket/), or [GitLab](../gitlab/) repository.  When Rollbar is connected to your source control system, new debugging features are unlocked.
-
+d
 ## View source from stack traces
 
 When a Rollbar project is connected to a git repository, stack traces will include links to each file in the code version where the error was most recently activated.
@@ -25,6 +24,18 @@ By adding an appropriately formatted message when committing a code change, you 
 $ git commit -m 'resolves rb#12345'
 ```
 To learn more, check out [Resolving Items via commit](..//resolve-via-commits/)
+
+## Advanced options
+
+### Server.Root
+
+In order to let our servers know that you want it to try linking your stack trace to the files on BitBucket you should send the `server.root` key. A lot of the time that can be "/", to indicate that all files can be linked to a file in your repository.
+
+All [official Rollbar notifiers](../notifier/) can send this key. See the documentation for your notifiers to learn exactly how.
+
+An additional benefit of correctly setting `server.root` is that vendor code in your stack trace, portions that don't come from a subdirectory of `server.root`, will be collapsed. It also improves how Rollbar groups that error. We strip off `server.root` from your code where possible before using the filenames as part of the [fingerprint](../grouping-algorithm/#exception-fingerprinting). This means you can host the code from varying locations on your servers, and still correctly see otherwise identical errors as part of a single group.
+
+Code that is considered in-project because of the `project_package_paths` key will not be linked to your repository at this time.
 
 ## Setup Instructions
 To connect a Rollbar project to your git repository, just follow the steps on one of the following pages.
