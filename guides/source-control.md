@@ -1,6 +1,5 @@
 # Integrating Rollbar with Source Control
 
-d
 ## View source from stack traces
 
 When a Rollbar project is connected to a git repository, stack traces will include links to each file in the code version where the error was most recently activated.
