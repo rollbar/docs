@@ -129,8 +129,8 @@ The following columns exist for every row in `item_occurrence`:
 | `item.id` | System-wide Item ID
 | `item.counter` | Project-wide Item ID
 | `item.environment` | Environment name
-| `item.platform` | Platform ID
-| `item.framework` | Framework ID
+| `item.platform` | [Platform ID](#platform-ids)
+| `item.framework` | [Framework ID](#framework-ids)
 | `item.hash` | Computed fingerprint of the item (controls [grouping](/docs/grouping-algorithm/))
 | `item.first_occurrence_id` | ID of the first occurrence
 | `item.first_occurrence_timestamp` | Timestamp of the first occurrence
@@ -231,3 +231,44 @@ the following columns:
 -   An aggregation query that does not match any rows will return no
     results at all, instead of a row indicating that zero rows were
     found.
+    
+### Framework IDs
+
+The `item.framework` property is an integer value which maps as follows:
+
+```
+    'unknown': 0,
+    'rails': 1,
+    'django': 2,
+    'pyramid': 3,
+    'node-js': 4,
+    'pylons': 5,
+    'php': 6,
+    'browser-js': 7,
+    'rollbar-system': 8,  # system messages, like "over rate limit"
+    'android': 9,
+    'ios': 10,
+    'mailgun': 11,
+    'logentries': 12,
+    'python': 13,
+    'ruby': 14,
+    'sidekiq': 15,
+    'flask': 16,
+    'celery': 17,
+    'rq': 18,
+```
+
+### Platform IDs
+
+The `item.platform` property is an integer value which maps as follows:
+
+```
+    'unknown': 0,
+    'browser': 1,
+    'flash': 2,
+    'android': 3,
+    'ios': 4,
+    'heroku': 5,
+    'google-app-engine': 6,
+    'client': 7,
+```
