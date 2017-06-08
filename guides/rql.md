@@ -130,7 +130,7 @@ The following columns exist for every row in `item_occurrence`:
 | `item.counter` | Project-wide Item ID
 | `item.environment` | Environment name
 | `item.platform` | [Platform ID](#platform-ids)
-| `item.framework` | [Framework ID](framework-ids)
+| `item.framework` | [Framework ID](#framework-ids)
 | `item.hash` | Computed fingerprint of the item (controls [grouping](/docs/grouping-algorithm/))
 | `item.first_occurrence_id` | ID of the first occurrence
 | `item.first_occurrence_timestamp` | Timestamp of the first occurrence
@@ -261,6 +261,7 @@ The `item.framework` property is an integer value which maps as follows:
 ### Platform IDs
 
 The `item.platform` property is an integer value which maps as follows:
+
 ```
     'unknown': 0,
     'browser': 1,
