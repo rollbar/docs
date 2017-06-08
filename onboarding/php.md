@@ -1,11 +1,11 @@
-## Installation with Composer
+## Installation with Composer (recommended)
 
 Add `rollbar/rollbar` to your `composer.json`:
 
 ```json
 {
     "require": {
-        "rollbar/rollbar": "~1.0"
+        "rollbar/rollbar": "~1.1"
     }
 }
 ```
@@ -37,5 +37,15 @@ throw new Exception('test 2');
 Within a few seconds of loading this page, the message and errors should appear in your Rollbar dashboard.
 
 Once you've verified you have the notifier library installed, your access token works,
-and you can connect to rollbar, the <a href="https://github.com/rollbar/rollbar-php" target="_blank" rel="noopener">rollbar-php</a>
-documentation can show you how to automatically report exceptions and log message to Rollbar.
+and you can connect to rollbar, the <a href="https://github.com/rollbar/rollbar-php" target="_blank" rel="noopener">rollbar-php</a> documentation can show you how to automatically report exceptions and log message to Rollbar.
+
+## Manual Installation
+
+If you're not using Composer, then follow the instructions in the <a href="https://github.com/rollbar/rollbar-php" target="_blank" rel="noopener">rollbar-php docs on Github</a>.
+
+## Heroku Users
+
+Specific instructions for Heroku users can be found in the <a href="https://github.com/rollbar/rollbar-php" target="_blank" rel="noopener">rollbar-php docs on Github</a>.
+
+
+
