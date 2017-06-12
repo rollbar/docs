@@ -20,7 +20,7 @@ Add the following code to one of your PHP pages:
 Rollbar::init(array('access_token' => '{{ server_access_token }}'));
 
 // Message at level 'info'
-Rollbar::report_message('testing 123', 'info');
+Rollbar::log(Level::info(), 'testing 123');
 
 // Catch an exception and send it to Rollbar
 try {
