@@ -24,9 +24,9 @@ Rollbar::log(Level::info(), 'testing 123');
 
 // Catch an exception and send it to Rollbar
 try {
-    throw new Exception('test exception');
-} catch (Exception $e) {
-    Rollbar::report_exception($e);
+    throw new \Exception('test exception');
+} catch (\Exception $e) {
+    Rollbar::log(Level::error(), $e);
 }
 
 // Will also be reported by the exception handler
