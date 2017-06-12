@@ -16,6 +16,8 @@ Add the following code to one of your PHP pages:
 
 ```php
 <?php
+use \Rollbar\Rollbar;
+
 // installs global error and exception handlers
 Rollbar::init(array('access_token' => '{{ server_access_token }}'));
 
