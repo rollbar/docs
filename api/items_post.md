@@ -251,7 +251,7 @@ understands. The meaning of each key is explained in the comments.
     // If you have multiple code versions that are relevant, those can be sent inside "client" and "server"
     // (see those sections below)
     // For most cases, just send it here.
-    "code_version": "3da541559918a808c2402bba5012f6c60b27661c"
+    "code_version": "3da541559918a808c2402bba5012f6c60b27661c",
 
     // Optional: platform
     // The platform on which this occurred. Meaningful platform names:
@@ -379,7 +379,7 @@ understands. The meaning of each key is explained in the comments.
         // Optional: code_version
         // String describing the running code version in javascript
         // See note about "code_version" above
-        "code_version": "b6437f45b7bbbb15f5eddc2eace4c71a8625da8c"
+        "code_version": "b6437f45b7bbbb15f5eddc2eace4c71a8625da8c",
 
         // Optional: source_map_enabled
         // Set to true to enable source map deobfuscation
