@@ -55,22 +55,22 @@ _For projects created **May 16, 2017 and later**:_
 
 Source maps are automatically enabled in your project, but you still need to add the code_version parameter to the `_rollbarConfig` object that you have included in the on-page Javascript snippet:
 
--```js
- -var _rollbarConfig = {
- -  // add these new params:
- -  payload: {
- -    client: {
- -      javascript: {
- -        source_map_enabled: true, //this is now true by default
- -        code_version: "some version string, such as a version number or git sha",
- -        // Optionally have Rollbar guess which frames the error was thrown from
- -        // when the browser does not provide line and column numbers.
- -        guess_uncaught_frames: true
- -      }
- -    }
- -  }
- -};
- -```
+```js
+var _rollbarConfig = {
+// add these new params:
+  payload: {
+    client: {
+      javascript: {
+        source_map_enabled: true, //this is now true by default
+        code_version: "some version string, such as a version number or git sha",
+        // Optionally have Rollbar guess which frames the error was thrown from
+        // when the browser does not provide line and column numbers.
+        guess_uncaught_frames: true
+      }
+    }
+  }
+};
+```
 
  If you need to set this configuration after the Rollbar library has been initialized, use `Rollbar.configure()`:
 
@@ -78,22 +78,22 @@ _For projects created **before May 16, 2017**:_
 
 Source maps were not automatically enabled in your project.  The simplest way to enable them is to go to **Settings --> Migrations** and check **Enable source maps by default**. You will still need to add the code_version parameter to the `_rollbarConfig` object that you have included in the on-page Javascript snippet:
 
--```js
- -var _rollbarConfig = {
- -  // add these new params:
- -  payload: {
- -    client: {
- -      javascript: {
- -        source_map_enabled: true, //this is will be true by default if you have enabled this in your settings
- -        code_version: "some version string, such as a version number or git sha",
- -        // Optionally have Rollbar guess which frames the error was thrown from
- -        // when the browser does not provide line and column numbers.
- -        guess_uncaught_frames: true
- -      }
- -    }
- -  }
- -};
- -```
+```js
+var _rollbarConfig = {
+// add these new params:
+  payload: {
+    client: {
+      javascript: {
+        source_map_enabled: true, //this is will be true by default if you have enabled this in your settings
+        code_version: "some version string, such as a version number or git sha",
+        // Optionally have Rollbar guess which frames the error was thrown from
+        // when the browser does not provide line and column numbers.
+        guess_uncaught_frames: true
+      }
+    }
+  }
+};
+```
 
  If you need to set this configuration after the Rollbar library has been initialized, use `Rollbar.configure()`:
 
