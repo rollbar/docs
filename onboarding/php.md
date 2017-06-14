@@ -17,9 +17,15 @@ Add the following code to one of your PHP pages:
 ```php
 <?php
 use \Rollbar\Rollbar;
+use \Rollbar\Payload\Level;
 
 // installs global error and exception handlers
-Rollbar::init(array('access_token' => '{{ server_access_token }}'));
+Rollbar::init(
+	array(
+		'access_token' => '{{ server_access_token }}',
+		'environment' => 'development'
+	)
+);
 
 // Message at level 'info'
 Rollbar::log(Level::info(), 'testing 123');
@@ -33,6 +39,7 @@ try {
 
 // Will also be reported by the exception handler
 throw new Exception('test 2');
+
 ?>
 ```
 
