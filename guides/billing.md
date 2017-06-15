@@ -85,9 +85,9 @@ If you created your account through Heroku, then your Rollbar subscription is in
 
 Rollbar cannot automatically upgrade accounts created through Heroku.  If you reach your monthly event limit, then error data will not be processed until you migrate your plan ([instructions here](https://devcenter.heroku.com/articles/rollbar#migrating-between-plans)) or a new monthly billing cycle begins.
 
-### Github Marketplace
+### GitHub Marketplace
 
-If you created your account through Github Marketplace, then your Rollbar subscription is included in your monthly Github bill.
+If you created your account through GitHub Marketplace, then your Rollbar subscription is included in your monthly GitHub bill.
 
-Rollbar cannot automatically upgrade accounts created through Github Marketplace.  If you reach your monthly event limit, then error data will not be processed until you [edit your plan in Github Marketplace](https://github.com/marketplace/rollbar) or a new monthly billing cycle begins.
+Rollbar cannot automatically upgrade accounts created through GitHub Marketplace.  If you reach your monthly event limit, then error data will not be processed until you [edit your plan in GitHub Marketplace](https://github.com/marketplace/rollbar) or a new monthly billing cycle begins.
 

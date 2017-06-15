@@ -50,11 +50,11 @@ and you can connect to rollbar, the <a href="https://github.com/rollbar/rollbar-
 
 ## Manual Installation
 
-If you're not using Composer, then follow the instructions in the <a href="https://github.com/rollbar/rollbar-php" target="_blank" rel="noopener">rollbar-php docs on Github</a>.
+If you're not using Composer, then follow the instructions in the <a href="https://github.com/rollbar/rollbar-php" target="_blank" rel="noopener">rollbar-php docs on GitHub</a>.
 
 ## Heroku Users
 
-Specific instructions for Heroku users can be found in the <a href="https://github.com/rollbar/rollbar-php" target="_blank" rel="noopener">rollbar-php docs on Github</a>.
+Specific instructions for Heroku users can be found in the <a href="https://github.com/rollbar/rollbar-php" target="_blank" rel="noopener">rollbar-php docs on GitHub</a>.
 
 
 
