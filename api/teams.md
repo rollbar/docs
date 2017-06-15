@@ -46,6 +46,7 @@ Deletes the specified team. Be careful, there is no undo!
 
 Note: the Owners team (which has access level `owner`) is special and cannot be deleted.
 
+
 ## Check if a project is in a team
 
     GET /api/1/team/:team_id/project/:project_id
@@ -78,6 +79,13 @@ Returns up to 20 results. Add `&page=2` to go to the next page.
     GET /api/1/team/:team_id/users
 
 Returns up to 5000 results. Add `&page=2` to go to the next page.
+
+
+## Add a user to a team
+
+Adds an existing user (by their Rollbar User ID) to the specified team.
+
+    PUT /api/1/team/:team_id/user/:user_id
 
 
 ## Remove a user from a team
