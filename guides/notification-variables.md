@@ -43,6 +43,7 @@ Variable | Description/Values
 `{{"{{status"}}}}` | `Active`, `Resolved`, `Muted`
 `{{"{{occurrence_title"}}}}` | Same as item title
 `{{"{{occurrence_link"}}}}` | Occurrence URL
+Additionally, any data nested under body is available. The notification variable have an additional body prefix. For example, an occurrence's body.message.body is available as `{{"{{body.body.message.body"}}}}`
 
 ## Deploys
 When a deploy triggers a notification, the following variables are available:
