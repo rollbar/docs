@@ -29,3 +29,17 @@ If you want to remove items from a group (e.g. because you mistakenly merged the
 By default, items which have been merged into a group will no longer appear in the project item feed.  To view these items, you can search for `is:member`.
 
 To filter the item feed to only show group items, you can search for `is:group`.
+
+## Automatically merge similar items
+
+After you've merged to create a group item, all future occurrences with the same [fingerprint](../grouping-algorithm/) as one of the member items will be included into the group.  You may also want to merge _similar_ items that will have different fingerprints into the same group (e.g. all `TimeoutError` exceptions regardless of where they occur).
+
+In order to do this, you can set up a [custom fingerprinting rule](../custom-grouping/) that assigns future occurrence to the group item.  The following example will assign all future occurences with exception class `TimeoutError` to the existing group item `#123:
+
+```json
+[
+  {"condition": {"path": "body.trace.exception.class", "eq": "TimeoutError"},
+    "fingerprint": "group-item-123"
+  }
+]
+```
