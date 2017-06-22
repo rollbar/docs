@@ -39,7 +39,7 @@ In order to do this, you can set up a [custom fingerprinting rule](../custom-gro
 ```json
 [
   {"condition": {"path": "body.trace.exception.class", "eq": "TimeoutError"},
-    "fingerprint": "group-item-123",
+    "fingerprint": "group-item-123"
   }
 ]
 ```
