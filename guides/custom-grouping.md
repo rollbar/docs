@@ -133,7 +133,7 @@ Note: If your exception has nested stack traces, rather than using `body.trace.e
 
 ### Fingerprint
 
-Occurrences with the same `fingerprint` are combined into an Item.
+Occurrences with the same `fingerprint` are combined into an Item.  To add occurences to an existing group item created by [manual merging](../merge-items/), use the fingerprint `group-item-###`, e.g. `group-item-123`.  See the [merging guide](../merge-items/#automatically-merge-similar-items) for an example.
 
 ### Title
 
