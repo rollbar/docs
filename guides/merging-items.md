@@ -34,7 +34,7 @@ To filter the item feed to only show group items, you can search for `is:group`.
 
 After you've merged to create a group item, all future occurrences with the same [fingerprint](../grouping-algorithm/) as one of the member items will be included into the group.  You may also want to merge _similar_ items that will have different fingerprints into the same group (e.g. all `TimeoutError` exceptions regardless of where they occur).
 
-In order to do this, you can set up a [custom fingerprinting rule](../custom-grouping/) that assigns future occurrences to the group item.  The following example will assign all future occurrences with exception class `TimeoutError` to the existing group item `#123:
+In order to do this, you can set up a [custom fingerprinting rule](../custom-grouping/) that assigns future occurrences to the group item.  The following example will assign all future occurrences with exception class `TimeoutError` to the existing group item `#123`:
 
 ```json
 [
