@@ -176,10 +176,10 @@ Here's an example complete configuration with three rules.
     "fingerprint": "connection-error",
     "title": "Connection error"
   },
-  { 
+  {
     "condition": {"all": [
       {"path": "body.trace.exception.class", "eq": "TimeoutError"},
-      {"path": "body.trace.frames.*.filename", "contains": "payments"}
+      {"path": "body.trace.frames.\*.filename", "contains": "payments"}
     ]},
     "fingerprint": "payments-timeout-error",
     "title": "Timeout error in payments code"
