@@ -139,6 +139,10 @@ Occurrences with the same `fingerprint` are combined into an Item.  To add occur
 
 The `title` is an optional text description that is displayed when viewing an item.  It must be a string, of length 1-255 characters. You can change the title in this configuration without impacting the fingerprint. The new title will take effect if the item is reactivated after being resolved.
 
+### Precedence
+
+Any projects created after June 25, 2017 will automatically assign precedence to fingerprints and titles created in custom grouping rules. Prior to this date, precedence was given to fingerprints and titles passed in an occurrence's payload. Older projects can be modified to give precedence to custom fingerprinting rules by enabling the `Custom Fingerprinting & Title Override for Occurrences` migration in a project's settings.
+
 ### Templates
 
 Both `fingerprint` and `title` can contain template markers (wrapped in
