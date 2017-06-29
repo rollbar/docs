@@ -1,16 +1,26 @@
-## 0.1.x
+# Changelog
 
-This is the baseline release of the Rollbar on-premise distribution.
+### 0.7.0
 
-### 0.1.1
+- fixes for multi-host configure.sh bugs
+- don't erase old ssl cert files when upgrading
+- set beanstalk to persist to disk
+- upgrade from sphinx to elasticsearch for search engine
+- added options for configuring consul ports and domain name
 
-- Fixed a bug in the real-time server which was causing the UI to not update in
-  real-time.
+### 0.6.0
 
-### 0.2.0
+- Fix problem using project api to manage projects.
 
-- Added ability to ignore projects in new_raw_item_worker to aid in migrating
-  data for on-premise customers.
+### 0.5.0
+
+- Fix problem with ProGuard control panel.
+
+- Update nginx configuration to be more compliant with best practices.
+
+### 0.4.0
+
+- Update consul configuration to work across server reboots.
 
 - Pulled in all the latest rollbar code since the last release.
 
@@ -20,26 +30,18 @@ This is the baseline release of the Rollbar on-premise distribution.
 
 - Pulled in all the latest rollbar code since the last release.
 
-### 0.4.0
+### 0.2.0
 
-- Update consul configuration to work across server reboots.
+- Added ability to ignore projects in new_raw_item_worker to aid in migrating
+  data for on-premise customers.
 
 - Pulled in all the latest rollbar code since the last release.
 
-### 0.5.0
+### 0.1.1
 
-- Fix problem with ProGuard control panel.
+- Fixed a bug in the real-time server which was causing the UI to not update in
+  real-time.
 
-- Update nginx configuration to be more compliant with best practices.
+### 0.1.0
 
-### 0.6.0
-
-- Fix problem using project api to manage projects.
-
-### 0.7.0
-
-- fixes for multi-host configure.sh bugs
-- don't erase old ssl cert files when upgrading
-- set beanstalk to persist to disk
-- upgrade from sphinx to elasticsearch for search engine
-- added options for configuring consul ports and domain name
+- This is the baseline release of the Rollbar on-premise distribution.
