@@ -69,7 +69,6 @@ public network because we did not design these services to be publicly
 facing and there isn't any encryption or authentication between them,
 which is very dangerous on the open internet.
 
-* moxui - 8080
 * react renderer - 8081
 * mox rts - 8082
 * search api - 8083
