@@ -9,17 +9,17 @@ Here's a cheat sheet to download and install Docker Engine on Ubuntu
 14.04 LTS:
 
 ```sh
+sudo apt-get remove docker docker-engine docker.io
+
 sudo apt-get update
-sudo apt-get install apt-transport-https ca-certificates
-sudo sh -c 'echo "deb https://apt.dockerproject.org/repo ubuntu-trusty main" > /etc/apt/sources.list.d/docker.list'
-sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+sudo apt-get install linux-image-extra-$(uname -r) linux-image-extra-virtual
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
 sudo apt-get update
-sudo apt-get purge lxc-docker
-sudo apt-cache policy docker-engine
-sudo apt-get install linux-image-extra-$(uname -r)
-sudo apt-get install docker-engine
-sudo service docker stop
-sudo service docker start
+sudo apt-get install docker-ce
 ```
 
 To make docker work without requiring sudo:
@@ -53,6 +53,7 @@ sudo chmod +x /usr/local/bin/docker-compose
     ```sh
     cd rollbar-enterprise_2016-02-12 && ./install.sh
     ```
+
 4. Configure
 
     ```sh
@@ -63,6 +64,25 @@ sudo chmod +x /usr/local/bin/docker-compose
     ```sh
     ./start.sh --run-migrations
     ```
+
+5b. Likely troubleshooting needed: you may see an error message `ERROR: Unable to obtain Jdbc connection from DataSource (jdbc:mysql://mysql/mox) for user 'flyway': Could not connect to mysql:3306: unexpected end of stream, read 0bytes from 4`. To resolve this issue, enter the mysql container and run the script `/docker-entrypoint-initdb.d/create_dbs.sh`; for example:
+
+    ```sh
+    # on the host machine
+    image_id=$(docker ps | grep mysql | awk '{print $1}')
+    docker exec -it $image_id bash
+    # now inside the mysql container
+    cd /docker-entrypoint-initdb.d/
+    ./create_dbs.sh
+    exit
+    ```
+
+    Then, start again:
+
+    ```
+    ./start.sh --run-migrations
+    ```
+
 6. Initialize ElasticSearch
     ```sh
     ./utils.sh --es-init --es-index
