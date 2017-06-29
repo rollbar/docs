@@ -52,8 +52,8 @@ Here are a few commonly used paths:
 | `body.trace.exception.message` | Exception message
 | `body.trace.frames.0.filename` | Filename of the first stack frame
 | `body.trace.frames.-1.filename` | Filename of the last stack frame
-| `body.trace.frames.\*.filename` | Filename of any stack frame
-| `body.trace.frames.\*.method` | Method/function name of any stack frame
+| `body.trace.frames.*.filename` | Filename of any stack frame
+| `body.trace.frames.*.method` | Method/function name of any stack frame
 | `language` | The language name
 
 You can use any value in your JSON payload as a path, including custom data.  To view your JSON payloads, go into an occurrence and click on **View JSON** at the bottom of the screen.
