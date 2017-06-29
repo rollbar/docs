@@ -264,7 +264,7 @@ If you'd like to use source maps with the same code that is deployed on many dom
 var _rollbarConfig = {
   // ...
   transform: function(payload) {
-    var trace = payload.data.body.trace;
+    var trace = payload.body.trace;
     // Change 'yourdomainhere' to your domain.
     var locRegex = /^(https?):\/\/[a-zA-Z0-9._-]+\.yourdomainhere\.com(.*)/;
     if (trace && trace.frames) {
