@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.8.1
+
+Release date: June 30, 2017
+
+### Application
+
+- Fixed an issue causing flashes of unrendered content on some page loads
+
 ## 0.8.0
 
 Release date: June 29, 2017
