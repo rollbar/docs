@@ -130,6 +130,9 @@ All customer raw and aggregate data is stored as part of a Project. Individual u
 
 To ensure that customer data cannot be accessed by other customers, customer data is always stored with its Project ID and always queried using a Project ID.
 
+#### Data Centers
+Most of our servers are located in Dallas, Texas. We also have servers in California (San Jose), Amsterdam, and Singapore.
+
 ## Passwords
 
 ### Rollbar.com
