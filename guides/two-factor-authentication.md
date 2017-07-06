@@ -16,10 +16,10 @@ or [Authy](https://www.authy.com/).
 * Click on your username in the upper-right corner and select 'User Settings'.
 * In the Two-Factor Authentication section of the settings page, enter your password and click
   'Enable two-factor authentication'.  A QR code such as the following will appear:
-  ![](https://d26gfdfi90p7cf.cloudfront.net/Screen-Shot-2016-06-07-at-25634-PM.153551.o.png)
+  ![](../images/guides/two-factor-authentication/Screen-Shot-2016-06-07-at-25634-PM.153551.o.png)
 * Using your mobile authenticator app, capture the QR code. Once successfully captured, your app
   will automatically begin generating a time-sensitive code such as the following:
-  ![](https://d26gfdfi90p7cf.cloudfront.net/IMG_1857.153553.o.png)
+  ![](../images/guides/two-factor-authentication/IMG_1857.153553.o.png)
 * In Rollbar, enter the code into the 'two factor code' field and click 'Validate'. If your code is
   succesfully entered, then a list of recovery codes will appear.
 * Copy your recovery codes and store them in a secure location.

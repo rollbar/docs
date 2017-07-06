@@ -4,7 +4,7 @@ When using libraries or frameworks you will often have large portions of well-te
 code that is unlikely to have caused an error for you. In order to keep the focus on your code
 Rollbar will collapse stack frames from third party code.
 
-![](https://d26gfdfi90p7cf.cloudfront.net/expand.152737.o.gif)
+![](../images/guides/hiding-third-party-code/expand.152737.o.gif)
 
 ### Single Root
 
