@@ -9,16 +9,16 @@ notifications you can use notification filters.
 To find your notification settings navigate to the project you want to adjust,
 click 'Settings' in the top menu, then click 'Notifications' in the left menu.
 
-![](https://d26gfdfi90p7cf.cloudfront.net/Screen-Shot-2016-02-22-at-21637-PM.152242.l.png)
+![](../images/guides/filtering-notifications/Screen-Shot-2016-02-22-at-21637-PM.152242.l.png)
 
 Select the notification type you wish to adjust (for instance: Email, GitHub Issues, Slack). Now
 decide which rule you want to adjust and click Configure.
 
-![](https://d26gfdfi90p7cf.cloudfront.net/Screen-Shot-2016-02-22-at-21551-PM.152243.l.png)
+![](../images/guides/filtering-notifications/Screen-Shot-2016-02-22-at-21551-PM.152243.l.png)
 
 The edit rule dialog will appear:
 
-![](https://d26gfdfi90p7cf.cloudfront.net/Screen-Shot-2016-02-22-at-21723-PM.152222.500x491x0.png)
+![](../images/guides/filtering-notifications/Screen-Shot-2016-02-22-at-21723-PM.152222.500x491x0.png)
 
 The upper portion of the edit dialog is specific to each notification type (Slack has message
 formats, Jira has custom API fields, Email has recipients by team and user, etc). The lower portion,
