@@ -252,9 +252,14 @@ minified\_url
 :   The full URL of the minified file. Should start with `http:` or
     `https:`
 
+## How Rollbar Resolves Source Maps
+For each exception your application sends, Rollbar receives a payload that includes a stack trace & code version. Each frame of the stack trace has a filename. Rollbar tries to match a source map that has the same `code_version` of the occurrence and the same minified url of the filename (minus the `https:`).
+
+For example, let's say Rollbar received an exception that had a code_version of `12345` and a frame with the filename `https://myapp.com/assets/js/abc.js`. Rollbar can only de-minify the frame if it finds a source map with the exact minified url `//myapp.com/assets/js/abc.js` and code_version of `12345`.
+
 ## Webpack Plugin
 
-There is a community-maintained [Rollbar Sourcemap Plugin for Webpack](https://github.com/thredup/rollbar-sourcemap-webpack-plugin).  Please check the [Readme doc](https://github.com/thredup/rollbar-sourcemap-webpack-plugin/blob/master/README.md) for details on the project and usage instructions. 
+There is a community-maintained [Rollbar Sourcemap Plugin for Webpack](https://github.com/thredup/rollbar-sourcemap-webpack-plugin).  Please check the [Readme doc](https://github.com/thredup/rollbar-sourcemap-webpack-plugin/blob/master/README.md) for details on the project and usage instructions.
 
 ## Using Source Maps On Many Domains
 
