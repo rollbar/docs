@@ -79,7 +79,7 @@ Code Version
 : `code_version:abcdef` finds items that have been seen in the code_version `abcdef`.
 
 Item Number
-: `#123` finds the item with counter number `123`
+: `#123` finds the item with counter number `123`. You can search for multiple items if you separate each item by two spaces, e.g. `#123  #456`.
 
 Merging
 : `is:group` finds group items that were created by merging similar items
