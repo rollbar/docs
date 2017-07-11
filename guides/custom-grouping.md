@@ -19,12 +19,12 @@ Here's an example configuration:
 ```
 
 The above configuration is a list of rules. Each rule is a JSON object that consists of a
-`condition`, a `fingerprint`, and an optional `title`. 
+`condition`, a `fingerprint`, and an optional `title`.
 
 Rules are applied in order, testing the `condition` against the incoming occurrence. If a match is
 found, the rule's `fingerprint` and `title` will be used instead of our [default algorithm](/docs/grouping-algorithm/).
 
-Occurrences with the same `fingerprint` are combined into an _Item_. 
+Occurrences with the same `fingerprint` are combined into an _Item_.
 
 The `title` of the first occurrence of an Item is used as the title of the Item, and is only changed if the item is resolved and then later reactivated. Upon reactivation, the title of the reactivating occurrence is used as the new Item title.
 
@@ -52,8 +52,8 @@ Here are a few commonly used paths:
 | `body.trace.exception.message` | Exception message
 | `body.trace.frames.0.filename` | Filename of the first stack frame
 | `body.trace.frames.-1.filename` | Filename of the last stack frame
-| `body.trace.frames.\*.filename` | Filename of any stack frame
-| `body.trace.frames.\*.method` | Method/function name of any stack frame
+| `body.trace.frames.*.filename` | Filename of any stack frame
+| `body.trace.frames.*.method` | Method/function name of any stack frame
 | `language` | The language name
 
 You can use any value in your JSON payload as a path, including custom data.  To view your JSON payloads, go into an occurrence and click on **View JSON** at the bottom of the screen.
@@ -66,15 +66,15 @@ Here's a simple example of some error JSON:
     "trace": {
       "frames": [
         {
-          "method": "HTMLDocument.e._wrapped", 
-          "lineno": 32, 
-          "colno": 100, 
+          "method": "HTMLDocument.e._wrapped",
+          "lineno": 32,
+          "colno": 100,
           "filename": "https://cdnjs.cloudflare.com/ajax/libs/rollbar.js/1.9.3/rollbar.min.js"
         }
-      ], 
+      ],
       "exception": {
-        "message": "Boomerang is not defined", 
-        "class": "ReferenceError", 
+        "message": "Boomerang is not defined",
+        "class": "ReferenceError",
         "description": "Error while initializing Heroku header"
       }
     }
@@ -84,7 +84,7 @@ Here's a simple example of some error JSON:
   }
 }
 ```
-In this example, the value of `body.trace.frames.0.lineno` is `32`, and the value of `server.host` is `web01`. 
+In this example, the value of `body.trace.frames.0.lineno` is `32`, and the value of `server.host` is `web01`.
 
 #### Operators
 
@@ -129,11 +129,11 @@ ValueError, and exception message contains the string "database"
 }
 ```
 
-Note: If your exception has nested stack traces, rather than using `body.trace.exception.message`, you'll need to use `body.trace_chain.0.exception.message`, and so on for any paths that begin with `body.trace`. 
+Note: If your exception has nested stack traces, rather than using `body.trace.exception.message`, you'll need to use `body.trace_chain.0.exception.message`, and so on for any paths that begin with `body.trace`.
 
 ### Fingerprint
 
-Occurrences with the same `fingerprint` are combined into an Item.
+Occurrences with the same `fingerprint` are combined into an Item.  To add occurences to an existing group item created by [manual merging](../merge-items/), use the fingerprint `group-item-###`, e.g. `group-item-123`.  See the [merging guide](../merge-items/#automatically-merge-similar-items) for an example.
 
 ### Title
 
@@ -154,7 +154,7 @@ There are two special markers:
 These can be used to tune the fingerprinting algorithm without entirely
 replacing it.
 
-Additionally, any part of the occurrence JSON body may be referenced by path.  For example 
+Additionally, any part of the occurrence JSON body may be referenced by path.  For example
 
 - `{{"{{ body.trace.exception.class "}}}}` will be replaced
 with the exception class.
@@ -168,7 +168,7 @@ Here's an example complete configuration with three rules.
 
 ```json
 [
-  { 
+  {
     "condition": {
       "path": "body.trace.exception.class",
       "in": ["EOFError", "Errno::ECONNREFUSED", "Errno::ETIMEDOUT"]
@@ -176,7 +176,7 @@ Here's an example complete configuration with three rules.
     "fingerprint": "connection-error",
     "title": "Connection error"
   },
-  { 
+  {
     "condition": {"all": [
       {"path": "body.trace.exception.class", "eq": "TimeoutError"},
       {"path": "body.trace.frames.*.filename", "contains": "payments"}
@@ -194,3 +194,9 @@ Here's an example complete configuration with three rules.
   }
 ]
 ```
+
+### Precedence
+
+Any projects created after June 25, 2017 will automatically assign precedence to fingerprints and titles created in custom grouping rules. This means that if you are explicitly sending a fingerprint and title in an occurrence's payload *and* you have custom grouping rules, the custom grouping rules will over-write the fingerprint and title sent in the payload. For projects created prior to this date, if you are explicitly sending fingerprints and have custom grouping rules, precedence is given to fingerprints and titles sent in an occurrence's payload. Older projects can be modified to give precedence to custom fingerprinting rules by enabling the `Custom Fingerprinting & Title Override for Occurrences` migration in a project's settings.
+
+The [Go notifier](https://github.com/rollbar/rollbar-go) sets fingerprints and titles in an occurrence's payload by default so enabling the `Custom Fingerprinting & Title Override for Occurrences` migration in older projects may affect how occurrences are grouped.
