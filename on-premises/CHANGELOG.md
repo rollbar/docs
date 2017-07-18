@@ -1,5 +1,19 @@
 # Changelog
 
+## 0.8.2
+
+Release date: July 18, 2017
+
+### Application
+
+- Improvement: method names now unminified when source maps are applied. [More info](https://changelog.rollbar.com/de-minify-js-method-names-27541)
+- Improved frontend page load time and rendering performance
+- Various bug fixes and polish
+
+### Infrastructure
+
+- New worker type: project_task_worker
+
 ## 0.8.1
 
 Release date: June 30, 2017
