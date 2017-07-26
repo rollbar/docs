@@ -22,4 +22,4 @@ For general information about Rollbar's alerting features, check out the [Notifi
     adding, or deleting them.
 
 ### Tips & Tricks
-* You can customize the content of Flowdock messages using [notication variables](/docs/notification-variables/).
+* You can customize the content of Flowdock messages using [notification variables](/docs/notification-variables/).
