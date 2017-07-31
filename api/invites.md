@@ -9,6 +9,7 @@ The prefix for all URLs is `https://api.rollbar.com`
 
 Requires `read` scope.
 
+
 ## List invites for a team
 
 Returns all invites ever sent for the team--pending, accepted, rejected, and canceled.

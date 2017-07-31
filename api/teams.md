@@ -25,7 +25,6 @@ Requires `read` scope.
 Returns up to 20 results. Add `&page=2` to go to the next page.
 
 
-
 ## Create a team
 
 Creates a new team in the authenticated account.
@@ -61,6 +60,7 @@ Note: the Owners team (which has access level `owner`) is special and cannot be 
     GET /api/1/team/:team_id/project/:project_id
 
 Requires `read` scope.
+
 
 ## List projects in a team
 
