@@ -42,6 +42,11 @@ In order to connect Rollbar to JIRA, you must configure an Application Link betw
   * If you wish to set up an additional JIRA credential for use as the project default, then go to **User Settings --> Connected Accounts --> JIRA** to complete the configuration.
 * Select a `JIRA Project` and `Issue Type` for the linked issues created for the Rollbar Project
 * By default, each Rollbar user must have a JIRA credential configured in order to use the **Create Issue** button in the item view.  If you would like for project members to be able to use the default project credential rather than entering their own, then check `Use default credentials if user has not connected to JIRA`.
+* Click **Send Test Notification** to verify that issues can be created in your JIRA project.
+* Click **Enable** to turn on the integration.
+
+For detailed instructions on using and configuring automatic and manual issue tracking integration, check out the [Issue Tracking guide](../issue-tracking/). 
+{: .info}
 
 
 ## View Rollbar info in JIRA
