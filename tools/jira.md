@@ -23,14 +23,15 @@ In order to connect Rollbar to JIRA, you must configure an Application Link betw
   * Consumer Key: `OauthKey`
   * Consumer Name: `Rollbar`
   * Public Key: 
+    
     ```
     -----BEGIN PUBLIC KEY-----
-MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDNTv6kgrUjvKfx9M2EppIBXEGh
-RuJRWCVVdlETKzi/fAMs/TdhLVXCFEZQMsmBVjDtT3vj8VzZgnWnNFyrAI0X5jOY
-JybJs0VGT+RTQm3m9f4Q57KN8qWvJHi7mv81BCOEIxkxoqfEJ5hGe4i21UvVZwrk
-FYpOk+QvYrvi2YZFEwIDAQAB
------END PUBLIC KEY-----
-```
+    MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDNTv6kgrUjvKfx9M2EppIBXEGh
+    RuJRWCVVdlETKzi/fAMs/TdhLVXCFEZQMsmBVjDtT3vj8VzZgnWnNFyrAI0X5jOY
+    JybJs0VGT+RTQm3m9f4Q57KN8qWvJHi7mv81BCOEIxkxoqfEJ5hGe4i21UvVZwrk
+    FYpOk+QvYrvi2YZFEwIDAQAB
+    -----END PUBLIC KEY-----
+    ```
 
 * Click **Continue**.  JIRA should finish configuring the application link then display the message `Application Link 'Rollbar' created successfully.`
 
