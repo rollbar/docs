@@ -18,9 +18,8 @@ In order to connect Rollbar to JIRA, you must configure an Application Link betw
   * Access Token URL: `https://rollbar.com`
   * Authorize URL: `https://rollbar.com`
   * Create incoming link: `Not checked`
-  
-
-
+ 
+* Save the configuration.  JIRA should display the message `Application Link 'Rollbar' created successfully.`
 
 ## In Rollbar
 
