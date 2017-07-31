@@ -7,12 +7,15 @@ The prefix for all URLs is `https://api.rollbar.com`
 
     GET /api/1/invite/:id
 
+Requires `read` scope.
 
 ## List invites for a team
 
 Returns all invites ever sent for the team--pending, accepted, rejected, and canceled.
 
     GET /api/1/team/:id/invites
+
+Requires `read` scope.
 
 Returns up to 5000 results. Add `&page=2` to the URL to go to the next page.
 
@@ -26,6 +29,8 @@ team, and sent an email notification. Otherwise, an invite email will be sent, c
 link that will allow the recipient to join the specified team.
 
     POST /api/1/team/:id/invites
+
+Requires `write` scope.
 
 ### Parameters
 
@@ -43,6 +48,8 @@ Cancels an invite, making it no longer valid to accept. If it has already been a
 use `DELETE /team/:team_id/user/:user_id` instead.
 
     DELETE /api/1/invite/:id
+
+Requires `write` scope.
 
 
 -----

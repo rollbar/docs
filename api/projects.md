@@ -10,10 +10,14 @@ Lists all projects for the authenticated account.
 
     GET /api/1/projects
 
+Requires `read` scope.
+
 
 ## Get a project
 
     GET /api/1/project/:id
+
+Requires `read` scope.
 
 
 ## Create a project
@@ -21,6 +25,8 @@ Lists all projects for the authenticated account.
 Creates a new project in the authenticated account.
 
     POST /api/1/projects
+
+Requires `write` scope.
 
 ### Parameters
 
@@ -39,6 +45,8 @@ project, please contact [support](mailto:support@rollbar.com) immediately.
 
     DELETE /api/1/project/:id
 
+Requires `write` scope.
+
 
 ## List project access tokens
 
@@ -46,12 +54,16 @@ Lists all access tokens for the specified project.
 
     GET /api/1/project/:id/access_tokens
 
+Requires `read` scope.
+
 
 ## Update rate limits for a project access token
 
 Updates a project access token's rate limit settings.
 
     PATCH /api/1/project/:id/access_token/:project_access_token
+
+Requires `write` scope.
 
 ### Parameters
 
