@@ -17,11 +17,13 @@ In order to connect Rollbar to JIRA, you must configure an Application Link betw
   * Request Token URL: `https://rollbar.com`
   * Access Token URL: `https://rollbar.com`
   * Authorize URL: `https://rollbar.com`
-  * Create incoming link: `Not checked`
+  * Create incoming link: `Checked`
  
 * Save the configuration.  JIRA should display the message `Application Link 'Rollbar' created successfully.`
 
 ## In Rollbar
+
+* Go to **Settings --> Notifications --> JIRA**.  If no users in the project have configured 
 
 * Visit the Settings page in Rollbar and go to Notifications. From the Notifications Settings you
    will select JIRA from the list of "Available Channels".
