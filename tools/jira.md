@@ -33,7 +33,10 @@ In order to connect Rollbar to JIRA, you must configure an Application Link betw
     -----END PUBLIC KEY-----
     ```
 
-* Click **Continue**.  JIRA should finish configuring the application link then display the message `Application Link 'Rollbar' created successfully.`
+* Click **Continue**.  JIRA should finish configuring the application link then display the message 
+  ```
+  Application Link 'Rollbar' created successfully.
+  ```
 
 ## In Rollbar
 
