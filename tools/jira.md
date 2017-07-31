@@ -4,19 +4,34 @@ For general information about Rollbar's issue tracking features, check out the [
 {: .info}
 
 ## In JIRA
-In order to connect Rollbar to JIRA, you mucst configure an Application Link between Rollbar and JIRA
+
+In order to connect Rollbar to JIRA, you must configure an Application Link between Rollbar and JIRA.
+
+* Go to **Settings --> Applications --> Application Links**, enter the URL `https://rollbar.com` and click **Create New Link**
+* In the form that appears, enter the following values:
+  * Application Name: `Rollbar`
+  * Application Type: `Generic Application`
+  * Service Provider Name: `Rollbar`
+  * Consumer Key: `OauthKey`
+  * Shared Secret: `Rollbar`
+  * Request Token URL: `https://rollbar.com`
+  * Access Token URL: `https://rollbar.com`
+  * Authorize URL: `https://rollbar.com`
+  * Create incoming link: `Not checked`
+  
+
 
 
 ## In Rollbar
 
-1. Visit the Settings page in Rollbar and go to Notifications. From the Notifications Settings you
+* Visit the Settings page in Rollbar and go to Notifications. From the Notifications Settings you
    will select JIRA from the list of "Available Channels".
-2. Add your JIRA username, password, and server URL, and click 'Enable JIRA integration'.
-3. Once you've authorized, you'll be able to customize the type of notifications and frequency you
+* Add your JIRA username, password, and server URL, and click 'Enable JIRA integration'.
+* Once you've authorized, you'll be able to customize the type of notifications and frequency you
    want to automatically create Issues on your JIRA Projects.
-4. Turn specific Items in Rollbar into Issues in JIRA. When viewing an Item in Rollbar simply click
+* Turn specific Items in Rollbar into Issues in JIRA. When viewing an Item in Rollbar simply click
    the button "Create JIRA Issue" to send the error details to JIRA.
-5. You can also link an Item in Rollbar to an existing JIRA Issue. When viewing an Item, select the
+* You can also link an Item in Rollbar to an existing JIRA Issue. When viewing an Item, select the
    drop down next to the JIRA button and then click "Link existing JIRA Issue" and copy and paste
    the URL for the JIRA Issue you would like to link.
 
