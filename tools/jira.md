@@ -3,7 +3,11 @@
 For general information about Rollbar's issue tracking features, check out the [Issue Tracking guide](../issue-tracking/). 
 {: .info}
 
-### In Rollbar
+## In JIRA
+In order to connect Rollbar to JIRA, you mucst configure an Application Link between Rollbar and JIRA
+
+
+## In Rollbar
 
 1. Visit the Settings page in Rollbar and go to Notifications. From the Notifications Settings you
    will select JIRA from the list of "Available Channels".
@@ -20,7 +24,7 @@ Congratulations! You have now integrated Rollbar with your JIRA account. Events 
 automatically create Issues on your JIRA Projects. If you want, you can customize the default rules
 by editing, adding, or deleting them.
 
-### View Rollbar info in JIRA
+## View Rollbar info in JIRA
 _NOTE: This feature is only available in JIRA Cloud, not in self-hosted JIRA versions_
 
 By adding the [Rollbar for JIRA](https://marketplace.atlassian.com/plugins/com.rollbar.jira/cloud/overview)
