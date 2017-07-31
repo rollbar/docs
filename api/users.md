@@ -10,6 +10,8 @@ Lists all users who a member of the current account.
 
     GET /api/1/users
 
+Requires `read` scope.    
+
 Example response:
 
 ```json
@@ -65,6 +67,8 @@ Lists all teams in the current account that the specified user is a memebr of.
 
     GET /api/1/user/:id/teams
 
+Requires `read` scope.
+
 Example response:
 
 ```json
@@ -95,6 +99,8 @@ Example response:
 Lists all projects in the current account that the specified user has access to.
 
     GET /api/1/user/:id/projects
+
+Requires `read` scope.
 
 Example response:
 
