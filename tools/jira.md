@@ -37,22 +37,12 @@ In order to connect Rollbar to JIRA, you must configure an Application Link betw
 
 ## In Rollbar
 
-* Go to **Settings --> Notifications --> JIRA**.  If no users in the project have configured 
+* Go to **Settings --> Notifications --> Available Channels --> JIRA**.
+* If no users in the project have configured a JIRA credential, then you will need to enter the URL of your JIRA server to set up a default credential for the project.  Otherwise, you can select from the available credentials in the project.
+  * If you wish to set up an additional JIRA credential for use as the project default, then go to **User Settings --> Connected Accounts --> JIRA** to complete the configuration.
+* Select a `JIRA Project` and `Issue Type` for the linked issues created for the Rollbar Project
+* By default, each Rollbar user must have a JIRA credential configured in order to use the **Create Issue** button in the item view.  If you would like for project members to be able to use the default project credential rather than entering their own, then check `Use default credentials if user has not connected to JIRA`.
 
-* Visit the Settings page in Rollbar and go to Notifications. From the Notifications Settings you
-   will select JIRA from the list of "Available Channels".
-* Add your JIRA username, password, and server URL, and click 'Enable JIRA integration'.
-* Once you've authorized, you'll be able to customize the type of notifications and frequency you
-   want to automatically create Issues on your JIRA Projects.
-* Turn specific Items in Rollbar into Issues in JIRA. When viewing an Item in Rollbar simply click
-   the button "Create JIRA Issue" to send the error details to JIRA.
-* You can also link an Item in Rollbar to an existing JIRA Issue. When viewing an Item, select the
-   drop down next to the JIRA button and then click "Link existing JIRA Issue" and copy and paste
-   the URL for the JIRA Issue you would like to link.
-
-Congratulations! You have now integrated Rollbar with your JIRA account. Events from Rollbar will
-automatically create Issues on your JIRA Projects. If you want, you can customize the default rules
-by editing, adding, or deleting them.
 
 ## View Rollbar info in JIRA
 _NOTE: This feature is only available in JIRA Cloud, not in self-hosted JIRA versions_
