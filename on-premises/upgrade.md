@@ -26,16 +26,20 @@ future release.
    ```
 5. Configure using your previous settings
 
-   The settings file from your previous install will be stored in the
-   directory you uncompressed the original archive into. Copy this file
-   into the new distribution directory and name it `.settings`.
-
-   If you do not have this file it is likely that you are upgrading from
-   a version built before 2/16/2016. See instructions below.
+   5a. Copy your old `.settings` file into the current directory
+   
+   ```sh
+   cp /path/to/old/version/.settings .
+   ```
+   
+   NOTE: if you don't have an old `.settings` file, see the instructions below at "Upgrading from a version built before 2/16/2016".
+   
+   5b. Run configure
 
    ```sh
    ./configure.sh -f .settings --save
    ```
+   
 6. Start/upgrade to the new version
 
    ```sh
