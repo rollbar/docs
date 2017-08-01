@@ -26,10 +26,10 @@ In order to connect Rollbar to JIRA, you must configure an Application Link betw
     
     ```
     -----BEGIN PUBLIC KEY-----
-    MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDNTv6kgrUjvKfx9M2EppIBXEGh
-    RuJRWCVVdlETKzi/fAMs/TdhLVXCFEZQMsmBVjDtT3vj8VzZgnWnNFyrAI0X5jOY
-    JybJs0VGT+RTQm3m9f4Q57KN8qWvJHi7mv81BCOEIxkxoqfEJ5hGe4i21UvVZwrk
-    FYpOk+QvYrvi2YZFEwIDAQAB
+    MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC+unu+VFdOomVs4Rzn0YKNHgOj
+    CM7n3PvFjE+pY9dMZYySHsE75ouzScb3Vt1FrqaDRk+mqTCSIxqTGRM9fjpXaXc4
+    k+KQ57f8/pNsRFvbjz7ev4sD4LyEQ+nCOFCa9Lc03zc6J/Jj1+nDqPzwznzil1by
+    eLRyTwg7TERcqDGg+wIDAQAB
     -----END PUBLIC KEY-----
     ```
 
