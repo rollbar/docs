@@ -7,7 +7,12 @@ Item merging allows you to combine multiple items into one 'group' for easier ma
 The first time you encounter a duplicated error, you'll want to create a new group:
 
 * Select one or more items from the same environment in the Items feed.  An action bar will appear at the top of the screen.
+
+![](../images/guides/merging-items/merge1.png)
+
 * Slide the toggle to Merge, set appropriate `Level`, `Status`, `Owner`, and `Source` values, type in a name for the new item, and click the Merge button.
+
+![](../images/guides/merging-items/merge2.png)
 
 ## Merge into an existing item
 
@@ -25,10 +30,14 @@ If you want to remove items from a group (e.g. because you mistakenly merged the
 * Go to the group item and select the 'Member Items' tab at the bottom of the screen to view all items which have been merged into it.
 * Select the items you want to remove and click 'Un-merge'.
 
+![](../images/guides/merging-items/merge3.png)
+
 ## Search for merged items
 By default, items which have been merged into a group will no longer appear in the project item feed.  To view these items, you can search for `is:member`.
 
 To filter the item feed to only show group items, you can search for `is:group`.
+
+![](../images/guides/merging-items/merge4.png)
 
 ## Automatically merge similar items
 
