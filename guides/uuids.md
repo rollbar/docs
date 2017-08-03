@@ -38,3 +38,13 @@ and there is no processing delay reported in the dashboard, it's likely
 that something prevented it from being reported to Rollbar in the first
 place. Check your server logs for more details, and feel free to contact
 <support@rollbar.com> for help debugging.
+
+### UUID Bookmarklet
+
+To easily look up items via UUID, create this handy little bookmarklet. 
+Simply create a bookmark, name it RollbarUUID, and add the following code as the URL.
+Then the next time you get a UUID (in an email or on a site), just highlight it, click the bookmark, and you will be redirected to the occurrence.
+
+```javascript
+javascript:(function(){function selectedText() {var text = "";if (window.getSelection) {text = window.getSelection().toString();} else if (document.selection && document.selection.type != "Control") {text = document.selection.createRange().text;}return text;}var url = "https://rollbar.com/occurrence/uuid/?uuid=" + selectedText();var win = window.open(url, '_blank');win.focus();})();
+```
