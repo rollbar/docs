@@ -8,6 +8,7 @@ For general information about Rollbar's issue tracking features, check out the [
 In order to connect Rollbar to JIRA, you must configure an Application Link between Rollbar and JIRA.
 
 * Go to **Settings --> Applications --> Application Links**, enter the URL `https://rollbar.com` and click **Create New Link**
+  * You may see "No response was received from the URL you entered - it may not be valid. Please fix the URL below, if needed, and click Continue." This is nothing to worry about. You can just click Continue and it will work. 
 * In the form that appears, enter the following values:
   * Application Name: `Rollbar`
   * Application Type: `Generic Application`
