@@ -20,3 +20,6 @@ SCREENSHOT HERE w/ timestamps
 The occurrence you are currently viewing is shown as the final entry in the telemetry timeline.
 
 SCREENSHOT HERE w/ final entry formatting.
+
+To select which telemetry events are captured and sent along with exceptions and messages, see the config options for `autoinstrument` in the [rollbar.js docs](https://rollbar.com/docs/notifiers/rollbar.js#telemetry)
+{:info}
