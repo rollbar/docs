@@ -7,19 +7,19 @@ When using [rollbar.js](https://rollbar.com/docs/notifiers/rollbar.js#telemetry)
 
 * Page load events (`DOMContentLoaded`, `load`)
 * User actions (`input`, `click`, navigation between routes in a single-page app)
-* Network activitity, including request type and response code
+* Network activitity (`xhr` and `fetch`) including method, URL and response code
 * `Console` messages
 * Other exceptions and messages sent to Rollbar
 
-SCREENSHOT HERE w/ all event types
+![](../images/guides/telemetry/telemetry.png)
 
 The telemetry timeline for an occurrence can be viewed with oldest or newest entries displayed first, and each entry includes both an absolute timestamp (based on the project timezone) and a relative timestamp based on when the `DOMContentLoaded` event fired.
 
-SCREENSHOT HERE w/ timestamps
+![](../images/guides/telemetry/timestamp.png)
 
-The occurrence you are currently viewing is shown as the final entry in the telemetry timeline.
+The occurrence you are currently viewing is highlighted and shown as the final entry in the telemetry timeline.
 
-SCREENSHOT HERE w/ final entry formatting.
+![](../images/guides/telemetry/final_event.png)
 
 To select which telemetry events are captured and sent along with exceptions and messages, see the config options for `autoinstrument` in the [rollbar.js docs](https://rollbar.com/docs/notifiers/rollbar.js#telemetry)
 {:info}
