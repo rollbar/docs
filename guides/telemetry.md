@@ -15,7 +15,7 @@ When using [rollbar.js](https://rollbar.com/docs/notifiers/rollbar.js#telemetry)
 
 The telemetry timeline for an occurrence can be viewed with oldest or newest entries displayed first, and each entry includes both an absolute timestamp (based on the project timezone) and a relative timestamp based on when the `DOMContentLoaded` event fired.
 
-![](../images/guides/telemetry/timestamp.png)
+![](../images/guides/telemetry/event_timestamp.png)
 
 The occurrence you are currently viewing is highlighted and shown as the final entry in the telemetry timeline.
 
