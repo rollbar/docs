@@ -1,7 +1,7 @@
 # Javascript Telemetry
 
 In order to collect telemetry events from your client-side Javascript, make sure you are using the [latest release of rollbar.js](https://github.com/rollbar/rollbar.js/releases/latest).
-{ :info}
+{: .info}
 
 When using [rollbar.js](https://rollbar.com/docs/notifiers/rollbar.js#telemetry) in client-side Javascript, Rollbar will track and report events that happen prior to an exception or message being reported, and display them in the **Telemetry** section of an occurrence.  The telemetry timeline provides 'breadcrumbs' that can help developers understand and fix problems in their client-side Javascript, including:
 
@@ -22,4 +22,4 @@ The occurrence you are currently viewing is highlighted and shown as the final e
 ![](../images/guides/telemetry/final_event.png)
 
 To select which telemetry events are captured and sent along with exceptions and messages, see the config options for `autoinstrument` in the [rollbar.js docs](https://rollbar.com/docs/notifiers/rollbar.js#telemetry)
-{ :info}
+{: .info}
