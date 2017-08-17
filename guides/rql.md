@@ -13,14 +13,14 @@ clause.
 `SELECT`, `FROM`, and `WHERE` are required.
 `GROUP BY`, `ORDER BY`, and `LIMIT` are optional.
 
-`SELECT *` \*may\* be used (as long as there is no GROUP BY). It will
+`SELECT *` may be used as long as there is no `GROUP BY` clause. It will
 return a list of columns similar to the Occurrences tab on Item Detail
 pages.
 
 SQL keywords and built-in function names are case-insensitive (i.e.
 `SELECT` and `select` are both fine).
 
-Names (i.e. column names) should start with a lowercase letter and may
+Column names should start with a lowercase letter and may
 contain letters, numbers, and periods (for specifying a JSON path). If
 you need any other characters (i.e. a hyphen, or to start with an
 uppercase letter), escape with backticks (i.e.
