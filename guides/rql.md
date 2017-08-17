@@ -1,18 +1,17 @@
 # RQL
 
-Rollbar Query Language (RQL)  is an attempt at exposing a rich querying
-interface to the data in Rollbar. Its goal is to be SQL-like, so it
-should be familiar to SQL users.
+Rollbar Query Language (RQL)  provides a rich SQL-like
+interface to the data in Rollbar.
 
-This first release allows running `SELECT`s on two logical tables,
-`item_occurrence` and `deploy`. Basic GROUP BY, ORDER BY, LIMIT, and
-aggregation functions all work, as do arbitrary expressions in the WHERE
-clause. No DISTINCT, HAVING, subqueries, or joins yet.
+RQL supports running `SELECT` queries on two logical tables,
+`item_occurrence` and `deploy`. Basic `GROUP BY`, `ORDER BY`, `LIMIT`, and
+aggregation functions are available, as are arbitrary expressions in the `WHERE`
+clause.
 
 ### Syntax
 
-Simple-ish queries are supported. SELECT, FROM, and WHERE are required.
-GROUP BY, ORDER BY, and LIMIT are optional.
+`SELECT`, `FROM`, and `WHERE` are required.
+`GROUP BY`, `ORDER BY`, and `LIMIT` are optional.
 
 `SELECT *` \*may\* be used (as long as there is no GROUP BY). It will
 return a list of columns similar to the Occurrences tab on Item Detail
@@ -95,11 +94,11 @@ WHERE item.counter IN (1,2,3)
 -   For better performance, filter by item (i.e.
     `WHERE item.counter = 123`) or by timestamp (i.e.
     `WHERE timestamp > unix_timestamp() - 86400`)
--   When using GROUP BY or ORDER BY, make sure the group/order clause is
-    also present in the SELECT clause
+-   When using `GROUP BY` or `ORDER BY`, make sure the group/order clause is
+    also present in the `SELECT` clause
 -   You can share the URL with a co-worker and they'll see the same
     results you do, without having to run the query again.
--   After a query has completed, press Execute again to re-run it.
+-   After a query has completed, press `Execute` again to re-run it.
 
 ### Limitations
 
@@ -252,7 +251,7 @@ The `item.platform` property is an integer value which maps as follows:
 
 ### Future Improvements
 
--   "DISTINCT", "HAVING"
+-   `DISTINCT`, `HAVING` clauses
 -   More performance optimizations
 -   More functions
 -   Better progress indicators
