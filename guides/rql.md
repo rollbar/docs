@@ -1,9 +1,6 @@
 # RQL
 
-_Important: RQL is a work in progress. While it's generally stable,
-expect bugs at the corners._
-
-RQL ("Rollbar Query Language") is an attempt at exposing a rich querying
+Rollbar Query Language (RQL)  is an attempt at exposing a rich querying
 interface to the data in Rollbar. Its goal is to be SQL-like, so it
 should be familiar to SQL users.
 
@@ -196,7 +193,6 @@ Here are some common column names, all of which refer to data for the occurrence
 | `server.code_version` | String describing the running code version on the server
 | `uuid` | A string that uniquely identifies the occurrence. See [UUIDs](/docs/uuids/)
 
-
 #### deploy
 
 `deploy` is a table where each row represents a single deploy. It has
@@ -212,25 +208,6 @@ the following columns:
 | `local_username` | Local username recorded for the deploy
 | `comment` | The deploy comment
 | `timestamp` | Timestamp when the deploy was recorded
-
-### Roadmap
-
--   "DISTINCT", "HAVING"
--   More performance optimizations
--   More functions
--   Better progress indicators
--   Saved searches
--   More visualization options (i.e. bar graphs, line graphs, etc.)
--   Download results as CSV/JSON dump (with support for large
-    resultsets)
--   More data tables
-
-
-### Known Bugs
-
--   An aggregation query that does not match any rows will return no
-    results at all, instead of a row indicating that zero rows were
-    found.
     
 ### Framework IDs
 
@@ -272,3 +249,15 @@ The `item.platform` property is an integer value which maps as follows:
     'google-app-engine': 6,
     'client': 7,
 ```
+
+### Future Improvements
+
+-   "DISTINCT", "HAVING"
+-   More performance optimizations
+-   More functions
+-   Better progress indicators
+-   Saved searches
+-   More visualization options (i.e. bar graphs, line graphs, etc.)
+-   Download results as CSV/JSON dump (with support for large
+    resultsets)
+-   More data tables
