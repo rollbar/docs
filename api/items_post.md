@@ -95,7 +95,7 @@ understands. The meaning of each key is explained in the comments.
         "source": "client",
 
         // Required: timestamp_ms
-        // When this occurred, as a unix timestamp.
+        // When this occurred, as a unix timestamp in milliseconds.
         "timestamp_ms": 1500413393557,
 
         // Required: body
