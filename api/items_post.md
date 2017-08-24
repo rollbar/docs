@@ -437,7 +437,7 @@ understands. The meaning of each key is explained in the comments.
 }
 ```
 
-Note that you can send us whatever data you want and we'll store it. Max paylaod size is 128kb.
+Note that you can send us whatever data you want and we'll store it. Max paylaod size is 512kb.
 For best results, put custom data in `request`, `server`, `client`, `person`, or `custom`.
 
 ### Response Format
