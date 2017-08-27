@@ -118,3 +118,4 @@ Be careful, there is no undo!
 Requires `write` scope.
 
 -----
+Last updated: August 27, 2017

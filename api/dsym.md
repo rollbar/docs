@@ -23,3 +23,6 @@ curl -X POST "https://api.rollbar.com/api/1/dsym"
 ```
 Note: For version, you should use the "Bundle version" from your plist which corresponds to the Build Number. This is not the Version Number which is found under the key "Bundle versions string, short" in your plist. See this [technical note](https://developer.apple.com/library/content/technotes/tn2420/_index.html) for more information.
 We use this to match up the dSYM with the same version of the code that caused the stack trace.
+
+-----
+Last updated: August 27, 2017

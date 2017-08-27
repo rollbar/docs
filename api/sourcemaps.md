@@ -53,3 +53,6 @@ curl https://api.rollbar.com/api/1/sourcemap/download
 	-F version=92429d82a41e930486c6de5ebda9602d55c39986 \  
 	-F minified_url=http://example.com/static/js/example.min.js
 ```
+
+-----
+Last updated: August 27, 2017
