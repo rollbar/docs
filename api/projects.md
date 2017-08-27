@@ -77,3 +77,4 @@ no rate limit. Params must be supplied as JSON, and as the body of the request. 
 the header `Content-Type: application/json`.
 
 -----
+Last updated: August 27, 2017

@@ -68,3 +68,6 @@ Link | Author | Language | Description
 [api-examples](https://github.com/rollbar/api-examples)|Rollbar|Python|Examples using RQL, deploys, occurrences, and reports
 [api-people-example](https://github.com/rollbar/api-people-example)|Rollbar|Python|Shows how to gather the Person data for each occurrence of a list of items
 [rolltools](https://github.com/jslate/rolltools)|[Jonathan Slate](https://github.com/jslate)|Ruby|A few utilities using the Rollbar API
+
+-----
+Last updated: August 27, 2017

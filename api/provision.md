@@ -56,3 +56,6 @@ Response
     "project_url": "https://rollbar.com/project/12345/"
   }
 ```
+
+-----
+Last updated: August 27, 2017

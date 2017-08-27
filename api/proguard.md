@@ -18,3 +18,6 @@ curl 'https://api.rollbar.com/api/1/proguard' \
 	-F version=0.0.10 \
 	-F mapping=@mapping.txt
 ```
+
+-----
+Last updated: August 27, 2017

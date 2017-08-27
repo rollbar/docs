@@ -505,3 +505,7 @@ The Items API can return the following status codes:
 
 If you encounter any other errors, or don't understand an error you see, please
 [contact support](https://rollbar.com/contact/).
+
+
+-----
+Last updated: August 27, 2017
