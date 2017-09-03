@@ -87,7 +87,7 @@ understands. The meaning of each key is explained in the comments.
         "level": "info",
 
         // Required: type
-        // The type of telemetry data. One of: "log", "network", "dom", "navigation", "error", "custom".
+        // The type of telemetry data. One of: "log", "network", "dom", "navigation", "error", "manual".
         "type": "network",
 
         // Required: source
