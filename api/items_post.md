@@ -80,7 +80,7 @@ understands. The meaning of each key is explained in the comments.
       // If a message with no stack trace, use "message"
       // If an iOS crash report, use "crash_report"
 
-      // Optional: "telemetry". Only applicable if you are sending [telemetry data](/docs/notifier/rollbar.js/#telemetry). 
+      // Optional: "telemetry". Only applicable if you are sending telemetry data. 
       "telemetry": {
         // Required: level
         // The severity level of the telemetry data. One of: "critical", "error", "warning", "info", "debug".
