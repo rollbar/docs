@@ -80,6 +80,41 @@ understands. The meaning of each key is explained in the comments.
       // If a message with no stack trace, use "message"
       // If an iOS crash report, use "crash_report"
 
+      // Optional: "telemetry". Only applicable if you are sending [telemetry data](/docs/notifier/rollbar.js/#telemetry). 
+      "telemetry": {
+        // Required: level
+        // The severity level of the telemetry data. One of: "critical", "error", "warning", "info", "debug".
+        "level": "info",
+
+        // Required: type
+        // The type of telemetry data. One of: "log", "network", "dom", "navigation", "error", "manual".
+        "type": "network",
+
+        // Required: source
+        // The source of the telemetry data. Usually "client" or "server".
+        "source": "client",
+
+        // Required: timestamp_ms
+        // When this occurred, as a unix timestamp in milliseconds.
+        "timestamp_ms": 1500413393557,
+
+        // Required: body
+        // The key-value pairs for the telemetry data point. See "body" key below.
+        // If type above is "log", body should contain "message" key.
+        // If type above is "network", body should contain "method", "url", and "status_code" keys.
+        // If type above is "dom", body should contain "element" key.
+        // If type above is "navigation", body should contain "from" and "to" keys.
+        // If type above is "error", body should contain "message" key. 
+        "body": {
+          "subtype": "xhr",
+          "method": "GET",
+          "url": "/api/1/item/4/",
+          "status_code": "200",
+          "start_timestamp_ms": 1500413394557,
+          "end_timestamp_ms": 1500413394957
+        },
+      },
+
       // Option 1: "trace"
       "trace": {
 
