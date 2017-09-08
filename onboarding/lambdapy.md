@@ -8,16 +8,16 @@ This basically amounts to running
 pip install rollbar
 ```
 
-## Sending a message to Rollbar
+## Sending a test message to Rollbar
 
-The main change that is required to get Rollbar to work is to either use the `blocking` handler
+Add the following to import and initialize Rollbar:
 
 ```
 import rollbar
-rollbar.init( '{{ server_access_token }}', environment='production', handler='blocking')
+rollbar.init( '{{ server_access_token }}', environment='production')
 ```
 
-or to use the decorator `rollbar.lambda_function` which will ensure that any errors/messages will be transmitted to Rollbar before your function returns regardless of whether you use the `blocking` or the default `thread` handler.
+Use the decorator `rollbar.lambda_function` which will ensure that any errors/messages will be transmitted to Rollbar before your function returns:
 
 ```
 @rollbar.lambda_function
@@ -26,4 +26,4 @@ def lambda_handler(event, context):
     return 'Hello Lambda'
 ```
 
-We recommend using the decorator in all situations, but it is technically not necessary when using the `blocking` handler.
+For further instructions on using pyrollbar in AWS Lambda, see our [pyrollbar docs]().
