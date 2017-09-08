@@ -14,7 +14,7 @@ The main change that is required to get Rollbar to work is to either use the `bl
 
 ```
 import rollbar
-rollbar.init( token='{{ server_access_token }}', environment='production', handler='blocking')
+rollbar.init( '{{ server_access_token }}', environment='production', handler='blocking')
 ```
 
 or to use the decorator `rollbar.lambda_function` which will ensure that any errors/messages will be transmitted to Rollbar before your function returns regardless of whether you use the `blocking` or the default `thread` handler.
