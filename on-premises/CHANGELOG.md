@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.8.3
+
+Release date: September 11, 2017
+
+### Application
+
+- New feature: JavaScript Telemetry. Requires upgrading to rollbar.js 2.2.4 or higher. [More info](https://rollbar.com/docs/telemetry/)
+- New feature: Google OAuth authentication
+- Improvements to [JIRA integration](https://changelog.rollbar.com/jira-updates-oauth-more-29665)
+- Various bug fixes and UI polish
+
 ## 0.8.2
 
 Release date: July 18, 2017
