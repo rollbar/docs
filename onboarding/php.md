@@ -1,6 +1,6 @@
 ## Installation with Composer (recommended)
 
-Add `rollbar/rollbar` with composer
+Add `rollbar/rollbar` with composer:
 
 ```bash
 $ composer require rollbar/rollbar:~1.1
