@@ -1,4 +1,4 @@
-## Installation with Composer (recommended)
+## Installation w/ Composer (recommended)
 
 Add `rollbar/rollbar` with composer:
 
