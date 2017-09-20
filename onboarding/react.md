@@ -1,6 +1,6 @@
 ## Installation
 
-To use the React <a href="https://github.com/rollbar/rollbar.js" target="_blank" rel="noopener">rollbar.js</a> notifier, simply copy-paste the following code
+To use the React <a href="https://github.com/rollbar/rollbar.js" target="_blank" rel="noopener">rollbar.js</a> SDK, simply copy-paste the following code
 into the ```<head>``` of any page you'd like to monitor. Add it before all other ```<script>``` tags to ensure that errors
 in those scripts are reported to Rollbar.
 
