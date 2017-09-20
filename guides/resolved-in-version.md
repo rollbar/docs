@@ -2,7 +2,7 @@
 
 You can track which versions or revisions your errors are resolved in. When resolving items within Rollbar, you have the option of entering a revision or version number. If one is entered, it will appear in the item’s status history to let anyone looking at the item better understand specifically when it was fixed.
 
-This version can be combined with a new code_version parameter set in the configuration options of the latest versions of our notifiers. This can be set to either a numerical value (eg. 1, 24, 300), a semantic version value (eg. 1.0.3, 2.9), or a Git revision SHA. Here are examples on how to set this parameter in our JavaScript and Ruby notifiers:
+This version can be combined with a new code_version parameter set in the configuration options of the latest versions of our Rollbar SDKs. This can be set to either a numerical value (eg. 1, 24, 300), a semantic version value (eg. 1.0.3, 2.9), or a Git revision SHA. Here are examples on how to set this parameter in our JavaScript and Ruby SDKs:
 
 In the JavaScript snippet:
 
@@ -25,7 +25,7 @@ Rollbar.configure do |config|
 end
 ```
 
-The other notifiers have very similar top-level code_version configuration settings. See the docs for your notifier for more info.
+The other SDKs have very similar top-level code_version configuration settings. See the docs for your SDK for more info.
 
 If you resolve an item within Rollbar in a certain version and also specify a code_version, we use both of these values to decide whether or not to reactivate the item.
 
