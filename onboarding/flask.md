@@ -1,7 +1,7 @@
 ## Installation
 
-To send errors to Rollbar from your Python application you should use 
-<a href="http://github.com/rollbar/pyrollbar" target="_blank" rel="noopener">pyrollbar</a> notifier library. Install pyrollbar with pip:
+To send errors to Rollbar from your Python application you should use the
+<a href="http://github.com/rollbar/pyrollbar" target="_blank" rel="noopener">pyrollbar</a> package. Install pyrollbar with pip:
 
 ```python
 pip install rollbar
@@ -9,8 +9,8 @@ pip install rollbar
 
 ## Add Rollbar to Your Flask Application
 
-Here's a simple Flask app that demonstrates how you import and initialize the Rollbar
-notifier end gister an exception handler.
+Here's a simple Flask app that demonstrates how you import and initialize the pyrollbar
+package and initiate an exception handler.
 ```python
 from flask import Flask
 app = Flask(__name__)
