@@ -53,7 +53,7 @@ will prevent it from being reactivated before you deploy the new code,
 or from being reactivated by clients that are still running the old code
 (this is especially important for mobile apps). Note that this
 functionality requires the 'code\_version' to be configured in the
-notifier. More details in [this post](https://rollbar.com/blog/resolving-rollbar-items-in-versions).
+SDK. More details in [this post](https://rollbar.com/blog/resolving-rollbar-items-in-versions).
 
 Items can change from Resolved to Active in these ways:
 
