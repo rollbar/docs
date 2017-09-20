@@ -12,7 +12,7 @@ Make sure your `AndroidManifest.xml` contains the `android.permission.INTERNET` 
 
 ## Sending Messages & Errors to Rollbar
 
-By default the notifier will report all uncaught exceptions to Rollbar.
+By default the Rollbar SDK will report all uncaught exceptions to Rollbar.
 
 To report caught exceptions, call `reportException()`:
 
@@ -33,4 +33,4 @@ To report your own messages, call `reportMessage()`:
 Rollbar.reportMessage("A test message", "debug"); // default level is "info"
 ```
 
-For additional configuration information, see the documentation for the <a href="https://github.com/rollbar/rollbar-android " target="_blank" rel="noopener">rollbar-android</a> notifier.
+For additional configuration information, see the documentation for the <a href="https://github.com/rollbar/rollbar-android " target="_blank" rel="noopener">rollbar-android</a> SDK.
