@@ -1,6 +1,6 @@
 ## Installation
 
-Install the Rollbar <a href="https://github.com/rollbar/rollbar.js" target="_blank" rel="noopener">rollbar.js</a> notifier using npm:
+Install the Rollbar <a href="https://github.com/rollbar/rollbar.js" target="_blank" rel="noopener">rollbar.js</a> package using npm:
 
 ```bash
 $ npm install --save rollbar
@@ -19,6 +19,6 @@ rollbar.log("Hello world!");
 
 The message should appear in your Rollbar dashboard within a few seconds.
 
-Once you've verified you have the notifier library installed, your access token works,
+Once you've verified you have the Rollbar package installed, your access token works,
 and you can connect to Rollbar, the <a href="https://github.com/rollbar/rollbar.js" target="_blank" rel="noopener">rollbar.js</a>
 documentation can show you how to automatically report exceptions and log messages to Rollbar.
