@@ -182,7 +182,7 @@ RollbarConfiguration *config = [RollbarConfiguration configuration];
 
 [Rollbar initWithAccessToken:@"POST_CLIENT_ITEM_ACCESS_TOKEN" configuration:config];
 
-// If you've already initialized the notifier, you can update the person later by
+// If you've already initialized the gem, you can update the person later by
 // getting the `config` object and calling `setPersonId` on it:
 
 [config setPersonId:@"42", username:"dadams", email:"dadams@example.com"];
@@ -206,7 +206,7 @@ public void onCreate(Bundle savedInstanceState) {
 
 ```actionscript
 // In flash you must configure the Rollbar person when first initializing the
-// notifier. The fourth argument to `Rollbar.init` is `person`. This argument
+// SDK. The fourth argument to `Rollbar.init` is `person`. This argument
 // can be passed an id string, an object, or a function (which returns an
 // appropriate object):
 
