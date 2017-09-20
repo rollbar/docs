@@ -145,7 +145,7 @@ The following columns exist for every row in `item_occurrence`:
 | `occurrence_id` | System-wide Occurrence ID
 | `timestamp` | Timestamp of the occurrence, as a Unix timestamp
 
-Many virtual columns will usually exist as well, depending on what notifier you are using
+Many virtual columns will usually exist as well, depending on which Rollbar SDK you are using
 and what custom data you are sending. Simply use the JSON path to the field
 you want to query. To see the JSON structure of one of your occurrences, click the
 "Raw JSON" button on an Occurrence page. The structure will follow the
