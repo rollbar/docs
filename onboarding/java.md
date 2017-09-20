@@ -1,6 +1,6 @@
 ## Installation
 
-To send errors to Rollbar from your Java application, you should use our <a href="https://github.com/rollbar/rollbar-java" target="_blank" rel="noopener">java-rollbar</a> notifier library. 
+To send errors to Rollbar from your Java application, you should use our <a href="https://github.com/rollbar/rollbar-java" target="_blank" rel="noopener">java-rollbar</a> package. 
 
 You can, of course, build it yourself and depend on the .jar manually, however, the modules are up on maven central and can be installed in most tool chains pretty trivially. 
 
