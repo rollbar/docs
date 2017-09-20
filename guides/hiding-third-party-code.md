@@ -8,7 +8,7 @@ Rollbar will collapse stack frames from third party code.
 
 ### Single Root
 
-To set this up all you have to do is configure your notifier to send the `server.root`, or
+To set this up all you have to do is configure your SDK to send the `server.root`, or
 the prefix URL for all in-house stack frame filenames. Any code from outside the `server.root`
 directory will be collapsed by default when you load that item in the Rollbar UI.
 

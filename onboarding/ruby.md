@@ -20,7 +20,7 @@ gem install rollbar
 
 ## Send a test message
 
-You'll need your project's server-side access token to initialize the Rollbar notifier. Sending
+You'll need your project's server-side access token to initialize the Rollbar gem. Sending
 a message to Rollbar is as simple as:
 
 ```ruby

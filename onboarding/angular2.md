@@ -1,6 +1,6 @@
 ## Installation
 
-Install the Rollbar <a href="https://github.com/rollbar/rollbar.js" target="_blank" rel="noopener">rollbar.js</a> notifier using npm:
+Install the Rollbar <a href="https://github.com/rollbar/rollbar.js" target="_blank" rel="noopener">rollbar.js</a> package using npm:
 
 ```bash
 $ npm install --save rollbar

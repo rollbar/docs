@@ -6,11 +6,11 @@ Last updated: December 15, 2014
 
 ## Disclosure and audit
 
-Data is sent to the Rollbar API via notifiers that are installed and run on customer machines or embedded in web pages and run on customer's user's browsers. We provide and maintain official open-source libraries for several popular programming languages and platforms, including [Ruby](https://github.com/rollbar/rollbar-gem), [Python](https://github.com/rollbar/pyrollbar), [Node.js](https://github.com/rollbar/node_rollbar), [JavaScript](https://github.com/rollbar/rollbar.js), and [PHP](https://github.com/rollbar/rollbar-php). 
+Data is sent to the Rollbar API via SDKs that are installed and run on customer machines or embedded in web pages and run on customer's user's browsers. We provide and maintain official open-source libraries for several popular programming languages and platforms, including [Ruby](https://github.com/rollbar/rollbar-gem), [Python](https://github.com/rollbar/pyrollbar), [Node.js](https://github.com/rollbar/node_rollbar), [JavaScript](https://github.com/rollbar/rollbar.js), and [PHP](https://github.com/rollbar/rollbar-php). 
 
-Notifiers are small pieces of code that gather and report data to Rollbar over HTTPS. They do not generate any dynamic code, so you do not need to worry about them interfering with your codebase once installed. Notifiers are also designed to run in an asynchornous manner (where available), and should not have a noticeable impact on performance.
+SDKs are small pieces of code that gather and report data to Rollbar over HTTPS. They do not generate any dynamic code, so you do not need to worry about them interfering with your codebase once installed. SDKs are also designed to run in an asynchornous manner (where available), and should not have a noticeable impact on performance.
 
-Since all of the notifier code is open-source, the community is able and encouraged to audit the source code. All code is hosted at [GitHub - Rollbar](http://github.com/rollbar/).
+Since all of the Rollbar SDK code is open-source, the community is able and encouraged to audit the source code. All code is hosted at [GitHub - Rollbar](http://github.com/rollbar/).
 
 ## Secured content
 
@@ -22,39 +22,39 @@ See our [privacy policy](http://rollbar.com/privacy) for more information.
 
 ## Data collection
 
-Our [privacy policy](http://rollbar.com/privacy) details the type of data we collect via our website and notifiers.
+Our [privacy policy](http://rollbar.com/privacy) details the type of data we collect via our website and SDKs.
 
-All data collected from our notifiers is stored in raw and aggregated forms. Both the aggregated and raw data are available via our website as well as our API. More information about our API can be found [here](http://rollbar.com/docs/api/).
+All data collected from our SDKs is stored in raw and aggregated forms. Both the aggregated and raw data are available via our website as well as our API. More information about our API can be found [here](http://rollbar.com/docs/api/).
 
 ## Data transmission
 
 ### HTTPS
 
-All data transmitted to Rollbar from our notifiers is done over SSL by default. Users can choose to configure HTTPS or HTTP in each notifier by providing a configuration option or editing the source code directly. We do not perform host authentication over HTTPS nor do we store any passwords in our notifiers. HTTPS is used solely for communication encryption.
+All data transmitted to Rollbar from our SDKs is done over SSL by default. Users can choose to configure HTTPS or HTTP in each SDK by providing a configuration option or editing the source code directly. We do not perform host authentication over HTTPS nor do we store any passwords in our SDKs. HTTPS is used solely for communication encryption.
 
 ### SSL certificates
 
-Notifiers send data to [https://api.rollbar.com/](https://api.rollbar.com/). We have an extended validation SSL certificate from [DigiCert](https://www.digicert.com) which our API servers use to ensure trusted communication between our customers and Rollbar.
+SDKs send data to [https://api.rollbar.com/](https://api.rollbar.com/). We have an extended validation SSL certificate from [DigiCert](https://www.digicert.com) which our API servers use to ensure trusted communication between our customers and Rollbar.
 
 ### CORS (cross-origin resource sharing)
  
-Rollbar's API servers are configured to allow [CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) requests for API endpoints that are used by our JavaScript notifiers. This enables our customers to send data from their users' browsers to Rollbar for processing. Our CORS enabled endpoints only allow POST requests.
+Rollbar's API servers are configured to allow [CORS](http://en.wikipedia.org/wiki/Cross-origin_resource_sharing) requests for API endpoints that are used by our JavaScript SDK. This enables our customers to send data from their users' browsers to Rollbar for processing. Our CORS enabled endpoints only allow POST requests.
 
 ### Serialization formats
 
-Data from our notifiers is either serialized into JSON or multipart-mime format before being sent. Our API servers respond with application/json content-type.  
+Data from our SDKs is either serialized into JSON or multipart-mime format before being sent. Our API servers respond with application/json content-type.  
 
 ## Proxies
 
-None of the notifiers currently support proxies. Work on this is not yet scheduled. Please contact [support@rollbar.com](mailto:support@rollbar.com) if this would be useful for you.
+None of the SDKs currently support proxies. Work on this is not yet scheduled. Please contact [support@rollbar.com](mailto:support@rollbar.com) if this would be useful for you.
 
 ## Data scrubbing
 
-Data scrubbing is the process of removing sensitive information from the data sent to Rollbar by the notifier. All of the notifiers support data scrubbing. Refer to their individual READMEs on github for information regarding configuration.
+Data scrubbing is the process of removing sensitive information from the data sent to Rollbar by the SDK. All of the SDKs support data scrubbing. Refer to their individual READMEs on github for information regarding configuration.
 
-### Notifiers
+### SDKs
 
-By default, notifiers will attempt to remove request parameters that look like sensitive information. For example, the rollbar-gem notifier scrubs the following request parameters by default:
+By default, SDKs will attempt to remove request parameters that look like sensitive information. For example, the rollbar-gem SDK scrubs the following request parameters by default:
 
 - passwd
 - password
@@ -101,7 +101,7 @@ We follow best practices for securing SSH and used industry-standard tools such 
 
 #### Raw data
 
-The data we collect from our notifiers is referred to as "raw" data. We store this data in temporary files that have a very short lifetime (less than a few seconds) before loading them into a MySQL cluster and Memcache. The data stored in MySQL and Memcache is not encrypted, although it is compressed.
+The data we collect from our SDKs is referred to as "raw" data. We store this data in temporary files that have a very short lifetime (less than a few seconds) before loading them into a MySQL cluster and Memcache. The data stored in MySQL and Memcache is not encrypted, although it is compressed.
 
 #### Uploaded data
 

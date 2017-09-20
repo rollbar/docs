@@ -1,7 +1,7 @@
 ## Installation
 
-To send errors to Rollbar from your Python application you should use 
-<a href="http://github.com/rollbar/pyrollbar" target="_blank" rel="noopener">pyrollbar</a> notifier library. Install pyrollbar with pip:
+To send errors to Rollbar from your Python application you should use the
+<a href="http://github.com/rollbar/pyrollbar" target="_blank" rel="noopener">pyrollbar</a> package. Install pyrollbar with pip:
 
 ```python
 pip install rollbar
@@ -9,7 +9,7 @@ pip install rollbar
 
 ## Add Rollbar to Your Bottle Application
 
-Here's a simple Bottle application that demonstrates how you import and initialize Rollbar
+Here's a simple Bottle application that demonstrates how you import and initialize pyrollbar
 and register it as an error handler.
 
 ```python
