@@ -2,7 +2,7 @@
 
 	POST /api/1/dsym
 
-This is usually done via the [upload_dsym.py](https://raw.githubusercontent.com/rollbar/rollbar-ios/master/upload_dsym.py) script. For more information on this, see the "Symbolication using .dSYM files" section of our [iOS notifier docs](https://rollbar.com/docs/notifier/rollbar-ios/).
+This is usually done via the [upload_dsym.py](https://raw.githubusercontent.com/rollbar/rollbar-ios/master/upload_dsym.py) script. For more information on this, see the "Symbolication using .dSYM files" section of our [rollbar-ios docs](https://rollbar.com/docs/notifier/rollbar-ios/).
 
 ### Form Data Parameters
 
