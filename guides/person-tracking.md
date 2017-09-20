@@ -153,6 +153,7 @@ var _rollbarConfig = {
       id: 42,
       username: 'dadams',
       email: 'dadams@example.com'
+    }
   }
 }
 
