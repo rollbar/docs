@@ -1,4 +1,4 @@
-Rollbar doesn't maintain an official Clojure notifier library, however the following
+Rollbar doesn't maintain an official Clojure SDK, however the following
 community-supported libraries are available:
 
 * <a href="https://github.com/nervous-systems/cljs-rollbar" target="_blank" rel="noopener">cljs-rollbar</a> by <a href="https://github.com/moea" target="_blank" rel="noopener">Moe Aboulkheir</a>
