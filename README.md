@@ -2,7 +2,7 @@
 
 This repo contains the source for several pages at [https://rollbar.com/docs](https://rollbar.com/docs).
 
-Everything is Markdown, with a few extensions:
+Everything is markdown with a few extensions:
 
 - fenced code blocks
 - tables
