@@ -1,36 +1,44 @@
 ## Installation
 
-Download <a href="https://github.com/rollbar/rollbar-android/releases/latest" target="_blank" rel="noopener">rollbar-android.jar</a> and place it in your Android project's `libs` directory.
-
-Add the following line in your custom Application subclass's `onCreate()` to initialize Rollbar:
-
-```java
-Rollbar.init(this, "{{ client_access_token }}", "production");
+To add Rollbar to an Android project, update your `app/build.gradle` to include the following `compile` call:
+```
+compile 'com.rollbar:rollbar-android:0+'
 ```
 
-Make sure your `AndroidManifest.xml` contains the `android.permission.INTERNET` permission.
+## Initialization
 
-## Sending Messages & Errors to Rollbar
+Make sure to add the following permissions to your `AndroidManifest.xml`:
+```xml
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+```
 
-By default the rollbar-android SDK will report all uncaught exceptions to Rollbar.
 
-To report caught exceptions, call `reportException()`:
 
-```java
-Rollbar.reportException(new Exception("Test exception")); // default level is "warning"
+Import `com.rollbar.android.Rollbar` and call `Rollbar.init()` in the `onCreate()` method:
+``` java
+import com.rollbar.android.Rollbar;
 
-try {
-    amount = Integer.parseInt(data);
-} except (NumberFormatException e) {
-    // Providing a description for this exception
-    Rollbar.reportException(e, "critical", "Unexpected data from server");
+public class MainActivity extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Rollbar.init(this, "{{ client_access_token }}", "development");
+        Rollbar.reportMessage("A test message", "debug");
+    }
 }
 ```
 
-To report your own messages, call `reportMessage()`:
+## Send Test Data
 
-```java
-Rollbar.reportMessage("A test message", "debug"); // default level is "info"
+Add the following anywhere in your application after the `init()` call to send some test data:
+``` java
+Rollbar.reportMessage("Test message", "debug");
+Rollbar.reportException(new Exception("Test exception"));       
 ```
 
-For additional configuration information, see the documentation for the <a href="https://github.com/rollbar/rollbar-android " target="_blank" rel="noopener">rollbar-android</a> SDK.
+## Further configuration
+
+For additional configuration information, see the documentation for the <a href="https://rollbar.com/docs/notifier/rollbar-android " target="_blank" rel="noopener">rollbar-android</a> SDK.
