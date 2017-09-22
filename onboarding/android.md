@@ -32,7 +32,7 @@ public class MainActivity extends Activity {
 
 ## Send Test Data
 
-Add the following anywhere in your application after the `init()` call to send some test data:
+Add the following anywhere in your application after the `init()` call to send test data:
 ``` java
 Rollbar.reportMessage("Test message", "debug");
 Rollbar.reportException(new Exception("Test exception"));       
