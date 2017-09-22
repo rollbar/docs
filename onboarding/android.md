@@ -1,6 +1,6 @@
 ## Installation
 
-To add Rollbar to an Android project, update your `app/build.gradle` to include the following `compile` call:
+Update your `app/build.gradle` to include the following `compile` call:
 ```
 compile 'com.rollbar:rollbar-android:0+'
 ```
