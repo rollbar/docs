@@ -15,7 +15,7 @@ Make sure to add the following permissions to your `AndroidManifest.xml`:
 
 
 
-Import `com.rollbar.android.Rollbar` and call `Rollbar.init()` in the `onCreate()` method:
+Import `com.rollbar.android.Rollbar` and call `Rollbar.init()` in `onCreate()`:
 ``` java
 import com.rollbar.android.Rollbar;
 
@@ -24,9 +24,8 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
         Rollbar.init(this, "{{ client_access_token }}", "development");
-        Rollbar.reportMessage("A test message", "debug");
+        // Rest of onCreate() method ....
     }
 }
 ```
