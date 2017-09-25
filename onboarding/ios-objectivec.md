@@ -5,7 +5,7 @@
 In your Podfile:
 
 ```
- platform :ios
+platform :ios
 
 target 'YOUR_APP_NAME' do
   pod "Rollbar", "~> 0.2"
@@ -22,7 +22,7 @@ end
 
 3. In Xcode, select _File_ -> _Add Files to "[your project name]"_ and choose the Rollbar directory from step 2.
 
-## Configuration
+## Configuration and Testing
 
 In your Application delegate implementation file, add the following import statement:
 
@@ -40,14 +40,8 @@ Then add the following to `application:didFinishLaunchingWithOptions:`:
     // Rest of your code here...
     return YES;
 }
-```
-That's all you need for Rollbar to automatically report when the app restarts following a crash.
 
-## Send a test message to verify
-To send a test message, add the following line after calling `initWithAccessToken`:
-```
-[Rollbar infoWithMessage:@"Test message"];
-```
+Once you've confirmed that a test message was sent to your Rollbar project, remove the call to `[Rollbar infoWithMessage]`.
 
 ## Further Configuration
 
