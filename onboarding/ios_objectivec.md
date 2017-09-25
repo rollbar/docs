@@ -40,6 +40,7 @@ Then add the following to `application:didFinishLaunchingWithOptions:`:
     // Rest of your code here...
     return YES;
 }
+```
 
 Once you've confirmed that a test message was sent to your Rollbar project, remove the call to `[Rollbar infoWithMessage]`.
 
