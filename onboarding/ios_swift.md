@@ -36,7 +36,7 @@ Then add the following to the`application` function:
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        Rollbar.initWithAccessToken("413ec49f6b714d5f90cc13d0e94548f3")
+        Rollbar.initWithAccessToken("{{client_access_token}}")
         Rollbar.info(withMessage: "Test message to Rollbar")
         //Rest of your code here...
         return true
