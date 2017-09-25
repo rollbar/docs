@@ -24,7 +24,7 @@ end
 
 ## Configuration and Testing
 
-In your Application delegate implementation file, add the following import statement:
+In your `AppDelegate.m` file, add the following import statement:
 
 ```objective-c
 #import <Rollbar/Rollbar.h>
