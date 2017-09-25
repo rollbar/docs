@@ -1,6 +1,4 @@
-## Installation
-
-### With <a href="http://cocoapods.org/" target="_blank" rel="noopener">Cocoapods</a>
+## Installation With <a href="http://cocoapods.org/" target="_blank" rel="noopener">Cocoapods</a> _(Recommended)_
 
 In your Podfile:
 
