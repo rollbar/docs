@@ -31,7 +31,7 @@ In your `AppDelegate.swift` file, add the following import statement:
 import Rollbar
 ```
 
-Then add the following to the`application:` function:
+Then add the following to the`application` function:
 
 ```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -45,6 +45,8 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 
 Once you've confirmed that a test message was sent to your Rollbar project, remove the call to `Rollbar.info()`.
 
+That's all that's necessary for Rollbar to capture crashes and report them next time your app starts!
+
 ## Further Configuration
 
-For additional configuration instructsion, including instructions for symbolication, see the documentation for <a href="https://rollbar.com/docs/notifier/rollbar-ios" target="_blank" rel="noopener">rollbar-ios</a>.
+For additional configuration instructions, including instructions for symbolication, see the documentation for <a href="https://rollbar.com/docs/notifier/rollbar-ios" target="_blank" rel="noopener">rollbar-ios</a>.
