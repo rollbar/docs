@@ -8,13 +8,26 @@ Install Rollbar.Net with Nuget:
 Install-Package Rollbar
 ```
 
-## Send a Message
-
-You'll need your project's server-side access token to initialize the Rollbar.NET SDK. Sending
-a message to the Rollbar server is as simple as:
+To use inside an ASP.Net Application, first in your global.asax.cs and Application_Start method initialize Rollbar:
 
 ```csharp
-Rollbar.Init(new RollbarConfig("{{server_access_token}}");
+protected void Application_Start()
+{
+    ...
+    Rollbar.Init(new RollbarConfig
+    {
+        AccessToken = ConfigurationManager.AppSettings["{{server_access_token}}"],
+        Environment = ConfigurationManager.AppSettings["Rollbar.Environment"]
+    });
+    ...
+}
+```
+
+## Send a Message
+
+Sending a message to the Rollbar server is as simple as running this command after initializing Rollbar:
+
+```csharp
 Rollbar.Report("Rollbar is configured correctly");
 ```
 
