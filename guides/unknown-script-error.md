@@ -3,6 +3,8 @@ This happens when your JS code is hosted on a different domain (i.e. a CDN). To 
 
 If the script errors are coming from Javascript that you don't maintain, you can suppress them using the [ignoreMessages option in Rollbar.js](/docs/notifier/rollbar.js/#ignoring-specific-exception-messages)
 
+It is normal to still get some of these errors even after following the steps below and setting up CORS, because almost everyone has third party JS on their site that isn't set up with the CORS headers. 
+
 # Full explanation
 `"Script Error"` happens when an uncaught JavaScript error crosses domain boundaries in violation of the cross-origin policy. For example, if you host your JavaScript code on a CDN, any uncaught errors (errors that bubble up to the `window.onerror` handler, instead of being caught in `try-catch`) will get reported as simply `"Script error"` instead of containing useful information. This is a browser security measure intended to prevent passing data across domains that otherwise wouldn't be allowed to communicate. It's implemented in Firefox and Chrome.
 
