@@ -5,7 +5,7 @@ processed. In turn, this gives you control over how many occurrences
 count towards your monthly bill.
 
 Each project access token can be individually configured with a
-different rate limit. Once the limit is reached, all calls to POST items
+different rate limit. The default rate limit for all access tokens is 5,000 calls per minute.  Once the limit is reached, all calls to POST items
 will return HTTP status code `429 Too Many Requests` until the next rate
 limit window begins.
 
@@ -26,7 +26,7 @@ click on the pencil icon to edit.
 Next, choose a time window from the rate limit dropdown menu. Choices
 are:
 
-1.  No Limit
+1.  Default rate limit
 2.  1 minute
 3.  5 minutes
 4.  30 minutes
