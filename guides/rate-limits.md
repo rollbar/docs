@@ -5,7 +5,9 @@ processed. In turn, this gives you control over how many occurrences
 count towards your monthly bill.
 
 Each project access token can be individually configured with a
-different rate limit. The default rate limit for all access tokens is 5,000 calls per minute.  Once the limit is reached, all calls to POST items
+different rate limit. The default rate limit for all access tokens is 5,000 calls per minute.  If you'd like to set a higher rate limit on any of your access tokens (e.g. 10,000 calls per minute), you can do so by contacting [support@rollbar.com](mailto:support@rollbar.com).  
+
+Once the limit is reached, all calls to POST items
 will return HTTP status code `429 Too Many Requests` until the next rate
 limit window begins.
 
