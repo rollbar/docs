@@ -1,4 +1,4 @@
-We recommend installing the Rollbar plugin through <a href="https://wpackagist.org/" target="_blank" rel="noopener">wpackagist</a> if you manage your project using Composer. This way ensures the plugin and all of its' dependencies are managed by Composer.
+We recommend installing the Rollbar plugin through <a href="https://wpackagist.org/" target="_blank" rel="noopener">wpackagist</a> if you manage your project using Composer. This way ensures the plugin and all of its dependencies are managed by Composer.
 
 
 1. If your WordPress project is not managed with Composer yet, we suggest looking into upgrading your WordPress: <a href="https://roots.io/using-composer-with-wordpress/" target="_blank" rel="noopener">Using Composer with WordPress</a>.
@@ -15,7 +15,7 @@ We recommend installing the Rollbar plugin through <a href="https://wpackagist.o
 
 3. Issue command `composer install` in the root directory of your WordPress project.
 
-4. In `Plugins → Installed plugins` find `Rollbar` and click `Activate` underneath.
+4. In `Plugins &rarr; Installed plugins` find `Rollbar` and click `Activate` underneath.
 
 5. Copy the token value for your post_client_item and post_server_item. Your post_server_item access token is:
 
