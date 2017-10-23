@@ -100,6 +100,7 @@ The following operators are available:
 | `gte` | Greater than or equal to |
 | `lt` | Less than |
 | `lte` | Less than or equal to |
+| `regex_match` | Regular expression matcher |
 
 For the numeric operators (`gt`, `gte`, `lt`, `lte`): the right side must be a
 number, and the left side (data from the occurrence) will be coerced to
@@ -130,6 +131,17 @@ ValueError, and exception message contains the string "database"
 ```
 
 Note: If your exception has nested stack traces, rather than using `body.trace.exception.message`, you'll need to use `body.trace_chain.0.exception.message`, and so on for any paths that begin with `body.trace`.
+
+**Example:** Match items whose message body is 7 to 10 digits and does not begin with 4321
+
+```json
+{
+  "all": [
+    {"path": "body.message.body", "regex_match": "^(?!4321).*"},
+    {"path": "body.message.body", "regex_match": "^\\d{7,10}$"}
+  ]
+}
+```
 
 ### Fingerprint
 
