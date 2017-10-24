@@ -61,6 +61,7 @@ NOTE: You must be an admin of your Okta account to complete the following steps.
    file then click "Next".
    ![](../images/guides/sso/otka_identity_provider_metadata.153800.o.png)
 5. In the "Assign to People" screen, select which users have access to Rollbar then click "Next".
+6. In Rollbar, go to your Account Settings > SSO, and paste the metadata you downloaded in Step 4 into the SAML Metadata field, then click "Save".
 
 
 ### Logging in to Rollbar with Okta
