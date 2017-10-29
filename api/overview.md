@@ -80,4 +80,4 @@ Link | Author | Language | Description
 [rolltools](https://github.com/jslate/rolltools)|[Jonathan Slate](https://github.com/jslate)|Ruby|A few utilities using the Rollbar API
 
 -----
-Last updated: August 27, 2017
+Last updated: October 29, 2017
