@@ -11,6 +11,16 @@ like to see, please [let us know](mailto:support@rollbar.com).
 At this time the best way to discover the available resources/calls is
 by exploring the [test console](https://rollbar.com/docs/test_console/).
 
+### Ping
+
+To test whether you're able to ping the API server, you can simply run the following command:
+
+```bash
+curl 'https://api.rollbar.com/api/1/status/ping'
+```
+
+You will get back `pong` from our server if your request was successful.
+
 ### Timestamps
 
 All timestamps (inputs and outputs) are GMT unix timestamps.
