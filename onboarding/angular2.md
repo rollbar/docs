@@ -22,14 +22,23 @@ const rollbarConfig = {
   captureUnhandledRejections: true,
 };
 
+export function rollbarFactory() {
+  return new Rollbar(rollbarConfig);
+}
+
 @Injectable()
 export class RollbarErrorHandler implements ErrorHandler {
-  constructor(private injector: Injector) { }
-  handleError(err:any) : void {
-    var rollbar = this.injector.get(Rollbar);
-    rollbar.error(err.originalError || err);
+  rollbar: any;
+  constructor(private injector: Injector) {
+    this.rollbar = injector.get(Rollbar);
+  }
+
+  handleError(err: any ): void {
+    console.log(err);
+    this.rollbar.error(err.originalError || err);
   }
 }
+
 
 @NgModule({
   imports: [ BrowserModule ],
@@ -37,11 +46,7 @@ export class RollbarErrorHandler implements ErrorHandler {
   bootstrap: [ AppComponent ],
   providers: [
     { provide: ErrorHandler, useClass: RollbarErrorHandler },
-    { provide: Rollbar,
-      useFactory: () => {
-        return new Rollbar(rollbarConfig)
-      }
-    }
+    { provide: Rollbar,  useFactory: rollbarFactory }
   ]
 })
 export class AppModule { }
