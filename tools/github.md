@@ -25,6 +25,7 @@ a single repository. This has to be done once per project.
 1. Go to the Settings section of your project then click on Source Control. Then click on GitHub.
 2. Click Connect to GitHub. 
 3. Select a repository from the list of available repositories, enter the branch (default is 'master') and a project root within the repository (usually this can be left blank - [click here](../source-control#serverroot) for more details), then save the settings.
+4. Ensure you are sending the `server.root` key with your items. See [here](../source-control#serverroot) for more information.
 
 ### GitHub Issues
 
