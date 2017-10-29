@@ -10,6 +10,7 @@ For general information about Rollbar's Git integration, check out the [Source C
 1. Go to the Settings section of your project then click on Source Control. 
 2. If you have not yet connected to your Bitbucket account, click on Connect to Bitbucket and complete the authorization process.
 3.  Select a repository from the list of available repositories, enter the branch (default is 'master') and a project root within the repository (usually this can be left blank - [click here](../source-control#serverroot) for more details), then save the settings.
+4. Ensure you are sending the `server.root` key with your items. See [here](../source-control#serverroot) for more information.
 
 ### Viewing Bitbucket Source Code from Rollbar
 Once you've successfully connected to a Bitbucket repository, Rollbar error tracebacks and deploy reports will include links to specific lines of code and revisions in your repository.
