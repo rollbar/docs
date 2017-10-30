@@ -1,6 +1,6 @@
 # SAML Identity Providers
 
-NOTE: Users must already exist before they can authenticate via a SAML identity provider. User provisioning from SAML identity providers is not currently supported.
+Users must already exist before they can authenticate via a SAML identity provider. User provisioning from SAML identity providers is not currently supported.
 {: .warning}
 
 Rollbar account owners can configure a [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) identity provider to authenticate users.  The following SAML providers have been tested and have specific instructions below:
@@ -13,7 +13,7 @@ Rollbar account owners can configure a [SAML](https://en.wikipedia.org/wiki/Secu
 
 ## G Suite
 
-NOTE:  You must be an admin of your Google Apps for Work account to complete the following steps.
+You must be an admin of your Google Apps for Work account to complete the following steps.
 {: .info}
 
 **In G Suite:**
@@ -41,7 +41,7 @@ NOTE:  You must be an admin of your Google Apps for Work account to complete the
 
 ## Okta
 
-NOTE: You must be an admin of your Okta account to complete the following steps.
+You must be an admin of your Okta account to complete the following steps.
 {: .info}
 
 **In Okta:**
