@@ -67,7 +67,7 @@ Check out [Configuring SAML for Rollbar](https://support.bitium.com/administrati
 
 Setup procedures for other identity providers will vary. Make sure that users' email addresses are being used as the `Name ID` attribute in the SAML metadata.
 
-## Require Log In via your SAML Identity Provider
+## Require Log In via SAML
 
 Once you have successfully saved metadata for your provider, you have the option of requiring non-owners to login via the identity provider whenever they access your account.  
 
