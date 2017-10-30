@@ -4,6 +4,7 @@ NOTE: Users must already exist before they can authenticate via a SAML identity 
 {: .warning}
 
 Rollbar account owners can configure a [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) identity provider to authenticate users.  The following SAML providers have been tested and have specific instructions below:
+
 * [G Suite](#g-suite)
 * [Okta](#okta)
 * [Bitium](#bitium).
@@ -16,6 +17,7 @@ NOTE:  You must be an admin of your Google Apps for Work account to complete the
 {: .info}
 
 **In G Suite:**
+
 * Open your Google admin panel then click the "Apps" tile.
 * Click "SAML apps" then "Create New App".
 * Click the "+" button on the bottom right to add a new app.
@@ -33,6 +35,7 @@ NOTE:  You must be an admin of your Google Apps for Work account to complete the
 * Optionally, assign Rollbar to the appropriate users and groups
 
 **In Rollbar:**
+
 * Click on the avatar for your user and go to `{AccountName} Settings -> Security -> Identity Provider`
 * Select your identity provider and then enter the XML SAML metadata for the provider and save it.
 
@@ -42,6 +45,7 @@ NOTE: You must be an admin of your Okta account to complete the following steps.
 {: .info}
 
 **In Okta:**
+
 * In the "Applications" screen, click "Add Application"
 * Find the Rollbar app, then click "Add"
 * In the "General Settings" screen, enter your account name, which can be found in the URL when you
@@ -51,6 +55,7 @@ NOTE: You must be an admin of your Okta account to complete the following steps.
 * In the "Assign to People" screen, select which users have access to Rollbar then click "Next".
 
 **In Rollbar:**
+
 * Click on the avatar for your user and go to `{AccountName} Settings -> Security -> Identity Provider`
 * Select your identity provider and then enter the XML SAML metadata for the provider and save it.
 
