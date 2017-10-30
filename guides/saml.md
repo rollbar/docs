@@ -48,11 +48,10 @@ You must be an admin of your Okta account to complete the following steps.
 
 * In the "Applications" screen, click "Add Application"
 * Find the Rollbar app, then click "Add"
-* In the "General Settings" screen, enter your account name, which can be found in the URL when you
-   are logged in (`"https://rollbar.com/{AccountName}/..."`) then click "Next".
-* In the "Sign-On options" screen, click "Identity Provider metadata" to download the XML metadata
-   file then click "Next".
-* In the "Assign to People" screen, select which users have access to Rollbar then click "Next".
+* In the "General Settings" screen, enter your account name, which can be found in the URL when you are logged in (`"https://rollbar.com/{AccountName}/..."`) then click "Next".
+* In the "Sign-On options" screen, click "Identity Provider metadata" to download the XML metadata file.
+* In the "Credential Details" section, make sure that `Application username format` is set to `Email` then click "Done".
+* Assign the appropriate users and groups to Rollbar.
 
 **In Rollbar:**
 
