@@ -1,4 +1,4 @@
-Rollbar's Android SDK is current in beta.  For details, please see the [Readme](https://github.com/rollbar/rollbar-java/blob/master/README.md).  To report issues, make suggestions, or ask questions, please [create an issue in Github](https://github.com/rollbar/rollbar-java/issues/new)
+Rollbar's Java SDK is current in beta.  For details, please see the [Readme](https://github.com/rollbar/rollbar-java/blob/master/README.md).  To report issues, make suggestions, or ask questions, please [create an issue in Github](https://github.com/rollbar/rollbar-java/issues/new)
 {: .info}
 
 ## Installation
