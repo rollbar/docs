@@ -15,4 +15,4 @@ Configuration is per-project in Rollbar.
     adding new ones.
        
 ### Tips & Tricks
-* You can customize the content of Hipchat messages using [notication variables](/docs/notification-variables/).
+* You can customize the content of Hipchat messages using [notification variables](/docs/notification-variables/).
