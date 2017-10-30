@@ -9,6 +9,14 @@ Benefits of providing your source maps to Rollbar include:
     number, method name, and code snippet so you can debug more easily
 -   error grouping should be more resilient to code changes
 
+Before source maps:
+
+![](../images/guides/source-maps/before-source-maps.png)
+
+After source maps:
+
+![](../images/guides/source-maps/after-source-maps.png)
+
 ## Source Map Requirements
 
 For the minified-to-source translation to work, we need:
@@ -395,4 +403,4 @@ Here are a few common problems:
 -   If you're a Rails asset pipeline user, be sure you aren't generating source
     maps off an already minified file.  
     
- If your still not able to get source maps working, we're here to help!  Simply message us via the in-app chat or email <support@rollbar.com>
+ If you're still not able to get source maps working, we're here to help!  Simply message us via the in-app chat or email <support@rollbar.com>
