@@ -1,4 +1,4 @@
-# Single Sign-On (SSO)
+# SAML Identity Providers
 
 NOTE: Users must already exist before they can authenticate via a SAML identity provider. User provisioning from SAML identity providers is not currently supported.
 {: .warning}
