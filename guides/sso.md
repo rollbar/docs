@@ -10,11 +10,6 @@ Rollbar account owners can configure a [SAML](https://en.wikipedia.org/wiki/Secu
 
 [Other SAML-compliant identity providers](#others) may be used, however we don't provide specific instructions for configuring them.
 
-## Connecting to your identity provider in Rollbar
-
-
-  
-
 ## G Suite
 
 NOTE:  You must be an admin of your Google Apps for Work account to complete the following steps.
@@ -36,6 +31,7 @@ NOTE:  You must be an admin of your Google Apps for Work account to complete the
 * On the Attribute Mapping page, add a single attribute statement
    * "Email", Basic Information, Primary Email
 * Optionally, assign Rollbar to the appropriate users and groups
+
 **In Rollbar:**
 * Click on the avatar for your user and go to `{AccountName} Settings -> Security -> Identity Provider`
 * Select your identity provider and then enter the XML SAML metadata for the provider and save it.
@@ -44,6 +40,7 @@ NOTE:  You must be an admin of your Google Apps for Work account to complete the
 
 NOTE: You must be an admin of your Okta account to complete the following steps.
 {: .info}
+
 **In Okta:**
 * In the "Applications" screen, click "Add Application"
 * Find the Rollbar app, then click "Add"
@@ -52,6 +49,7 @@ NOTE: You must be an admin of your Okta account to complete the following steps.
 * In the "Sign-On options" screen, click "Identity Provider metadata" to download the XML metadata
    file then click "Next".
 * In the "Assign to People" screen, select which users have access to Rollbar then click "Next".
+
 **In Rollbar:**
 * Click on the avatar for your user and go to `{AccountName} Settings -> Security -> Identity Provider`
 * Select your identity provider and then enter the XML SAML metadata for the provider and save it.
@@ -69,4 +67,3 @@ Setup procedures for other identity providers will vary. Make sure that users' e
 Once you have successfully saved metadata for your provider, you have the option of requiring non-owners to login via the identity provider whenever they access your account.  
 
 Users who belong to your account may still log in to other accounts using alternate authentication methods (username/email + password, OAuth via Github or Google), but if they attempt to access a URL specific to your account, they will be required to re-authenticate via your identity provider.
-
