@@ -1,8 +1,13 @@
+<div class="alert alert-info">
+    Rollbar's Android SDK is currently a <code>beta</code> release.  For details, please see the <a href="https://github.com/rollbar/rollbar-java/blob/master/README.md">Readme</a>.<br>
+    To report issues, make suggestions, or ask questions, please <a href="https://github.com/rollbar/rollbar-java/issues/new">create an issue in Github</a>.
+    </div>
+
 ## Installation
 
 Update your `app/build.gradle` to include the following `compile` call:
 ```
-compile 'com.rollbar:rollbar-android:0+'
+compile('com.rollbar:rollbar-android:1.0.0-beta-2@aar'){transitive=true}
 ```
 
 ## Initialization
