@@ -39,8 +39,8 @@ public class MainActivity extends Activity {
 
 Add the following anywhere in your application after the `init()` call to send test data:
 ``` java
-Rollbar.reportMessage("Test message", "debug");
-Rollbar.reportException(new Exception("Test exception"));       
+Rollbar rollbar = Rollbar.instance();
+rollbar.error(new Exception("This is a test error"));      
 ```
 
 ## Further configuration
