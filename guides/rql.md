@@ -17,6 +17,8 @@ clause.
 return a list of columns similar to the Occurrences tab on Item Detail
 pages.
 
+You cannot `GROUP BY` a function. You *can* reference a column by its index in a `GROUP BY`, for example `GROUP BY 1`.
+
 SQL keywords and built-in function names are case-insensitive (i.e.
 `SELECT` and `select` are both fine).
 
@@ -38,6 +40,7 @@ uppercase letter), escape with backticks (i.e.
 
 -   `count(*)`: counts all rows
 -   `count(foo)`: counts rows where foo is not null
+-   `count_distinct(foo)`: counts distinct rows where foo is not null
 -   `sum(foo)`: sums value of foo (for rows where not null)
 -   `avg(foo)`: average value of foo (for rows where not null)
 -   `min(foo)`: minimum value of foo
@@ -66,6 +69,8 @@ uppercase letter), escape with backticks (i.e.
 
 ### Examples
 
+To find all occurrences of item #47, grouped by request.user_ip with the total count, earliest timestamp, and most recent timestamp, ordered by total count descending and limited to the top 10 rows:
+
 ```sql
 SELECT request.user_ip, min(timestamp), max(timestamp), count(*)
 FROM item_occurrence
@@ -75,16 +80,59 @@ ORDER BY count(*) DESC
 LIMIT 10
 ```
 
+To see the timestamp and message for all occurrences for Items #40 to #50:
+
 ```sql
 SELECT timestamp, body.message.body
 FROM item_occurrence
 WHERE item.counter BETWEEN 40 AND 50
 ```
 
+To grab all the occurrences of Items #1, 2, and 3:
+
 ```sql
 SELECT *
 FROM item_occurrence
 WHERE item.counter IN (1,2,3)
+```
+
+To find items that affected the most IPs in the last 3 days, grouped by the item number and ordered by the distinct count of the number of user_ips descending:
+
+```sql
+SELECT item.counter
+FROM item_occurrence
+WHERE timestamp > unix_timestamp() - 60 * 60 * 24 * 3
+GROUP BY item.counter
+ORDER BY count_distinct(request.user_ip) desc
+```
+
+To see all the items with the User-Agent string "python-requests/2.9.1" in a date range, ordered by timestamps descending:
+
+```sql
+SELECT * 
+FROM item_occurrence 
+WHERE `request.headers.User-Agent` = "python-requests/2.9.1"  
+AND timestamp BETWEEN 1507566716 and 1510245116 
+ORDER BY timestamp desc
+```
+
+To grab all the referrer domains an Item #1234 came from, grouped by the domain and limited to the top 1000 rows:
+
+```sql
+SELECT substring(request.headers.Referer, locate('.', request.headers.Referer), locate('.', request.headers.Referer, locate('.', request.headers.Referer)) - locate('.', request.headers.Referer) - 1)
+FROM item_occurrence
+WHERE item.counter = 1234
+GROUP BY 1
+LIMIT 1000
+```
+
+To find all the occurrences of items that occurred on Safari version 9.x in the last day:
+
+```sql
+SELECT *
+FROM item_occurrence
+WHERE client.javascript.browser LIKE '%Version/9.%.% Safari/%'
+AND timestamp > unix_timestamp() - 60 * 60 * 24
 ```
 
 ### Tips
@@ -94,8 +142,11 @@ WHERE item.counter IN (1,2,3)
 -   For better performance, filter by item (i.e.
     `WHERE item.counter = 123`) or by timestamp (i.e.
     `WHERE timestamp > unix_timestamp() - 86400`)
+-   RQL will sometimes timeout unless you put a date range, such as `WHERE timestamp > unix_timestamp() - 86400`.
 -   When using `GROUP BY` or `ORDER BY`, make sure the group/order clause is
-    also present in the `SELECT` clause
+    also present in the `SELECT` clause.
+-   You cannot `GROUP BY` a function. 
+-   You *can* reference a column by its index in a `GROUP BY`, for example `GROUP BY 1`. 
 -   You can share the URL with a co-worker and they'll see the same
     results you do, without having to run the query again.
 -   After a query has completed, press `Execute` again to re-run it.
@@ -107,6 +158,7 @@ WHERE item.counter IN (1,2,3)
 -   No `DISTINCT`, `HAVING`, subqueries, joins, or unions
 -   No `ANY`, `ALL`, `EXISTS`
 -   `SELECT *` cannot be combined with `GROUP BY`
+-   You cannot `GROUP BY` a function
 -   Can only be used to examine data within a single project
 
 ### Schema
