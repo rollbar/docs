@@ -70,6 +70,7 @@ uppercase letter), escape with backticks (i.e.
 ### Examples
 
 To find all occurrences of item #47, grouped by request.user_ip with the total count, earliest timestamp, and most recent timestamp, ordered by total count descending and limited to the top 10 rows:
+
 ```sql
 SELECT request.user_ip, min(timestamp), max(timestamp), count(*)
 FROM item_occurrence
@@ -80,6 +81,7 @@ LIMIT 10
 ```
 
 To see the timestamp and message for all occurrences for Items #40 to #50:
+
 ```sql
 SELECT timestamp, body.message.body
 FROM item_occurrence
@@ -87,6 +89,7 @@ WHERE item.counter BETWEEN 40 AND 50
 ```
 
 To grab all the occurrences of Items #1, 2, and 3:
+
 ```sql
 SELECT *
 FROM item_occurrence
@@ -94,6 +97,7 @@ WHERE item.counter IN (1,2,3)
 ```
 
 To find items that affected the most IPs in the last 3 days, grouped by the item number and ordered by the distinct count of the number of user_ips descending:
+
 ```sql
 SELECT item.counter
 FROM item_occurrence
@@ -102,7 +106,8 @@ GROUP BY item.counter
 ORDER BY count_distinct(request.user_ip) desc
 ```
 
-To see all the items with the User-Agent string "python-requests/2.9.1" in a date range, ordered by timestamps descending: 
+To see all the items with the User-Agent string "python-requests/2.9.1" in a date range, ordered by timestamps descending:
+
 ```sql
 SELECT * 
 FROM item_occurrence 
@@ -112,6 +117,7 @@ ORDER BY timestamp desc
 ```
 
 To grab all the referrer domains an Item #1234 came from, grouped by the domain and limited to the top 1000 rows:
+
 ```sql
 SELECT substring(request.headers.Referer, locate('.', request.headers.Referer), locate('.', request.headers.Referer, locate('.', request.headers.Referer)) - locate('.', request.headers.Referer) - 1)
 FROM item_occurrence
@@ -121,6 +127,7 @@ LIMIT 1000
 ```
 
 To find all the occurrences of items that occurred on Safari version 9.x in the last day:
+
 ```sql
 SELECT *
 FROM item_occurrence
