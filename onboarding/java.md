@@ -20,7 +20,7 @@ The minimal amount of code you need to use `rollbar-java` is:
 ``` java
 import static com.rollbar.notifier.config.ConfigBuilder.withAccessToken;
 import com.rollbar.notifier.Rollbar;
-Rollbar rollbar = Rollbar.init(withAccessToken("ROLLBAR_ACCESS_TOKEN"));
+Rollbar rollbar = Rollbar.init(withAccessToken("{{ server_access_token }}"));
 rollbar.log("Hello, Rollbar");
 ```
 
@@ -42,7 +42,7 @@ public class Application {
   private Rollbar rollbar;
 
   public Application() {
-    Config config = withAccessToken("ROLLBAR_ACCESSTOKEN")
+    Config config = withAccessToken("{{ server_access_token }}")
         .environment("development")
         .codeVersion("1.0.0")
         .build();
@@ -83,7 +83,7 @@ If your web server is implemented as a Servlet, you can configure and enable Rol
         <filter-class>com.rollbar.web.filter.RollbarFilter</filter-class>
         <init-param>
             <param-name>access_token</param-name>
-            <param-value>[YOUR_ACCESS_TOKEN>]</param-value>
+            <param-value>[{{ server_access_token }}]</param-value>
         </init-param>
     </filter>
     <filter-mapping>
@@ -118,7 +118,7 @@ Set your access token in your AndroidManifest.xml file:
     <application ...>
         ...
         <meta-data android:name="com.rollbar.android.ACCESS_TOKEN"
-        android:value="YOUR_ACTUAL_ACCESS_TOKEN" />
+        android:value="{{ client_access_token }}" />
     </application>
 </manifest>
 ```
