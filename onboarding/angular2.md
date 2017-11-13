@@ -13,7 +13,13 @@ Import rollbar into your app and configure it to catch uncaught exceptions:
 ```
 import * as Rollbar from 'rollbar';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, ErrorHandler } from '@angular/core';
+import {
+  Injectable,
+  Injector,
+  InjectionToken,
+  NgModule,
+  ErrorHandler
+} from '@angular/core';
 import { AppComponent } from './app.component';
 
 const rollbarConfig = {
@@ -22,23 +28,21 @@ const rollbarConfig = {
   captureUnhandledRejections: true,
 };
 
-export function rollbarFactory() {
-  return new Rollbar(rollbarConfig);
-}
-
 @Injectable()
 export class RollbarErrorHandler implements ErrorHandler {
-  rollbar: any;
-  constructor(private injector: Injector) {
-    this.rollbar = injector.get(Rollbar);
-  }
+  constructor(private injector: Injector) {}
 
-  handleError(err: any ): void {
-    console.log(err);
-    this.rollbar.error(err.originalError || err);
+  handleError(err:any) : void {
+    var rollbar = this.injector.get(RollbarService);
+    rollbar.error(err.originalError || err);
   }
 }
 
+export function rollbarFactory() {
+    return new Rollbar(rollbarConfig);
+}
+
+export const RollbarService = new InjectionToken<Rollbar>('rollbar');
 
 @NgModule({
   imports: [ BrowserModule ],
@@ -46,7 +50,7 @@ export class RollbarErrorHandler implements ErrorHandler {
   bootstrap: [ AppComponent ],
   providers: [
     { provide: ErrorHandler, useClass: RollbarErrorHandler },
-    { provide: Rollbar,  useFactory: rollbarFactory }
+    { provide: RollbarService, useFactory: rollbarFactory }
   ]
 })
 export class AppModule { }
