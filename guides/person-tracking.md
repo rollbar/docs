@@ -66,7 +66,7 @@ end
 
 # If you are *not* using Rails, Rollbar will automatically pick up
 # the `rollbar.person_data` key in the Rack environment and pass it
-# on to the Rollbar website. It *must* have at least an `id` field.d
+# on to the Rollbar website. It *must* have at least an `id` field.
 # `username` and `email` will also be treated specially.
 ```
 {: .tab-pane #ruby}
@@ -187,7 +187,6 @@ RollbarConfiguration *config = [RollbarConfiguration configuration];
 // getting the `config` object and calling `setPersonId` on it:
 
 [config setPersonId:@"42", username:"dadams", email:"dadams@example.com"];
-
 
 The person ID is required.
 ```
