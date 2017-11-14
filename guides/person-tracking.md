@@ -66,7 +66,7 @@ end
 
 # If you are *not* using Rails, Rollbar will automatically pick up
 # the `rollbar.person_data` key in the Rack environment and pass it
-# on to the Rollbar website. It *must* have at least an `id` field.d
+# on to the Rollbar website. It *must* have at least an `id` field.
 # `username` and `email` will also be treated specially.
 ```
 {: .tab-pane #ruby}
@@ -119,7 +119,7 @@ function beforeRequestHandler(request) {
 ```
 Rollbar.PersonData(() => new Person
 {
-    Id = 123,
+    Id = 123, // required
     Username = "rollbar",
     Email = "user@rollbar.com"
 });
@@ -150,7 +150,7 @@ var _rollbarConfig = {
   payload: {
     // The usual
     person: {
-      id: 42,
+      id: 42, // required 
       username: 'dadams',
       email: 'dadams@example.com'
     }
@@ -163,7 +163,7 @@ var _rollbarConfig = {
 Rollbar.configure({
   payload: {
     person: {
-      id: 456,
+      id: 456, // required
       username: "foo",
       email: "foo@example.com"
     }
@@ -187,6 +187,8 @@ RollbarConfiguration *config = [RollbarConfiguration configuration];
 // getting the `config` object and calling `setPersonId` on it:
 
 [config setPersonId:@"42", username:"dadams", email:"dadams@example.com"];
+
+The person ID is required.
 ```
 {: .tab-pane #ios}
 
@@ -209,7 +211,7 @@ public void onCreate(Bundle savedInstanceState) {
 // In flash you must configure the Rollbar person when first initializing the
 // SDK. The fourth argument to `Rollbar.init` is `person`. This argument
 // can be passed an id string, an object, or a function (which returns an
-// appropriate object):
+// appropriate object). The id is required.
 
 Rollbar.init(this, accessToken, environment, "42"); //For user, id 42
 
