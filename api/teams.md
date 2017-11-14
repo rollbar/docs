@@ -40,6 +40,10 @@ Name | Type | Description
 `name`|`string`|**Required.** Name of the team. Max length 32 characters.
 `access_level`|`string`|**Required.** Can be either `standard`, `light`, or `view`.
 
+#### Access Levels
+
+`standard` is the only access level you can choose in the UI. `light` and `view` are API-only team access levels. `light` gives the team read and write access, but not to all settings. `view` gives the team read-only access. 
+
 Params must be supplied as JSON, and as the body of the request. Be sure to set the
 header `Content-Type: application/json`.
 
