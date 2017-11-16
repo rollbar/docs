@@ -23,7 +23,7 @@ import {
 import { AppComponent } from './app.component';
 
 const rollbarConfig = {
-  accessToken: 'POST_CLIENT_ITEM_ACCESS_TOKEN',
+  accessToken: '{{ client_access_token }}',
   captureUncaught: true,
   captureUnhandledRejections: true,
 };
