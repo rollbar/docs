@@ -7,7 +7,7 @@
 
 Update your `app/build.gradle` to include the following `compile` call:
 ```
-compile('com.rollbar:rollbar-android:1.0.0-beta-3@aar'){transitive=true}
+compile('com.rollbar:rollbar-android:1.0.0@aar'){transitive=true}
 ```
 
 ## Initialization
