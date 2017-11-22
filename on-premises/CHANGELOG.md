@@ -1,5 +1,49 @@
 # Changelog
 
+## 0.8.4
+
+Release date: November 21, 2017
+
+### Application
+
+- New feature: ability to restrict authentication to SAML-only. [More info](https://changelog.rollbar.com/require-saml-authentication-38730)
+- New feature: system-controlled "default rate limits". Admins can configure the system default and also override on a per-token basis using the newly-accessible administrator view. When a user-controlled limit is also defined (via the normal non-admin view), both limits are in effect. [More info](https://changelog.rollbar.com/default-rate-limits-on-project-access-tokens-37808)
+- New feature: ability to edit or merge all items matching a search in a single action. [More info](https://changelog.rollbar.com/edit-merge-all-items-at-once-34467)
+- Fix: test emails are now sent only to the user who clicks "Send test notification", rather than to all users who can access the project.
+- Fix: CSV downloads now work correctly. To apply this fix to an existing installation, edit your `mox.ini` config file (most likely located in `/etc/rollbar/mox.ini`) as follows: 
+
+  ```diff
+  --- a/standalone.ini
+  +++ b/standalone.ini
+  @@ -55,8 +55,8 @@ pyramid.debug_routematch = false
+   pyramid.debug_templates = false
+   pyramid.default_locale_name = en
+   pyramid.includes =
+  +    pyramid_tablib
+       rollbar.contrib.pyramid
+  -    pyramid_tm
+   ```
+
+### Infrastructure
+
+- Added external link for `web` container to `haproxy:redis`. NOTE: if upgrading from an existing version, apply the following change to your `mox.ini` config file:
+
+  ```diff
+  --- a/standalone.ini
+  +++ b/standalone.ini
+  @@ -84,6 +84,9 @@ mako.output_encoding = utf-8
+   memcache.default.server_list = memcache:11211/1
+   memcache.raw.server_list = memcache:11211/1
+   
+  +redis.host = redis
+  +redis.port = 6379
+  +
+   beanstalk.host = beanstalk
+   beanstalk.port = 11300
+  ```
+- New container: autoresolve_old_items_periodic
+- Removed container: project_processing_etl
+
 ## 0.8.3
 
 Release date: September 11, 2017
