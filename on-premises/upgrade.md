@@ -8,8 +8,8 @@ future release.
    the release version)
 
    ```sh
-   tar -xzvf rollbar-on-prem-server-v0.7.0.tgz
-   cd rollbar-enterprise_2016-08-24
+   tar -xzvf rollbar-enterprise_0.8.4.tar.gz
+   cd rollbar-enterprise_0.8.4
    ```
 3. Stop all Rollbar services
 
@@ -31,8 +31,6 @@ future release.
    ```sh
    cp /path/to/old/version/.settings .
    ```
-   
-   NOTE: if you don't have an old `.settings` file, see the instructions below at "Upgrading from a version built before 2/16/2016".
    
    5b. Run configure
 
