@@ -1,8 +1,3 @@
-<div class="alert alert-info">
-    Rollbar's Java SDK is currently a <code>beta</code> release.  For details, please see the <a href="https://github.com/rollbar/rollbar-java/blob/master/README.md">Readme</a>.<br>
-    To report issues, make suggestions, or ask questions, please <a href="https://github.com/rollbar/rollbar-java/issues/new">create an issue in Github</a>.
-    </div>
-
 ## Installation
 
 To send errors to Rollbar from your Java application, you should use our <a href="https://github.com/rollbar/rollbar-java" target="_blank" rel="noopener">rollbar-java</a> package. 
