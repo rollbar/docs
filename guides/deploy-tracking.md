@@ -53,7 +53,7 @@ You may want to resolve all active items every time you deploy, so that only new
 Deploy tracking in Rollbar can be set up in minutes:
 
 * [Bash](/docs/deploys/bash/)
-* [Bitbucket](docs/bitbucket/#bitbucket-pipelines)
+* [Bitbucket](/docs/bitbucket/#bitbucket-pipelines)
 * [Capistrano](/docs/deploys/capistrano)
 * [Engine Yard](/docs/deploys/engineyard/)
 * [Fabric](/docs/deploys/fabric/)
