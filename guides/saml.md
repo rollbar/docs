@@ -90,7 +90,7 @@ Check out [Configuring SAML for Rollbar](https://support.bitium.com/administrati
 Setup procedures for other identity providers will vary. Make sure that users' email addresses are being used as the `Name ID` attribute in the SAML metadata.
 
 The following fields will likely be required by your identity provider:
-* `ACS URL`: `https://saml.rollbardev.com/{{AccountName}}/saml/login/other`. `{{accountname}}` is the slug of your account  `https://rollbar.com/{{AccountName}}`.
+* `ACS URL`: `https://saml.rollbardev.com/{{AccountName}}/saml/login/other`. `{{accountname}}` is the slug of your account  `https://rollbar.com/{AccountName}`.
 * `Entity ID`: `https://saml.rollbar.com`
 
 ## Require Log In via SAML
