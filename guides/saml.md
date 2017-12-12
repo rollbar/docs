@@ -70,7 +70,7 @@ You must be an admin of your Azure account to complete the following steps.
 * Enter the following information in the form and save it.
    * Name: `Rollbar`
    * Application type: `Web App / API`
-   * Sign-on URL: `https://saml.rollbardev.com/{{AccountName}}/saml/login/azure`. `{{accountname}}` is the slug of your account  `https://rollbar.com/{{AccountName}}`.
+   * Sign-on URL: `https://saml.rollbardev.com/{AccountName}/saml/login/azure`. `{accountname}` is the slug of your account  `https://rollbar.com/{{AccountName}}`.
 * Open the app configuration, select **Properties** and set the following value:
    * App ID URI: `https://saml.rollbar.com`
 * Go to **Endpoints**, then open **Federation Metadata Document** and copy the XML metadata.
