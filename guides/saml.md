@@ -7,6 +7,7 @@ Rollbar account owners can configure a [SAML](https://en.wikipedia.org/wiki/Secu
 
 * [G Suite](#g-suite)
 * [Okta](#okta)
+* [OneLogin](#one-login)
 * [Azure](#azure)
 * [Bitium](#bitium).
 
@@ -59,6 +60,15 @@ You must be an admin of your Okta account to complete the following steps.
 * Click on the avatar for your user and go to **{AccountName} Settings -> Security -> Identity Provider**
 * Select `Okta` as your identity prvider and then enter the XML SAML metadata for the provider and save it.
 
+## One Login
+
+**In OneLogin:**
+* Go to **Apps-->Custom Connectors-->New Connector**
+* Enter the following values in the New Connector form
+  * Sign-on method: `OpenID Connect`
+  * 
+
+
 ## Azure
 
 You must be an admin of your Azure account to complete the following steps.
@@ -70,7 +80,7 @@ You must be an admin of your Azure account to complete the following steps.
 * Enter the following information in the form and save it.
    * Name: `Rollbar`
    * Application type: `Web App / API`
-   * Sign-on URL: `https://saml.rollbardev.com/{AccountName}/saml/login/azure`. `{accountname}` is the slug of your account  `https://rollbar.com/{AccountName}`.
+   * Sign-on URL: `https://saml.rollbar.com/{AccountName}/saml/login/azure`. `{accountname}` is the slug of your account  `https://rollbar.com/{AccountName}`.
 * Open the app configuration, select **Properties** and set the following value:
    * App ID URI: `https://saml.rollbar.com`
 * Go to **Endpoints**, then open **Federation Metadata Document** and copy the XML metadata.
