@@ -135,6 +135,15 @@ WHERE client.javascript.browser LIKE '%Version/9.%.% Safari/%'
 AND timestamp > unix_timestamp() - 60 * 60 * 24
 ```
 
+To grab the occurrence counts per item per day for the last three days:
+
+```sql 
+SELECT timestamp div 86400, item.counter, count(*)
+FROM item_occurrence
+WHERE timestamp > unix_timestamp() - 60 * 60 * 24 * 3
+GROUP BY 1, item.counter
+```
+
 ### Tips
 
 -   Use `SELECT * FROM item_occurrence` to get a display similar to the
