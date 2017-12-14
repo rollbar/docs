@@ -9,7 +9,7 @@ Rollbar account owners can configure a [SAML](https://en.wikipedia.org/wiki/Secu
 * [Okta](#okta)
 * [OneLogin](#one-login)
 * [Azure](#azure)
-* [Bitium](#bitium).
+* [Bitium](#bitium)
 
 [Other SAML-compliant identity providers](#others) may be used, however we don't provide specific instructions for configuring them.
 
