@@ -62,6 +62,7 @@ You must be an admin of your Okta account to complete the following steps.
 ## One Login
 
 **In OneLogin:**
+
 * Go to **Apps -> Company Apps** then click **Add Apps**
 * Select the app **SAML Test Connector (IdP w/attr)**
 * In the configuration tab, enter `Rollbar` as the display name.  Optionally, you can use icons available at https://rollbar.com/media/ for the app.  Click **Save**.
