@@ -25,8 +25,7 @@ You must be an admin of your Google Apps for Work account to complete the follow
 * Click the **+** button on the bottom right to add a new app.
 * In the **Enable SSO for SAML Application** modal, click **Setup my own custom app**
 * On the next page of the modal, follow **Option 2** and download the application SAML metadata (an XML file).
-* Name your app `Rollbar` and optionally give it a description and/or logo
-   ([Download Rollbar logo](https://cdn.rollbar.com/assets/homepage/images/media/png/rollbar-mark-color.png)) then click **Next**.
+* Name your app `Rollbar` and optionally give it a description and/or logo (available at https://rollbar.com/media/)  then click **Next**.
 * On the Service Provider Details Page enter the following:
    * _ACS URL_: `https://rollbar.com/{AccountName}/saml/sso/google/` replacing {AccountName} with your account name, which can be found in the URL when you are logged in (`"https://rollbar.com/{AccountName}/..."`)
    _Entity ID_: `https://saml.rollbar.com`
@@ -63,11 +62,20 @@ You must be an admin of your Okta account to complete the following steps.
 ## One Login
 
 **In OneLogin:**
-* Go to **Apps-->Custom Connectors-->New Connector**
-* Enter the following values in the New Connector form
-  * Sign-on method: `OpenID Connect`
-  * 
+* Go to **Apps -> Company Apps** then click **Add Apps**
+* Select the app **SAML Test Connector (IdP w/attr)**
+* In the configuration tab, enter `Rollbar` as the display name.  Optionally, you can use icons available at https://rollbar.com/media/ for the app.  Click **Save**.
+* Go to the **Configuration** tab, enter the following values, and click **Save**:
+  * Audience: `https://saml.rollbar.com`
+  * Recipient: `https://rollbar.com/{accountname}/saml/sso/onelogin/` where `{accountname}` is the name found in the URL of your account, e.g. `https://rollbar.com/{accountname}`
+  * ACS (Consumer) URL Validator: `.*`
+  * ACS (Consumer) URL: `https://rollbar.com/{accountname}/saml/sso/onelogin/` (same value as Recipient field)
+* Go to **More Action -> SAML Metadata** to download an XML file containing your SAML metadata  
 
+**In Rollbar:**
+
+* Click on the avatar for your user and go to **{AccountName} Settings -> Security -> Identity Provider**
+* Select `OneLogin` as your identity prvider and then paste the XML SAML metadata for the provider and save it.
 
 ## Azure
 
@@ -80,7 +88,7 @@ You must be an admin of your Azure account to complete the following steps.
 * Enter the following information in the form and save it.
    * Name: `Rollbar`
    * Application type: `Web App / API`
-   * Sign-on URL: `https://saml.rollbar.com/{AccountName}/saml/login/azure`. `{accountname}` is the slug of your account  `https://rollbar.com/{AccountName}`.
+   * Sign-on URL: `https://rollbar.com/{AccountName}/saml/login/azure`. `{accountname}` is the slug of your account  `https://rollbar.com/{AccountName}`.
 * Open the app configuration, select **Properties** and set the following value:
    * App ID URI: `https://saml.rollbar.com`
 * Go to **Endpoints**, then open **Federation Metadata Document** and copy the XML metadata.
@@ -88,7 +96,7 @@ You must be an admin of your Azure account to complete the following steps.
 **In Rollbar:**
 
 * Click on the avatar for your user and go to **{AccountName} Settings -> Security -> Identity Provider**
-* Select `Azure` as your identity prvider and then enter the XML SAML metadata for the provider and save it.
+* Select `Azure` as your identity provider and then paste the XML SAML metadata for the provider and save it.
 
 
 ## Bitium
@@ -100,7 +108,7 @@ Check out [Configuring SAML for Rollbar](https://support.bitium.com/administrati
 Setup procedures for other identity providers will vary. Make sure that users' email addresses are being used as the `Name ID` attribute in the SAML metadata.
 
 The following fields will likely be required by your identity provider:
-* `ACS URL`: `https://saml.rollbardev.com/{{AccountName}}/saml/login/other`. `{{accountname}}` is the slug of your account  `https://rollbar.com/{AccountName}`.
+* `ACS URL`: `https://rollbar.com/{{AccountName}}/saml/login/other`. `{{accountname}}` is the slug of your account  `https://rollbar.com/{AccountName}`.
 * `Entity ID`: `https://saml.rollbar.com`
 
 ## Require Log In via SAML
