@@ -7,7 +7,7 @@ Rollbar account owners can configure a [SAML](https://en.wikipedia.org/wiki/Secu
 
 * [G Suite](#g-suite)
 * [Okta](#okta)
-* [OneLogin](#one-login)
+* [OneLogin](#onelogin)
 * [Azure](#azure)
 * [Bitium](#bitium)
 
