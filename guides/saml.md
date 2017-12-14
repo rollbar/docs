@@ -59,7 +59,7 @@ You must be an admin of your Okta account to complete the following steps.
 * Click on the avatar for your user and go to **{AccountName} Settings -> Security -> Identity Provider**
 * Select `Okta` as your identity prvider and then enter the XML SAML metadata for the provider and save it.
 
-## One Login
+## OneLogin
 
 **In OneLogin:**
 
