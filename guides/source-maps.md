@@ -107,7 +107,7 @@ var _rollbarConfig = {
 
 ## Providing Source Maps to Rollbar
 
-We recommend that you upload source maps to Rollbar prior to each production deployment, however we can also attempt to download them automatically based on configuration data in your minifed Javascript files. 
+We recommend that you upload source maps to Rollbar prior to each production deployment, however we can also attempt to download them automatically based on configuration data in your minified Javascript files.
 
 ### Recommended Method: Upload pre-deploy
 
