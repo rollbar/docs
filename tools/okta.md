@@ -1,7 +1,7 @@
 # Okta
 
 In order to complete the instructions in this document, you must be an administrator in your Okta account and an owner in your Rollbar account.
-{: warning}
+{: .warning}
 
 Okta can be used for both SAML-based authentication and SCIM-based team and user provisioning in Rollbar.
 
