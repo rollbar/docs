@@ -60,6 +60,4 @@ _rollbarConfig = {
 }
 ```
 
-Our other libraries don't implement `checkIgnore` yet, so if you'd like
-this somewhere else, please open an issue on the appropriate repo in
-GitHub.
+Some of our other libraries don't implement `checkIgnore` yet. Please check out the docs for your SDK to see if `checkIgnore` is implemented, and open an issue on the appropriate repo in GitHub if you'd like `checkIgnore` in an SDK that hasn't implemented it yet.
