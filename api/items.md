@@ -60,7 +60,7 @@ Requires `read` scope.
 
 ### Query String Parameters
 
-Aside from `access_token`, `page`, and `ids`,, the query string params are the same as you might
+Aside from `access_token`, `page`, and `ids`, the query string params are the same as you might
 see when using the search functionality on the "Items" part of the Rollbar UI. So you can
 copy-paste the query string from the address bar while on the Items page, and use that same query
 string in this API call.
