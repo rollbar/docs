@@ -17,6 +17,4 @@ For general information about Rollbar's issue tracking features, check out the [
    drop down next to the Trello button and then click "Link existing Trello Card" and copy and paste
    the URL for the Trello Card you would like to link.
 
-Congratulations! You have now integrated Rollbar with your Trello account. Events from Rollbar will
-automatically create Cards on your Trello Boards. If you want, you can customize the default rules
-by editing, adding, or deleting them.  
+For detailed instructions on using and configuring automatic and manual issue tracking integration, check out the Issue Tracking guide. {: .info} 
