@@ -77,21 +77,7 @@ Rollbar account owners can configure a [SAML](https://en.wikipedia.org/wiki/Secu
 
 ## Azure
 
-**In Azure**
-
-* Go to **Azure Active Directory** then click **App registrations** and select **New application registration**.
-* Enter the following information in the form and save it.
-   * Name: `Rollbar`
-   * Application type: `Web App / API`
-   * Sign-on URL: `https://rollbar.com/{AccountName}/saml/login/azure`. `{accountname}` is the slug of your account  `https://rollbar.com/{AccountName}`.
-* Open the app configuration, select **Properties** and set the following value:
-   * App ID URI: `https://saml.rollbar.com`
-* Go to **Endpoints**, then open **Federation Metadata Document** and copy the XML metadata.
-
-**In Rollbar:**
-
-* Click on the avatar for your user and go to **{AccountName} Settings -> Security -> Identity Provider**
-* Select `Azure` as your identity provider and then paste the XML SAML metadata for the provider and save it.
+See instructions at [docs.microsoft.com](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-saas-rollbar-tutorial).
 
 
 ## Bitium
