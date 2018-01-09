@@ -1,5 +1,7 @@
 # Create Clubhouse Stories from Rollbar
 
+[Clubhouse](https://clubhouse.io/) is a project management tool for software development teams that can be used to track Rollbar items.
+
 For general information about Rollbar's issue tracking features, check out the [Issue Tracking guide](../issue-tracking/). 
 {: .info}
 
@@ -19,4 +21,5 @@ For general information about Rollbar's issue tracking features, check out the [
    * Resolved state: Clubhouse workflow state in which stories will be placed if a linked Rollbar item is resolved.
 * Click **Save Settings**, then click **Send Test Notification** to verify that stories can be created.
 
-For detailed instructions on using and configuring automatic and manual issue tracking integration, check out the Issue Tracking guide. {: .info} 
+For detailed instructions on using and configuring automatic and manual issue tracking integration, check out the Issue Tracking guide. 
+{: .info} 
