@@ -6,7 +6,7 @@ Use Curl to send an HTTP POST:
 ACCESS_TOKEN=POST_SERVER_ITEM_ACCESS_TOKEN
 ENVIRONMENT=production
 LOCAL_USERNAME=`whoami`
-REVISION=`git log -n 1 --pretty=format:"%H"`
+REVISION=`git rev-parse --verify HEAD`
 
 curl https://api.rollbar.com/api/1/deploy/ \
   -F access_token=$ACCESS_TOKEN \
