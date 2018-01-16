@@ -5,7 +5,7 @@
 Add to your `Gemfile`:
 
 ```ruby
-gem 'rollbar', '~1.2.7'
+gem 'rollbar', '~>1.2.7'
 ```
 
 Add to your `Capfile`:
