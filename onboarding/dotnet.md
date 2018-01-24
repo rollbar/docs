@@ -14,8 +14,8 @@ You'll need your project's server-side access token to initialize the Rollbar.NE
 a message to the Rollbar server is as simple as:
 
 ```csharp
-Rollbar.Init(new RollbarConfig("{{server_access_token}}");
-Rollbar.Report("Rollbar is configured correctly");
+RollbarLocator.RollbarInstance.Configure(new RollbarConfig("POST_SERVER_ITEM_ACCESS_TOKEN"))
+RollbarLocator.RollbarInstance.Info("Rollbar is configured properly.")
 ```
 
 A few seconds after you execute this code, the message should appear on your project's "Items" page.
@@ -32,7 +32,7 @@ try
 }
 catch (System.Exception ex)
 {
-    Rollbar.Report(ex);
+    RollbarLocator.RollbarInstance.Error(Exception);
 }
 ```
 
