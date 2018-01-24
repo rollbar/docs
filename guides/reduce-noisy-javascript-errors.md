@@ -41,7 +41,7 @@ var _rollbarConfig = {
 };
 ```
 
-When [hostWhiteList](/docs/notifier/rollbar.js/configuration/#context) has been configured, Rollbar will
+When [hostWhiteList](/docs/notifier/rollbar.js/#context-1) has been configured, Rollbar will
 enumerate over the stack frames in each error. At
 least one of the frames must contain a filename that contains at least one of the strings in this
 configuration option. The items in the array are compiled into a regex that is used to compare
@@ -65,13 +65,13 @@ When this configuration key is set, rollbar.js looks through the values in the s
 of them match the exception message, the error will be discarded. These will be compiled into
 a regex that is compared against the exception mesasge.
 
-## Custom grouping options
+## Custom fingerprinting options
 
-We recommend using [custom grouping](/docs/custom-grouping/) when you still want the error data to be sent to
+We recommend using [custom fingerprinting](/docs/custom-grouping/) when you still want the error data to be sent to
 Rollbar and viewable in your dashboard for data metrics and reporting purposes, but you want to
 reduce the some of the 'noise' in the [Items](/features/) list. You can set up custom grouping rules to group your
 errors together in a way that makes sense for you. This is the best option to use when you still
 want to see the error occurrences in your dashboard, but want full control over how they are grouped
-together. See the [docs on custom grouping](/docs/custom-grouping/), as well as our in depth blog post on
+together. See the [docs on custom fingerprinting](/docs/custom-grouping/), as well as our in depth blog post on
 [how to improve your error grouping in Rollbar](/blog/error-grouping-tutorial).
 
