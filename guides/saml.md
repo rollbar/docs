@@ -13,6 +13,7 @@ Rollbar account owners can configure a [SAML](https://en.wikipedia.org/wiki/Secu
 * [OneLogin](#onelogin)
 * [Azure](#azure)
 * [Bitium](#bitium)
+* [Other identity providers](#other-identity-providers)
 
 [Other SAML-compliant identity providers](#others) may be used, however we don't provide specific instructions for configuring them.
 
@@ -84,13 +85,20 @@ See instructions at [docs.microsoft.com](https://docs.microsoft.com/en-us/azure/
 
 Check out [Configuring SAML for Rollbar](https://support.bitium.com/administration/saml-rollbar/) on the Bitium site for full instructions.
 
-## Others
+## Other Identity Providers
 
-Setup procedures for other identity providers will vary. Make sure that users' email addresses are being used as the `Name ID` attribute in the SAML metadata.
+Rollbar should work with any identity provider that is compliant with the [SAML 2.0](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) standard.  Setup procedures for other identity providers will vary.
 
 The following fields will likely be required by your identity provider:
-* `ACS URL`: `https://rollbar.com/{{AccountName}}/saml/login/other`. `{{accountname}}` is the slug of your account  `https://rollbar.com/{AccountName}`.
+* `ACS URL`: `https://rollbar.com/{{AccountName}}/saml/login/other`. `{accountname}` is the slug of your account  `https://rollbar.com/{AccountName}`.
+* `Login URL`: Same as ACS URL
 * `Entity ID`: `https://saml.rollbar.com`
+* `NameID format`: email address
+
+Additionally, Rollbar requires the following:
+* An attribute statement of `Email` must be included.
+* Response and Assertion should be signed.
+* `HTTP-Redirect` and `HTTP-POST` bindings are required. 
 
 ## Require Log In via SAML
 
