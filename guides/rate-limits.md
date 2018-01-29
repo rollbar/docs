@@ -1,3 +1,6 @@
+If you are using [rollbar-php](/docs/notifier/rollbar-php/) version prior to 1.0, then rate limits will not be respected.  Please see the [rollbar-php changelog](https://github.com/rollbar/rollbar-php/blob/v1.3.0/CHANGELOG.md) for details on the latest version and upgrade instructions.
+{: .warning}
+
 # Rate Limits
 
 Rate limits allow you to control how many occurrences are saved and
