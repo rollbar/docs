@@ -90,12 +90,14 @@ Check out [Configuring SAML for Rollbar](https://support.bitium.com/administrati
 Rollbar should work with any identity provider that is compliant with the [SAML 2.0](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) standard.  Setup procedures for other identity providers will vary.
 
 The following fields will likely be required by your identity provider:
+
 * `ACS URL`: `https://rollbar.com/{{AccountName}}/saml/login/other`. `{accountname}` is the slug of your account  `https://rollbar.com/{AccountName}`.
 * `Login URL`: Same as ACS URL
 * `Entity ID`: `https://saml.rollbar.com`
 * `NameID format`: email address
 
 Additionally, Rollbar requires the following:
+
 * An attribute statement of `Email` must be included.
 * Response and Assertion should be signed.
 * `HTTP-Redirect` and `HTTP-POST` bindings are required. 
