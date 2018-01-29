@@ -6,7 +6,7 @@ When a Rollbar project is connected to a git repository, stack traces will inclu
 
 ![Linking from stack trace to source code](https://rollbar.com/assets/homepage/images/integrations/stacktrace-bitbucket-linked.png)
 
-To ensure that stack traces will link to the correct code version in your git repository, make sure to send the full git SHA in the `code_version` attribute of your errors.  See the instructions for your [Rollbar SDKs](/docs/notifiers) for specific instructions on using `code_version`.
+To ensure that stack traces will link to the correct code version in your git repository, make sure to send the full git SHA in the `code_version` attribute when reporting exceptions to Rollbar.  See the instructions for your [Rollbar SDKs](/docs/notifier/) for specific instructions on using `code_version`.
 {: .info}
 
 ## View commits in each deploy
