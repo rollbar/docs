@@ -1,6 +1,6 @@
 # Environments
 
-Every error reported to Rollbar is required to have an `environment` property.  This value can contain any non-empty alphanumeric string of up to 255 characters, so it can be used in a number of ways.
+Every error reported to Rollbar is required to have an `environment` property.  This value can contain any non-empty alphanumeric string of up to 255 latin-1 characters, so it can be used in a number of ways.
 
 This guide explains a bit about how `environment` is used in the app, some important limitations, and our recommended best practices.
 
@@ -8,7 +8,7 @@ This guide explains a bit about how `environment` is used in the app, some impor
 
 * `production` is treated as the default environment filter in many Rollbar screens, since we assume that production data matters the most.
 * Items cannot be [merged](/docs/merging/) if they are in different environments.
-* [Notification rules](/docs/notifications/) can easily be applied to a single environment or all environmnts, but not necessarily to multiple environments.
+* [Notification rules](/docs/notifications/) can easily be applied to a single environment or all environments, but not necessarily to multiple environments.
 
 ## Best practices
 
