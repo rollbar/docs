@@ -1,3 +1,8 @@
+<div class="alert alert-info">
+	Rollbar's React Native SDK is currently a <code>beta</code> release.  For details, please see the <a href="https://github.com/rollbar/rollbar-react-native/blob/master/README.md">Readme</a>.<br>
+	To report issues, make suggestions, or ask questions, please <a href="https://github.com/rollbar/rollbar-react-native/issues/new">create an issue in Github</a>.
+</div>
+
 ## Installation
 
 Integrating requires the following steps:
