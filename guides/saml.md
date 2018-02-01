@@ -10,7 +10,7 @@ Rollbar account owners can configure a [SAML](https://en.wikipedia.org/wiki/Secu
 
 * [G Suite](#g-suite)
 * [Okta](#okta)
-* [OneLogin](#onelogin)
+* [OneLogin](/docs/onelogin/)
 * [Azure](#azure)
 * [Bitium](#bitium)
 * [Other identity providers](#other-identity-providers)
@@ -56,25 +56,6 @@ Rollbar account owners can configure a [SAML](https://en.wikipedia.org/wiki/Secu
 
 * Click on the avatar for your user and go to **{AccountName} Settings -> Security -> Identity Provider**
 * Select `Okta` as your identity prvider and then enter the XML SAML metadata for the provider and save it.
-
-## OneLogin
-
-**In OneLogin:**
-
-* Go to **Apps -> Company Apps** then click **Add Apps**
-* Select the app **SAML Test Connector (IdP w/attr)**
-* In the configuration tab, enter `Rollbar` as the display name.  Optionally, you can use icons available at https://rollbar.com/media/ for the app.  Click **Save**.
-* Go to the **Configuration** tab, enter the following values, and click **Save**:
-  * Audience: `https://saml.rollbar.com`
-  * Recipient: `https://rollbar.com/{accountname}/saml/sso/onelogin/` where `{accountname}` is the name found in the URL of your account, e.g. `https://rollbar.com/{accountname}`
-  * ACS (Consumer) URL Validator: `.*`
-  * ACS (Consumer) URL: `https://rollbar.com/{accountname}/saml/sso/onelogin/` (same value as Recipient field)
-* Go to **More Action -> SAML Metadata** to download an XML file containing your SAML metadata  
-
-**In Rollbar:**
-
-* Click on the avatar for your user and go to **{AccountName} Settings -> Security -> Identity Provider**
-* Select `OneLogin` as your identity prvider and then paste the XML SAML metadata for the provider and save it.
 
 ## Azure
 
