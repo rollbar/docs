@@ -126,13 +126,13 @@ rollbar.reportMessageWithPayloadData("Something went wrong", {level: "error", fi
 <?php
 // exceptions
 try {
-    do_something();
-} catch (Exception $e) {
-    Rollbar::report_exception($e, null, array('fingerprint' => 'abcdefg'));
+    throw new \Exception('test exception');
+} catch (\Exception $e) {
+    Rollbar::log(Level::ERROR, $e, array('fingerprint' => 'abcdefg'));
 }
 
 // messages
-Rollbar::report_message("Something went wrong", "error", null, array('fingerprint' => 'hijkl'));
+Rollbar::log(Level::INFO, "Something went wrong", array('fingerprint' => 'hijkl'));
 ```
 {: .tab-pane #php}
 
