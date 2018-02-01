@@ -5,4 +5,4 @@ Automatic user & team provisioning is available on enterprise plans.  To learn m
 
 Provisioning setup and functionality depends on which identity provider you are using.  For specific instructions, select an identity provider from the following:
 
-* [OneLogin](/docs/tools/onelogin/#enable-provisioning)
+* [OneLogin](/docs/onelogin#enable-provisioning)
