@@ -11,8 +11,8 @@ Rollbar account owners can configure a [SAML](https://en.wikipedia.org/wiki/Secu
 * [G Suite](#g-suite)
 * [Okta](#okta)
 * [OneLogin](/docs/onelogin/)
-* [Azure](#azure)
-* [Bitium](#bitium)
+* [Azure](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-saas-rollbar-tutorial)
+* [Bitium](https://support.bitium.com/administration/saml-rollbar/)
 * [Other identity providers](#other-identity-providers)
 
 [Other SAML-compliant identity providers](#others) may be used, however we don't provide specific instructions for configuring them.
@@ -56,15 +56,6 @@ Rollbar account owners can configure a [SAML](https://en.wikipedia.org/wiki/Secu
 
 * Click on the avatar for your user and go to **{AccountName} Settings -> Security -> Identity Provider**
 * Select `Okta` as your identity prvider and then enter the XML SAML metadata for the provider and save it.
-
-## Azure
-
-See instructions at [docs.microsoft.com](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-saas-rollbar-tutorial).
-
-
-## Bitium
-
-Check out [Configuring SAML for Rollbar](https://support.bitium.com/administration/saml-rollbar/) on the Bitium site for full instructions.
 
 ## Other Identity Providers
 
