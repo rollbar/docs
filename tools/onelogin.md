@@ -7,15 +7,15 @@
 _In OneLogin:_
 
 * Go to **Apps->Add Apps**  and find Rollbar
-* In the Rollbar Configuration tab, accept the defaults (make sure that `SAML 2.0 - user provisioning` is selected) and click Save.
-* Go to the **Configuration** tab again, and enter your Rollbar account name in the Applications Details section and click Save.
+* In the Rollbar Configuration tab, accept the defaults (make sure that `SAML 2.0 - user provisioning` is selected) and click **Save**.
+* Go to the **Configuration** tab again, and enter your Rollbar account name in the Applications Details section and click **Save**.
 * Click **More Actions** -> **SAML Metadata**, download the metadata file, and copy the XML contents.
 
 
 _In Rollbar:_
 
-* Go to {Accountname} Settings -> Security -> Identity Provider.
-* Select OneLogin as the identity provider, paste the metadata and click Save.
+* Go to **{Accountname} Settings -> Security -> Identity Provider**.
+* Select OneLogin as the identity provider, paste the metadata and click **Save**.
 * Optionally select to require users to login via OneLogin.
 
 _In OneLogin:_
