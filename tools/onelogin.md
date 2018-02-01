@@ -1,5 +1,7 @@
 # OneLogin
 
+[OneLogin](http://www.onelogin.com) can be used as SAML identity provider for your Rollbar account and can be optionally used to automatically provision users.
+
 ## Enable SAML Authentication
 
 _In OneLogin:_
