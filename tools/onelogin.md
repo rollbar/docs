@@ -1,6 +1,6 @@
 # OneLogin
 
-# Enable SAML Authentication
+## Enable SAML Authentication
 
 _In OneLogin:_
 
@@ -23,7 +23,7 @@ _In OneLogin:_
 Unless user provisioning has been enabled for your Rollbar account, anyone who accesses Rollbar via OneLogin will need to be invited to Rollbar.  To enable provisioning in your Rollbar account, please contact us via <a href="mailto:sales@rollbar.com">sales@rollbar.com</a>.
 {: .info}
 
-# Enable Provisioning
+## Enable Provisioning
 
 If user provisioning is enabled for your Rollbar account, then users who are added to the Rollbar app in OneLogin will be provisioned in Rollbar.
 
