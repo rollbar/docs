@@ -17,9 +17,12 @@ For general information about Rollbar's issue tracking features, check out the [
    * API Token:  Token to use as the default for automatic rules.
    * Organization:  Name of your organization, found at `https://app.clubhouse.com/{organization}/`.
    * Clubhouse project:  The project where stories will be created.
+   * Clubhouse epic: Epic where the stories will be created. _(Optional)_
+   * Initial state:  Clubhouse workflow state in which stories will be placed when created.
    * Reactivated state:  Clubhouse workflow state in which stories will be placed if a linked Rollbar item is reactivated.
    * Resolved state: Clubhouse workflow state in which stories will be placed if a linked Rollbar item is resolved.
-* Click **Save Settings**, then click **Send Test Notification** to verify that stories can be created.
+   * Labels: Labels to apply to stories when created. _(Optional)_
+* Click **Save Settings**, then click **Send Test Notification** to verify that stories can be created with the correct configuration.
 * Configure your automated rules, as described in the [Issue Tracking guide](../issue-tracking/).
 * Click the toggle to set the integration to **Enabled**.
 
