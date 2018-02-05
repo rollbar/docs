@@ -4,6 +4,8 @@ When used in client-side Javascript, Rollbar access tokens are visible to end us
 
 Each Rollbar project can be configured with a blacklist of IP addresses from whom we will not accept any data.
 
-To configure the blacklist for your project, go to **Project Settings --> IP Blacklist**, and enter one or more IP addresses, separated by newlines or commas.
+To configure the blacklist for your project, go to **Project Settings --> IP Blacklist**, and enter one or more valid IPv4/IPv6 addresses or subnets (in [CIDR](https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing) notation), separated by newlines or commas.  Examples of valid entries include:
+* `192.168.0.1`
+* `192.168.0.1/24`
+* `2620:0:2d0:200:0:0:0:7/128`
 
-*NOTE: Wildcards and ranges are not currently supported for expressing multiple IP addresses.*
