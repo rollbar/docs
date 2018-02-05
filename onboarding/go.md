@@ -19,7 +19,7 @@ import (
 )
 
 func main() {
-  rollbar.SetToken( {{ server_access_token }} )
+  rollbar.SetToken("{{ server_access_token }}")
   rollbar.SetEnvironment("production")                 // defaults to "development"
   rollbar.SetCodeVersion("v2")                         // optional Git hash/branch/tag (required for GitHub integration)
   rollbar.SetServerHost("web.1")                       // optional override; defaults to hostname
