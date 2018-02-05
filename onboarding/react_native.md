@@ -38,7 +38,7 @@ $ open ios/MyAwesomeApp.xcodeproj
 
 5. Drag the framework from the extracted zip file to be part of the `RollbarReactNative` project:
 
-![](../images/onboarding/react-native/iosFrameworks.png)
+![](https://raw.githubusercontent.com/rollbar/rollbar-react-native/master/iosFrameworks.png)
 
 We recommend checking the box that says "Copy items if needed". If you are managing your vendored
 dependencies in some other way where you do not want to check that box, then I presume you know what
