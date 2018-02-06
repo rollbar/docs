@@ -29,6 +29,7 @@ Rollbar gives you a great deal of control over when notifications are triggered 
 
 * [Slack](/docs/slack/)
 * [Hipchat](/docs/hipchat/)
+* [Cisco Spark](/docs/ciscospark/)
 * [Flowdock](/docs/flowdock/)
 * [Campfire](/docs/campfire/)
 
