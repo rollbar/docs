@@ -1,43 +1,57 @@
 ## Installation
 
-Update your `app/build.gradle` to include the following `compile` call:
-```
-compile('com.rollbar:rollbar-android:1.0.0@aar'){transitive=true}
-```
+To send errors to Rollbar from your Java application, you should use our <a href="https://github.com/rollbar/rollbar-java" target="_blank" rel="noopener">rollbar-java</a> package. 
 
-## Initialization
-
-Make sure to add the following permissions to your `AndroidManifest.xml`:
-```xml
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-```
-
-
-
-Import `com.rollbar.android.Rollbar` and call `Rollbar.init()` in `onCreate()`:
 ``` java
-import com.rollbar.android.Rollbar;
+compile('com.rollbar:rollbar-java:1.0.0')
+```
 
-public class MainActivity extends Activity {
+## rollbar-android
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Rollbar.init(this, "{{ client_access_token }}", "development");
-        // Rest of onCreate() method ....
-    }
+For an Android app, we have some more specific pieces which allow you to capture more information about the Android environment automatically than what you would have to do with `rollbar-java` directly.
+
+Set your access token in your AndroidManifest.xml file:
+
+``` java
+<?xml version="1.0" encoding="utf-8"?>
+<manifest ...>
+    <application ...>
+        ...
+        <meta-data android:name="com.rollbar.android.ACCESS_TOKEN"
+        android:value="{{ client_access_token }}" />
+    </application>
+</manifest>
+```
+
+Then initialize Rollbar in your MainActivity:
+
+``` java
+import com.rollbar.android.Rollbar
+
+public class MainActivity extends AppCompatActivity {
+
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    Rollbar.init(this);
+    ...
+  }
 }
 ```
 
-## Send Test Data
+You can then make direct calls to Rollbar via the managed instance:
 
-Add the following anywhere in your application after the `init()` call to send test data:
 ``` java
-Rollbar rollbar = Rollbar.instance();
-rollbar.error(new Exception("This is a test error"));      
+void clickAction() {
+  Rollbar.instance().log("Some button was clicked");
+}
 ```
 
-## Further configuration
+All uncaught exceptions which cause a crash will also be logged by Rollbar, but will not be sent until the next time the app runs.
 
-For additional configuration information, see the documentation for the <a href="https://rollbar.com/docs/notifier/rollbar-android " target="_blank" rel="noopener">rollbar-android</a> SDK.
+You can see a rollbar-android example <a href="https://github.com/rollbar/rollbar-java/tree/master/examples/rollbar-android" target="_blank" rel="noopener">on GitHub</a>.
+
+
+## Configuration
+
+All configuration is done via the Config object in `rollbar-java`. You can see the interface <a href="https://github.com/rollbar/rollbar-java/blob/master/rollbar-java/src/main/java/com/rollbar/notifier/config/Config.java" target="_blank" rel="noopener">here</a>.
