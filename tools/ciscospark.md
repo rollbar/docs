@@ -9,12 +9,12 @@ Configuration is per-project in Rollbar.
 
 1.  Head to the Notification settings page for a project: Dashboard ->
     Settings -> Notifications -> Cisco Spark.
-2.  Click **Connect with Cisco Spark**
+2.  Click **Connect with Cisco Spark**.
 3.  Select the Cisco account you want to integrate with, and authorize the
     permission request.
-4.  Select the room you wish to receive messages for
-5.  Click **Enable Cisco Spark Integration**
-6.  Congrats! Cisco Spark is now integrated with Rollbar. Default rules will
+4.  Select the room you wish to receive messages for.
+5.  Click **Enable Cisco Spark Integration**.
+6.  Congrats! Cisco Spark is now integrated with Rollbar. Default rules 
     have been created for the various events that Rollbar notifies on.
     You can customize the rules by editing them, deleting them, or
     adding new ones.
