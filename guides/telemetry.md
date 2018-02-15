@@ -3,6 +3,9 @@
 In order to collect telemetry events from your client-side Javascript, make sure you are using the [latest release of rollbar.js](https://github.com/rollbar/rollbar.js/releases/latest).
 {: .info}
 
+Telemetry is available for iOS apps too.  For configuration instructions, check out the [rollbar-ios guide](/docs/notifier/rollbar-ios/#telemetry).
+{: .info}
+
 When using [rollbar.js](https://rollbar.com/docs/notifier/rollbar.js#telemetry) in client-side Javascript, Rollbar will track and report events that happen prior to an exception or message being reported, and display them in the **Telemetry** section of an occurrence.  The telemetry timeline provides 'breadcrumbs' that can help developers understand and fix problems in their client-side Javascript, including:
 
 * Page load events (`DOMContentLoaded`, `load`)
