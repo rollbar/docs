@@ -7,7 +7,7 @@ For general information about Rollbar's alerting features, check out the [Notifi
 
 Configuration is per-project in Rollbar.
 
-1.  Head to the Notification settings page for a project: Dashboard ->
+1.  Head to the Notification settings page for a project: Select the project ->
     Settings -> Notifications -> Cisco Spark.
 2.  Click **Connect with Cisco Spark**.
 3.  Select the Cisco account you want to integrate with, and authorize the
