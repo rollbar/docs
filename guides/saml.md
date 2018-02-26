@@ -63,7 +63,7 @@ Rollbar should work with any identity provider that is compliant with the [SAML 
 
 The following fields will likely be required by your identity provider:
 
-* `ACS URL`: `https://rollbar.com/{{AccountName}}/saml/login/other`. `{accountname}` is the slug of your account  `https://rollbar.com/{AccountName}`.
+* `ACS URL`: `https://rollbar.com/{AccountName}/saml/login/other/`. `{AccountName}` is the slug of your account  `https://rollbar.com/{AccountName}`.
 * `Login URL`: Same as ACS URL
 * `Entity ID`: `https://saml.rollbar.com`
 * `NameID format`: email address
