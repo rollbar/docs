@@ -28,7 +28,7 @@ Configuration is per-project in Rollbar.
 * To mention `@channel`, `@group`, `@here`, or `@everyone`, use the syntax `<!channel>`, `<!group>`, `<!here>`, or `<!everyone>`.
 * To add a newline to the slack message, simply type it into the template, e.g.
 ```
-[{{project_slug}}] - {{body.framework}} - {{level}} - {{trigger_description}}
-{{title}}
-{{link}}
+[{{"{{project_slug"}}}}] - {{"{{body.framework"}}}} - {{"{{level"}}}} - {{"{{trigger_description"}}}}
+{{"{{title"}}}}
+{{"{{link"}}}}
 ```
