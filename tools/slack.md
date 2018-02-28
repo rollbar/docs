@@ -27,7 +27,8 @@ Configuration is per-project in Rollbar.
 * You can mention specific Slack users in notification messages using the syntax `<@username>`.
 * To mention `@channel`, `@group`, `@here`, or `@everyone`, use the syntax `<!channel>`, `<!group>`, `<!here>`, or `<!everyone>`.
 * To add a newline to the slack message, simply type it into the template, e.g.
-```
+
+```text
 [{{"{{project_slug"}}}}] - {{"{{body.framework"}}}} - {{"{{level"}}}} - {{"{{trigger_description"}}}}
 {{"{{title"}}}}
 {{"{{link"}}}}
