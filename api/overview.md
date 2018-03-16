@@ -1,5 +1,4 @@
-Overview
---------
+# API
 
 The Rollbar API provides a RESTful interface to much of the data in the
 system. It is used by our official libraries to report exceptions,
