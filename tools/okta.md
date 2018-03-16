@@ -45,6 +45,9 @@ After following these steps, Okta users with an existing Rollbar user may log in
 
 ## Step 2: Enable provisioning of Rollbar teams and users
 
+Provisioning is currently available on **enterprise plans only**.  To learn more or request to have it enabled, please contact [sales@rollbar.com](mailto:sales@rollbar.com).
+{: warning}
+
 **In Rollbar:**
 
 * Go to **{account name} Settings > Identity Providers**.
