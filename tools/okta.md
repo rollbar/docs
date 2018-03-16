@@ -41,12 +41,12 @@ Okta can be used for both SAML-based authentication and SCIM-based team and user
 * Assign groups and users to the Rollbar application.
 
 After following these steps, Okta users with an existing Rollbar user may log in via Okta.  To enable provisioning of Rollbar users and teams from Okta, follow the instructions in the next session
-{: warning}
+{: .warning}
 
 ## Step 2: Enable provisioning of Rollbar teams and users
 
 Provisioning is currently available on **enterprise plans only**.  To learn more or request to have it enabled, please contact [sales@rollbar.com](mailto:sales@rollbar.com).
-{: warning}
+{: .warning}
 
 **In Rollbar:**
 
