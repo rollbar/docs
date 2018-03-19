@@ -526,7 +526,6 @@ See the next section for more details about the response codes.
 
 The Items API can return the following status codes:
 
-|---
 | Code | Type | Description
 |-|-|-
 | 200 | Success | The item was accepted for processing.
