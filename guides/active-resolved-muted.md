@@ -1,3 +1,7 @@
+---
+title: Item Status - Active, Resolved, Muted
+---
+
 # Active/ Resolved/ Muted
 
 In Rollbar, all Items have a *status* that determines where they appear
