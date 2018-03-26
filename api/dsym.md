@@ -1,3 +1,7 @@
+---
+title: API Reference - dSYM
+---
+
 ## Upload an iOS .dSYM file
 
 	POST /api/1/dsym

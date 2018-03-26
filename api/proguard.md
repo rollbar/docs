@@ -1,3 +1,7 @@
+---
+title: API Reference - ProGuard
+---
+
 ## Upload a ProGuard Mapping file
 
 	POST /api/1/proguard

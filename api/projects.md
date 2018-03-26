@@ -1,3 +1,7 @@
+---
+title: API Reference - Projects
+---
+
 # Projects
 
 These calls require an account-level access token, which should be provided in the query string.

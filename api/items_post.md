@@ -1,3 +1,7 @@
+---
+title: API Reference - Items (POST)
+---
+
 _**Note:**  This documentation is provided for authors of custom integration libraries. If your
 application is built on one of our supported platforms, you can use a pre-built library
 instead of rolling your own._

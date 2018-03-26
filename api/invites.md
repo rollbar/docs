@@ -1,3 +1,7 @@
+---
+title: API Reference - Invites
+---
+
 # Invites
 
 These calls require an account-level access token, which should be provided in the query string.

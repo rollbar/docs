@@ -1,3 +1,7 @@
+---
+title: API Reference - Source Maps
+---
+
 ## Upload
 
 	POST /api/1/sourcemap

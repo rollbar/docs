@@ -1,3 +1,7 @@
+---
+title: API Reference - Items (GET, PATCH)
+---
+
 # Items
 
 These calls require a project-level access token, which should be provided in the query string.

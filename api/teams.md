@@ -1,3 +1,7 @@
+---
+title: API Reference - Teams
+---
+
 # Teams
 
 In Rollbar, users are allowed to access projects if they are part of a team that can access that

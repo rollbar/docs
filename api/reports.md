@@ -1,3 +1,7 @@
+---
+title: API Reference - Reports
+---
+
 # Reports
 
 This collection of API calls allows access to the same kind of reports as on the Dashboard in
