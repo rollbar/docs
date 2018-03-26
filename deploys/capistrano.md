@@ -1,3 +1,7 @@
+---
+title: Tracking Deploys with Capistrano
+---
+
 # Capistrano Deploy Integration
 
 ### Capistrano 3

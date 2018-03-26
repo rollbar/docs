@@ -1,3 +1,7 @@
+---
+title: Tracking Deploys with Any Platform
+---
+
 # Other platforms
 
 When a deploy has completed successfully, make an HTTP POST to
