@@ -1,3 +1,7 @@
+---
+title: JavaScript Source Map Support
+---
+
 # Source Maps
 
 If you minify your JavaScript code for use in production, you may be seeing Rollbar errors that reference the

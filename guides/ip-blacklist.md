@@ -1,3 +1,7 @@
+---
+title: IP Blacklist
+---
+
 # IP Blacklist
 
 When used in client-side Javascript, Rollbar access tokens are visible to end users and at risk of being used inappropriately to send data to your projects.

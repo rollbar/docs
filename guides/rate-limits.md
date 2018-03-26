@@ -1,3 +1,7 @@
+---
+title: Rate Limits
+---
+
 If you are using a [rollbar-php](/docs/notifier/rollbar-php/) version prior to 1.0, then rate limits will not be respected because API calls are batched.  Please see the [rollbar-php changelog](https://github.com/rollbar/rollbar-php/blob/v1.3.0/CHANGELOG.md) for details on the latest version and upgrade instructions.
 {: .warning}
 

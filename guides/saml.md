@@ -1,3 +1,7 @@
+---
+title: SAML Identity Providers
+---
+
 # SAML Identity Providers
 
 You must be an admin of your Identity Provider account to complete the following steps.

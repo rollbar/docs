@@ -1,3 +1,7 @@
+---
+title: Merging Items
+---
+
 # Merging Items
 
 Item merging allows you to combine multiple items into one 'group' for easier management and more accurate metrics.  All past and future occurrences of any merged items will automatically be combined.

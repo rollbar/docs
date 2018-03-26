@@ -1,3 +1,7 @@
+---
+title: Rollbar Billing Explained
+---
+
 # How Billing Works
 
 The following applies to accounts created via Rollbar.com.  See the section <a href="#partner-billing">Partner Billing</a> for details on how billing works if you created an account elsewhere.

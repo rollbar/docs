@@ -1,3 +1,7 @@
+---
+title: Resolved in Version
+---
+
 # Resolved in Version
 
 You can track which versions or revisions your errors are resolved in. When resolving items within Rollbar, you have the option of entering a revision or version number. If one is entered, it will appear in the item’s status history to let anyone looking at the item better understand specifically when it was fixed.

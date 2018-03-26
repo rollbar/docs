@@ -1,3 +1,7 @@
+---
+title: Filtering Foreign Languages
+---
+
 # Filtering Javascript errors by language
 
 If your application has an international user base, you may be receiving Javascript error reports in the local language of your users' browsers.

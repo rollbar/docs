@@ -1,3 +1,7 @@
+---
+title: Person Tracking
+---
+
 # People Tracking
 
 Rollbar can track which of your People (users) are affected by each error. This works automatically
