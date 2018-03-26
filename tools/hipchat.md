@@ -1,3 +1,7 @@
+---
+title: Integrate Rollbar with HipChat
+---
+
 # Connect Rollbar to Hipchat
 
 For general information about Rollbar's alerting features, check out the [Notifications guide](../notifications/). 

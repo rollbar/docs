@@ -1,3 +1,7 @@
+---
+title: Pivotal Tracker Integration
+---
+
 ## Connecting Rollbar to Pivotal
 
 For general information about Rollbar's issue tracking features, check out the [Issue Tracking guide](../issue-tracking/). 

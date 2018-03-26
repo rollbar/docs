@@ -1,3 +1,7 @@
+---
+title: Logstash Integration
+---
+
 # Sending Logstash Events to Rollbar
 
 Logstash can send events collected from any log file to Rollbar.

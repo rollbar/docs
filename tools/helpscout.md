@@ -1,3 +1,7 @@
+---
+title: Help Scout Integration
+---
+
 # Using Rollbar inside Help Scout
 
 If you use [Help Scout](https://www.helpscout.net/) for support, you can

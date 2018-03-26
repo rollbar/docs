@@ -1,3 +1,7 @@
+---
+title: PagerDuty Integration
+---
+
 # Connecting Rollbar to PagerDuty
 
 Rollbar can create, update, and resolve Incidents

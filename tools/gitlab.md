@@ -1,3 +1,7 @@
+---
+title: Integrate Rollbar with GitLab
+---
+
 # Connect Rollbar to GitLab
 
 ## Set up Linking

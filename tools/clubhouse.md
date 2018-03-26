@@ -1,3 +1,7 @@
+---
+title: Integrate Rollbar with Clubhouse
+---
+
 # Create Clubhouse Stories from Rollbar
 
 [Clubhouse](https://clubhouse.io/) is a project management tool for software development teams that can be used to track Rollbar items.
