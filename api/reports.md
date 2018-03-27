@@ -189,6 +189,3 @@ Response is JSON.
 }
 ```
 
-
------
-Last updated: August 27, 2017

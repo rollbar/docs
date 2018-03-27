@@ -174,5 +174,3 @@ Name | Type | Description
 `page`|`number`|Page number starting from 1
 
 
------
-Last updated: August 27, 2017

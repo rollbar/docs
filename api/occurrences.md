@@ -30,7 +30,6 @@ Name | Type | Description
 `access_token`|`string`|**Required.** A `read`-scope project access token.
 
 
----
 
 ## List all occurrences
 
@@ -48,7 +47,6 @@ Name | Type | Description
 `page`|`integer`|Page number, starting from 1. 20 occurrences are returned per page.
 
 
----
 
 ## List all occurrences of an item
 
@@ -69,7 +67,6 @@ Name | Type | Description
 `page`|`integer`|Page number, starting from 1. 20 occurrences are returned per page.
 
 
----
 
 ## Delete an occurrence
 
@@ -108,5 +105,3 @@ Response:
 }
 ```
 
------
-Last updated: August 27, 2017

@@ -56,6 +56,3 @@ use `DELETE /team/:team_id/user/:user_id` instead.
 
 Requires `write` scope.
 
-
------
-Last updated: August 27, 2017

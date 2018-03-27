@@ -2,6 +2,8 @@
 title: API Reference - Source Maps
 ---
 
+# Source Maps
+
 ## Upload
 
 	POST /api/1/sourcemap
@@ -58,5 +60,3 @@ curl https://api.rollbar.com/api/1/sourcemap/download
 	-F minified_url=http://example.com/static/js/example.min.js
 ```
 
------
-Last updated: August 27, 2017

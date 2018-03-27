@@ -143,5 +143,3 @@ information, see the following pages:
 - [Teams](https://rollbar.com/docs/api/teams/)
 - [Invites](https://rollbar.com/docs/api/invites/)
 
------
-Last updated: August 27, 2017
