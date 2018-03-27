@@ -56,6 +56,9 @@ Comments
 IP Address
 : `ip:101.102.103.104` finds items that were seen by the ip address "101.102.103.104" (exact match).
 
+Issues:
+: `has:issue` finds items that have a linked issue.  (NOTE:  This command can be negated using `!has:issue`)
+
 People
 : `user_id:12345` finds items/people associated with the user id "12345".
 : `username:snowden` finds items/people associated with the username "snowden".
