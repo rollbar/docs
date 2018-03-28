@@ -24,5 +24,5 @@ The occurrence you are currently viewing is highlighted and shown as the final e
 
 ![](../images/guides/telemetry/final_event.png)
 
-To select which telemetry events are captured and sent along with exceptions and messages, see the config options for `autoinstrument` in the [rollbar.js docs](https://rollbar.com/docs/notifier/rollbar.js#telemetry)
+To select which telemetry events are captured and sent along with exceptions and messages, see the config options for `autoInstrument` in the [rollbar.js docs](https://rollbar.com/docs/notifier/rollbar.js#telemetry)
 {: .info}

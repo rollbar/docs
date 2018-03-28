@@ -1,3 +1,7 @@
+---
+title: Tracking Deploys with MSBuild
+---
+
 # MSBuild Deploy Integration
 
 Here's an MSBuild target to notify Rollbar of a publish. Requires

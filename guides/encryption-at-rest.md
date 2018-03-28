@@ -1,3 +1,7 @@
+---
+title: Encryption at Rest
+---
+
 # Encryption at Rest
 
 Encryption at rest ('encryption') is currently available to customers of our [compliance solutions](/compliance/).  For more information, [contact us](/compliance/#contact-us). 

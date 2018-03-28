@@ -1,3 +1,7 @@
+---
+title: Using UUIDs
+---
+
 # UUIDs
 
 The Rollbar API supports including a UUID with occurrence reports which

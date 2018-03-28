@@ -1,3 +1,7 @@
+---
+title: Integrate Rollbar with Campfire
+---
+
 ## Connecting Rollbar to Campfire
 
 For general information about Rollbar's alerting features, check out the [Notifications guide](../notifications/). 

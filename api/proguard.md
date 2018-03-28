@@ -1,3 +1,9 @@
+---
+title: API Reference - ProGuard
+---
+
+# ProGuard Files
+
 ## Upload a ProGuard Mapping file
 
 	POST /api/1/proguard
@@ -19,5 +25,3 @@ curl 'https://api.rollbar.com/api/1/proguard' \
 	-F mapping=@mapping.txt
 ```
 
------
-Last updated: August 27, 2017

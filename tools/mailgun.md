@@ -1,3 +1,7 @@
+---
+title: Mailgun Integration
+---
+
 ## Sending Mailgun Events to Rollbar
 
 You can set up webhooks through Mailgun to report any unsubscribes, spam

@@ -1,3 +1,7 @@
+---
+title: Flowdock Integration
+---
+
 # Connect Rollbar to Flowdock
 
 For general information about Rollbar's alerting features, check out the [Notifications guide](../notifications/). 

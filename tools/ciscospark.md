@@ -1,3 +1,7 @@
+---
+title: Integrate Rollbar with Cisco Spark
+---
+
 ## Connecting Rollbar to Cisco Spark
 
 For general information about Rollbar's alerting features, check out the [Notifications guide](../notifications/). 

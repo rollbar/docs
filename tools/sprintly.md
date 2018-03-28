@@ -1,3 +1,7 @@
+---
+title: Integrate Rollbar with Sprintly
+---
+
 # Connecting Rollbar to Sprintly
 
 For general information about Rollbar's issue tracking features, check out the [Issue Tracking guide](../issue-tracking/). 

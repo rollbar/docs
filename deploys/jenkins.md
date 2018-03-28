@@ -1,3 +1,7 @@
+---
+title: Tracking Deploys with Jenkins
+---
+
 # Jenkins Deploy Integration
 
 Tracking deployments in Jenkins will allow you to see new errors for each deployment, determine the deployment that is suspected to have caused each error, and automatically resolve errors that were fixed in each deployment. You can read more examples in our blog [Continuous Delivery with Jenkins and Rollbar](/blog/continuous-delivery-with-jenkins/).

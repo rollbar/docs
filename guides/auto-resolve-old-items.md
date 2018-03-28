@@ -1,3 +1,7 @@
+---
+title: Auto-Resolve Items
+---
+
 # Auto-Resolve Items
 
 You can configure Rollbar to automatically resolve active items to simplify your error management workflow.  The options are set per environment, and can be found by going to **Settings -> Auto-Resolve** in each of your projects.

@@ -1,3 +1,7 @@
+---
+title: API Reference - RQL
+---
+
 # RQL
 
 These calls require a project-level access token with `read` scope, which should be provided in
@@ -170,5 +174,3 @@ Name | Type | Description
 `page`|`number`|Page number starting from 1
 
 
------
-Last updated: August 27, 2017

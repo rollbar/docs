@@ -1,9 +1,12 @@
-# Items
+---
+title: API Reference - Items (GET, PATCH)
+---
+
+# Managing Items
 
 These calls require a project-level access token, which should be provided in the query string.
 The prefix for all URLs is `https://api.rollbar.com`
 
----
 
 ## Get an item by ID
 
@@ -17,7 +20,6 @@ Note that they are NOT found in in URLs like "https://rollbar.com/myaccount/mypr
 is the "counter", which can be used in the following API call.
 
 
----
 
 ## Get an item by counter
 
@@ -47,7 +49,6 @@ Location: /api/1/item/272505123?access_token=abcd1234abcd1234abcd1234abcd1234
 Many HTTP clients will automatically follow the redirect.
 
 
----
 
 ## List all items
 
@@ -92,7 +93,6 @@ curl 'https://api.rollbar.com/api/1/items/?access_token=abcd5678&level=error&lev
 ```
 
 
----
 
 ## Modify an item
 
@@ -134,5 +134,3 @@ curl -X PATCH 'https://api.rollbar.com/api/1/item/275123456?access_token=abcd123
 ```
 
 
------
-Last updated: August 27, 2017

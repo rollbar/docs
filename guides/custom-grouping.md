@@ -1,3 +1,7 @@
+---
+title: Custom Fingerprinting Rules
+---
+
 # Custom Fingerprinting Rules
 
 If our [default fingerprinting algorithm](https://rollbar.com/docs/grouping-algorithm/) is separating occurrences that you would rather have combined or vice versa, then you can set up Custom Fingerprinting Rules.

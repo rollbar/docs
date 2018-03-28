@@ -1,3 +1,7 @@
+---
+title: Integrate Rollbar with VictorOps
+---
+
 # Connecting Rollbar to VictorOps
 
 For general information about Rollbar's alerting features, check out the [Notifications guide](../notifications/). 

@@ -1,3 +1,7 @@
+---
+title: Source Control Integration
+---
+
 # Integrating Rollbar with Source Control
 
 ## View source from stack traces

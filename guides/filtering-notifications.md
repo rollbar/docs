@@ -1,3 +1,7 @@
+---
+title: Filtering Notifications
+---
+
 # Filtering Notifications
 
 Having access to an error's full history is great, but you may not want to be notified every time a

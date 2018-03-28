@@ -1,3 +1,7 @@
+---
+title: Two-Factor Authentication
+---
+
 # Two-Factor Authentication (2FA)
 
 Two-Factor Authentication (2FA) provides an extra layer of security to your Rollbar account by

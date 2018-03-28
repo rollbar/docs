@@ -1,3 +1,7 @@
+---
+title: Resolving Items via Commits
+---
+
 # Resolving via Commit Messages
 
 If your project is integrated with [GitHub](/docs/github/), [Bitbucket](/docs/bitbucket), or [GitLab](/docs/gitlab/) then you can include Rollbar item

@@ -1,3 +1,7 @@
+---
+title: API Reference - Reports
+---
+
 # Reports
 
 This collection of API calls allows access to the same kind of reports as on the Dashboard in
@@ -185,6 +189,3 @@ Response is JSON.
 }
 ```
 
-
------
-Last updated: August 27, 2017

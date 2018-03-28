@@ -1,3 +1,7 @@
+---
+title: API Reference - Projects
+---
+
 # Projects
 
 These calls require an account-level access token, which should be provided in the query string.
@@ -76,5 +80,3 @@ If `rate_limit_window_size` or `rate_limit_window_count` is set to `0`, the acce
 no rate limit. Params must be supplied as JSON, and as the body of the request. Be sure to set
 the header `Content-Type: application/json`.
 
------
-Last updated: August 27, 2017

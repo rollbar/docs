@@ -1,3 +1,7 @@
+---
+title: Enterprise Security Controls
+---
+
 # Enterprise Security Controls
 
 If you have an Enterprise plan, you have the option to enable additional security controls. These are advanced security features that will help keep all of your data safe, protected, and centralized from disruptions. All features are accessed through the Account Settings page.

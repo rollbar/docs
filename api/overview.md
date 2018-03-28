@@ -1,3 +1,7 @@
+---
+title: API Overview
+---
+
 # API
 
 The Rollbar API provides a RESTful interface to much of the data in the
@@ -60,7 +64,6 @@ isolated post\_client\_item-only token.
 
 The API can return the following error codes:
 
-|---
 | Code | Type | Description
 |-|-|-
 | 400 | Bad request | The request was malformed and could not be parsed.
@@ -78,5 +81,3 @@ Link | Author | Language | Description
 [api-people-example](https://github.com/rollbar/api-people-example)|Rollbar|Python|Shows how to gather the Person data for each occurrence of a list of items
 [rolltools](https://github.com/jslate/rolltools)|[Jonathan Slate](https://github.com/jslate)|Ruby|A few utilities using the Rollbar API
 
------
-Last updated: October 29, 2017

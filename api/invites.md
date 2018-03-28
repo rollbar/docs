@@ -1,3 +1,7 @@
+---
+title: API Reference - Invites
+---
+
 # Invites
 
 These calls require an account-level access token, which should be provided in the query string.
@@ -52,6 +56,3 @@ use `DELETE /team/:team_id/user/:user_id` instead.
 
 Requires `write` scope.
 
-
------
-Last updated: August 27, 2017

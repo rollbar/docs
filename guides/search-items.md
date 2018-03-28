@@ -1,3 +1,7 @@
+---
+title: Searching Items
+---
+
 # Searching Items
 
 On the Items view, you can filter your Items by many different properties. Some properties are

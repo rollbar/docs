@@ -1,3 +1,7 @@
+---
+title: Hiding Third-Party Code
+---
+
 # Hiding Third-Party Code
 
 When using libraries or frameworks you will often have large portions of well-tested third party

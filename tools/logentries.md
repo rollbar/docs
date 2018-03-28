@@ -1,3 +1,6 @@
+---
+title: Logentries Integration
+---
 # Sending Logentries Alerts to Rollbar
 
 If you use [Logentries](https://logentries.com), you can set up alerts

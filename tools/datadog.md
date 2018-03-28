@@ -1,3 +1,7 @@
+---
+title: Integrate Rollbar with Datadog
+---
+
 # Connecting Rollbar to Datadog
 
 Rollbar users can syndicate exceptions, errors and code deployments as 'Events' in [Datadog](https://www.datadoghq.com/).

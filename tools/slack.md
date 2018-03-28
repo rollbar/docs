@@ -1,3 +1,7 @@
+---
+title: Integration Rollbar with Slack
+---
+
 ## Connecting Rollbar to Slack
 
 For general information about Rollbar's alerting features, check out the [Notifications guide](../notifications/). 

@@ -1,3 +1,7 @@
+---
+title: Variables in Notifications
+---
+
 # Using Variables in Rollbar Notifications
 
 Rollbar supports variables in notifications using a familiar `{{"{{VARIABLE_NAME"}}}}` syntax.  Different variable values are available depending on the type of event that triggers the notification.

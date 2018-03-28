@@ -1,3 +1,7 @@
+---
+title: Reduce Noisy JavaScript Errors
+---
+
 If your team is overwhelmed with a lot of noisy JavaScript errors, and you're looking for ways to reduce them, look no further. There are a few ways to reduce noisy JS errors using different Rollbar functionalities. 
 
 ## Ignore noisy errors on the client-side

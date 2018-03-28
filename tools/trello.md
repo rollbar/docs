@@ -1,3 +1,7 @@
+---
+title: Trello Integration
+---
+
 ## Connecting Trello to Rollbar
 
 For general information about Rollbar's issue tracking features, check out the [Issue Tracking guide](../issue-tracking/). 

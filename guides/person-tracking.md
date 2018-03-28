@@ -1,3 +1,7 @@
+---
+title: Person Tracking
+---
+
 # People Tracking
 
 Rollbar can track which of your People (users) are affected by each error. This works automatically
@@ -15,21 +19,44 @@ As well as the list of all people who have ever experienced an error, sorted by 
 
 ![](../images/guides/person-tracking/people_project.png)
 
-* {: .active} [Python](#python)
-* [Ruby](#ruby)
-* [PHP](#php)
-* [Node](#node)
-* [.NET](#net)
-* [Java](#java)
-* [Browser JS](#javascript)
-* [iOS](#ios)
-* [Android](#android)
-* [Flash](#flash)
-{: .nav .nav-tabs}
 
-<div class="tab-content">
+<ul class="blog nav nav-tabs">
+  <li role="presentation">
+    <a href="#python" aria-controls="panel-1-1" role="tab" data-toggle="tab">Python</a>
+  </li>
+  <li role="presentation">
+    <a href="#ruby" aria-controls="panel-1-2" role="tab" data-toggle="tab">Ruby</a>
+  </li>
+  <li role="presentation">
+    <a href="#php" aria-controls="panel-1-3" role="tab" data-toggle="tab">PHP</a>
+  </li>
+  <li role="presentation">
+    <a href="#node" aria-controls="panel-1-4" role="tab" data-toggle="tab">Node</a>
+  </li>
+  <li role="presentation">
+    <a href="#dotnet" aria-controls="panel-1-5" role="tab" data-toggle="tab">.NET</a>
+  </li>
+  <li role="presentation">
+    <a href="#java" aria-controls="panel-1-6" role="tab" data-toggle="tab">Java</a>
+  </li>
+  <li role="presentation">
+    <a href="#js" aria-controls="panel-1-7" role="tab" data-toggle="tab">Browser JS</a>
+  </li>
+  <li role="presentation">
+    <a href="#ios" aria-controls="panel-1-8" role="tab" data-toggle="tab">iOS</a>
+  </li>
+  <li role="presentation">
+    <a href="#android" aria-controls="panel-1-9" role="tab" data-toggle="tab">Android</a>
+  </li>
+  <li role="presentation">
+    <a href="#flash" aria-controls="panel-1-10" role="tab" data-toggle="tab">Flash</a>
+  </li>
+</ul>
+
+<div class="tab-panel" id="panel-1-1"></div>
 
 ```python
+
 # Pyrollbar works by inspecting the `request` for a `rollbar_person`,
 # `user` or `user_id` field (in that order). The first one it finds
 # it uses as the person data assuming the object contains at least
@@ -39,8 +66,10 @@ As well as the list of all people who have ever experienced an error, sorted by 
 # follows: `{ id: request.user_id }`.
 
 # Many/Most frameworks handle this all automatically.
+
 ```
-{: .tab-pane .active #python}
+
+<div class="tab-panel" id="panel-1-2"></div>
 
 ```ruby
 # For more documentation see:
@@ -69,7 +98,9 @@ end
 # on to the Rollbar website. It *must* have at least an `id` field.
 # `username` and `email` will also be treated specially.
 ```
-{: .tab-pane #ruby}
+
+
+<div class="tab-panel" id="panel-1-3"></div>
 
 ```php
 <?php
@@ -86,7 +117,9 @@ function get_current_user() {
 $config['person_fn'] = 'get_current_user';
 ?>
 ```
-{: .tab-pane #php}
+
+
+<div class="tab-panel" id="panel-1-4"></div>
 
 ```js
 // rollbar.js works by inspecting the `request` for a `rollbar_person`,
@@ -114,7 +147,8 @@ function beforeRequestHandler(request) {
 // If you are using the Passport authentication library no additional
 // configuration is needed to make this work as expected.
 ```
-{: .tab-pane #node}
+
+<div class="tab-panel" id="panel-1-5"></div>
 
 ```
 Rollbar.PersonData(() => new Person
@@ -124,8 +158,9 @@ Rollbar.PersonData(() => new Person
     Email = "user@rollbar.com"
 });
 ```
-{: .tab-pane #net}
 
+
+<div class="tab-panel" id="panel-1-6"></div>
 
 ```java
 import com.rollbar.Rollbar;
@@ -139,9 +174,11 @@ public class HelloWorld {
     }
 }
 ```
-{: .tab-pane #java}
+
+<div class="tab-panel" id="panel-1-7"></div>
 
 ```js
+
 // To track the current user in Javascript you can alter your `_rollbarConfig`
 // like so:
 
@@ -170,7 +207,8 @@ Rollbar.configure({
   }
 });
 ```
-{: .tab-pane #javascript}
+
+<div class="tab-panel" id="panel-1-8"></div>
 
 ```objective_c
 // In order to record the current user in an iOS application you must call
@@ -190,7 +228,9 @@ RollbarConfiguration *config = [RollbarConfiguration configuration];
 
 The person ID is required.
 ```
-{: .tab-pane #ios}
+
+
+<div class="tab-panel" id="panel-1-9"></div>
 
 ```java
 // After initializing Rollbar you can configure the person with the `setPersonData` method:
@@ -205,7 +245,9 @@ public void onCreate(Bundle savedInstanceState) {
 // The methods `getUserId()`, `getUsername()` and `getEmail()` should return strings. If the
 // `id` method returns null then no person will be recorded. Username and email are optional.
 ```
-{: .tab-pane #android}
+
+
+<div class="tab-panel" id="panel-1-10"></div>
 
 ```actionscript
 // In flash you must configure the Rollbar person when first initializing the
@@ -233,6 +275,4 @@ function getCurrentUser() {
 }
 Rollbar.init(this, accessToken, environment, getCurrentUser); //For user, id 42
 ```
-{: .tab-pane #flash}
 
-</div>

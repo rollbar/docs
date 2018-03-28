@@ -1,3 +1,7 @@
+---
+title: RQL
+---
+
 # RQL
 
 Rollbar Query Language (RQL)  provides a rich SQL-like

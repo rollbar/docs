@@ -1,3 +1,7 @@
+---
+title: Tracking Deploys with Heroku
+---
+
 # Heroku Deploy Integration
 
 Use the free Deploy Hook addon from Heroku. Run this command to add it

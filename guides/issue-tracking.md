@@ -1,3 +1,7 @@
+---
+title: IP History
+---
+
 # Connect Rollbar to your Issue Tracker
 
 Rollbar can integrate with [many popular issue trackers](/docs/tools/#issue-tracking) so you can manage Rollbar-detected errors in your existing workflow.

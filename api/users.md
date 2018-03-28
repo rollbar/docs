@@ -1,3 +1,7 @@
+---
+title: API Reference - Users
+---
+
 # Users
 
 These calls require an account-level access token, which should be provided in the query string.
@@ -126,5 +130,3 @@ Example response:
 }
 ```
 
------
-Last updated: August 27, 2017

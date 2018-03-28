@@ -1,3 +1,7 @@
+---
+title: How Rollbar Groups Occurrences
+---
+
 # Default Fingerprinting Algorithm
 
 When it comes to combining similar errors, Rollbar has a few key concepts and term:

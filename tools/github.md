@@ -1,3 +1,7 @@
+---
+title: GitHub Integration
+---
+
 # Connect Rollbar to GitHub
 
 Rollbar is better with GitHub! Get single-sign on with GitHub, send your rollbar items to GitHub

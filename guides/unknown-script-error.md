@@ -1,3 +1,7 @@
+---
+title: Unknown (Script Error)
+---
+
 # Summary
 This happens when your JS code is hosted on a different domain (i.e. a CDN). To fix, set `Access-Control-Allow-Origin: *` on the JS file, and `crossorigin="anonymous"` on the `<SCRIPT>` tag.  
 

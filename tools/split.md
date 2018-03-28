@@ -1,3 +1,7 @@
+---
+title: Integrate Rollbar with Split
+---
+
 # Connecting Rollbar to Split
 
 Are you new to Rollbar?

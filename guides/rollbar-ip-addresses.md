@@ -1,6 +1,10 @@
+---
+title: Rollbar IP Addresses
+---
+
 # Rollbar IP Addresses
 
-_Last updated August 19, 2017_
+_Last changed August 19, 2017_
 
 ## Outbound IP Addresses 
 

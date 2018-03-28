@@ -1,8 +1,13 @@
-_**Note:**  This documentation is provided for authors of custom integration libraries. If your
-application is built on one of our supported platforms, you can use a pre-built library
-instead of rolling your own._
+---
+title: API Reference - Items (POST)
+---
 
-### Overview
+# Sending Occurrences (Creating Items)
+
+This documentation is provided for authors of custom integration libraries. If your
+application is built on one of our supported platforms, you can use a pre-built library
+instead of rolling your own.
+{: .warning}
 
 Rollbar receives Occurrences (exceptions and messages) via a RESTful JSON API. Clients send
 JSON data via an HTTP POST to `https://api.rollbar.com/api/1/item/`
@@ -526,7 +531,6 @@ See the next section for more details about the response codes.
 
 The Items API can return the following status codes:
 
-|---
 | Code | Type | Description
 |-|-|-
 | 200 | Success | The item was accepted for processing.
@@ -542,5 +546,3 @@ If you encounter any other errors, or don't understand an error you see, please
 [contact support](https://rollbar.com/contact/).
 
 
------
-Last updated: August 27, 2017

@@ -1,9 +1,11 @@
+---
+title: API Reference - Deploys
+---
+
 # Deploys
 
 These calls require a project-level access token, which should be provided in the query string.
 The prefix for all URLs is `https://api.rollbar.com`.
-
----
 
 ## Record (create) a deploy
 
@@ -40,8 +42,6 @@ curl 'https://api.rollbar.com/api/1/deploy/' -F access_token=abcdef1234 -F envir
 ```
 
 
----
-
 ## Get a deploy by ID
 
     GET /api/1/deploy/:id
@@ -52,8 +52,6 @@ Requires `read` scope.
 API calls, and can be found in the Rollbar UI on URLs like "https://rollbar.com/deploy/12345/"
 (12345 is the Deploy ID).
 
-
----
 
 ## List all deploys
 
@@ -85,6 +83,3 @@ Get the 21st through 40th most recent deploys:
 curl 'https://api.rollbar.com/api/1/deploys/?access_token=abcd5678&page=2'
 ```
 
-
------
-Last updated: August 27, 2017

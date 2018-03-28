@@ -1,3 +1,7 @@
+---
+title: Custom Log Messages
+---
+
 # Custom Log Messages
 
 You can send any log message to Rollbar, not just exceptions. Log messages can have the same

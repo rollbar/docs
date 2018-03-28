@@ -1,3 +1,7 @@
+---
+title: Tracking Deploys with Bash
+---
+
 # Bash deployment integration
 
 Use Curl to send an HTTP POST:
