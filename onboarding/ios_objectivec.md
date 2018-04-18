@@ -25,13 +25,13 @@ end
 
 In your `AppDelegate.m` file, add the following import statement:
 
-```objective-c
+```objectivec
 #import <Rollbar/Rollbar.h>
 ```
 
 Then add the following to `application:didFinishLaunchingWithOptions:`:
 
-```objective-c
+```objectivec
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [Rollbar initWithAccessToken:@"{{client_access_token}}"];
