@@ -35,7 +35,7 @@ Listing information for all projects
 +----+------------+----------+-------------+
 | id | account_id | slug     | description |
 +----+------------+----------+-------------+
-|  1 |          1 | HProject | HProject    |
+|  5 |          1 | HProject | HProject    |
 +----+------------+----------+-------------+
 
 All desired utilities ran successfully
@@ -67,7 +67,7 @@ Now that you've gotten the project information, you can run the purge on
 each project to get rid of all items older than a day.
 
 ```
-$ ./utils.sh --purge 1:HProject:1473633024
+$ ./utils.sh --purge 5:HProject:1473633024
 ```
 
 ## Compact raw_item Table
