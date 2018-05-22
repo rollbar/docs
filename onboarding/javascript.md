@@ -20,7 +20,7 @@ var _rollbarConfig = {
 ## Test your installation
 
 1. Navigate your browser to a page that has the above code installed
-2. Open the javascript console (in Chrome: right-click, Inspect Element, Console tab)
-3. Type the following and press enter:
+1. Open the javascript console (in Chrome: right-click, Inspect Element, Console tab)
+1. Type the following and press enter:
 
     `window.onerror("TestError: Hello world", window.location.href)`
