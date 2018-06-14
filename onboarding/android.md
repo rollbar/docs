@@ -3,7 +3,8 @@
 To send errors to Rollbar from your Java application, you should use our <a href="https://github.com/rollbar/rollbar-java" target="_blank" rel="noopener">rollbar-java</a> package. 
 
 ``` java
-compile('com.rollbar:rollbar-java:1.0.0')
+compile('com.rollbar:rollbar-java:1.2.0')
+compile('com.rollbar:rollbar-android:1.2.0@aar')
 ```
 
 ## rollbar-android
