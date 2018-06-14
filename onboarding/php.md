@@ -3,7 +3,7 @@
 Add `rollbar/rollbar` with composer:
 
 ```bash
-$ composer require rollbar/rollbar:~1.1
+$ composer require rollbar/rollbar:~1.5
 ```
 
 ## Configuration
