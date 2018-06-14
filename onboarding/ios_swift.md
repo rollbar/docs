@@ -8,7 +8,7 @@ platform :ios
 
 target 'YOUR_APP_NAME' do
   use_frameworks!
-  pod 'Rollbar', '~> 0.2'
+  pod "Rollbar", "~> 1.0.0-alpha11"
 end
 
 ```
