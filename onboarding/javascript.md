@@ -7,7 +7,7 @@ in those scripts are reported to Rollbar.
 ```html
 <script>
 var _rollbarConfig = {
-    accessToken: "POST_CLIENT_ITEM_ACCESS_TOKEN",
+    accessToken: "{{ client_access_token }}",
     captureUncaught: true,
     captureUnhandledRejections: true,
     payload: {
