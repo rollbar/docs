@@ -1,9 +1,9 @@
 ## Installation
 
-To send errors to Rollbar from your Java application, you should use our <a href="https://github.com/rollbar/rollbar-java" target="_blank" rel="noopener">rollbar-java</a> package. 
+To send errors to Rollbar from your Java application, you should use our <a href="https://github.com/rollbar/rollbar-java" target="_blank" rel="noopener">rollbar-java</a> package.
 
 ``` java
-compile('com.rollbar:rollbar-java:1.2.0')
+compile('com.rollbar:rollbar-java:1.2.1')
 ```
 
 ## rollbar-java
@@ -19,7 +19,7 @@ rollbar.log("Hello, Rollbar");
 
 A few seconds after you execute this code, the message should appear on your project's "Items" page.
 
-For a more detailed example integration, see below: 
+For a more detailed example integration, see below:
 
 We initialize `com.rollbar.notifier.Rollbar` with a `Config` which has the access token and other configuration properties set on it.
 We can then this this instance of Rollbar to report messages via the `log/debug/warning/error/critical` methods.
@@ -57,7 +57,7 @@ public class Application {
 }
 ```
 
-A more full-featured example can be found <a href="https://github.com/rollbar/rollbar-java/tree/master/examples/rollbar-java" target="_blank" rel="noopener">on GitHub</a>. 
+A more full-featured example can be found <a href="https://github.com/rollbar/rollbar-java/tree/master/examples/rollbar-java" target="_blank" rel="noopener">on GitHub</a>.
 
 
 ## Configuration
@@ -66,4 +66,4 @@ All configuration is done via the Config object in `rollbar-java`. You can see t
 
 ## Spring
 
-Check out [this blog post](https://rollbar.com/blog/spring-mvc-exception-handling/) for more information on how to use rollbar-java in your Spring app. 
+Check out [this blog post](https://rollbar.com/blog/spring-mvc-exception-handling/) for more information on how to use rollbar-java in your Spring app.
