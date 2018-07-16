@@ -12,7 +12,7 @@ dependencies {
 
 Set your access token in your `AndroidManifest.xml` file:
 
-``` java
+``` xml
 <?xml version="1.0" encoding="utf-8"?>
 <manifest ...>
     <application ...>
