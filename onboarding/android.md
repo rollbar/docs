@@ -1,6 +1,4 @@
-## Installation
-
-To send errors to Rollbar from your Java application, you should use our <a href="https://github.com/rollbar/rollbar-java" target="_blank" rel="noopener">rollbar-java</a> package. 
+## Installation 
 
 Add the following to your `build.gradle`:
 
@@ -11,8 +9,6 @@ dependencies {
     //Rest of your dependencies...
 }
 ```
-
-For an Android app, we have some more specific pieces which allow you to capture more information about the Android environment automatically than what you would have to do with `rollbar-java` directly.
 
 Set your access token in your `AndroidManifest.xml` file:
 
