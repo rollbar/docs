@@ -13,7 +13,7 @@ The minimal amount of code you need to use `rollbar-java` is:
 ``` java
 import static com.rollbar.notifier.config.ConfigBuilder.withAccessToken;
 import com.rollbar.notifier.Rollbar;
-Rollbar rollbar = Rollbar.init(withAccessToken("{{ server_access_token }}"));
+Rollbar rollbar = Rollbar.init(withAccessToken("{{ server_access_token }}").build());
 rollbar.log("Hello, Rollbar");
 ```
 
