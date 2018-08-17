@@ -1,0 +1,1 @@
+- Did you place the script at the top of the `<head>` tag?
