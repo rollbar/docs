@@ -1,0 +1,1 @@
+- Using Heroku? Check out these <a href="/docs/notifier/rollbar-php/#for-heroku-users" target="_blank" rel="noopener noreferrer">Heroku-specific setup instructions</a>
