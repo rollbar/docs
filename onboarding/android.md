@@ -4,8 +4,8 @@ Add the following to your `build.gradle`:
 
 ``` java
 dependencies {
-    compile('com.rollbar:rollbar-java:1.2.1')
-    compile('com.rollbar:rollbar-android:1.2.1@aar')
+    compile('com.rollbar:rollbar-java:1.3.1')
+    compile('com.rollbar:rollbar-android:1.3.1@aar')
     //Rest of your dependencies...
 }
 ```
