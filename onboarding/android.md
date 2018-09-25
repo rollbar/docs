@@ -2,7 +2,7 @@
 
 ## Using Android Studio or Gradle
 
-Add the following to your `build.gradle`:
+Add the following to your **Module Gradle Settings**, usually found at `<project_dir>/app/build.gradle`:
 
 ``` java
 dependencies {
@@ -58,20 +58,6 @@ public class MainActivity extends AppCompatActivity {
 
 The first time you run this code, a new item should appear in your Rollbar project.
 
-# Basic Usage
+# Docs 
 
-You can make direct calls to Rollbar via the managed instance:
-
-``` java
-void clickAction() {
-  Rollbar.instance().log("Some button was clicked");
-}
-```
-
-All uncaught exceptions which cause a crash will be logged by Rollbar, but will not be sent until the next time the app runs.
-
-You can see a rollbar-android example <a href="https://github.com/rollbar/rollbar-java/tree/master/examples/rollbar-android" target="_blank" rel="noopener">on GitHub</a>.
-
-# Configuration
-
-All configuration is done via the Config object in `rollbar-java`. You can see the interface <a href="https://github.com/rollbar/rollbar-java/blob/master/rollbar-java/src/main/java/com/rollbar/notifier/config/Config.java" target="_blank" rel="noopener">here</a>.
+For full documentation of the Java & Android SDK, see our <a href="https://docs.rollbar.com/docs/android" target="_blank" rel="noopener">Android docs</a>.
