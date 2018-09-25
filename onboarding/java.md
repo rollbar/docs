@@ -1,12 +1,28 @@
-## Installation
+# Installation
 
-To send errors to Rollbar from your Java application, you should use our <a href="https://github.com/rollbar/rollbar-java" target="_blank" rel="noopener">rollbar-java</a> package.
+## Using Gradle
+
+Add `rollbar-java` to the `dependencies` section in your `build.gradle`:
 
 ``` java
-compile('com.rollbar:rollbar-java:1.3.1')
+compile 'com.rollbar:rollbar-java:1.+'
 ```
 
-## rollbar-java
+## Using Maven
+
+Add `rollbar-java` as a dependency in your `pom.xml`:
+
+```xml
+<dependency>
+  <groupId>com.rollbar</groupId>
+  <version>[1.0,)</version>
+  <artifactId>rollbar-java</artifactId>
+</dependency>
+```
+
+Then run `mvn install`.
+
+# Basic Configuration
 
 The minimal amount of code you need to use `rollbar-java` is:
 
@@ -60,10 +76,10 @@ public class Application {
 A more full-featured example can be found <a href="https://github.com/rollbar/rollbar-java/tree/master/examples/rollbar-java" target="_blank" rel="noopener">on GitHub</a>.
 
 
-## Configuration
+# Further Configuration
 
 All configuration is done via the Config object in `rollbar-java`. You can see the interface <a href="https://github.com/rollbar/rollbar-java/blob/master/rollbar-java/src/main/java/com/rollbar/notifier/config/Config.java" target="_blank" rel="noopener">here</a>.
 
-## Spring
+# Spring
 
 Check out [this blog post](https://rollbar.com/blog/spring-mvc-exception-handling/) for more information on how to use rollbar-java in your Spring app.
