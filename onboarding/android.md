@@ -1,14 +1,31 @@
-## Installation 
+# Installation
+
+## Using Android Studio or Gradle
 
 Add the following to your `build.gradle`:
 
 ``` java
 dependencies {
-    compile('com.rollbar:rollbar-java:1.3.1')
-    compile('com.rollbar:rollbar-android:1.3.1@aar')
+    compile 'com.rollbar:rollbar-java:1.+')
+    compile 'com.rollbar:rollbar-android:1.+@aar'
     //Rest of your dependencies...
 }
 ```
+
+Don't forget to run **Tools→Android→Sync Project with Gradle Files** after updating `build.gradle`.
+
+## Using Maven
+
+Add `rollbar-android` as a dependency in your `pom.xml`:
+
+```xml
+<dependency>
+    <groupId>com.rollbar</groupId>
+    <artifactId>rollbar-android</artifactId>
+</dependency>
+```
+
+# Basic Configuration
 
 Set your access token in your `AndroidManifest.xml` file:
 
@@ -39,6 +56,10 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
+The first time you run this code, a new item should appear in your Rollbar project.
+
+# Basic Usage
+
 You can make direct calls to Rollbar via the managed instance:
 
 ``` java
@@ -51,7 +72,6 @@ All uncaught exceptions which cause a crash will be logged by Rollbar, but will 
 
 You can see a rollbar-android example <a href="https://github.com/rollbar/rollbar-java/tree/master/examples/rollbar-android" target="_blank" rel="noopener">on GitHub</a>.
 
-
-## Configuration
+# Configuration
 
 All configuration is done via the Config object in `rollbar-java`. You can see the interface <a href="https://github.com/rollbar/rollbar-java/blob/master/rollbar-java/src/main/java/com/rollbar/notifier/config/Config.java" target="_blank" rel="noopener">here</a>.
