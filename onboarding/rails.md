@@ -34,7 +34,7 @@ That will create the file ```config/initializers/rollbar.rb```, which initialize
 To confirm that your application is properly configured, run:
 
 ```bash
-$ rake rollbar:test
+rake rollbar:test
 ```
 
 This will raise an exception within a test request; if it works, you'll see a stacktrace in the console, and the exception will appear in the Rollbar dashboard.
@@ -44,8 +44,8 @@ This will raise an exception within a test request; if it works, you'll see a st
 If you want to store your access token outside of your repo, run the same command without arguments and create an environment variable ```ROLLBAR_ACCESS_TOKEN``` that holds your server-side access token:
 
 ```bash
-$ rails generate rollbar
-$ export ROLLBAR_ACCESS_TOKEN={{ server_access_token }}
+rails generate rollbar
+export ROLLBAR_ACCESS_TOKEN={{ server_access_token }}
 ```
 
 ### For Heroku users
@@ -53,5 +53,5 @@ $ export ROLLBAR_ACCESS_TOKEN={{ server_access_token }}
 If you're on Heroku, you can store the access token in your Heroku config:
 
 ```bash
-$ heroku config:add ROLLBAR_ACCESS_TOKEN={{ server_access_token }}
+heroku config:add ROLLBAR_ACCESS_TOKEN={{ server_access_token }}
 ```
