@@ -1,6 +1,6 @@
 ## Install the gem
 
-Add to your Gemfile:
+Add the following entry to your `Gemfile`:
 
 ```ruby
 gem 'rollbar'
@@ -12,9 +12,9 @@ Then run:
 bundle install
 ```
 
-If you don't use bundler:
+Or, if you don't use `bundler`:
 
-```
+```bash
 gem install rollbar
 ```
 
@@ -27,7 +27,7 @@ Run the following command from your Rails root:
 rails generate rollbar {{ server_access_token }}
 ```
 
-That will create the file ```config/initializers/rollbar.rb```, which initializes Rollbar and holds your access token and other configuration values.
+That will create the file `config/initializers/rollbar.rb`, which initializes Rollbar and holds your access token and other configuration values.
 
 ## Test Your Rollbar Configuration
 
