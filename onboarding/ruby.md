@@ -1,18 +1,18 @@
 ## Install the gem
 
-Add to your Gemfile:
+Add the following entry to your `Gemfile`:
 
 ```ruby
 gem 'rollbar'
 ```
 
-Then run:
+Then run the command:
 
 ```shell
 bundle install
 ```
 
-If you don't use bundler:
+Or, if you don't use bundler:
 
 ```
 gem install rollbar
