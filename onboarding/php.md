@@ -17,7 +17,7 @@ use \Rollbar\Payload\Level;
 Rollbar::init(
 	array(
 		'access_token' => '{{ server_access_token }}',
-		'environment' => 'development'
+		'environment' => 'production'
 	)
 );
 ```
