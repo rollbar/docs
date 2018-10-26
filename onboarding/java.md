@@ -52,7 +52,7 @@ public class Application {
 
   public Application() {
     Config config = withAccessToken("{{ server_access_token }}")
-        .environment("development")
+        .environment("production")
         .codeVersion("1.0.0")
         .build();
     this.rollbar = Rollbar.init(config);
