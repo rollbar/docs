@@ -31,7 +31,7 @@ def init_rollbar():
         # access token
         '{{ server_access_token }}',
         # environment name
-        'testing',
+        'production',
         # server root directory, makes tracebacks prettier
         root=os.path.dirname(os.path.realpath(__file__)),
         # flask already sets up logging
