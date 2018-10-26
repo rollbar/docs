@@ -33,7 +33,7 @@ In `config/logging.php`, add `rollbar` logging channel by adding the following u
             'driver' => 'monolog',
             'handler' => \Rollbar\Laravel\MonologHandler::class,
             'access_token' => env('ROLLBAR_TOKEN'),
-            'level' => 'error',
+            'level' => 'debug',
         ]
 ```
 
