@@ -6,8 +6,8 @@ Add the following to your **Module Gradle Settings**, usually found at `<project
 
 ``` java
 dependencies {
-    compile 'com.rollbar:rollbar-java:1.+')
-    compile 'com.rollbar:rollbar-android:1.+@aar'
+    implementation 'com.rollbar:rollbar-java:1.+'
+    implementation 'com.rollbar:rollbar-android:1.+@aar'
     //Rest of your dependencies...
 }
 ```
