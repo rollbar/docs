@@ -11,10 +11,12 @@ Install-Package Rollbar
 To use inside a Winforms Application, do the following inside your main method. You'll need your project's server-side access token to initialize the Rollbar.NET SDK.
 
 ```csharp
+using Rollbar;
+
 [STAThread]
 static void Main()
 {
-    Rollbar.Init(new RollbarConfig
+    RollbarLocator.RollbarInstance.Configure(new RollbarConfig
     {
         AccessToken = "{{server_access_token}}",
         Environment = "production"
@@ -24,12 +26,12 @@ static void Main()
 
     Application.ThreadException += (sender, args) =>
     {
-        Rollbar.Report(args.Exception);
+        RollbarLocator.RollbarInstance.Error(args.Exception);
     };
 
     AppDomain.CurrentDomain.UnhandledException += (sender, args) =>
     {
-        Rollbar.Report(args.ExceptionObject as System.Exception);
+        RollbarLocator.RollbarInstance.Error(args.ExceptionObject as System.Exception);
     };
 
     Application.Run(new Form1());
@@ -46,7 +48,7 @@ public class RollbarExceptionFilter : IExceptionFilter
         if (filterContext.ExceptionHandled)
             return;
 
-        Rollbar.Report(filterContext.Exception);
+        RollbarLocator.RollbarInstance.Error(filterContext.Exception);
     }
 }
 ```
@@ -66,7 +68,7 @@ private static void RegisterGlobalFilters(GlobalFilterCollection filters)
 Sending a message to the Rollbar server is as simple as running this command after initializing Rollbar:
 
 ```csharp
-Rollbar.Report("Rollbar is configured correctly");
+RollbarLocator.RollbarInstance.Info("Rollbar is configured correctly");
 ```
 
 A few seconds after you execute this code, the message should appear on your project's "Items" page.
@@ -83,7 +85,7 @@ try
 }
 catch (System.Exception ex)
 {
-    Rollbar.Report(ex);
+    RollbarLocator.RollbarInstance.Error(ex);
 }
 ```
 
