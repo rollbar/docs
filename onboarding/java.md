@@ -31,6 +31,7 @@ import static com.rollbar.notifier.config.ConfigBuilder.withAccessToken;
 import com.rollbar.notifier.Rollbar;
 Rollbar rollbar = Rollbar.init(withAccessToken("{{ server_access_token }}").build());
 rollbar.log("Hello, Rollbar");
+rollbar.close(true);
 ```
 
 A few seconds after you execute this code, the message should appear on your project's "Items" page.
