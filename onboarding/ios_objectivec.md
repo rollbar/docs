@@ -7,7 +7,7 @@ In your Podfile:
 platform :ios
 
 target 'YOUR_APP_NAME' do
-  pod "Rollbar", "~> 1.0.0-alpha11"
+  pod "Rollbar", "~> 1.4.2"
 end
 ```
 **NOTE:** The `plaftform:ios` statement is required 
