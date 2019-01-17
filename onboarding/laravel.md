@@ -14,7 +14,7 @@ composer require rollbar/rollbar-laravel 2.*
 ## Configuration
 Add Project Access Token to `.env`:
 ```
-ROLLBAR_TOKEN="{{ server_access_token }}"
+ROLLBAR_TOKEN={{ server_access_token }}
 ```
 
 Add the service provider to the `'providers'` array in `config/app.php`:
