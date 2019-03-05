@@ -30,11 +30,10 @@ const rollbarConfig = {
 
 @Injectable()
 export class RollbarErrorHandler implements ErrorHandler {
-  constructor(private injector: Injector) {}
+  constructor(@Inject(RollbarService) private rollbar: Rollbar) {}
 
   handleError(err:any) : void {
-    var rollbar = this.injector.get(RollbarService);
-    rollbar.error(err.originalError || err);
+    this.rollbar.error(err.originalError || err);
   }
 }
 
