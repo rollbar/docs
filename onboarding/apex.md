@@ -33,7 +33,7 @@
         - _Apex Notifications forwarding set up_
         - _Access Token correct_
     2. When the package and your organization is fully configured, all of them should turn green and you will be presented with a _Success_ installation page.
-    3. The SDK will send a welcome message to your Rollbar project right away. You should be able to find in your items view in Rollbar.
+    3. The SDK will send a welcome message to your Rollbar project right away. You should be able to find it in your items view in Rollbar.
   
 9. You can now use Rollbar for Apex in your organization.
 
