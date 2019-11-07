@@ -1,7 +1,6 @@
 # Installation
 
 1. Navigate to the [Rollbar for Apex Salesforce package installation page](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2E000003sj20).
-    1. If you are installing the pakcage in a scratch organization, just add `/packaging/installPackage.apexp?p0=04t2E000003sj20` after your scratch org's domain name, i.e.: `https://platform-enterprise-7532-dev-ed.lightning.force.com//packaging/installPackage.apexp?p0=04t2E000003sj20`.
 
 2. To the question _What if existing component names conflict with ones in this package?_ answer: _Do not install_.
 
@@ -55,3 +54,6 @@ Or just start using Rollbar in your Apex classes.
 If you need to change the access token of your Rollbar project to which your organization is connected, it's as simple as changing the value of a Custom Settings `RollbarSettings__c`.
 
 You can also go back to the Rollbar for Apex installer VisualForce page: `RollbarConfigure`.
+
+# Additional information
+* If you are installing the pakcage in a scratch organization, just add `/packaging/installPackage.apexp?p0=04t2E000003sj20` after your scratch org's domain name, i.e.: `https://platform-enterprise-7532-dev-ed.lightning.force.com//packaging/installPackage.apexp?p0=04t2E000003sj20`.
