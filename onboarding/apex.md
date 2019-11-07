@@ -8,7 +8,7 @@
 
 4. Click _Install_.
 
-5. Grant access to Rollbar API in a pop up window:
+5. Grant access to Rollbar API in a popup window:
     1. Check the _Yes, grant access to these third-party web sites_ checkbox.
     2. Click _Continue_.
   
@@ -19,7 +19,7 @@
     2. Provide your Rollbar project's `post_server_item` access token.
         1. Go to _Settings_ in your Rollbar account.
         2. Click the name of the project you want to connect with your organization.
-        3. Navigate to _Project Accesss Tokens_ (it should be default section).
+        3. Navigate to _Project Access Tokens_ (it should be default section).
         4. Copy the `post_server_item` access token.
         5. Paste the copied access token in the text input in the package's installer.
     3. Click _Finish_.
@@ -56,4 +56,4 @@ If you need to change the access token of your Rollbar project to which your org
 You can also go back to the Rollbar for Apex installer VisualForce page: `RollbarConfigure`.
 
 # Additional information
-* If you are installing the pakcage in a scratch organization, just add `/packaging/installPackage.apexp?p0=04t2E000003sj20` after your scratch org's domain name, i.e.: `https://platform-enterprise-7532-dev-ed.lightning.force.com//packaging/installPackage.apexp?p0=04t2E000003sj20`.
+* If you are installing the package in a scratch organization, just add `/packaging/installPackage.apexp?p0=04t2E000003sj20` after your scratch org's domain name, i.e.: `https://platform-enterprise-7532-dev-ed.lightning.force.com//packaging/installPackage.apexp?p0=04t2E000003sj20`.
