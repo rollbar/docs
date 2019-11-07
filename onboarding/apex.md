@@ -4,7 +4,7 @@
 
 2. To the question _What if existing component names conflict with ones in this package?_ answer: _Do not install_.
 
-3. Select the group of users you want to install Rollbar for Apex. We recommend selecting _Install for All Users_.
+3. Select the group of users you want to install Rollbar for Apex for. We recommend selecting _Install for All Users_.
 
 4. Click _Install_.
 
