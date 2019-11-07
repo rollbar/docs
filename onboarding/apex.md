@@ -38,5 +38,19 @@
 9. You can now use Rollbar for Apex in your organization.
 
 # Send a test message
+Sending a message to Rollbar is as simple as:
+```
+Rollbar.init();
+
+Rollbar.log('info', 'Hello World');
+```
+
+You can copy and paste the above Apex code either to your Developer Console and execute it anonymously (`Developer Console` → `Debug` → `Open Execute Anonymous Window`.
+
+Or just start using Rollbar in your Apex classes.
 
 # Configuration
+## Changing the access token
+If you need to change the access token of your Rollbar project to which your organization is connected, it's as simple as changing the value of a Custom Settings `RollbarSettings__c`.
+
+You can also go back to the Rollbar for Apex installer VisualForce page: `RollbarConfigure`.
