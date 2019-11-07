@@ -1,6 +1,7 @@
 # Installation
 
 1. Navigate to the [Rollbar for Apex Salesforce package installation page](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2E000003sj20).
+    1. If you are installing the pakcage in a scratch organization, just add `/packaging/installPackage.apexp?p0=04t2E000003sj20` after your scratch org's domain name, i.e.: `https://platform-enterprise-7532-dev-ed.lightning.force.com//packaging/installPackage.apexp?p0=04t2E000003sj20`.
 
 2. To the question _What if existing component names conflict with ones in this package?_ answer: _Do not install_.
 
@@ -45,7 +46,7 @@ Rollbar.init();
 Rollbar.log('info', 'Hello World');
 ```
 
-You can copy and paste the above Apex code either to your Developer Console and execute it anonymously (`Developer Console` → `Debug` → `Open Execute Anonymous Window`.
+You can copy and paste the above Apex code either to your Developer Console and execute it anonymously (`Developer Console` → `Debug` → `Open Execute Anonymous Window`).
 
 Or just start using Rollbar in your Apex classes.
 
