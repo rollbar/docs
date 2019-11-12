@@ -9,13 +9,17 @@
 4. Click _Install_.
 
 5. Grant access to Rollbar API in a popup window:
+
     1. Check the _Yes, grant access to these third-party web sites_ checkbox.
+    
     2. Click _Continue_.
   
 6. Wait until the package downloads into your organization. You will see the message _Installing and granting access to all Users..._ with a loader. Wait several seconds.
 
 7. Configure Rollbar for Apex
+
     1. When the download is finished you will be presented with the package's configuration page.
+    
     2. Provide your Rollbar project's _post_server_item_ access token:
     
         `{{ server_access_token }}`
