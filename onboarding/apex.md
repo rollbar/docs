@@ -1,6 +1,6 @@
 # Installation
 
-1. Navigate to the [Rollbar for Apex Salesforce package installation page](https://login.salesforce.com/packaging/installPackage.apexp?p0=04t2E000003sj20).
+1. Navigate to the [Rollbar for Apex Salesforce package installation page](https://docs.rollbar.com/salesforce-apex/install).
 
 2. To the question _What if existing component names conflict with ones in this package?_ answer: _Do not install_.
 
