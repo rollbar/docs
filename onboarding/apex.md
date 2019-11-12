@@ -46,8 +46,6 @@
 # Send a test message
 Sending a message to Rollbar is as simple as:
 ```
-Rollbar.init();
-
 Rollbar.log('info', 'Hello World');
 ```
 
