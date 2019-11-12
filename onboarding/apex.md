@@ -58,4 +58,6 @@ If you need to change the access token of your Rollbar project to which your org
 You can also go back to the Rollbar for Apex installer VisualForce page: `RollbarConfigure`.
 
 # Additional information
-* If you are installing the package in a scratch organization, just add `/packaging/installPackage.apexp?p0=04t2E000003sj20` after your scratch org's domain name, i.e.: `https://platform-enterprise-7532-dev-ed.lightning.force.com//packaging/installPackage.apexp?p0=04t2E000003sj20`.
+* If you are installing the package in a scratch organization, just add path name from the Salesforce package installation link after your scratch org's domain name, i.e.: 
+
+`https://platform-enterprise-7532-dev-ed.lightning.force.com/packaging/installPackage.apexp?p0=04t2E000003sj2F`.
