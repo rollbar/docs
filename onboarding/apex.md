@@ -16,12 +16,7 @@
 
 7. Configure Rollbar for Apex
     1. When the download is finished you will be presented with the package's configuration page.
-    2. Provide your Rollbar project's `post_server_item` access token.
-        1. Go to _Settings_ in your Rollbar account.
-        2. Click the name of the project you want to connect with your organization.
-        3. Navigate to _Project Access Tokens_ (it should be default section).
-        4. Copy the `post_server_item` access token.
-        5. Paste the copied access token in the text input in the package's installer.
+    2. Provide your Rollbar project's `post_server_item` access token: `{{ server_access_token }}`
     3. Click _Finish_.
   
 8. Wait until Rollbar for Apex prepares your organization to use the SDK.
