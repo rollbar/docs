@@ -17,7 +17,9 @@
 7. Configure Rollbar for Apex
     1. When the download is finished you will be presented with the package's configuration page.
     2. Provide your Rollbar project's _post_server_item_ access token:
+    
         `{{ server_access_token }}`
+        
     3. Click _Finish_.
   
 8. Wait until Rollbar for Apex prepares your organization to use the SDK.
