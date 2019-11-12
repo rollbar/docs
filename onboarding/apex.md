@@ -55,12 +55,6 @@ You can copy and paste the above Apex code either to your Developer Console and 
 
 Or just start using Rollbar in your Apex classes.
 
-# Configuration
-## Changing the access token
-If you need to change the access token of your Rollbar project to which your organization is connected, it's as simple as changing the value of a Custom Settings `RollbarSettings__c`.
-
-You can also go back to the Rollbar for Apex installer VisualForce page: `RollbarConfigure`.
-
 # Additional information
 * If you are installing the package in a scratch organization, just add path name from the Salesforce package installation link after your scratch org's domain name, i.e.: 
 
