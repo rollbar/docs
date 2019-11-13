@@ -56,4 +56,4 @@ Or just start using Rollbar in your Apex classes.
 # Additional information
 * If you are installing the package in a scratch organization, just add path name from the Salesforce package installation link after your scratch org's domain name, i.e.: 
 
-`https://platform-enterprise-7532-dev-ed.lightning.force.com/packaging/installPackage.apexp?p0=04t2E000003sj7k`.
+`https://platform-enterprise-7532-dev-ed.lightning.force.com/packaging/installPackage.apexp?p0=04t2E000003sj7u`.
