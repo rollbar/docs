@@ -11,7 +11,11 @@ $ npm install --save rollbar
 Import rollbar into your app and configure it to catch uncaught exceptions:
 
 ```
-import * as Rollbar from 'rollbar';
+import * as Rollbar from 'rollbar'; // When using Typescript < 3.6.0.
+// `import Rollbar from 'rollbar';` is the required syntax for Typescript 3.6.x.
+// However, it will only work when setting either `allowSyntheticDefaultImports`
+// or `esModuleInterop` in your Typescript options.
+
 import { BrowserModule } from '@angular/platform-browser';
 import {
   Injectable,
@@ -88,9 +92,8 @@ os: darwin x64
 typescript: 2.3.4
 ```
 
-there are some further steps you may need to implement in order to get rollbar.js working for you. 
+there are some further steps you may need to implement in order to get rollbar.js working for you.
 
 When compiling, if you get the error `Error encountered resolving symbol values statically. Function calls are not supported. Consider replacing the function or lambda with a reference to an exported function`, then the inline factory function in providers should be an exported function.
 
 Another error you may encounter when compiling is `Property 'error' does not exist on type '{}'.` In this case, the RollbarErrorHandler `var rollbar` needs to have a type explicitly defined, i.e. `var rollbar: Rollbar`.
-
