@@ -2,21 +2,15 @@
 
 1. Navigate to the [Rollbar for Apex Salesforce package installation page](https://docs.rollbar.com/salesforce-apex/install).
 
-2. To the question _What if existing component names conflict with ones in this package?_ answer: _Do not install_.
+2. Select the group of users you want to install Rollbar for Apex for. We recommend selecting _Install for All Users_.
 
-3. Select the group of users you want to install Rollbar for Apex for. We recommend selecting _Install for All Users_.
-
-4. Click _Install_.
-
-5. Grant access to Rollbar API in a popup window:
-
-    1. Check the _Yes, grant access to these third-party web sites_ checkbox.
-    
-    2. Click _Continue_.
+3. Click _Install_.
   
-6. Wait until the package downloads into your organization. You will see the message _Installing and granting access to all Users..._ with a loader. Wait several seconds.
+4. Wait until the package downloads into your organization. You will see the message _Installing and granting access to all Users..._ with a loader. This may take 60 seconds or more.
 
-7. Configure Rollbar for Apex
+5. Click _Continue Install_ and _Setup Forwarding_ when prompted. Wait for the Rollbar package components to be configured.
+
+6. Configure Rollbar for Apex
 
     1. When the download is finished you will be presented with the package's configuration page.
     
@@ -24,29 +18,16 @@
     
         `{{ server_access_token }}`
         
-    3. Click _Finish_.
-  
-8. Wait until Rollbar for Apex prepares your organization to use the SDK.
-
-    1. You will see the following final steps being performed:
+    3. Click _Save and Verify_.
     
-        - _Salesforce Metadata API enabled_
-        - _Rollbar API endpoint allowed_
-        - _Rollbar ping successful_
-        - _Rollbar Email Service set up_
-        - _Apex Notifications forwarding set up_
-        - _Access Token correct_
-        
-    2. When the package and your organization is fully configured, all of them should turn green and you will be presented with a _Success_ installation page.
-    
-    3. The SDK will send a welcome message to your Rollbar project right away. You should be able to find it in your items view in Rollbar.
+7. The SDK will send a welcome message to your Rollbar project right away. You should be able to find it in your items view in Rollbar.
   
-9. You can now use Rollbar for Apex in your organization.
+8. You can now use Rollbar for Apex in your organization.
 
 # Send a test message
 Sending a message to Rollbar is as simple as:
 ```
-Rollbar.log('info', 'Hello World');
+rollbar.Rollbar.log('info', 'Hello World');
 ```
 
 You can copy and paste the above Apex code either to your Developer Console and execute it anonymously (`Developer Console` → `Debug` → `Open Execute Anonymous Window`).
