@@ -31,13 +31,12 @@ try
 }
 catch (System.Exception ex)
 {
-    RollbarLocator.RollbarInstance.Error(ex);
+    RollbarLocator.RollbarInstance.AsBlockingLogger(TimeSpan.FromSeconds(1)).Error(ex);
 }
 ```
 
 A few seconds after you execute this code, an exception should appear on your project’s “Items” page.
-This item will include the basic exception information and a stack trace, along with the values of
-local variables and the arguments passed to each function at each frame in the stack trace.
+This item will include the basic exception information and its stack trace.
 
 # Integrating the SDK into a Specific .NET compatible Application Framework
 
