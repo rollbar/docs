@@ -45,7 +45,7 @@ Once you’ve verified that the Rollbar SDK is configured correctly and can comm
 want to add the SDK to your existing applications based on your application development framework. To gain a better 
 understanding of the intended usage patterns for the SDK, see the Rollbar.NET docs <a href=“https://docs.rollbar.com/docs/dotnet” target=“_blank” rel=“noopener”>here</a> for further information.
 
-Here is the list of documentation article we recommend reviewing before making attempts to properly integrate into a real application:
+Here is the list of documentation articles we recommend reviewing before making attempts to properly integrate into a real application:
 
 - <a href=“https://docs.rollbar.com/docs/dotnet” target=“_blank” rel=“noopener”>SDK Introduction</a>
 - <a href=“https://docs.rollbar.com/docs/overview” target=“_blank” rel=“noopener”>SDK Components Overview</a>
