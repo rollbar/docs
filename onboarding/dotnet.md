@@ -51,7 +51,7 @@ Here is the list of articles from our docs we recommend reviewing before making 
 - [Basic Logger/Notifier Usage Scenarios](https://docs.rollbar.com/docs/basic-usage)
 - [Logger’s Configuration Options/Alternatives](https://docs.rollbar.com/docs/logger-configuration)
 - [More Advanced Usage Scenarios](https://docs.rollbar.com/docs/more-advanced-logger-usages)
-- To better integrate the SDK into a specific application type or existing logging framework look for suitable documentation article titled as “Integrating as/with ...“. Pick the one that matches best your desired integration strategy.
+- To better integrate the SDK into a specific application type or existing logging framework look for suitable documentation article titled as “Integrating as/with ...“, [like this one](https://docs.rollbar.com/docs/integrating-as-a-tracelistener). Pick the one that matches best your desired integration strategy.
 - [Also, review a repo of our application/technology integration samples](https://github.com/rollbar/Rollbar.NET/tree/master/Samples)
 
 
