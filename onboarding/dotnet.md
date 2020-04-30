@@ -14,11 +14,11 @@ You’ll need your project’s server-side access token to initialize the Rollba
 a message to the Rollbar server is as simple as:
 
 ```csharp
-RollbarLocator.RollbarInstance.Configure(new RollbarConfig(“{{ server_access_token }}“));
-RollbarLocator.RollbarInstance.Info(“Rollbar is configured properly.“);
+RollbarLocator.RollbarInstance.Configure(new RollbarConfig("{{ server_access_token }}"));
+RollbarLocator.RollbarInstance.Info("Rollbar is configured properly.");
 ```
 
-A few seconds after you execute this code, the message should appear on your project’s “Items” page.
+A few seconds after you execute this code, the message should appear on your project’s Items page.
 
 ## Report an Error
 
@@ -27,7 +27,7 @@ To send an error, rather than a message, execute the following code after initia
 ```csharp
 try
 {
-    int value = 1 / int.Parse(“0");
+    int value = 1 / int.Parse("0");
 }
 catch (System.Exception ex)
 {
@@ -35,7 +35,7 @@ catch (System.Exception ex)
 }
 ```
 
-A few seconds after you execute this code, an exception should appear on your project’s “Items” page.
+A few seconds after you execute this code, an exception should appear on your project’s Items page.
 This item will include the basic exception information and its stack trace.
 
 # Integrating the SDK into a Specific .NET compatible Application Framework
