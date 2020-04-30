@@ -1,8 +1,8 @@
 ## Installation instructions for any .NET compatible application
 
-To send errors to Rollbar from your .NET application, you should use our <a href=“https://github.com/rollbar/Rollbar.NET” target=“_blank” rel=“noopener”>Rollbar.NET</a> SDK.
+To send errors to Rollbar from your .NET application, you should use our [Rollbar.NET SDK](https://github.com/rollbar/Rollbar.NET).
 
-Install Rollbar.Net with Nuget:
+Install Rollbar .Net with Nuget:
 
 ```csharp
 Install-Package Rollbar
@@ -10,7 +10,7 @@ Install-Package Rollbar
 
 ## Send a Message
 
-You’ll need your project’s server-side access token to initialize the Rollbar.NET SDK. Sending
+You’ll need your project’s server-side access token to initialize the Rollbar .NET SDK. Sending
 a message to the Rollbar server is as simple as:
 
 ```csharp
@@ -42,15 +42,16 @@ This item will include the basic exception information and its stack trace.
 
 Once you’ve verified that the Rollbar SDK is configured correctly and can communicate with the Rollbar server, you’ll
 want to add the SDK to your existing applications based on your application development framework. To gain a better 
-understanding of the intended usage patterns for the SDK, see the Rollbar.NET docs <a href=“https://docs.rollbar.com/docs/dotnet” target=“_blank” rel=“noopener”>here</a> for further information.
+understanding of the intended usage patterns for the SDK, see the Rollbar .NET docs [here](https://docs.rollbar.com/docs/dotnet) for further information.
 
 Here is the list of articles from our docs we recommend reviewing before making attempts to fully integrate into a complete application:
 
-- <a href=“https://docs.rollbar.com/docs/dotnet” target=“_blank” rel=“noopener”>SDK Introduction</a>
-- <a href=“https://docs.rollbar.com/docs/overview” target=“_blank” rel=“noopener”>SDK Components Overview</a>
-- <a href=“https://docs.rollbar.com/docs/basic-usage” target=“_blank” rel=“noopener”>Basic Logger/Notifier Usage Scenarios</a>
-- <a href=“https://docs.rollbar.com/docs/logger-configuration” target=“_blank” rel=“noopener”>Logger’s Configuration Options/Alternatives</a>
-- <a href=“https://docs.rollbar.com/docs/more-advanced-logger-usages” target=“_blank” rel=“noopener”>More Advanced Usage Scenarios</a>
-- <a href=“https:https://github.com/rollbar/Rollbar.NET/tree/master/Samples” target=“_blank” rel=“noopener”>Also, review a repo of our application/technology integration samples</a>
+- [SDK Introduction](https://docs.rollbar.com/docs/dotnet)
+- [SDK Components Overview](https://docs.rollbar.com/docs/overview)
+- [Basic Logger/Notifier Usage Scenarios](https://docs.rollbar.com/docs/basic-usage)
+- [Logger’s Configuration Options/Alternatives](https://docs.rollbar.com/docs/logger-configuration)
+- [More Advanced Usage Scenarios](https://docs.rollbar.com/docs/more-advanced-logger-usages)
+- [Also, review a repo of our application/technology integration samples](https://github.com/rollbar/Rollbar.NET/tree/master/Samples)
+
 
 Good luck and have fun rolling your product quality bar even higher!
