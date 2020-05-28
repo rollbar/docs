@@ -1,40 +1,36 @@
 # Installation
 
-** WORKING DRAFT **
 
-## Using Gradle
+## Configure Gradle dependencies
 
-Add the necessary dependency based on your project type.
+Depending on your project type, add the appropriate dependency for gradle.
 
 ### Spring Boot
 
-For Spring Boot add the following to the `dependencies` section in your `build.gradle`: 
-
+If you have a Spring Boot project add the following to your `dependencies` section in your `build.gradle`:
+ 
 ``` java
-compile 'com.rollbar:rollbar-spring-boot-webmvc:1.+'
+compile 'com.rollbar:rollbar-spring-boot-webmvc:1.7.2'
 ```
 
 ### Spring Web MVC
 
-For Spring Web MVC add the following to the `dependencies` section in your `build.gradle`: 
+For a Spring Web MVC project add the following to the `dependencies` section in your `build.gradle`: 
 
 ``` java
-compile 'com.rollbar:rollbar-spring-webmvc:1.+'
+compile 'com.rollbar:rollbar-spring-webmvc:1.7.2'
 ```
 
 
 # Basic Configuration
 
-- Create a configuration class that has a component scan on `com.rollbar.spring` along with your project package 
-namespace. 
-- Set your access token
-
+Add the following RollbarConfig class to your project, make sure to add your project package namespace into the @ComponentScan.
 
 ``` java
 @Configuration()
 @EnableWebMvc
 @ComponentScan({
-    "Your project package namespace", // set your project namespace here
+    "YOUR_PROJECT_NAMESPACE", // set your project namespace here e.g., com.my.project.example
     "com.rollbar.spring"
 })
 public class RollbarConfig {
@@ -44,7 +40,7 @@ public class RollbarConfig {
    */
   @Bean
   public Rollbar rollbar() {
-    return new Rollbar(getRollbarConfigs("<ACCESS TOKEN>"));
+    return new Rollbar(getRollbarConfigs("{{ server_access_token }}"));
   }
 
   private Config getRollbarConfigs(String accessToken) {
@@ -56,3 +52,8 @@ public class RollbarConfig {
   }
 }
 ```
+
+# Further Configuration
+
+All configuration is done via the Config object in `rollbar-java`. You can see the interface <a href="https://github.com/rollbar/rollbar-java/blob/master/rollbar-java/src/main/java/com/rollbar/notifier/config/Config.java" target="_blank" rel="noopener">here</a>.
+
