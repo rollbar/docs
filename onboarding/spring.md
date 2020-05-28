@@ -54,6 +54,8 @@ public class RollbarConfig {
 }
 ```
 
+After adding this configuration in to your Spring project, all exceptions raised by Spring will now be sent into Rollbar.
+
 # Further Configuration
 
 All configuration is done via the Config object in `rollbar-java`. You can see the interface <a href="https://github.com/rollbar/rollbar-java/blob/master/rollbar-java/src/main/java/com/rollbar/notifier/config/Config.java" target="_blank" rel="noopener">here</a>.
