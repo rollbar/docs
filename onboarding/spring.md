@@ -24,7 +24,7 @@ compile 'com.rollbar:rollbar-spring-webmvc:1.7.2'
 
 # Basic Configuration
 
-For a very simple configuration you can create a new RollbarConfig class such as the one below and add it to your project.
+For a very simple configuration you can create a new RollbarConfig.java file and add it to your project package scope to @ComponentScan.
 
 
 ``` java
@@ -55,6 +55,16 @@ public class RollbarConfig {
 ```
 
 After adding this configuration in to your Spring project, all exceptions raised by Spring will now be sent into Rollbar.
+
+
+### Test the configuration
+
+You can test this by sending us a debug message now.
+
+``` java
+rollbar.debug("Here is some debug message");
+
+```
 
 # Further Configuration
 
