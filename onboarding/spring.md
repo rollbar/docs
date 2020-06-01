@@ -24,7 +24,7 @@ compile 'com.rollbar:rollbar-spring-webmvc:1.7.2'
 
 # Basic Configuration
 
-For a very simple configuration you can create a new RollbarConfig.java file and add your project package scope to @ComponentScan.
+For a very simple configuration you can create a new RollbarConfig.java file and add it to your project package scope to @ComponentScan.
 
 
 ``` java
