@@ -60,7 +60,7 @@ public class RollbarConfig {
 After adding this configuration in to your Spring project, all exceptions raised by Spring will now be sent into Rollbar.
 
 
-## Verify your configuration
+## Step 3: Verify your configuration
 
 You can test this by sending us a debug message now.
 
