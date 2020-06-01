@@ -72,7 +72,9 @@ rollbar.debug("Here is some debug message");
 Once you do, this screen will refresh automatically once successful. After that you are ready to start using Rollbar!
 
 
-# Further Configuration
+# Further Configuration and Java Docs
 
-All configuration is done via the Config object in `rollbar-java`. You can see the interface <a href="https://github.com/rollbar/rollbar-java/blob/master/rollbar-java/src/main/java/com/rollbar/notifier/config/Config.java" target="_blank" rel="noopener">here</a>.
+If you are interested in learning more about how to configure Rollbar you can reference the doc <a href="https://docs.rollbar.com/docs/spring#configure-the-rollbar-bean" target="_blank" rel="noopener">here</a>. Also our Java Docs are available <a href="https://javadoc.io/doc/com.rollbar" target="_blank" rel="noopener">here</a>.
 
+
+***
