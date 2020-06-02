@@ -2,6 +2,8 @@
 
 Send your first event and start using Rollbar with three easy steps with your Spring project! 
 
+<br />
+
 ## Step 1: Install Rollbar 
 
 Depending on your project type, add the appropriate dependency for gradle.
