@@ -1,4 +1,6 @@
-# Follow these three easy steps to send your first event and start using Rollbar 
+# Get started 
+
+Follow these three easy steps to send your first event and start using Rollbar.
 
 <br />
 
