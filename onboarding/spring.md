@@ -1,6 +1,4 @@
-# Follow these steps
-
-Send your first event and start using Rollbar with three easy steps with your Spring project! 
+# Follow these three easy steps to send your first event and start using Rollbar 
 
 <br />
 
