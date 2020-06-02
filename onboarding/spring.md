@@ -77,6 +77,8 @@ public class RollbarConfig {
 }
 ```
 
+<br />
+
 ## Step 3: Verify your configuration
 
 You can verify your configuration by sending us a test messing. Using the `rollbar` instance, you can send Rollbar a test with the example code below. On success this screen will refresh, your test will be visible and you can start using Rollbar!
