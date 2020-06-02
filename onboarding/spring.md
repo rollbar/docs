@@ -4,9 +4,11 @@ Follow these steps to get your first event sent and start using Rollbar now with
 
 ## Step 1: Install Rollbar 
 
+
 ### Configure Gradle dependencies
 
 Depending on your project type, add the appropriate dependency for gradle.
+
 
 #### Spring Boot
 
@@ -31,10 +33,21 @@ For a very simple configuration you can create a new `RollbarConfig.java` file a
 
 
 ``` java
+package com.example.app;   // Set this to your project package
+
+import com.rollbar.notifier.Rollbar;
+import com.rollbar.notifier.config.Config;
+import com.rollbar.spring.webmvc.RollbarSpringConfigBuilder;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+
+
 @Configuration()
 @EnableWebMvc
 @ComponentScan({
-    "YOUR_PROJECT_NAMESPACE", // set your project namespace here e.g., com.my.project.example
+    "com.example.app",    // Set this to your project package
     "com.rollbar.spring"
 })
 public class RollbarConfig {
