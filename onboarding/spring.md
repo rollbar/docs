@@ -2,15 +2,16 @@
 
 Send your first event and start using Rollbar with three easy steps with your Spring project! 
 
+<br />
+
 ## Step 1: Install Rollbar 
-
-
-### Configure Gradle dependencies
 
 Depending on your project type, add the appropriate dependency for gradle.
 
+<br />
 
-#### Spring Boot
+
+**Spring Boot**
 
 If you have a Spring Boot project add the following to your `dependencies` section in your `build.gradle`:
  
@@ -18,7 +19,10 @@ If you have a Spring Boot project add the following to your `dependencies` secti
 compile 'com.rollbar:rollbar-spring-boot-webmvc:1.7.2'
 ```
 
-#### Spring Web MVC
+<br />
+
+
+**Spring Web MVC**
 
 For a Spring Web MVC project add the following to the `dependencies` section in your `build.gradle`: 
 
@@ -26,6 +30,7 @@ For a Spring Web MVC project add the following to the `dependencies` section in 
 compile 'com.rollbar:rollbar-spring-webmvc:1.7.2'
 ```
 
+<br />
 
 ## Step 2: Configure Rollbar
 
@@ -74,6 +79,8 @@ public class RollbarConfig {
 }
 ```
 
+<br />
+
 ## Step 3: Verify your configuration
 
 You can verify your configuration by sending us a test messing. Using the `rollbar` instance, you can send Rollbar a test with the example code below. On success this screen will refresh, your test will be visible and you can start using Rollbar!
@@ -85,6 +92,8 @@ You can verify your configuration by sending us a test messing. Using the `rollb
 rollbar.debug("Here is some debug message");
 
 ```
+
+<br />
 
 
 # Further Configuration and Java Docs
