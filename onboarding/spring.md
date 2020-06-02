@@ -1,6 +1,6 @@
-# Installation
+# Follow these steps
 
-Follow these steps to get your first event sent and start using Rollbar now with your Spring project! 
+Send your first event and start using Rollbar with three easy steps with your Spring project! 
 
 ## Step 1: Install Rollbar 
 
@@ -29,11 +29,14 @@ compile 'com.rollbar:rollbar-spring-webmvc:1.7.2'
 
 ## Step 2: Configure Rollbar
 
-For a very simple configuration you can create a new `RollbarConfig.java` file and add it to your project. Make sure to also set `@ComponentScan` with your project package namespace.
+Basic Rollbar Configuration
+1. Create a new class `RollbarConfig.java` in your project
+2. Copy the sample code below into  `RollbarConfig.java`
+3. Ensure `com.example.app` is set to your project namespace
 
 
 ``` java
-package com.example.app;   // Set this to your project package
+package com.example.app;                     // Don't forget to update
 
 import com.rollbar.notifier.Rollbar;
 import com.rollbar.notifier.config.Config;
@@ -47,7 +50,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @Configuration()
 @EnableWebMvc
 @ComponentScan({
-    "com.example.app",    // Set this to your project package
+    "com.example.app",                        // Don't forget to update
     "com.rollbar.spring"
 })
 public class RollbarConfig {
