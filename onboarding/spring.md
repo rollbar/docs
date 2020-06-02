@@ -4,22 +4,19 @@ Send your first event and start using Rollbar with three easy steps with your Sp
 
 ## Step 1: Install Rollbar 
 
-
-### Configure Gradle dependencies
-
+**Configure Gradle dependencies**
 Depending on your project type, add the appropriate dependency for gradle.
 
 
-#### Spring Boot
-
+**Spring Boot**
 If you have a Spring Boot project add the following to your `dependencies` section in your `build.gradle`:
  
 ``` java
 compile 'com.rollbar:rollbar-spring-boot-webmvc:1.7.2'
 ```
 
-#### Spring Web MVC
 
+**Spring Web MVC**
 For a Spring Web MVC project add the following to the `dependencies` section in your `build.gradle`: 
 
 ``` java
