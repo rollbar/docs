@@ -91,6 +91,8 @@ rollbar.debug("Here is some debug message");
 
 ```
 
+<br />
+
 
 # Further Configuration and Java Docs
 
