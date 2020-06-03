@@ -70,6 +70,9 @@ public class RollbarConfig {
    */
   @Bean
   public Rollbar rollbar() {
+  
+    // Your ACCESS TOKEN is: {{ server_access_token }}
+    // Make sure to keep this secure    
     return new Rollbar(getRollbarConfigs("{{ server_access_token }}"));
   }
 
