@@ -42,7 +42,8 @@ compile 'com.rollbar:rollbar-spring-webmvc:1.7.2'
 After adding this configuration in to your Spring project, all exceptions raised by Spring will now be sent into Rollbar.
 
 ``` java
-package com.example.app;                     // Don't forget to update
+// UPDATE TO YOUR PROJECT PACKAGE
+package com.example.app;
 
 import com.rollbar.notifier.Rollbar;
 import com.rollbar.notifier.config.Config;
@@ -56,8 +57,11 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 @Configuration()
 @EnableWebMvc
 @ComponentScan({
-    "com.example.app",                        // Don't forget to update
+
+// UPDATE TO YOUR PROJECT PACKAGE
+    "com.example.app",
     "com.rollbar.spring"
+
 })
 public class RollbarConfig {
 
@@ -83,7 +87,7 @@ public class RollbarConfig {
 
 ## Step 3: Verify your configuration
 
-You can verify your configuration by sending us a test messing. Using the `rollbar` instance, you can send Rollbar a test with the example code below. On success this screen will refresh, your test will be visible and you can start using Rollbar!
+You can verify your configuration by sending us a test message. Using the `rollbar` instance, you can send Rollbar a test with the example code below. On success this screen will refresh, your test will be visible and you can start using Rollbar!
 
 
 ``` java
@@ -98,7 +102,7 @@ rollbar.debug("Here is some debug message");
 
 # Further Configuration and Java Docs
 
-If you are interested in learning more about how to configure Rollbar you can reference the doc <a href="https://docs.rollbar.com/docs/spring#configure-the-rollbar-bean" target="_blank" rel="noopener">here</a>. Also our Java Docs are available <a href="https://javadoc.io/doc/com.rollbar" target="_blank" rel="noopener">here</a>.
+If you are interested in learning more about how to configure Rollbar you can reference the doc <a href="https://docs.rollbar.com/docs/spring#configure-the-rollbar-bean" target="_blank" rel="noopener">here</a> and the Java Docs <a href="https://javadoc.io/doc/com.rollbar" target="_blank" rel="noopener">here</a>.
 
 
 ***
