@@ -27,3 +27,5 @@ var _rollbarConfig = {
 1. Type the following and press enter:
 
     `window.onerror("TestError: Hello world", window.location.href)`
+
+If you see `window.onerror is not a function` in the console, this means either Rollbar.js isn't installed or enabled, or the `captureUncaught` option isn't set in your config.
