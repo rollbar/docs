@@ -30,5 +30,12 @@ Rollbar.configure do |config|
   config.access_token = '{{ server_access_token }}'
 end
 
-Rollbar.error('Hello world')
+Rollbar.info("Hello world!")
+
+begin
+  x = nil
+  x.hello?
+rescue => e
+  Rollbar.error(e)
+end
 ```
