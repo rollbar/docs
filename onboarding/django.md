@@ -4,7 +4,7 @@
     pip install rollbar
     ```
 
-2. In your ``settings.py``, add ``'rollbar.contrib.django.middleware.RollbarNotifierMiddleware'`` as the last item in ``MIDDLEWARE_CLASSES``:
+2. In your `settings.py`, add `'rollbar.contrib.django.middleware.RollbarNotifierMiddleware'` as the last item in `MIDDLEWARE_CLASSES`:
 
     ```python
     MIDDLEWARE_CLASSES = (
@@ -13,7 +13,7 @@
     )
     ```
 
-3. Add the following in ``settings.py``:
+3. Add the following in `settings.py`:
 
     ```python
     ROLLBAR = {
