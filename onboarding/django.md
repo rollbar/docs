@@ -4,10 +4,10 @@
     pip install rollbar
     ```
 
-2. In your `settings.py`, add `'rollbar.contrib.django.middleware.RollbarNotifierMiddleware'` as the last item in `MIDDLEWARE_CLASSES`:
+2. In your `settings.py`, add `'rollbar.contrib.django.middleware.RollbarNotifierMiddleware'` as the last item in `MIDDLEWARE` (Django v1.10 or newer) or `MIDDLEWARE_CLASSES` (pre-Django v1.10):
 
     ```python
-    MIDDLEWARE_CLASSES = (
+    MIDDLEWARE = (
         # ... other middleware classes ...
         'rollbar.contrib.django.middleware.RollbarNotifierMiddleware',
     )
@@ -32,3 +32,5 @@
     >>> import rollbar
     >>> rollbar.report_message("Hello world")
     ```
+
+5. Check out the <a href="https://github.com/rollbar/pyrollbar/tree/master/rollbar/examples/django" target="_blank" rel="noopener">Django example</a> for more information.
