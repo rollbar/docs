@@ -9,7 +9,6 @@ pip install rollbar
 ```ini
 [app:main]
 pyramid.includes =
-    pyramid_debugtoolbar
     rollbar.contrib.pyramid
 ```
       
