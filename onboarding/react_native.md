@@ -20,30 +20,6 @@ or
 $ yarn add rollbar-react-native
 ```
 
-2. Link the native modules with the underlying project:
-
-```
-$ react-native link rollbar-react-native
-```
-
-3. For iOS, download the Rollbar iOS Framework
-   [here](https://github.com/rollbar/rollbar-ios/releases/download/v1.0.0-alpha5/Rollbar.zip). Extract this
-   zip file somewhere. You will need it for the next couple steps.
-
-4. Open the underlying Xcode project for your app:
-
-```
-$ open ios/MyAwesomeApp.xcodeproj
-```
-
-5. Drag the framework from the extracted zip file to be part of the `RollbarReactNative` project:
-
-![](https://raw.githubusercontent.com/rollbar/rollbar-react-native/master/iosFrameworks.png)
-
-We recommend checking the box that says "Copy items if needed". If you are managing your vendored
-dependencies in some other way where you do not want to check that box, then I presume you know what
-you are doing.
-
 ### Cocoapods
 
 We currently do not recommend using Cocoapods for integrating with Rollbar. This is being worked on,
@@ -71,7 +47,7 @@ all other Cocoapods dependencies.
 
 ### Javascript
 
-In both `index.ios.js` and `index.android.js` you need to instantiate a Rollbar Client:
+In your `App.js` you need to instantiate a Rollbar Client:
 
 ```js
 import { Client } from 'rollbar-react-native'
