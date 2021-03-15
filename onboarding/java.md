@@ -48,7 +48,7 @@ import static com.rollbar.notifier.config.ConfigBuilder.withAccessToken;
 import com.rollbar.notifier.Rollbar;
 import com.rollbar.notifier.config.Config;
 
-public class Application {
+public class Application implements AutoCloseable {
   private Rollbar rollbar;
 
   public Application() {
@@ -58,10 +58,16 @@ public class Application {
         .build();
     this.rollbar = Rollbar.init(config);
   }
+  
+  @Override
+  public void close() throws Exception {
+    this.rollbar.close(true);
+  }
 
-  public static void main(String[] args) {
-    Application app = new Application();
-    app.execute();
+  public static void main(String[] args) throws Exception {
+    try (Application app = new Application()) {
+      app.execute();
+    }
   }
 
   private void execute() {
