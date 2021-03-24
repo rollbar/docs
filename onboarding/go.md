@@ -15,6 +15,8 @@ a message or an error to the Rollbar server is as simple as:
 package main
 
 import (
+  "errors"
+
   "github.com/rollbar/rollbar-go"
 )
 
@@ -25,8 +27,7 @@ func main() {
   rollbar.SetServerHost("web.1")                       // optional override; defaults to hostname
   rollbar.SetServerRoot("github.com/heroku/myproject") // path of project (required for GitHub integration and non-project stacktrace collapsing)
 
-  result, err := DoSomething()
-  if err != nil {
+  if err := DoSomething(); err != nil {
     rollbar.Critical(err)
   }
 
@@ -34,6 +35,11 @@ func main() {
 
   rollbar.Wait()
 }
+
+func DoSomething() error {
+  return errors.New("new error")
+}
+
 ```
 
 A few seconds after you execute this code, the item should appear on your project's "Items" page.
