@@ -27,8 +27,7 @@ func main() {
   rollbar.SetServerHost("web.1")                       // optional override; defaults to hostname
   rollbar.SetServerRoot("github.com/heroku/myproject") // path of project (required for GitHub integration and non-project stacktrace collapsing)
 
-  err := DoSomething()
-  if err != nil {
+  if err := DoSomething(); err != nil {
     rollbar.Critical(err)
   }
 
