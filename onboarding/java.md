@@ -2,7 +2,7 @@
 
 ## Using Gradle
 
-Add `rollbar-java` to the `dependencies` section in your `build.gradle`:
+Add <a href="https://github.com/rollbar/rollbar-java" target="_blank" rel="noopener">`rollbar-java`</a> to the `dependencies` section in your `build.gradle`:
 
 ``` java
 compile 'com.rollbar:rollbar-java:1.+'
