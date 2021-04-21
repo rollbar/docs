@@ -10,7 +10,7 @@ compile 'com.rollbar:rollbar-java:1.+'
 
 ## Using Maven
 
-Add `rollbar-java` as a dependency in your `pom.xml`:
+Add <a href="https://github.com/rollbar/rollbar-java" target="_blank" rel="noopener">`rollbar-java`</a> as a dependency in your `pom.xml`:
 
 ```xml
 <dependency>
