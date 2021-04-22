@@ -89,4 +89,4 @@ All configuration is done via the Config object in `rollbar-java`. You can see t
 
 # Spring
 
-Check out [this blog post](https://rollbar.com/blog/spring-mvc-exception-handling/) for more information on how to use rollbar-java in your Spring app.
+For more information on how to use rollbar-java in your Spring app, check out our <a href="https://docs.rollbar.com/docs/spring" target="_blank" rel="noopener">Complete Spring Documentation</a>.
