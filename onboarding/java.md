@@ -1,3 +1,5 @@
+This is a quick starter guide for basic Java applications: You can check further instructions for supported Java frameworks in our <a href="https://docs.rollbar.com/docs/java#usage" target="_blank" rel="noopener">Complete Java Documentation</a>.
+
 # Installation
 
 ## Using Gradle
@@ -85,7 +87,7 @@ A more full-featured example can be found <a href="https://github.com/rollbar/ro
 
 # Further Configuration
 
-All configuration is done via the Config object in `rollbar-java`. You can see the interface <a href="https://github.com/rollbar/rollbar-java/blob/master/rollbar-java/src/main/java/com/rollbar/notifier/config/Config.java" target="_blank" rel="noopener">here</a>.
+For more advanced configuration options, visit our <a href="https://javadoc.io/doc/com.rollbar/rollbar-java/latest/com/rollbar/notifier/config/Config.html" target="_blank" rel="noopener">Complete Java Configuration reference</a>.
 
 # Spring
 
