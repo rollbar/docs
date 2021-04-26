@@ -28,9 +28,15 @@ Then run `mvn install`.
 
 The minimal amount of code you need to use `rollbar-java` is:
 
-``` java
+```java
+// Add your package declaration here, eg. package com.mycompany;
+
 import static com.rollbar.notifier.config.ConfigBuilder.withAccessToken;
 import com.rollbar.notifier.Rollbar;
+
+// Add you class and method definitions
+
+// Within a method's body:
 Rollbar rollbar = Rollbar.init(withAccessToken("{{ server_access_token }}").build());
 rollbar.log("Hello, Rollbar");
 rollbar.close(true);
@@ -45,7 +51,9 @@ We can then this this instance of Rollbar to report messages via the `log/debug/
 
 Any uncaught exceptions are automatically reported to Rollbar. This behavior can be turned off via the configuration.
 
-``` java
+```java
+// Add your package declaration here, eg. package com.mycompany;
+
 import static com.rollbar.notifier.config.ConfigBuilder.withAccessToken;
 import com.rollbar.notifier.Rollbar;
 import com.rollbar.notifier.config.Config;
