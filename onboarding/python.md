@@ -2,9 +2,9 @@ This is a quick starter guide for basic Python applications: You can check furth
 
 ## Installation
 
-Use the <a href="http://github.com/rollbar/pyrollbar " target="_blank" rel="noopener">pyrollbar</a> SDK for sending events to Rollbar from your Python application. Install pyrollbar with pip:"
+Use the <a href="https://github.com/rollbar/pyrollbar" target="_blank" rel="noopener">pyrollbar</a> SDK for sending events to Rollbar from your Python application. Install pyrollbar with pip:"
 
-```python
+```shell script
 pip install rollbar
 ```
 
@@ -40,5 +40,3 @@ except:
 A few seconds after you execute this code, an exception should appear on your project's "Items" page.
 This item will include the basic exception information and a stack trace, along with the values of
 local variables and the arguments passed to each function at each frame in the stack trace.
-
-
