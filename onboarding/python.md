@@ -1,4 +1,4 @@
-This is a quick starter guide for basic Python applications:
+This is a quick starter guide for basic Python applications.
 You can check further instructions for supported Python frameworks in our <a href="https://docs.rollbar.com/docs/python" target="_blank" rel="noopener">Complete Python Documentation</a>.
 
 ## Installation
