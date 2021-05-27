@@ -1,8 +1,11 @@
-This is a quick starter guide for basic Python applications: You can check further instructions for supported Python frameworks in our <a href="https://docs.rollbar.com/docs/python" target="_blank" rel="noopener">Complete Python Documentation</a>.
+This is a quick starter guide for basic Python applications.
+You can check further instructions for supported Python frameworks in our <a href="https://docs.rollbar.com/docs/python" target="_blank" rel="noopener">Complete Python Documentation</a>.
 
 ## Installation
 
-Use the <a href="https://github.com/rollbar/pyrollbar" target="_blank" rel="noopener">pyrollbar</a> SDK for sending events to Rollbar from your Python application. Install pyrollbar with pip:"
+Use the <a href="https://github.com/rollbar/pyrollbar" target="_blank" rel="noopener">pyrollbar</a> SDK for sending events to Rollbar from your Python application.
+
+Install pyrollbar with pip:
 
 ```shell script
 pip install rollbar
