@@ -15,9 +15,9 @@ pip install rollbar
 
 ## Test your Integration
 
-The example below is a recommended way to integrate Rollbar with FastAPI.
-This example requires FastAPI version 0.41.0 or later. There are other possible integrations (e.g. via middleware) that are compatible with older FastAPI versions.
-More information can be found in our <a href="https://docs.rollbar.com/docs/python" target="_blank" rel="noopener">documentation</a>.
+The example below is a recommended way to integrate Rollbar with FastAPI 0.41.0 or later.
+For alternative methods supporting older FastAPI versions, please visit our
+<a href="https://docs.rollbar.com/docs/python#fastapi" target="_blank" rel="noopener">FastAPI documentation</a>.
 
 ```python
 import fastapi
