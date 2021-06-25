@@ -19,7 +19,6 @@ pip install rollbar
 import rollbar
 from rollbar.contrib.starlette import ReporterMiddleware as RollbarMiddleware
 from starlette.applications import Starlette
-from starlette.responses import PlainTextResponse
 
 # Initialize Rollbar SDK with your server-side access token
 rollbar.init('{{ server_access_token }}')
