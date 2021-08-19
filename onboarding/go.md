@@ -1,8 +1,3 @@
-<div class="alert alert-info">
-	Rollbar's Go SDK is currently a <code>alpha</code> release.  For details, please see the <a href="https://github.com/rollbar/rollbar-go/blob/master/README.md">Readme</a>.<br>
-	To report issues, make suggestions, or ask questions, please <a href="https://github.com/rollbar/rollbar-go/issues/new">create an issue in Github</a>.
-</div>
-
 ## Installation
 
 To send errors to Rollbar from your Go application, you should use our <a href="https://github.com/rollbar/rollbar-go" target="_blank" rel="noopener">rollbar-go</a> SDK.
