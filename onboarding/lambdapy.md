@@ -14,7 +14,7 @@ Add the following to import and initialize Rollbar:
 
 ```
 import rollbar
-rollbar.init( '{{ server_access_token }}', environment='production')
+rollbar.init('{{ server_access_token }}', environment='production')
 ```
 
 Use the decorator `rollbar.lambda_function` which will ensure that any errors/messages will be transmitted to Rollbar before your function returns:
